@@ -1,0 +1,194 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+<HTML>
+  <HEAD>
+  <title> 1001bit.com - Staircase 2</title>
+	<style type="text/css">
+	<!--
+	body,td,a,p,.h{font-family:arial,sans-serif; font-size:10pt;}
+	h1 {  font-size: 16pt; color: #ffffff;  }
+	h2 { font-size: 12pt; }
+	h3 { font-size: 11pt; }
+	p { font-size: 10pt; }
+
+	.f1 {font-size: 16pt}
+	.f2 {font-size: 14pt}
+	a {text-decoration: none}
+	a:hover {color:#ff0000; font-size:12pt}
+	.textbox {
+	 background-color: white; font-size: 12px;
+	 border: 1px solid #000000;
+	}	
+
+
+	-->
+	</style>	
+  
+  <script language="Javascript" type="text/javascript">
+      function SUstMode(name)
+      {
+      DL_setPic1();
+      window.location='skp:set_StairMode@' + name;
+      }
+      function SUdoStair(name)
+      {
+      window.location='skp:DoStair@' + name;
+      }
+      function SUexitStair(name)
+      {
+      window.location='skp:ExitStair@' + name;
+      }
+      function DL_stair_width(wdh)
+      {
+        wdh = wdh.replace("ft", "\'");
+        wdh = wdh.replace("in", "\"");
+        document.theForm.stair_width.value = wdh;
+      }
+      function DL_stair_riser(hgt)
+     { 
+        hgt = hgt.replace("ft", "\'");
+        hgt = hgt.replace("in", "\"");
+        document.theForm.stair_riser.value = hgt;
+      }
+      function DL_stair_thread(dpt)
+     { 
+        dpt = dpt.replace("ft", "\'");
+        dpt = dpt.replace("in", "\"");
+        document.theForm.stair_thread.value = dpt;
+      }
+      function DL_stair_gap(gap)
+     { 
+        gap = gap.replace("ft", "\'");
+        gap = gap.replace("in", "\"");
+        document.theForm.stair_gap.value = gap;
+      }
+      function DL_stair_railoffset(roff)
+     { 
+        roff = roff.replace("ft", "\'");
+        roff = roff.replace("in", "\"");
+        document.theForm.stair_railoffset.value = roff;
+      }
+      function DL_stair_railheight(rhgt)
+     { 
+        rhgt = rhgt.replace("ft", "\'");
+        rhgt = rhgt.replace("in", "\"");
+        document.theForm.stair_railheight.value = rhgt;
+      }
+      function DL_stair_nos1(nos)
+     { 
+        document.theForm.stair_nos1.value = nos;
+      }
+      function DL_stair_nos2(nos)
+     { 
+        document.theForm.stair_nos2.value = nos;
+      } 
+      function DL_stair_mode(i)
+      {
+      document.theForm.stair_mode[i].checked = true;
+      DL_setPic1();
+      }
+    function DL_setPic1()
+    {
+      if (document.theForm.stair_mode[0].checked==true) {
+        document.myPic.src="images/staircase2_1.png";
+      }
+      if (document.theForm.stair_mode[1].checked==true) {
+        document.myPic.src="images/staircase2_2.png";
+      }      
+    }   
+    function DL_enter_width()
+    {
+      document.myPic.src="images/staircase2_3.png";
+      document.theForm.stair_width.select();
+    }
+    function DL_enter_riser()
+    {
+      document.myPic.src="images/staircase2_3.png";
+      document.theForm.stair_riser.select();
+    }
+    function DL_enter_thread()
+    {
+      document.myPic.src="images/staircase2_3.png";
+      document.theForm.stair_thread.select();
+    } 
+    function DL_enter_gap()
+    {
+      document.myPic.src="images/staircase2_3.png";
+      document.theForm.stair_gap.select();
+    }
+    function DL_enter_nos1()
+    {
+      DL_setPic1();
+      document.theForm.stair_nos1.select();
+    }
+    function DL_enter_nos2()
+    {
+      DL_setPic1();
+      document.theForm.stair_nos2.select();
+    }
+    function DL_enter_railoffset()
+    {
+      document.myPic.src="images/staircase2_3.png";
+      document.theForm.stair_railoffset.select();
+    }
+    function DL_enter_railheight()
+    {
+      document.myPic.src="images/staircase2_3.png";
+      document.theForm.stair_railheight.select();
+    }
+    
+      function DL_translate(id, newtext)
+	{
+		var newentry=document.getElementById(id);
+		newentry.firstChild.data=newtext;
+
+	}
+
+	function DL_translate_button(id, newtext)
+	{
+				
+		var newentry=document.getElementById(id);
+		newentry.value=newtext;
+
+	}
+    
+      </script>
+      
+  </HEAD>
+  <body bgcolor=#788B9A>
+      <div>
+      <form name="theForm" action="#">
+      <table>
+    <tr><td colspan=4><h1><span name="title" id="title">Build Staircase 2</span></h1></td></tr>
+    <tr><td colspan=4 align=center><img src='images/staircase2_1.png' name="myPic" id="myPic"></td></tr>
+    <tr><td colspan=4>   
+        <span name="t1" id="t1">Staircase direction</span><br>
+        <input type=radio name="stair_mode" id="stair_mode" value="left" checked =true
+        onClick="SUstMode(this.value, this.checked)" ><span name="t2" id="t2"> Left to right</span></input>
+        <input type=radio name="stair_mode" id="stair_mode" value="right"
+        onClick="SUstMode(this.value, this.checked)"  ><span name="t3" id="t3"> Right to left</span></input>
+        <br><hr>
+  </td></tr>
+	<tr><td><span name="t4" id="t4"> Flight width</span> (a)</td><td><input type=text class="textbox"  name="stair_width" id="stair_width" onfocus="javascript:DL_enter_width()"></td>
+        <td><span name="t5" id="t5"> Riser height</span> (b) </td><td><input type=text class="textbox"  name="stair_riser" id="stair_riser" onfocus="javascript:DL_enter_riser()"></td></tr>
+  <tr><td><span name="t6" id="t6"> Thread depth</span> (c) </td><td><input type=text class="textbox"  name="stair_thread" id="stair_thread" onfocus="javascript:DL_enter_thread()"></td>
+        <td><span name="t7" id="t7"> Gap in between</span> (d) </td><td><input type=text class="textbox"  name="stair_gap" id="stair_gap" onfocus="javascript:DL_enter_gap()"></td></tr>
+  <tr><td><span name="t8" id="t8"> Number of risers in first flight</span> (e)</td><td><input type=text class="textbox"  name="stair_nos1" id="stair_nos1" onfocus="javascript:DL_enter_nos1()"></td>
+        <td><span name="t9" id="t9">Number of risers in second flight</span> (f)</td><td><input type=text class="textbox"  name="stair_nos2" id="stair_nos2" onfocus="javascript:DL_enter_nos2()"></td></tr>         
+  <tr><td><span name="10" id="t10">Handrail guiding lines offset</span> (g)</td><td><input type=text class="textbox"  name="stair_railoffset" id="stair_railoffset" onfocus="javascript:DL_enter_railoffset()"></td>
+        <td><span name="11" id="t11">Handrail guiding lines height</span> (h)</td><td><input type=text class="textbox"  name="stair_railheight" id="stair_railheight" onfocus="javascript:DL_enter_railheight()"></td></tr>      
+</table>
+  <hr>
+        <input type=button name="do_stair" id="do_stair" value="Build staircase"
+        onClick="SUdoStair(this.value)">
+        <input type=button name="exit_stair" id="exit_stair" value="Exit" 
+        onClick="SUexitStair(this.value)">
+        
+        </form>
+               <font size="2pt"><i><span name="author" id="author">.</span></i></font>
+
+      </div>
+      
+ 
+      </body>
+      
+</html>

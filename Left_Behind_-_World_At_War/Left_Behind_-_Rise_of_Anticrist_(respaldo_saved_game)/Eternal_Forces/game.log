@@ -1,0 +1,88 @@
+[app:info] Application started at: Tue Mar 20 12:09:48 2012
+[app:info] Build number is: 0
+[app:info] Build time is: Sep 16 2010 23:22:25
+[core:info] QueryPerformanceCounter() based timer selected via config settings.
+[app:info] Data package file 'data.pak' successfully loaded.[app:info] Data package file 'sound.pak' successfully loaded.[app:info] Data package file 'textures.pak' successfully loaded.[app:err] Patch file #0 does not exist.
+[app:err] Patch file #1 does not exist.
+[app:err] Patch file #2 does not exist.
+[app:err] Patch file #3 does not exist.
+[app:err] Patch file #4 does not exist.
+[app:err] Patch file #5 does not exist.
+[app:err] Patch file #6 does not exist.
+[app:err] Patch file #7 does not exist.
+[app:err] Patch file #8 does not exist.
+[app:err] Patch file #9 does not exist.
+[app:err] Patch file #10 does not exist.
+[app:err] Patch file #11 does not exist.
+[app:err] Patch file #12 does not exist.
+[app:err] Patch file #13 does not exist.
+[app:err] Patch file #14 does not exist.
+[app:err] Patch file #15 does not exist.
+[app:err] Patch file #16 does not exist.
+[app:err] Patch file #17 does not exist.
+[render:info] Adapter: Mobile Intel(R) 4 Series Express Chipset Family(igxprd64.dll). Driver version: 6.14.10.5029
+[render:info] Used shader versions: vs_30, ps_30
+[core:info] Using hardware vertex processing.
+[render:info] Estimated amount of texture memory: 988MB
+[render:info] Adapter video memory: 1024 MB
+[render:info] Depth stencil surface D3DFMT_D24S8 1600x900: successfully created. ID: 1
+[render:info] Render target texture D3DFMT_R5G6B5 512x512: successfully created. ID: 2
+[render:info] Render target texture D3DFMT_R5G6B5 512x512: successfully created. ID: 3
+[render:info] Device surface object with ID: 1 selected from pool. This is good.
+[render:info] Late creation of render target texture D3DFMT_A8R8G8B8 512x512: succeded. ID: 4. Late creation is really bad. Try to modify precreation section.
+[render:info] Instantiating materials...
+[render:info] All materials successfully loaded
+[core:info] Font Manager: Created new font. Name: 'arial, flags: 0, height: 12 (0x02913C30).
+[core:info] Font Manager: Created new font. Name: 'tahoma, flags: 1, height: 19 (0x04B52D50).
+[core:info] Font Manager: Created new font. Name: 'tahoma, flags: 1, height: 15 (0x04BF4FB8).
+[core:info] Font Manager: Created new font. Name: 'tahoma, flags: 1, height: 27 (0x029C12C8).
+[app:info] Instancing event handlers
+[app:info] Loading States
+[app:info] Loading states sectionmenu
+[app:info] Preloading common icons
+[core:info] Font Manager: Created new font. Name: 'arial, flags: 0, height: 22 (0x04B7F3E0).
+[core:info] Font Manager: Created new font. Name: 'tahoma, flags: 0, height: 24 (0x04AE9800).
+[core:info] Font Manager: Created new font. Name: 'arial, flags: 0, height: 16 (0x04CD80F8).
+[app:info] Loading options menus
+[app:info] Preloading mainoptions icons
+[core:info] Font Manager: Created new font. Name: 'tahoma, flags: 1, height: 22 (0x04CF1890).
+[core:info] Font Manager: Created new font. Name: 'verdana, flags: 1, height: 16 (0x04CFB0B8).
+[core:info] Font Manager: Created new font. Name: 'verdana, flags: 1, height: 18 (0x04CFC558).
+[core:info] Font Manager: Created new font. Name: 'verdana, flags: 1, height: 7 (0x04B9FF48).
+[core:info] Font Manager: Created new font. Name: 'tahoma, flags: 1, height: 24 (0x04D857B8).
+[core:info] Font Manager: Created new font. Name: 'tahoma, flags: 1, height: 16 (0x04D537D0).
+[core:info] Font Manager: Created new font. Name: 'tahoma, flags: 1, height: 12 (0x04D62490).
+[core:info] Font Manager: Created new font. Name: 'tahoma, flags: 1, height: 46 (0x04DC52F8).
+[core:info] Font Manager: Created new font. Name: 'verdana, flags: 1, height: 21 (0x04DC16F0).
+[core:info] Font Manager: Created new font. Name: 'verdana, flags: 1, height: 15 (0x04DC58F8).
+[core:info] Font Manager: Created new font. Name: 'tahoma, flags: 1, height: 18 (0x04DB5868).
+[core:info] Font Manager: Created new font. Name: 'tahoma, flags: 1, height: 21 (0x04DD8008).
+[app:info] Loaded in 3.19
+[app:info] Config file 'C:\Documents and Settings\Administrator\My Documents\Left Behind Games\Eternal Forces\user.cfg' successfully saved
+[core:info] esFontManager::DropFont: Releasing unreferenced font. Name: 'arial, flags: 0, height: 16 (0x04CD80F8).
+[core:info] esFontManager::DropFont: Releasing unreferenced font. Name: 'tahoma, flags: 0, height: 24 (0x04AE9800).
+[core:info] esFontManager::DropFont: Releasing unreferenced font. Name: 'arial, flags: 0, height: 22 (0x04B7F3E0).
+[core:info] esFontManager::DropFont: Releasing unreferenced font. Name: 'tahoma, flags: 1, height: 12 (0x04D62490).
+[core:info] esFontManager::DropFont: Releasing unreferenced font. Name: 'verdana, flags: 1, height: 7 (0x04B9FF48).
+[core:info] esFontManager::DropFont: Releasing unreferenced font. Name: 'tahoma, flags: 1, height: 22 (0x04CF1890).
+[core:info] esFontManager::DropFont: Releasing unreferenced font. Name: 'verdana, flags: 1, height: 21 (0x04DC16F0).
+[core:info] esFontManager::DropFont: Releasing unreferenced font. Name: 'verdana, flags: 1, height: 15 (0x04DC58F8).
+[core:info] esFontManager::DropFont: Releasing unreferenced font. Name: 'tahoma, flags: 1, height: 46 (0x04DC52F8).
+[core:info] esFontManager::DropFont: Releasing unreferenced font. Name: 'verdana, flags: 1, height: 18 (0x04CFC558).
+[core:info] esFontManager::DropFont: Releasing unreferenced font. Name: 'tahoma, flags: 1, height: 21 (0x04DD8008).
+[core:info] esFontManager::DropFont: Releasing unreferenced font. Name: 'tahoma, flags: 1, height: 24 (0x04D857B8).
+[core:info] esFontManager::DropFont: Releasing unreferenced font. Name: 'tahoma, flags: 1, height: 16 (0x04D537D0).
+[core:info] esFontManager::DropFont: Releasing unreferenced font. Name: 'verdana, flags: 1, height: 16 (0x04CFB0B8).
+[core:info] esFontManager::DropFont: Releasing unreferenced font. Name: 'tahoma, flags: 1, height: 18 (0x04DB5868).
+[core:info] esFontManager::DropFont: Releasing unreferenced font. Name: 'tahoma, flags: 1, height: 19 (0x04B52D50).
+[core:info] esFontManager::DropFont: Releasing unreferenced font. Name: 'tahoma, flags: 1, height: 15 (0x04BF4FB8).
+[core:info] esFontManager::DropFont: Releasing unreferenced font. Name: 'tahoma, flags: 1, height: 27 (0x029C12C8).
+[core:info] esFontManager::DropFont: Releasing unreferenced font. Name: 'arial, flags: 0, height: 12 (0x02913C30).
+[core:info] Destructing Font Manager...
+[render:info] Device surface object with ID: 2 selected from pool. This is good.
+[render:info] Device surface object with ID: 3 selected from pool. This is good.
+[core:info] Destructing Model Manager...
+[render:info] Device surface object with ID 3 was destroyed.
+[render:info] Device surface object with ID 2 was destroyed.
+[render:info] All materials cleared
+[app:info] Application stopped at: Tue Mar 20 12:11:19 2012

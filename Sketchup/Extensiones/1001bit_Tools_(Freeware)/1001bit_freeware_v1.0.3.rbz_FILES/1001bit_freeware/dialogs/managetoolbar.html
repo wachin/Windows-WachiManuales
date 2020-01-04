@@ -1,0 +1,1334 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+<HTML>
+  <HEAD>
+  <title> 1001bit.com - Manage Toolbars </title>
+	<style type="text/css">
+	<!--
+	body,td,a,p,.h{font-family:arial,sans-serif; font-size:10pt;}
+	h1 { font-size: 14pt; }
+	h2 { font-size: 10pt; }
+	h3 { font-size: 9pt; }
+	p { font-size: 8pt; }
+
+	.f1 {font-size: 14pt}
+	.f2 {font-size: 12pt}
+	a {text-decoration: none}
+	a:hover {color:#ff0000; font-size:12pt}
+	.textbox {
+	 background-color: white; font-size: 12px;
+	 border: 1px solid #000000;
+	}	
+
+
+	-->
+	</style>	
+  
+  <script language="Javascript" type="text/javascript">
+
+      function SUdomanagetb(name)
+      {
+      	window.location='skp:Domanagetb@' + name;
+      }
+
+      function SUexitmanagetb(name)
+      {
+      	window.location='skp:Exitmanagetb@' + name;
+      }
+      
+      function SUtbMode(name)
+      {
+	window.location='skp:set_tb_mode@' + name;
+      }
+
+      function DL_dv_mode(i)
+      {
+      	document.theForm.tb_mode[i].checked = true;
+      }
+
+//----------------
+
+      function SUtb_mode(val)
+      {
+		window.location='skp:set_tb_mode@' + val;
+		
+      }
+
+
+      function DLtb_mode(val)
+      {
+	      	if (val=='single') {
+        	document.theForm.tb_mode[0].checked = true;
+        	} 
+      		if (val=='multiple') {
+        	document.theForm.tb_mode[1].checked = true;
+        	}
+      }
+
+
+//----------------
+
+      function SUtb_Settingout(val)
+      {
+	      window.location='skp:set_tb_Settingout@' + val;
+      }
+
+
+      function DLtb_Settingout(val)
+      {
+	      	if (val=='true') {
+        	document.theForm.tb_Settingout.checked = true;
+        	} 
+      		else {
+        	document.theForm.tb_Settingout.checked = false;
+        	}
+      }
+
+//----------------
+
+      function SUtb_Draw(val)
+      {
+	      window.location='skp:set_tb_Draw@' + val;
+      }
+
+
+      function DLtb_Draw(val)
+      {
+	      	if (val=='true') {
+        	document.theForm.tb_Draw.checked = true;
+        	} 
+      		else {
+        	document.theForm.tb_Draw.checked = false;
+        	}
+      }
+
+//----------------
+
+      function SUtb_Edit(val)
+      {
+	      window.location='skp:set_tb_Edit@' + val;
+      }
+
+
+      function DLtb_Edit(val)
+      {
+	      	if (val=='true') {
+        	document.theForm.tb_Edit.checked = true;
+        	} 
+      		else {
+        	document.theForm.tb_Edit.checked = false;
+        	}
+      }
+//----------------
+
+      function SUtb_Array(val)
+      {
+	      window.location='skp:set_tb_Array@' + val;
+      }
+
+
+      function DLtb_Array(val)
+      {
+	      	if (val=='true') {
+        	document.theForm.tb_Array.checked = true;
+        	} 
+      		else {
+        	document.theForm.tb_Array.checked = false;
+        	}
+      }
+
+//----------------
+
+      function SUtb_Wall(val)
+      {
+	      window.location='skp:set_tb_Wall@' + val;
+      }
+
+
+      function DLtb_Wall(val)
+      {
+	      	if (val=='true') {
+        	document.theForm.tb_Wall.checked = true;
+        	} 
+      		else {
+        	document.theForm.tb_Wall.checked = false;
+        	}
+      }
+
+//----------------
+
+      function SUtb_Staircase(val)
+      {
+	      window.location='skp:set_tb_Staircase@' + val;
+      }
+
+
+      function DLtb_Staircase(val)
+      {
+	      	if (val=='true') {
+        	document.theForm.tb_Staircase.checked = true;
+        	} 
+      		else {
+        	document.theForm.tb_Staircase.checked = false;
+        	}
+      }
+
+//----------------
+
+      function SUtb_Win(val)
+      {
+	      window.location='skp:set_tb_Win@' + val;
+      }
+
+
+      function DLtb_Win(val)
+      {
+	      	if (val=='true') {
+        	document.theForm.tb_Win.checked = true;
+        	} 
+      		else {
+        	document.theForm.tb_Win.checked = false;
+        	}
+      }
+
+//----------------
+
+      function SUtb_Roof(val)
+      {
+	      window.location='skp:set_tb_Roof@' + val;
+      }
+
+
+      function DLtb_Roof(val)
+      {
+	      	if (val=='true') {
+        	document.theForm.tb_Roof.checked = true;
+        	} 
+      		else {
+        	document.theForm.tb_Roof.checked = false;
+        	}
+      }
+
+
+
+
+//----------------
+
+      function SUtb_POF(val)
+      {
+	      window.location='skp:set_tb_POF@' + val;
+      }
+
+
+      function DLtb_POF(val)
+      {
+	      	if (val=='true') {
+        	document.theForm.tb_POF.checked = true;
+        	} 
+      		else {
+        	document.theForm.tb_POF.checked = false;
+        	}
+      }
+
+//------------------
+      function SUtb_DVDE(val)
+      {
+	      window.location='skp:set_tb_DVDE@' + val;
+      }
+
+
+      function DLtb_DVDE(val)
+      {
+	      	if (val=='true') {
+        	document.theForm.tb_DVDE.checked = true;
+        	} 
+      		else {
+        	document.theForm.tb_DVDE.checked = false;
+        	}
+      }
+
+//------------------
+      function SUtb_ALGN(val)
+      {
+	      window.location='skp:set_tb_ALGN@' + val;
+      }
+
+
+      function DLtb_ALGN(val)
+      {
+	      	if (val=='true') {
+        	document.theForm.tb_ALGN.checked = true;
+        	} 
+      		else {
+        	document.theForm.tb_ALGN.checked = false;
+        	}
+      }
+
+
+
+//------------------
+      function SUtb_PERPL(val)
+      {
+	      window.location='skp:set_tb_PERPL@' + val;
+      }
+
+
+      function DLtb_PERPL(val)
+      {
+	      	if (val=='true') {
+        	document.theForm.tb_PERPL.checked = true;
+        	} 
+      		else {
+        	document.theForm.tb_PERPL.checked = false;
+        	}
+      }
+
+//------------------
+      function SUtb_FONP(val)
+      {
+	      window.location='skp:set_tb_FONP@' + val;
+      }
+
+
+      function DLtb_FONP(val)
+      {
+	      	if (val=='true') {
+        	document.theForm.tb_FONP.checked = true;
+        	} 
+      		else {
+        	document.theForm.tb_FONP.checked = false;
+        	}
+      }
+
+//------------------
+      function SUtb_BESF(val)
+      {
+	      window.location='skp:set_tb_BESF@' + val;
+      }
+
+
+      function DLtb_BESF(val)
+      {
+	      	if (val=='true') {
+        	document.theForm.tb_BESF.checked = true;
+        	} 
+      		else {
+        	document.theForm.tb_BESF.checked = false;
+        	}
+      }
+
+
+//------------------
+      function SUtb_EXTRD1(val)
+      {
+	      window.location='skp:set_tb_EXTRD1@' + val;
+      }
+
+
+      function DLtb_EXTRD1(val)
+      {
+	      	if (val=='true') {
+        	document.theForm.tb_EXTRD1.checked = true;
+        	} 
+      		else {
+        	document.theForm.tb_EXTRD1.checked = false;
+        	}
+      }
+
+//------------------
+      function SUtb_MVTX(val)
+      {
+	      window.location='skp:set_tb_MVTX@' + val;
+      }
+
+
+      function DLtb_MVTX(val)
+      {
+	      	if (val=='true') {
+        	document.theForm.tb_MVTX.checked = true;
+        	} 
+      		else {
+        	document.theForm.tb_MVTX.checked = false;
+        	}
+      }
+
+//------------------
+      function SUtb_FLTE(val)
+      {
+	      window.location='skp:set_tb_FLTE@' + val;
+      }
+
+
+      function DLtb_FLTE(val)
+      {
+	      	if (val=='true') {
+        	document.theForm.tb_FLTE.checked = true;
+        	} 
+      		else {
+        	document.theForm.tb_FLTE.checked = false;
+        	}
+      }
+
+//------------------
+      function SUtb_CMFE(val)
+      {
+	      window.location='skp:set_tb_CMFE@' + val;
+      }
+
+
+      function DLtb_CMFE(val)
+      {
+	      	if (val=='true') {
+        	document.theForm.tb_CMFE.checked = true;
+        	} 
+      		else {
+        	document.theForm.tb_CMFE.checked = false;
+        	}
+      }
+
+//------------------
+      function SUtb_EXTD(val)
+      {
+	      window.location='skp:set_tb_EXTD@' + val;
+      }
+
+
+      function DLtb_EXTD(val)
+      {
+	      	if (val=='true') {
+        	document.theForm.tb_EXTD.checked = true;
+        	} 
+      		else {
+        	document.theForm.tb_EXTD.checked = false;
+        	}
+      }
+
+//------------------
+      function SUtb_OFSE(val)
+      {
+	      window.location='skp:set_tb_OFSE@' + val;
+      }
+
+
+      function DLtb_OFSE(val)
+      {
+	      	if (val=='true') {
+        	document.theForm.tb_OFSE.checked = true;
+        	} 
+      		else {
+        	document.theForm.tb_OFSE.checked = false;
+        	}
+      }
+
+//------------------
+      function SUtb_HLFC(val)
+      {
+	      window.location='skp:set_tb_HLFC@' + val;
+      }
+
+
+      function DLtb_HLFC(val)
+      {
+	      	if (val=='true') {
+        	document.theForm.tb_HLFC.checked = true;
+        	} 
+      		else {
+        	document.theForm.tb_HLFC.checked = false;
+        	}
+      }
+
+//------------------
+      function SUtb_SLPEDG(val)
+      {
+	      window.location='skp:set_tb_SLPEDG@' + val;
+      }
+
+
+      function DLtb_SLPEDG(val)
+      {
+	      	if (val=='true') {
+        	document.theForm.tb_SLPEDG.checked = true;
+        	} 
+      		else {
+        	document.theForm.tb_SLPEDG.checked = false;
+        	}
+      }
+
+//------------------
+      function SUtb_MGFC(val)
+      {
+	      window.location='skp:set_tb_MGFC@' + val;
+      }
+
+
+      function DLtb_MGFC(val)
+      {
+	      	if (val=='true') {
+        	document.theForm.tb_MGFC.checked = true;
+        	} 
+      		else {
+        	document.theForm.tb_MGFC.checked = false;
+        	}
+      }
+
+//------------------
+      function SUtb_LNARR(val)
+      {
+	      window.location='skp:set_tb_LNARR@' + val;
+      }
+
+
+      function DLtb_LNARR(val)
+      {
+	      	if (val=='true') {
+        	document.theForm.tb_LNARR.checked = true;
+        	} 
+      		else {
+        	document.theForm.tb_LNARR.checked = false;
+        	}
+      }
+
+//------------------
+      function SUtb_RCARR(val)
+      {
+	      window.location='skp:set_tb_RCARR@' + val;
+      }
+
+
+      function DLtb_RCARR(val)
+      {
+	      	if (val=='true') {
+        	document.theForm.tb_RCARR.checked = true;
+        	} 
+      		else {
+        	document.theForm.tb_RCARR.checked = false;
+        	}
+      }
+
+//------------------
+      function SUtb_POARR(val)
+      {
+	      window.location='skp:set_tb_POARR@' + val;
+      }
+
+
+      function DLtb_POARR(val)
+      {
+	      	if (val=='true') {
+        	document.theForm.tb_POARR.checked = true;
+        	} 
+      		else {
+        	document.theForm.tb_POARR.checked = false;
+        	}
+      }
+
+//------------------
+      function SUtb_VXWLL(val)
+      {
+	      window.location='skp:set_tb_VXWLL@' + val;
+      }
+
+
+      function DLtb_VXWLL(val)
+      {
+	      	if (val=='true') {
+        	document.theForm.tb_VXWLL.checked = true;
+        	} 
+      		else {
+        	document.theForm.tb_VXWLL.checked = false;
+        	}
+      }
+
+//------------------
+      function SUtb_OPNG(val)
+      {
+	      window.location='skp:set_tb_OPNG@' + val;
+      }
+
+
+      function DLtb_OPNG(val)
+      {
+	      	if (val=='true') {
+        	document.theForm.tb_OPNG.checked = true;
+        	} 
+      		else {
+        	document.theForm.tb_OPNG.checked = false;
+        	}
+      }
+
+//------------------
+      function SUtb_HGRV(val)
+      {
+	      window.location='skp:set_tb_HGRV@' + val;
+      }
+
+
+      function DLtb_HGRV(val)
+      {
+	      	if (val=='true') {
+        	document.theForm.tb_HGRV.checked = true;
+        	} 
+      		else {
+        	document.theForm.tb_HGRV.checked = false;
+        	}
+      }
+
+//------------------
+      function SUtb_STR1(val)
+      {
+	      window.location='skp:set_tb_STR1@' + val;
+      }
+
+
+      function DLtb_STR1(val)
+      {
+	      	if (val=='true') {
+        	document.theForm.tb_STR1.checked = true;
+        	} 
+      		else {
+        	document.theForm.tb_STR1.checked = false;
+        	}
+      }
+
+
+//------------------
+      function SUtb_STR2(val)
+      {
+	      window.location='skp:set_tb_STR2@' + val;
+      }
+
+
+      function DLtb_STR2(val)
+      {
+	      	if (val=='true') {
+        	document.theForm.tb_STR2.checked = true;
+        	} 
+      		else {
+        	document.theForm.tb_STR2.checked = false;
+        	}
+      }
+
+//------------------
+      function SUtb_STR3(val)
+      {
+	      window.location='skp:set_tb_STR3@' + val;
+      }
+
+
+      function DLtb_STR3(val)
+      {
+	      	if (val=='true') {
+        	document.theForm.tb_STR3.checked = true;
+        	} 
+      		else {
+        	document.theForm.tb_STR3.checked = false;
+        	}
+      }
+
+//------------------
+      function SUtb_STR4(val)
+      {
+	      window.location='skp:set_tb_STR4@' + val;
+      }
+
+
+      function DLtb_STR4(val)
+      {
+	      	if (val=='true') {
+        	document.theForm.tb_STR4.checked = true;
+        	} 
+      		else {
+        	document.theForm.tb_STR4.checked = false;
+        	}
+      }
+
+//------------------
+      function SUtb_SPSTR(val)
+      {
+	      window.location='skp:set_tb_SPSTR@' + val;
+      }
+
+
+      function DLtb_SPSTR(val)
+      {
+	      	if (val=='true') {
+        	document.theForm.tb_SPSTR.checked = true;
+        	} 
+      		else {
+        	document.theForm.tb_SPSTR.checked = false;
+        	}
+      }
+
+//------------------
+      function SUtb_ESCL(val)
+      {
+	      window.location='skp:set_tb_ESCL@' + val;
+      }
+
+
+      function DLtb_ESCL(val)
+      {
+	      	if (val=='true') {
+        	document.theForm.tb_ESCL.checked = true;
+        	} 
+      		else {
+        	document.theForm.tb_ESCL.checked = false;
+        	}
+      }
+
+//------------------
+      function SUtb_WFRM(val)
+      {
+	      window.location='skp:set_tb_WFRM@' + val;
+      }
+
+
+      function DLtb_WFRM(val)
+      {
+	      	if (val=='true') {
+        	document.theForm.tb_WFRM.checked = true;
+        	} 
+      		else {
+        	document.theForm.tb_WFRM.checked = false;
+        	}
+      }
+
+
+//------------------
+      function SUtb_DFRM(val)
+      {
+	      window.location='skp:set_tb_DFRM@' + val;
+      }
+
+
+      function DLtb_DFRM(val)
+      {
+	      	if (val=='true') {
+        	document.theForm.tb_DFRM.checked = true;
+        	} 
+      		else {
+        	document.theForm.tb_DFRM.checked = false;
+        	}
+      }
+
+//------------------
+      function SUtb_PNLD(val)
+      {
+	      window.location='skp:set_tb_PNLD@' + val;
+      }
+
+
+      function DLtb_PNLD(val)
+      {
+	      	if (val=='true') {
+        	document.theForm.tb_PNLD.checked = true;
+        	} 
+      		else {
+        	document.theForm.tb_PNLD.checked = false;
+        	}
+      }
+
+//------------------
+      function SUtb_SCRN1(val)
+      {
+	      window.location='skp:set_tb_SCRN1@' + val;
+      }
+
+
+      function DLtb_SCRN1(val)
+      {
+	      	if (val=='true') {
+        	document.theForm.tb_SCRN1.checked = true;
+        	} 
+      		else {
+        	document.theForm.tb_SCRN1.checked = false;
+        	}
+      }
+
+//------------------
+      function SUtb_HLVR(val)
+      {
+	      window.location='skp:set_tb_HLVR@' + val;
+      }
+
+
+      function DLtb_HLVR(val)
+      {
+	      	if (val=='true') {
+        	document.theForm.tb_HLVR.checked = true;
+        	} 
+      		else {
+        	document.theForm.tb_HLVR.checked = false;
+        	}
+      }
+
+//------------------
+      function SUtb_VLVR(val)
+      {
+	      window.location='skp:set_tb_VLVR@' + val;
+      }
+
+
+      function DLtb_VLVR(val)
+      {
+	      	if (val=='true') {
+        	document.theForm.tb_VLVR.checked = true;
+        	} 
+      		else {
+        	document.theForm.tb_VLVR.checked = false;
+        	}
+      }
+
+//------------------
+      function SUtb_RFT1(val)
+      {
+	      window.location='skp:set_tb_RFT1@' + val;
+      }
+
+
+      function DLtb_RFT1(val)
+      {
+	      	if (val=='true') {
+        	document.theForm.tb_RFT1.checked = true;
+        	} 
+      		else {
+        	document.theForm.tb_RFT1.checked = false;
+        	}
+      }
+
+//------------------
+      function SUtb_RF1(val)
+      {
+	      window.location='skp:set_tb_RF1@' + val;
+      }
+
+
+      function DLtb_RF1(val)
+      {
+	      	if (val=='true') {
+        	document.theForm.tb_RF1.checked = true;
+        	} 
+      		else {
+        	document.theForm.tb_RF1.checked = false;
+        	}
+      }
+
+//------------------
+      function SUtb_HPRF(val)
+      {
+	      window.location='skp:set_tb_HPRF@' + val;
+      }
+
+
+      function DLtb_HPRF(val)
+      {
+	      	if (val=='true') {
+        	document.theForm.tb_HPRF.checked = true;
+        	} 
+      		else {
+        	document.theForm.tb_HPRF.checked = false;
+        	}
+      }
+
+//------------------
+      function SUtb_REVSURF(val)
+      {
+	      window.location='skp:set_tb_REVSURF@' + val;
+      }
+
+
+      function DLtb_REVSURF(val)
+      {
+	      	if (val=='true') {
+        	document.theForm.tb_REVSURF.checked = true;
+        	} 
+      		else {
+        	document.theForm.tb_REVSURF.checked = false;
+        	}
+      }
+//------------------
+      function SUtb_EXTRD2(val)
+      {
+	      window.location='skp:set_tb_EXTRD2@' + val;
+      }
+
+
+      function DLtb_EXTRD2(val)
+      {
+	      	if (val=='true') {
+        	document.theForm.tb_EXTRD2.checked = true;
+        	} 
+      		else {
+        	document.theForm.tb_EXTRD2.checked = false;
+        	}
+      }
+//------------------
+      function SUtb_RGRL(val)
+      {
+	      window.location='skp:set_tb_RGRL@' + val;
+      }
+
+
+      function DLtb_RGRL(val)
+      {
+	      	if (val=='true') {
+        	document.theForm.tb_RGRL.checked = true;
+        	} 
+      		else {
+        	document.theForm.tb_RGRL.checked = false;
+        	}
+      }
+//------------------
+      function SUtb_CGRL(val)
+      {
+	      window.location='skp:set_tb_CGRL@' + val;
+      }
+
+
+      function DLtb_CGRL(val)
+      {
+	      	if (val=='true') {
+        	document.theForm.tb_CGRL.checked = true;
+        	} 
+      		else {
+        	document.theForm.tb_CGRL.checked = false;
+        	}
+      }
+
+
+
+
+
+
+//------------------
+	function DL_translate(id, newtext)
+	{
+		var newentry=document.getElementById(id);
+		newentry.firstChild.data=newtext;
+
+	}
+
+	function DL_translate_button(id, newtext)
+	{
+				
+		var newentry=document.getElementById(id);
+		newentry.value=newtext;
+
+	}
+
+
+
+  </script>
+      
+  </HEAD>
+  <body bgcolor=#dddddd>
+      <div>
+      <form name="theForm" action="#">
+        <h1><span name="t1" id="t1">Manage 1001bit Toolbars</span></h1>
+        <table>
+	<tr>
+		<td bgcolor=#fac6aa>
+		<input type=radio name="tb_mode" id="tb_mode" value="single" checked =true
+        	onClick="SUtbMode(this.value, this.checked)" ><span name="mt1" id="mt1">Arrange in 1 toolbar</span></input>
+		</td>
+	
+		<td bgcolor=#debdd6>	
+		<input type=radio name="tb_mode" id="tb_mode" value="multiple" checked =false
+        	onClick="SUtbMode(this.value, this.checked)" ><span name="mt2" id="mt2">Separate toolbars</span></input>
+		</td>
+	</tr>
+	<tr>
+		<td colspan=5 bgcolor=#aabadd>
+		<input type=checkbox name="tb_Settingout" id="tb_Settingout" checked onClick="SUtb_Settingout(this.checked)">
+		<b><span name="sm1" id="sm1">Toolbar group: Setting out</span></b>			
+		</input>
+		</td>
+	</tr>
+	<tr>
+		<td>
+		<input type=checkbox name="tb_POF" id="tb_POF" checked onClick="SUtb_POF(this.checked)">
+		<img src='../icons/point_on_face_s.png'><span name="t2" id="t2">Point on face</span>			
+		</input>
+		</td>
+
+		<td>
+		<input type=checkbox name="tb_DVDE" id="tb_DVDE" checked onClick="SUtb_DVDE(this.checked)">
+		<img src='../icons/divide_s.png'><span name="t7" id="t7">Divide along edges</span>			
+		</input>
+		</td>
+
+		<td>
+		<input type=checkbox name="tb_ALGN" id="tb_ALGN" checked onClick="SUtb_ALGN(this.checked)">
+		<img src='../icons/align_s.png'><span name="t6" id="t6">Align selected entity</span>		
+		</input>
+		</td>
+		
+		<td>
+		</td>
+		<td>
+		</td>
+
+	</tr>
+	<tr>
+		<td colspan=5 bgcolor=#aabadd>
+		<input type=checkbox name="tb_Draw" id="tb_Draw" checked onClick="SUtb_Draw(this.checked)">
+		<b><span name="sm2" id="sm2">Toolbar group: Draw tool</span></b>			
+		</input>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+		<input type=checkbox name="tb_PERPL" id="tb_PERPL" checked onClick="SUtb_PERPL(this.checked)">
+		<img src='../icons/perpendicular_line_s.png'><span name="t3" id="t3">Draw perpendicuar edges</span>			
+		</input>
+		</td>
+
+		<td>
+		<input type=checkbox name="tb_FONP" id="tb_FONP" checked onClick="SUtb_FONP(this.checked)">
+		<img src='../icons/fonplane_s.png'><span name="t4" id="t4">Draw face on plane</span>			
+		</input>
+		</td>
+		
+		<td>
+		<input type=checkbox name="tb_BESF" id="tb_BESF" checked onClick="SUtb_BESF(this.checked)">
+		<img src='../icons/bestface_s.png'><span name="t5" id="t5">Draw best fit face</span>			
+		</input>
+		</td>
+		
+		<td>
+		<input type=checkbox name="tb_EXTRD1" id="tb_EXTRD1" checked onClick="SUtb_EXTRD1(this.checked)">
+		<img src='../icons/extrude1_s.png'><span name="t36" id="t36">Extrude along path</span>
+		</input>
+		</td>
+		
+		<td>
+		<input type=checkbox name="tb_EXTRD2" id="tb_EXTRD2" checked onClick="SUtb_EXTRD2(this.checked)">
+		<img src='../icons/extrude2_s.png'><span name="t40" id="t40">Extrude taper</span>
+		</input>
+		</td>
+		
+  </tr>
+  <tr>
+    <td>
+		<input type=checkbox name="tb_REVSURF" id="tb_REVSURF" checked onClick="SUtb_REVSURF(this.checked)">
+		<img src='../icons/revsurf_s.png'><span name="t39" id="t39">Revolved surface</span>
+		</input>
+		</td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+
+	</tr>
+	<tr>
+		<td colspan=5 bgcolor=#aabadd>
+		<input type=checkbox name="tb_Edit" id="tb_Edit" checked onClick="SUtb_Edit(this.checked)">
+		<b><span name="sm3" id="sm3">Toolbar group: Edit and modify</span></b>			
+		</input>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+		<input type=checkbox name="tb_MVTX" id="tb_MVTX" checked onClick="SUtb_MVTX(this.checked)">
+		<img src='../icons/move_vertex_s.png'><span name="t8" id="t8">Move vertex</span>			
+		</input>
+		</td>
+
+		<td>
+		<input type=checkbox name="tb_FLTE" id="tb_FLTE" checked onClick="SUtb_FLTE(this.checked)">
+		<img src='../icons/fillet_s.png'><span name="t9" id="t9">Fillet edges</span>			
+		</input>
+		</td>
+
+		<td>
+		<input type=checkbox name="tb_CMFE" id="tb_CMFE" checked onClick="SUtb_CMFE(this.checked)">
+		<img src='../icons/chamfer_s.png'><span name="t10" id="t10">Chamfer edges</span>			
+		</input>
+		</td>
+
+		<td>
+		<input type=checkbox name="tb_EXTD" id="tb_EXTD" checked onClick="SUtb_EXTD(this.checked)">
+		<img src='../icons/extend_s.png'><span name="t11" id="t11">Extend edges</span>			
+		</input>
+		</td>
+
+		<td>
+		<input type=checkbox name="tb_OFSE" id="tb_OFSE" checked onClick="SUtb_OFSE(this.checked)">
+		<img src='../icons/offset_edge_s.png'><span name="t12" id="t12">Offset edges</span>			
+		</input>
+		</td>
+	
+	</tr>
+	<tr>
+		<td>
+		<input type=checkbox name="tb_HLFC" id="tb_HLFC" checked onClick="SUtb_HLFC(this.checked)">
+		<img src='../icons/hline_faces_s.png'><span name="t13" id="t13">Horizontal slice on face</span>			
+		</input>
+		</td>
+	
+		<td>
+		<input type=checkbox name="tb_SLPEDG" id="tb_SLPEDG" checked onClick="SUtb_SLPEDG(this.checked)">
+		<img src='../icons/slopeedges_s.png'><span name="t35" id="t35">Slope selected edges</span>			
+		</input>
+		</td>
+	
+		<td>
+		</td>
+	
+		<td>
+		</td>
+	
+		<td>
+		</td>
+
+	</tr>
+	<tr>
+		<td colspan=5 bgcolor=#aabadd>
+		<input type=checkbox name="tb_Array" id="tb_Array" checked onClick="SUtb_Array(this.checked)">
+		<b><span name="sm4" id="sm4">Toolbar group: Arrays</span></b>			
+		</input>
+		</td>
+	</tr>
+	<tr>
+		<td>
+		<input type=checkbox name="tb_LNARR" id="tb_LNARR" checked onClick="SUtb_LNARR(this.checked)">
+		<img src='../icons/linear_array_s.png'><span name="t14" id="t14">Linear array</span>			
+		</input>
+		</td>
+	
+		<td>
+		<input type=checkbox name="tb_RCARR" id="tb_RCARR" checked onClick="SUtb_RCARR(this.checked)">
+		<img src='../icons/rect_array_s.png'><span name="t15" id="t15">Rectangular array</span>			
+		</input>
+		</td>
+	
+		<td>
+		<input type=checkbox name="tb_POARR" id="tb_POARR" checked onClick="SUtb_POARR(this.checked)">
+		<img src='../icons/polar_array_s.png'><span name="t16" id="t16">Polar array</span>			
+		</input>
+		</td>
+
+		<td>
+		</td>
+	
+		<td>
+		</td>
+
+
+	</tr>
+	<tr>
+		<td colspan=5 bgcolor=#aabadd>
+		<input type=checkbox name="tb_Wall" id="tb_Wall" checked onClick="SUtb_Wall(this.checked)">
+		<b><span name="sm5" id="sm5">Toolbar group: Walls and partitions</span></b>			
+		</input>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+		<input type=checkbox name="tb_VXWLL" id="tb_VXWLL" checked onClick="SUtb_VXWLL(this.checked)">
+		<img src='../icons/wall1_s.png'><span name="t17" id="t17">Vertical wall</span>		
+		</input>
+		</td>
+	
+		<td>
+		<input type=checkbox name="tb_OPNG" id="tb_OPNG" checked onClick="SUtb_OPNG(this.checked)">
+		<img src='../icons/opening_s.png'><span name="t18" id="t18">Opening on wall</span>			
+		</input>
+		</td>
+	
+		<td>
+		<input type=checkbox name="tb_HGRV" id="tb_HGRV" checked onClick="SUtb_HGRV(this.checked)">
+		<img src='../icons/hgroove_s.png'><span name="t20" id="t20">Horizontal groove on face</span>			
+		</input>
+		</td>
+
+		<td>
+		</td>
+	
+		<td>
+		</td>
+
+	</tr>
+	<tr>
+		<td colspan=5 bgcolor=#aabadd>
+		<input type=checkbox name="tb_Staircase" id="tb_Staircase" checked onClick="SUtb_Staircase(this.checked)">
+		<b><span name="sm6" id="sm6">Toolbar group: Staircases</span></b>			
+		</input>
+		</td>
+	</tr>
+
+
+	<tr>
+		<td>
+		<input type=checkbox name="tb_STR1" id="tb_STR1" checked onClick="SUtb_STR1(this.checked)">
+		<img src='../icons/staircase1_s.png'><span name="t23" id="t23">Single flight staircase</span>		
+		</input>
+		</td>
+
+		<td>
+		<input type=checkbox name="tb_STR2" id="tb_STR2" checked onClick="SUtb_STR2(this.checked)">
+		<img src='../icons/staircase2_s.png'><span name="t24" id="t24">Staircase type 2</span>	
+		</input>
+		</td>
+
+		<td>
+		<input type=checkbox name="tb_STR3" id="tb_STR3" checked onClick="SUtb_STR3(this.checked)">
+		<img src='../icons/staircase3_s.png'><span name="t25" id="t25">Staircase type 3</span>	
+		</input>
+		</td>
+
+		<td>
+		<input type=checkbox name="tb_STR4" id="tb_STR4" checked onClick="SUtb_STR4(this.checked)">
+		<img src='../icons/staircase4_s.png'><span name="t26" id="t26">Staircase type 4</span>	
+		</input>
+		</td>
+
+		<td>
+		<input type=checkbox name="tb_SPSTR" id="tb_SPSTR" checked onClick="SUtb_SPSTR(this.checked)">
+		<img src='../icons/spiralstair_s.png'><span name="t27" id="t27">Spiral staircase</span>
+		</input>
+		</td>
+
+	</tr>
+	<tr>
+		<td>
+		<input type=checkbox name="tb_ESCL" id="tb_ESCL" checked onClick="SUtb_ESCL(this.checked)">
+		<img src='../icons/escalator_s.png'><span name="t28" id="t28">Build escalator</span>
+		</input>
+		</td>
+	
+		<td>
+		</td>
+	
+		<td>
+		</td>
+		<td>
+		</td>
+	
+		<td>
+		</td>
+
+	</tr>
+
+	<tr>
+		<td colspan=5 bgcolor=#aabadd>
+		<input type=checkbox name="tb_Win" id="tb_Win" checked onClick="SUtb_Win(this.checked)">
+		<b><span name="sm7" id="sm7">Toolbar group: Doors and windows</span></b>			
+		</input>
+		</td>
+	</tr>
+
+
+
+	<tr>
+		<td>
+		<input type=checkbox name="tb_WFRM" id="tb_WFRM" checked onClick="SUtb_WFRM(this.checked)">
+		<img src='../icons/wframe_s.png'><span name="t29" id="t29">Create window frame</span>
+		</input>
+		</td>
+
+		<td>
+		<input type=checkbox name="tb_DFRM" id="tb_DFRM" checked onClick="SUtb_DFRM(this.checked)">
+		<img src='../icons/dframe_s.png'><span name="t30" id="t30">Create door frame</span>
+		</input>
+		</td>
+
+		<td>
+		<input type=checkbox name="tb_PNLD" id="tb_PNLD" checked onClick="SUtb_PNLD(this.checked)">
+		<img src='../icons/paneldivide_s.png'><span name="t31" id="t31">Panel divider</span>
+		</input>
+		</td>
+
+		<td>
+		<input type=checkbox name="tb_SCRN1" id="tb_SCRN1" checked onClick="SUtb_SCRN1(this.checked)">
+		<img src='../icons/screen1_s.png'><span name="t19" id="t19">Create screen</span>
+		</input>
+		</td>
+		<td>
+		<input type=checkbox name="tb_HLVR" id="tb_HLVR" checked onClick="SUtb_HLVR(this.checked)">
+		<img src='../icons/hlouvres_s.png'><span name="t21" id="t21">Create horizontal louvres</span>
+		</input>
+		</td>
+
+	</tr>
+	<tr>
+		<td>
+		<input type=checkbox name="tb_VLVR" id="tb_VLVR" checked onClick="SUtb_VLVR(this.checked)">
+		<img src='../icons/vlouvres_s.png'><span name="t22" id="t22">Create vertical louvres</span>
+		</input>
+		</td>
+		<td>
+		<input type=checkbox name="tb_RGRL" id="tb_RGRL" checked onClick="SUtb_RGRL(this.checked)">
+		<img src='../icons/rgrille_s.png'><span name="t41" id="t41">Rectangular grille</span>
+		</input>
+		</td>
+
+		<td>
+		<input type=checkbox name="tb_CGRL" id="tb_CGRL" checked onClick="SUtb_CGRL(this.checked)">
+		<img src='../icons/cgrille_s.png'><span name="t42" id="t42">Circular grille</span>
+		</input>
+		</td>
+
+		<td>
+		</td>
+	
+		<td>
+		</td>
+
+	</tr>
+	<tr>
+		<td colspan=5 bgcolor=#aabadd>
+		<input type=checkbox name="tb_Roof" id="tb_Roof" checked onClick="SUtb_Roof(this.checked)">
+		<b><span name="sm8" id="sm8">Toolbar group: Roof</span></b>			
+		</input>
+		</td>
+	</tr>
+
+
+	<tr>
+		<td>
+		<input type=checkbox name="tb_RFT1" id="tb_RFT1" checked onClick="SUtb_RFT1(this.checked)">
+		<img src='../icons/rafter1_s.png'><span name="t32" id="t32">Create rafters, joists</span>
+		</input>
+		</td>
+
+		<td>
+		<input type=checkbox name="tb_RF1" id="tb_RF1" checked onClick="SUtb_RF1(this.checked)">
+		<img src='../icons/roof1_s.png'><span name="t33" id="t33">Roof rafters</span>
+		</input>
+		</td>
+
+
+		<td>
+		<input type=checkbox name="tb_HPRF" id="tb_HPRF" checked onClick="SUtb_HPRF(this.checked)">
+		<img src='../icons/hiproof_s.png'><span name="t34" id="t34">Create hip roof</span>
+		</input>
+		</td>
+
+
+
+	</tr>
+
+	<tr>
+		<td colspan=5 bgcolor=#acacac>
+	        <input type=button name="do_managetb" id="do_managetb" value="OK"
+        	onClick="SUdomanagetb(this.value)">
+        	<input type=button name="exit_managetb" id="exit_managetb" value="Cancel" 
+        	onClick="SUexitmanagetb(this.value)">
+        	</td>
+	</tr>
+	</table>
+        </form>
+        	<font size="2pt"><i><span name="author" id="author">.</span></i></font>
+      </div>
+      
+ 
+      </body>
+      
+</html>

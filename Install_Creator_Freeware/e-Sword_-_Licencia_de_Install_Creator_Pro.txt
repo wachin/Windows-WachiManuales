@@ -1,0 +1,124 @@
+
+
+
+ 
+ <b><fontsize=12>¡Hola! soy Wachin, Dios te ama</font></b>.
+ 
+Me gustaría que pudieras pensar en algún amigo, familiar, o alguien que puidera necesitar tener en su computadora la Biblia y muchos recursos de estudio los cuales aquí los puedes encontrar. 
+Si quieres puedes ir donde esa persona e instalarle el e-Sword 9 con los Módulos, y también le puedes dejar este instalador para que los instale en otra PC...........Medite en esto:
+
+"No mirando cada uno por lo suyo propio, sino cada cual también por lo de los otros. Haya, pués, en vosotros éste sentir que hubo también en Cristo Jesús" Filipenses 2:4,5  (así era Jesús)
+
+ <b><fontsize=12>El contenido de estos Módulos para e-Swod 9 es:</font></b>.
+
+
+
+Armonia-Galvin.harx
+Armonia-Hayford.harx
+Armonia-Panoramas.harx
+Armonia-Robertson(Es).harx
+Armonia-Thompson.harx
+Biblia-al-Dia.bblx
+Biblia-Dios-Habla-Hoy.bblx
+Biblia-Greek-New-Testament-(Majority-Text)(gnt).bblx
+Biblia-Greek-Old-Testament(Septuagint)(lxx).bblx
+Biblia-Hebreo-Antiguo-Testamento-(hot).bblx
+Biblia-Hebreo-Antiguo-Testamento-+-numeros-Strong(hot+).bblx
+Biblia-Interlineal-Esp-NA27+.bblx
+Biblia-Interlineal-Esp-Tisch+.bblx
+Biblia-Internacional-Standard-Version(isv).bblx
+Biblia-Jerusalen.bblx
+Biblia-King-James-2000.bblx
+Biblia-La-Biblia-de-Las-Americas.bblx
+Biblia-Latinoamericana-95.bblx
+Biblia-Latinoamericana-de-Hoy.bblx
+Biblia-Lenguaje-Sencillo.bblx
+Biblia-NVI.bblx
+Biblia-para-Todos.bblx
+Biblia-RV-1960.bblx
+Biblia-Sagradas-Escrituras.bblx
+Biblia-Scrivener-Textus-Receptus-(Greek-New-Testament-Textus-R.)(gnt-tr).bblx
+Biblia-Sueca-Svenska-Folkbibeln-98-(sfb).bblx
+Biblia-Torah-(5-libros).bblx
+kjv+.bblx
+kjv.bblx
+Comantario-Notas-La-Biblia-Las-Americas-27-6.cmtx
+Comentario-Biblia-Diario-Vivir.cmtx
+Comentario-Biblia-Plenitud.cmtx
+Comentario-Dios-Habla-Hoy.cmtx
+Comentario-Mathew-Henry.cmtx
+Comentario-Notas-Biblia-Latinoamericana-95.cmtx
+Comentario-Notas-Reina-Valera-95-.cmtx
+Devocional-Spurgeon-Eng.devx
+Devocional-William-MacDonald.devx
+Diccionario-Barclay.dctx
+Diccionario-Biblico-Siglo21.dctx
+Diccionario-Bíblico-Arqueológico-Charles-Pfeiffer.dctx
+Diccionario-CAMR.dctx
+Diccionario-Certeza.dctx
+Diccionario-Concordancia.dctx
+Diccionario-de-Anecdotas.dctx
+Diccionario-de-Hebreo-Bíblico-(con-Strong-).dctx
+Diccionario-de-las-ReligionesI.dctx
+Diccionario-de-Nombres-RV1909.dctx
+Diccionario-DLP.dctx
+Diccionario-Donde-Buscar.dctx
+Diccionario-DRAE1.dctx
+Diccionario-DRAE2.dctx
+Diccionario-Ebenezer1.dctx
+Diccionario-Geografia.dctx
+Diccionario-Hitchcock.dctx
+Diccionario-Léxico-Griego-Español-del-NT-A.Tuggy.dctx
+Diccionario-MiniBiografía.dctx
+Diccionario-Nelson.dctx
+Diccionario-RAVASI.dctx
+Diccionario-Strong-Español.dctx
+Diccionario-Vine-AT.dctx
+Diccionario-Vine-NT.dctx
+Top-e-ST-03-Breve-Historia-del-Canon-Bíblico---G.-Báez.topx
+Top-e-ST-04-La-poesía-del-Antiguo-Testamento..-L.-Zogbo,-E.Wendland.topx
+Top-e-ST-05-Significado-y-Diversidad-Cultural--E.-Nida,W.-Reyburn.topx
+Top-e-ST-09-Aprendamos-griego-Hale,-Clarence.topx
+Top-Guerras-de-los-Judíos.topx
+Top-Halley-Compendio-Manual.topx
+Top-Introducción-a-la-Biblia-por-Casiodoro-de-Reina.topx
+Top-Spurgeon-Tesoro-de-David.topx
+Top-Spurgeon-Verdadera-Esencia-del-Avivamiento.topx
+Mapa-de-la-Biblia-Inernacional-Standard-Version(isv).mapx
+Mapa-División-de-las-12-Tribus.mapx
+Mapa-Israel-Wanderings.mapx
+Mapa-Usos-y-Costumbres.mapx
+Mapa-Vida,-Eventos-y-Ministerio-de-Jesús.mapx
+
+ <b><fontsize=12>Dirección de descarga</font></b>.
+Los Módulos en español los descargué:
+
+http://amistadcuauti.wordpress.com/2009/06/12/pack-de-modulos-para-e-sword-9-en-espanol/
+
+Reviselo algún día por un caso pongan alguno más, de allí yo he descargado estos:
+
+http://rapidshare.com/files/243774800/Pack_de_Biblias.exe
+http://rapidshare.com/files/243776624/Pack_de_Comentarios.exe
+http://rapidshare.com/files/243777196/Pack_de_Devocionales.exe
+http://rapidshare.com/files/243778303/Pack_de_Diccionarios.exe
+http://rapidshare.com/files/243778926/Pack_de_T_picos.exe
+http://rapidshare.com/files/245362369/Pack_de_Armonias.exe
+http://rapidshare.com/files/245362705/Pack_de_Mapas.exe
+
+Los módulos del Hebreo y Griego orignales de la Biblia los descargué de (y otros mas):
+
+www.e-sword.net 
+
+y en Ingles algunos los descargué de:
+
+http://www.blogger.com/feeds/7698748072203931209/posts/default
+
+Nota: En este momento todavía no hay muchos lugares donde se pueden descargar modulos para e-Sword 9, con el paso del tiempo los habrá, podrías luego buscar en otros lados (estos módulos no funcionan para e-Sword 8 y anteriores).
+
+Martes, de Octubre de 2010
+
+por: Washington Indacochea Delgado
+
+Jipijapa/Manabí/Ecuador
+
+wachin_id@hotmail.com

@@ -1,0 +1,55 @@
+Reparar arranque de Win 7 desde MS-DOS
+http://www.taringa.net/posts/hazlo-tu-mismo/15737760/Reparar-arranque-de-Win-7-desde-MS-DOS.html
+
+Reparar arranque de Windows 7 desde el símbolo del sistema 
+
+Reparar el arranque de Windows 7 usando el símbolo del sistema que se puede ejecutar desde las opciones de recuperación o desde el mismo DVD original. 
+
+Si tu equipo con Windows 7 presenta problemas de inicio, puedes probar a ejecutar una serie de lineas de comandos desde el simbolo del sistema que en muchos casos soluciona la avería. 
+
+En Windows XP usabamos el conocido comando chkdsk para solucionar este tipo de problemas, que también se puede ejecutar desde el mismo símbolo del sistema en Windows 7. Pero el nuevo sistema de Microsoft añade la herramienta “Bootrec.exe” a la cual debemos de llamar usando una serie de comandos. 
+
+
+1- Antes que nada tendremos que cargar las opciones de recuperación de Windows 7. Para ello hay diferentes opciones de hacerlo. 
+Elije el modo de ejecución que más te convenga: 
+
+- Antes de arrancar el sistema pulsando la tecla F8 (El más sencillo y rápido). 
+- Desde el DVD original de algunas de las versiones de Windows 7. 
+- Creando un cd con la opción correspondiente en Windows 7. 
+
+2- Después de arrancar las opciones de recuperación de Windows 7 hacemos clic sobre la opción simbolo del sistema para abrir una ventana MS-DOS: 
+
+Reparar arranque de Win 7 desde MS-DOS 
+
+3- Las lineas de comandos que utilizaremos para intentar solucionar problemas de arranque son las siguientes: 
+
+********************************************************************************
+bootrec /fixmbr 
+bootrec /fixboot 
+bootrec /rebuildbcd 
+********************************************************************************
+
+Nota: me funcionó con el DVD de reparación éste: bootrec /fixboot 
+
+- bootrec /fixmbr 
+La opción /fixmbr escribe un MBR compatible con Windows 7 en la partición del sistema. Esta opción no sobrescribe la tabla de particiones existente. Utiliza esta opción cuando tengas que resolver un problema debido a que el MBR esté dañado, o tengas que quitar código no estándar del MBR. 
+
+- bootrec /fixboot 
+La opción /fixboot escribe un nuevo sector de arranque en la partición del sistema utilizando uno compatible con Windows Vista. Usa esta opción si se cumple alguna de las condiciones siguientes: 
+
+– El sector de arranque se ha reemplazado con un sector de arranque de Windows Vista que no es estándar. 
+– El sector de arranque se daña. 
+– Se ha instalado un sistema operativo Windows anterior una vez instalado Windows Vista. En esta situación, el equipo se inicia con el Cargador de Windows NT (NTLDR) en lugar de con el Administrador de arranque de Windows (Bootmgr.exe). 
+
+- bootrec /rebuildbcd 
+La opción /rebuildbcdexamina todos los discos en busca de instalaciones que sean compatibles con Windows Vista. Además, esta opción le permite seleccionar las instalaciones que desea agregar al almacén del BCD. Utiliza esta opción cuando tenga que volver a generar completamente el BCD. 
+Está es la opción que más soluciona y corrige problemas de arranque. 
+
+
+
+4- Ventana del simbolo del sistema con todas las lineas de comandos anteriores ejecutadas: 
+
+reparar 
+
+Conclusión: Antes de realizar estos pasos también puedes probar con la primera opción de “Reparar Inicio” de las mismas opciones de recuperación. 
+Siguiendo estos pasos es muy probable que en alguna ocasión soluciones problemas de arranque. Si es el caso y no sabes cual ha sido el causante de la avería, realiza una comprobación rutinaria del hardware y software de su equipo como memoria RAM, Disco duro, drivers o programas instalados recientemente. Pero como cada ordenador es un mundo puede que no te funcione, si es así empieza a realizar un test al hardware básico de tu equipo como RAM,disco duro,problemas ocasionados por virus,drivers,programas..; 

@@ -1,0 +1,35 @@
+How do I profile my EXE or DLL file with Dependency Walker? - MATLAB Answers - MATLAB Central
+https://www.mathworks.com/matlabcentral/answers/95906-how-do-i-profile-my-exe-or-dll-file-with-dependency-walker
+
+How do I profile my EXE or DLL file with Dependency Walker?
+Asked by MathWorks Support Team  on 27 Jun 2009
+Latest activity Answered by Linus Atorf on 14 Dec 2015
+Accepted Answer by MathWorks Support Team 
+141 views (last 30 days)
+I would like to profile my EXE or DLL file and view dependencies with Dependency Walker.
+ 2 Answers
+MathWorks Support Team
+0
+Link
+Answer by MathWorks Support Team  on 20 Sep 2016
+ Accepted Answer
+
+Dependency Walker is a free tool that allows you to view the dependencies of your DLL or EXE file. In addition, you can profile your module to view the runtime dependencies.
+This tool is available at the following website:
+http://dependencywalker.com
+To view the dependencies of your module, simply open up your module in Dependency Walker. Select View->Full Paths to view the complete pathnames of the dependent files.
+If you want to profile the MATLAB.exe, please make sure you choose the one in the bin/arch folder.
+To profile your module, select Profile->Start Profiling. Provide any inputs your module requires, check the box "Use full paths when logging filenames", and then click "Ok."
+Save the output of Dependency Walker with File->Save As. The file should be saved with a .dwi extension.
+This process will show many failures (such as MPR.DLL) even in working applications; these libraries are not expected to exist on most systems, and are not cause for concern.
+Since MEX-files are shared libraries, you can also profile them with Dependency Walker. You can open the MEX file with Dependency Walker directly to view its dependencies. To do a runtime profile, you must open MATLAB in Dependency Walker, profile MATLAB as described above, and then call your MEX file from within MATLAB as usual. Dependency Walker will display your MEX file as a dependency of MATLAB and the libraries your MEX-file depends upon as well. For more detailed instructions on this procedure, see the Related Solution below.
+  0 Comments
+Sign in to comment.
+
+Linus Atorf
+0
+Link
+Answer by Linus Atorf on 14 Dec 2015
+
+Please note that for the "Start Profiling..." command to be enabled in Dependency Walker, you need to have Dependency Walker in the architecture matching the profiled executable (i.e. x86 or x64). See http://www.dependencywalker.com/faq.html
+You shouldn't profile the MATLAB-Launcher (e.g. in C:\Program Files\MATLAB\R2014b\bin), but the correct MATLAB executable (e.g. in C:\Program Files\MATLAB\R2014b\bin\win64). This worked for me!

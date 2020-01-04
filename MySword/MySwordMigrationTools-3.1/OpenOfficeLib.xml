@@ -1,0 +1,3492 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>OpenOfficeLib</name>
+    </assembly>
+    <members>
+        <member name="T:OOLib.Enumeration">
+            <summary>
+            Provides functionality to enumerate the contents of a container.
+            </summary>
+        </member>
+        <member name="T:OOLib.ComObjectWrapper">
+            <summary>
+            Base wrapper class for COM objects.
+            </summary>
+        </member>
+        <member name="M:OOLib.ComObjectWrapper.#ctor">
+            <summary>
+            Constructor
+            </summary>
+            <remarks>
+            After using this constructor, the ComObj must be set manually!
+            </remarks>
+        </member>
+        <member name="M:OOLib.ComObjectWrapper.#ctor(System.Object)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="comObject">COM object</param>
+        </member>
+        <member name="M:OOLib.ComObjectWrapper.OnComObjSet">
+            <summary>
+            Is called when the ComObj is finally set.
+            </summary>
+        </member>
+        <member name="M:OOLib.ComObjectWrapper.EqualsComObject(System.Object)">
+            <summary>
+            Compares the wrapped COM object with an other
+            </summary>
+            <param name="other">Other com object.</param>
+            <returns>Return true if the COM objects are the same, otherwise false</returns>
+            <remarks>
+            The base implementation compares the COM objects by Object.ReferenceEquals().
+            </remarks>
+        </member>
+        <member name="M:OOLib.ComObjectWrapper.GetObjectWrapper``1(System.Object)">
+            <summary>
+            Gets the warpper object for the given COM object.
+            </summary>
+            <typeparam name="T">Type of the desired wrapper object.</typeparam>
+            <param name="comObject">COM object to wrap</param>
+            <returns>Returns the COM object wrapper.</returns>
+            <remarks>
+            If there is already a wrapper object for the given COM object then the existion one is returned.
+            Else a new one is created.
+            </remarks>
+        </member>
+        <member name="M:OOLib.ComObjectWrapper.InvokeMethod(System.String,System.Object[])">
+            <summary>
+            Invokes an COM method on this object.
+            </summary>
+            <param name="name">Method name.</param>
+            <param name="args">Method arguments.</param>
+            <returns>Returns the return value of the method, or null if method has no return value.</returns>
+        </member>
+        <member name="M:OOLib.ComObjectWrapper.InvokeMethod(System.String,System.Object[],System.Boolean[])">
+            <summary>
+            Invokes an COM method on this object.
+            </summary>
+            <param name="name">Method name.</param>
+            <param name="args">Method arguments.</param>
+            <param name="byRef">Array with a bool value for each argument. true means argument is by ref, false by value.</param>
+            <returns>Returns the return value of the method, or null if method has no return value.</returns>
+        </member>
+        <member name="M:OOLib.ComObjectWrapper.InvokeMethodOf(System.Object,System.String,System.Object[])">
+            <summary>
+            Invokes an COM method on the target object.
+            </summary>
+            <param name="target">Target COM object.</param>
+            <param name="name">Method name.</param>
+            <param name="args">Method arguments.</param>
+            <returns>Returns the return value of the method, or null if method has no return value.</returns>
+        </member>
+        <member name="M:OOLib.ComObjectWrapper.InvokeMethodOf(System.Object,System.String,System.Object[],System.Boolean[])">
+            <summary>
+            Invokes an COM method on the target object.
+            </summary>
+            <param name="target">Target COM object.</param>
+            <param name="name">Method name.</param>
+            <param name="args">Method arguments.</param>
+            /// <param name="byRef">Array with a bool value for each argument. true means argument is by ref, false by value.</param>
+            <returns>Returns the return value of the method, or null if method has no return value.</returns>
+        </member>
+        <member name="M:OOLib.ComObjectWrapper.SetProperty(System.String,System.Object)">
+            <summary>
+            Sets a value for a COM Property on this object.
+            </summary>
+            <param name="name">Property name.</param>
+            <param name="value">New value.</param>
+        </member>
+        <member name="M:OOLib.ComObjectWrapper.SetPropertyOf(System.Object,System.String,System.Object)">
+            <summary>
+            Sets a value for a COM Property on the target object.
+            </summary>
+            <param name="target">Target COM object.</param>
+            <param name="name">Property name.</param>
+            <param name="value">New value.</param>
+        </member>
+        <member name="M:OOLib.ComObjectWrapper.GetProperty(System.String)">
+            <summary>
+            Sets the current value for a COM Property on this object.
+            </summary>
+            <param name="name">Property name.</param>
+            <returns>Return the current value of the COM property.</returns>
+        </member>
+        <member name="M:OOLib.ComObjectWrapper.GetPropertyOf(System.Object,System.String)">
+            <summary>
+            Sets the current value for a COM Property on the target object.
+            </summary>
+            <param name="target">Target COM object.</param>
+            <param name="name">Property name.</param>
+            <returns>Return the current value of the COM property.</returns>
+        </member>
+        <member name="M:OOLib.ComObjectWrapper.FileNameToUrl(System.String)">
+            <summary>
+            Converts a file name into a url.
+            </summary>
+            <param name="fileName">File name</param>
+            <returns>Returns the url of the given file name.</returns>
+        </member>
+        <member name="M:OOLib.ComObjectWrapper.NotifyPropertyChanged(System.String)">
+            <summary>
+            Raises an PropertyChanged event for the given property.
+            </summary>
+            <param name="propertyName">Property name</param>
+        </member>
+        <member name="M:OOLib.ComObjectWrapper.CheckDisposed">
+            <summary>
+            Checks if the object is disposed and throws an ObjectDisposedException if this is the case.
+            </summary>
+        </member>
+        <member name="M:OOLib.ComObjectWrapper.Dispose">
+            <summary>
+            Disposes the object.
+            </summary>
+            <remarks>
+            This is the .Net Dispose() and will onyl dispose the wrapper.
+            Call OODispose() to dispose the OpenOffice object.
+            </remarks>
+        </member>
+        <member name="M:OOLib.ComObjectWrapper.Finalize">
+            <summary>
+            Destructor
+            </summary>
+        </member>
+        <member name="M:OOLib.ComObjectWrapper.Dispose(System.Boolean)">
+            <summary>
+            Disposes the object
+            </summary>
+            <param name="disposing">true if this is called from disposing, false if called from destructor.</param>
+        </member>
+        <member name="P:OOLib.ComObjectWrapper.ComObj">
+            <summary>
+            Gets the COM object.
+            </summary>
+        </member>
+        <member name="E:OOLib.ComObjectWrapper.PropertyChanged">
+            <summary>
+            Occures when the value of an property has changed.
+            </summary>
+        </member>
+        <member name="P:OOLib.ComObjectWrapper.IsDisposed">
+            <summary>
+            Gets if the object is disposed.
+            </summary>
+            <remarks>
+            If the object is created by the parameterless constructor, the IsDisposed returns true 
+            until the property ComObj is set!
+            </remarks>
+        </member>
+        <member name="T:OOLib.IEnumeration">
+            <summary>
+            Provides functionality to enumerate the contents of a container. 
+            </summary>
+            <remarks>
+            An object that implements the XEnumeration interface generates a series of elements, one at a time. 
+            Successive calls to the XEnumeration::nextElement method return successive elements of the series. 
+            For example (Java), to print all elements of a vector aVect: 
+            for ( XEnumeration xEnum = aVect.elements() ; 
+            xEnum.hasMoreElements() ; ) 
+            {
+              System.out.println( xEnum.nextElement() );
+            }
+            If the object changed, the behavior of the enumeration is not specified. This is not a remote interface. 
+            </remarks>
+        </member>
+        <member name="M:OOLib.IEnumeration.NextElement">
+            <summary>
+            Returns the next element of this enumeration.
+            </summary>
+            <returns>Returns the next element of this enumeration.</returns>
+        </member>
+        <member name="P:OOLib.IEnumeration.HasMoreElements">
+            <summary>
+            Gets whether this enumeration contains more elements. 
+            </summary>
+        </member>
+        <member name="M:OOLib.Enumeration.#ctor">
+            <summary>
+            Constructor
+            </summary>
+            <remarks>
+            After using this constructor, the ComObj must be set manually!
+            </remarks>
+        </member>
+        <member name="M:OOLib.Enumeration.#ctor(System.Object)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="comObject">COM object</param>
+        </member>
+        <member name="M:OOLib.Enumeration.NextElement">
+            <summary>
+            Returns the next element of this enumeration.
+            </summary>
+            <returns>Returns the next element of this enumeration.</returns>
+            <remarks>!!! Not tested !!!</remarks>
+        </member>
+        <member name="P:OOLib.Enumeration.HasMoreElements">
+            <summary>
+            Gets whether this enumeration contains more elements. 
+            </summary>
+            <remarks>!!! Not tested !!!</remarks>
+        </member>
+        <member name="T:OOLib.Text">
+            <summary>
+            Extends a SimpleText by the capability of inserting TextContents.
+            </summary>
+        </member>
+        <member name="T:OOLib.SimpleText">
+            <summary>
+            Is the main interface for a distinct text unit, i.e. the main text of a document, the text for headers and footers or for single cells of a table.
+            </summary>
+        </member>
+        <member name="T:OOLib.TextRange">
+            <summary>
+            Describes the object's position in a text.
+            </summary>
+            <remarks>
+            It represents a text range. The beginning and end of the range may be identical.
+            </remarks>
+        </member>
+        <member name="M:OOLib.TextRange.#ctor">
+            <summary>
+            Constructor
+            </summary>
+            <remarks>
+            After using this constructor, the ComObj must be set manually!
+            </remarks>
+        </member>
+        <member name="M:OOLib.TextRange.#ctor(System.Object)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="comObject">COM object</param>
+        </member>
+        <member name="M:OOLib.TextRange.GetText">
+            <summary>
+            Gets the text interface in which the text position is contained.
+            </summary>
+            <returns>Returns the text interface in which the text position is contained.</returns>
+            <remarks>!!! Not tested !!!</remarks>
+        </member>
+        <member name="M:OOLib.TextRange.GetStart">
+            <summary>
+            Gets the text range which contains only the start of this text range.
+            </summary>
+            <returns>Returns a text range which contains only the start of this text range.</returns>
+            <remarks>!!! Not tested !!!</remarks>
+        </member>
+        <member name="M:OOLib.TextRange.GetEnd">
+            <summary>
+            Gets the a text range which contains only the end of this text range.
+            </summary>
+            <returns>Returns a text range which contains only the end of this text range.</returns>
+            <remarks>!!! Not tested !!!</remarks>
+        </member>
+        <member name="P:OOLib.TextRange.String">
+            <summary>
+            Gets or sets the string that is included in this text range.
+            </summary>
+            <remarks>
+            When String is set the whole string of characters of this piece of text is replaced.
+            All styles are removed when applying this method.
+            </remarks>
+        </member>
+        <member name="M:OOLib.SimpleText.#ctor">
+            <summary>
+            Constructor
+            </summary>
+            <remarks>
+            After using this constructor, the ComObj must be set manually!
+            </remarks>
+        </member>
+        <member name="M:OOLib.SimpleText.#ctor(System.Object)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="comObject">COM object</param>
+        </member>
+        <member name="M:OOLib.SimpleText.CreateTextCursor">
+            <summary>
+            Creates a new instance of a TextCursor service which can be used to travel in the given text context.
+            </summary>
+            <returns>Gets a new instance of a TextCursor service which can be used to travel in the given text context.</returns>
+            <remarks>!!! Not tested !!!</remarks>
+        </member>
+        <member name="M:OOLib.SimpleText.CreateTextCursorByRange(OOLib.TextRange)">
+            <summary>
+            Creates a new instance of a TextCursor which is located at the specified TextRange to travel in the given text context.
+            </summary>
+            <param name="textPosition">Specifies the start position for the new TextCursor.</param>
+            <returns>Returns a new instance of a TextCursor which is located at the specified TextRange to travel in the given text context.</returns>
+            <remarks>
+            The initial position is set to textPosition.
+            </remarks>
+        </member>
+        <member name="M:OOLib.SimpleText.InsertString(OOLib.TextRange,System.String,System.Boolean)">
+            <summary>
+            Inserts a string of characters into the text.
+            </summary>
+            <param name="range">
+            Specifies the position of insertion. For example, XSimpleText::createTextCursor can be used to get an XTextRange for this argument.
+            If the parameter bAbsorb was true the text range will contain the new inserted string, otherwise the range (and it's text) will remain unchanged.
+            </param>
+            <param name="str">Specifies the string to insert.</param>
+            <param name="absorb">
+            Specifies whether the text spanned by range will be replaced. If true then the content of range will be replaced by str, 
+            otherwise str will be inserted at the beginning of range.
+            </param>
+            <remarks>
+            The string may contain the following white spaces:
+            <list type="unordered">
+            <item>blank</item>
+            <item>tab</item>
+            <item>cr (which will insert a paragraph break)</item>
+            <item>lf (which will insert a line break)</item>
+            </list>
+            !!! Not tested !!!
+            </remarks>
+        </member>
+        <member name="M:OOLib.SimpleText.InsertControlCharacter(OOLib.TextRange,OOLib.ControlCharacter,System.Boolean)">
+            <summary>
+            Inserts a control character (like a paragraph break or a hard space) into the text. 
+            </summary>
+            <param name="range">
+            Specifies the position of insertion. For example, XSimpleText::createTextCursor can be used to get an XTextRange for this argument.
+            If the parameter bAbsorb was true the text range will contain the new inserted string, otherwise the range (and it's text) will remain unchanged.
+            </param>
+            <param name="controlCharacter">ControlCharacter to insert.</param>
+            <param name="absorb">
+            Specifies whether the text spanned by range will be replaced. If true then the content of range will be replaced by str, 
+            otherwise str will be inserted at the beginning of range.
+            </param>
+            <remarks>!!! Not tested !!!</remarks>
+        </member>
+        <member name="M:OOLib.Text.#ctor">
+            <summary>
+            Constructor
+            </summary>
+            <remarks>
+            After using this constructor, the ComObj must be set manually!
+            </remarks>
+        </member>
+        <member name="M:OOLib.Text.#ctor(System.Object)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="comObject">COM object</param>
+        </member>
+        <member name="M:OOLib.Text.InsertTextContent(OOLib.TextRange,OOLib.TextContent,System.Boolean)">
+            <summary>
+            Inserts a content, such as a text table, text frame or text field.
+            </summary>
+            <param name="range">Specifies the position of insertion.</param>
+            <param name="content">The text content to be inserted.</param>
+            <param name="absorb">
+            Specifies whether the text spanned by xRange will be replaced. 
+            If true then the content of range will be replaced by content, otherwise content will be inserted at the end of range.
+            </param>
+            <remarks>
+            Which contents are accepted is implementation-specific. Some implementations may only accept contents 
+            which were created by the factory that supplied the same text or the document which contains the text. 
+            </remarks>
+        </member>
+        <member name="M:OOLib.Text.RemoveTextContent(OOLib.TextContent)">
+            <summary>
+            Removes the specified content from the text object. 
+            </summary>
+            <param name="content">The text content to be removed.</param>
+        </member>
+        <member name="T:OOLib.OfficeDocument">
+            <summary>
+            Service which specifies a storable and printable document 
+            </summary>
+            <remarks>
+            All major document-like components should support this service instead of simple components which supports 
+            a ::com::sun::star::frame::Controller or pure ::com::sun::star::awt::XWindow only. 
+            </remarks>
+        </member>
+        <member name="T:OOLib.Component">
+            <summary>
+            allows to exclicitly free resources and break cyclic references. 
+            </summary>
+            <remarks>
+            Actually the real lifetime of an UNO object is controlled by references kept on interfaces of this object. 
+            But there are two distinct meanings in keeping a reference to an interface: 1st to own the object and 2nd to know the object. 
+            You are only allowed to keep references of interfaces to UNO objects if you are by definition the owner of that object or 
+            your reference is very temporary or you have registered an EventListener at that object and release the reference when "disposing" is called.
+            </remarks>
+        </member>
+        <member name="T:OOLib.IController">
+            <summary>
+            allows to exclicitly free resources and break cyclic references. 
+            </summary>
+            <remarks>
+            Actually the real lifetime of an UNO object is controlled by references kept on interfaces of this object. 
+            But there are two distinct meanings in keeping a reference to an interface: 1st to own the object and 2nd to know the object. 
+            You are only allowed to keep references of interfaces to UNO objects if you are by definition the owner of that object or 
+            your reference is very temporary or you have registered an EventListener at that object and release the reference when "disposing" is called.
+            </remarks>
+        </member>
+        <member name="M:OOLib.IController.OODispose">
+            <summary>
+            The owner of an object calls this method to explicitly free all resources kept by this object and thus break cyclic references. 
+            </summary>
+            <remarks>
+            Only the owner of this object is allowed to call this method. The object should release all resources and references 
+            in the easiest possible manner ( for instance no serialization should take place anymore ). 
+            The object must notify all registered listeners using the method XEventListener::disposing. 
+            All notfied objects should release there references to this object without calling 
+            XComponent::removeEventListener (the disposed object will release the listeners eitherway). 
+            After this method has been called, the object should behave as passive as possible, thus it should ignore 
+            all calls in case it can comply with its specification (for instance addEventListener()). Often the object 
+            can't fulfill its specification anymore, in this case it must throw the DisposedException (which is derived 
+            from ::com::sun::star::uno::RuntimeException) when it gets called.
+            For some objects no real owner can be identified, thus it can be disposed from multiple reference holders. 
+            In this case the object should be able to cope with multiple dispose()-calls (which are inevitable in a multithreaded environment). 
+            </remarks>
+        </member>
+        <member name="M:OOLib.Component.#ctor">
+            <summary>
+            Constructor
+            </summary>
+            <remarks>
+            After using this constructor, the ComObj must be set manually!
+            </remarks>
+        </member>
+        <member name="M:OOLib.Component.#ctor(System.Object)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="comObject">COM object</param>
+        </member>
+        <member name="M:OOLib.Component.OODispose">
+            <summary>
+            The owner of an object calls this method to explicitly free all resources kept by this object and thus break cyclic references. 
+            </summary>
+            <remarks>
+            Only the owner of this object is allowed to call this method. The object should release all resources and references 
+            in the easiest possible manner ( for instance no serialization should take place anymore ). 
+            The object must notify all registered listeners using the method XEventListener::disposing. 
+            All notfied objects should release there references to this object without calling 
+            XComponent::removeEventListener (the disposed object will release the listeners eitherway). 
+            After this method has been called, the object should behave as passive as possible, thus it should ignore 
+            all calls in case it can comply with its specification (for instance addEventListener()). Often the object 
+            can't fulfill its specification anymore, in this case it must throw the DisposedException (which is derived 
+            from ::com::sun::star::uno::RuntimeException) when it gets called.
+            For some objects no real owner can be identified, thus it can be disposed from multiple reference holders. 
+            In this case the object should be able to cope with multiple dispose()-calls (which are inevitable in a multithreaded environment). 
+            </remarks>
+        </member>
+        <member name="T:OOLib.IModel">
+            <summary>
+            Represents a component which is created from an URL and arguments.
+            </summary>
+            <remarks>
+            It is a representation of a resource in the sense that it was created/loaded from the resource. 
+            The arguments are passed to the loader to modify its behavior. An example for such an argument is "AsTemplate", 
+            which loads the resource as a template for a new document. (see ::com::sun::star::document::MediaDescriptor for further details) 
+            Models can be controlled by controller components, which are usually views of the model. (see Controller for further details) 
+            If there is at least one controller, there is by definition a current controller. And if that controller supports the 
+            interface ::com::sun::star::view::XSelectionSupplier, it has a current selection too. 
+            </remarks>
+        </member>
+        <member name="M:OOLib.IModel.AttachResource(System.String,System.Object[])">
+            <summary>
+            Informs a model about its resource description.
+            </summary>
+            <param name="url">Specifies the ressource.</param>
+            <param name="arguments">Are optional arguments for that ressource (see ::com::sun::star::document::MediaDescriptor)</param>
+            <returns>true for success, false otherwise</returns>
+        </member>
+        <member name="M:OOLib.IModel.ConnectController(OOLib.Controller)">
+            <summary>
+            Is called whenever a new controller is created for this model. 
+            </summary>
+            <param name="controller">A new controller for this model</param>
+            <remarks>
+            The ::com::sun::star::lang::XComponent interface of the controller must be used to recognize when it is deleted. 
+            </remarks>
+        </member>
+        <member name="M:OOLib.IModel.DisconnectController(OOLib.Controller)">
+            <summary>
+            Is called whenever an existing controller should be deregistered at this model. 
+            </summary>
+            <param name="controller">The existing controller which should be deregistered </param>
+            <remarks>
+            The ::com::sun::star::lang::XComponent interface of the controller must be used to recognize when it is deleted. 
+            </remarks>
+        </member>
+        <member name="M:OOLib.IModel.LockControllers">
+            <summary>
+            Suspends some notifications to the controllers which are used for display updates. 
+            </summary>
+            <remarks>
+            The calls to XModel::lockControllers() and XModel::unlockControllers() may be nested and even overlapping, 
+            but they must be in pairs. While there is at least one lock remaining, some notifications for display updates are not broadcasted. 
+            </remarks>
+        </member>
+        <member name="M:OOLib.IModel.UnlockControllers">
+            <summary>
+            Resumes the notifications which were suspended by XModel::lockControllers(). 
+            </summary>
+            <remarks>
+            The calls to XModel::lockControllers() and XModel::unlockControllers() may be nested and even overlapping, 
+            but they must be in pairs. While there is at least one lock remaining, some notifications for display updates are not broadcasted. 
+            </remarks>
+        </member>
+        <member name="P:OOLib.IModel.Url">
+            <summary>
+            Gets information about the location of this model.
+            </summary>
+        </member>
+        <member name="P:OOLib.IModel.Args">
+            <summary>
+            Gets read acces on currently representation of the ::com::sun::star::document::MediaDescriptor of this model which describes the model and his state
+            </summary>
+        </member>
+        <member name="P:OOLib.IModel.HasControllerLocked">
+            <summary>
+            Gets if there is at least one lock remaining. 
+            </summary>
+            <remarks>
+            While there is at least one lock remaining, some notifications for display updates are not broadcasted to the controllers. 
+            </remarks>
+        </member>
+        <member name="P:OOLib.IModel.CurrentController">
+            <summary>
+            Gets access to the controller which currently controls this model 
+            </summary>
+            <remarks>
+            If the controller which is active is a controller of this model, it will be returned. 
+            If not, the controller which was the last active of this model is returned. 
+            If no controller of this model ever was active, the controller first registered is returned. 
+            If no controller is registered for this model, NULL is returned. 
+            </remarks>
+        </member>
+        <member name="P:OOLib.IModel.CurrentSelection">
+            <summary>
+            Provides read access on current selection on controller .
+            </summary>
+            <remarks>
+            Returns the current selection in the current controller. If there is no current controller, it returns NULL
+            </remarks>
+        </member>
+        <member name="T:OOLib.IStorable">
+            <summary>
+            Offers a simple way to store a component to an URL
+            </summary>
+            <remarks>
+            It is usually only useful for two cases: 
+            1. Large components which are wrapped up in UNO interfaces and for which distinct filters are not available separately as components. 
+            2. Very small components for which only one or very few hard coded file format filters make sense or even exist.
+            </remarks>
+        </member>
+        <member name="M:OOLib.IStorable.GetLocation">
+            <summary>
+            After XStorable::storeAsURL() it returns the URL the object was stored to.
+            </summary>
+            <returns>Returns the URL of the resource which is represented by this object.</returns>
+        </member>
+        <member name="M:OOLib.IStorable.Store">
+            <summary>
+            Stores the data to the URL from which it was loaded.
+            </summary>
+            <remarks>
+            Only objects which know their locations can be stored.
+            </remarks>
+        </member>
+        <member name="M:OOLib.IStorable.StoreAsUrl(System.String,System.Object[])">
+            <summary>
+            Stores the object's persistent data to a URL and makes this URL the new location of the object. 
+            </summary>
+            <param name="url">Specifies the new location of this component as url.</param>
+            <param name="arguments">Optional parameters for saving (see ::com::sun::star::document::MediaDescriptor for further details)</param>
+            <remarks>
+            This is the normal behavior for UI's "save-as" feature.
+            The change of the location makes it necessary to store the document in a format that the object can load. 
+            For this reason the implementation of XStorable::storeAsURL() will throw an exception if a pure export filter is used, 
+            it will accept only combined import/export filters. For such filters the method XStorable::storeToURL() must be 
+            used that does not change the location of the object.
+            </remarks>
+        </member>
+        <member name="M:OOLib.IStorable.StoreAsFileName(System.String,System.Object[])">
+            <summary>
+            Stores the object's persistent data to a file and makes this file the new location of the object. 
+            </summary>
+            <param name="fileName">Specifies the new location of this component as file name.</param>
+            <param name="arguments">Optional parameters for saving (see ::com::sun::star::document::MediaDescriptor for further details)</param>
+            <remarks>
+            This is the normal behavior for UI's "save-as" feature.
+            The change of the location makes it necessary to store the document in a format that the object can load. 
+            For this reason the implementation of XStorable::storeAsURL() will throw an exception if a pure export filter is used, 
+            it will accept only combined import/export filters. For such filters the method XStorable::storeToURL() must be 
+            used that does not change the location of the object.
+            </remarks>
+        </member>
+        <member name="M:OOLib.IStorable.StoreToUrl(System.String,System.Object[])">
+            <summary>
+            Stores the object's persistent data to a URL and continues to be a representation of the old URL. 
+            </summary>
+            <param name="url">Specifies the new location of this component as url.</param>
+            <param name="arguments">Optional parameters for saving (see ::com::sun::star::document::MediaDescriptor for further details)</param>
+            <remarks>
+            This is the normal behavior for UI's export feature.
+            This method accepts all kinds of export filters, not only combined import/export filters because it 
+            implements an exporting capability, not a persistence capability.
+            </remarks>
+        </member>
+        <member name="M:OOLib.IStorable.StoreToFileName(System.String,System.Object[])">
+            <summary>
+            Stores the object's persistent data to a file and continues to be a representation of the old URL. 
+            </summary>
+            <param name="fileName">Specifies the new location of this component as file name.</param>
+            <param name="arguments">Optional parameters for saving (see ::com::sun::star::document::MediaDescriptor for further details)</param>
+            <remarks>
+            This is the normal behavior for UI's export feature.
+            This method accepts all kinds of export filters, not only combined import/export filters because it 
+            implements an exporting capability, not a persistence capability.
+            </remarks>
+        </member>
+        <member name="P:OOLib.IStorable.HasLocation">
+            <summary>
+            Gets if object knows the location because it was loaded from there, or because it is stored there.
+            </summary>
+        </member>
+        <member name="P:OOLib.IStorable.IsReadonly">
+            <summary>
+            Gets if the data store is readonly or opened readonly.
+            </summary>
+            <remarks>
+            It is not possible to call XStorable::store() successfully when the data store is read-only. 
+            </remarks>
+        </member>
+        <member name="T:OOLib.IServiceInfo">
+            <summary>
+            Provides information regarding the implementation, i.e. which services are implemented and the name of the implementation.
+            </summary>
+        </member>
+        <member name="M:OOLib.IServiceInfo.SupportsService(System.String)">
+            <summary>
+            Tests whether the specified service is supported, i.e. implemented by the implementation.
+            </summary>
+            <param name="serviceName">Name of service to be tested </param>
+            <returns>true, if service is supported, false otherwise</returns>
+        </member>
+        <member name="M:OOLib.IServiceInfo.GetSupportedServiceNames">
+            <summary>
+            Provides the supported service names of the implementation, including also indirect service names.
+            </summary>
+            <returns>Returns a sequence of service names that are supported.</returns>
+        </member>
+        <member name="P:OOLib.IServiceInfo.ImplementationName">
+            <summary>
+            Gets the implementation name of the service implementation.
+            </summary>
+        </member>
+        <member name="M:OOLib.OfficeDocument.#ctor">
+            <summary>
+            Constructor
+            </summary>
+            <remarks>
+            After using this constructor, the ComObj must be set manually!
+            </remarks>
+        </member>
+        <member name="M:OOLib.OfficeDocument.#ctor(System.Object)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="comObject">COM object</param>
+        </member>
+        <member name="M:OOLib.OfficeDocument.AttachResource(System.String,System.Object[])">
+            <summary>
+            Informs a model about its resource description.
+            </summary>
+            <param name="url">Specifies the ressource.</param>
+            <param name="arguments">Are optional arguments for that ressource (see ::com::sun::star::document::MediaDescriptor)</param>
+            <returns>true for success, false otherwise</returns>
+            <remarks>!!! Not tested !!!</remarks>
+        </member>
+        <member name="M:OOLib.OfficeDocument.OnUrlChanged">
+            <summary>
+            Call this to notify others that the Url might have changed.
+            </summary>
+        </member>
+        <member name="M:OOLib.OfficeDocument.ConnectController(OOLib.Controller)">
+            <summary>
+            Is called whenever a new controller is created for this model. 
+            </summary>
+            <param name="controller">A new controller for this model</param>
+            <remarks>
+            The ::com::sun::star::lang::XComponent interface of the controller must be used to recognize when it is deleted. 
+            !!! Not tested !!!
+            </remarks>
+        </member>
+        <member name="M:OOLib.OfficeDocument.DisconnectController(OOLib.Controller)">
+            <summary>
+            Is called whenever an existing controller should be deregistered at this model. 
+            </summary>
+            <param name="controller">The existing controller which should be deregistered </param>
+            <remarks>
+            The ::com::sun::star::lang::XComponent interface of the controller must be used to recognize when it is deleted. 
+            !!! Not tested !!!
+            </remarks>
+        </member>
+        <member name="M:OOLib.OfficeDocument.LockControllers">
+            <summary>
+            Suspends some notifications to the controllers which are used for display updates. 
+            </summary>
+            <remarks>
+            The calls to XModel::lockControllers() and XModel::unlockControllers() may be nested and even overlapping, 
+            but they must be in pairs. While there is at least one lock remaining, some notifications for display updates are not broadcasted. 
+            !!! Not tested !!!
+            </remarks>
+        </member>
+        <member name="M:OOLib.OfficeDocument.UnlockControllers">
+            <summary>
+            Resumes the notifications which were suspended by XModel::lockControllers(). 
+            </summary>
+            <remarks>
+            The calls to XModel::lockControllers() and XModel::unlockControllers() may be nested and even overlapping, 
+            but they must be in pairs. While there is at least one lock remaining, some notifications for display updates are not broadcasted. 
+            !!! Not tested !!!
+            </remarks>
+        </member>
+        <member name="M:OOLib.OfficeDocument.GetLocation">
+            <summary>
+            After XStorable::storeAsURL() it returns the URL the object was stored to.
+            </summary>
+            <returns>Returns the URL of the resource which is represented by this object.</returns>
+            <remarks>!!! Not tested !!!</remarks>
+        </member>
+        <member name="M:OOLib.OfficeDocument.Store">
+            <summary>
+            Stores the data to the URL from which it was loaded.
+            </summary>
+            <remarks>
+            Only objects which know their locations can be stored.
+            </remarks>
+        </member>
+        <member name="M:OOLib.OfficeDocument.StoreAsUrl(System.String,System.Object[])">
+            <summary>
+            Stores the object's persistent data to a URL and makes this URL the new location of the object. 
+            </summary>
+            <param name="url">Specifies the new location of this component as url.</param>
+            <param name="arguments">Optional parameters for saving (see ::com::sun::star::document::MediaDescriptor for further details)</param>
+            <remarks>
+            This is the normal behavior for UI's "save-as" feature.
+            The change of the location makes it necessary to store the document in a format that the object can load. 
+            For this reason the implementation of XStorable::storeAsURL() will throw an exception if a pure export filter is used, 
+            it will accept only combined import/export filters. For such filters the method XStorable::storeToURL() must be 
+            used that does not change the location of the object.
+            </remarks>
+        </member>
+        <member name="M:OOLib.OfficeDocument.StoreAsFileName(System.String,System.Object[])">
+            <summary>
+            Stores the object's persistent data to a file and makes this file the new location of the object. 
+            </summary>
+            <param name="fileName">Specifies the new location of this component as file name.</param>
+            <param name="arguments">Optional parameters for saving (see ::com::sun::star::document::MediaDescriptor for further details)</param>
+            <remarks>
+            This is the normal behavior for UI's "save-as" feature.
+            The change of the location makes it necessary to store the document in a format that the object can load. 
+            For this reason the implementation of XStorable::storeAsURL() will throw an exception if a pure export filter is used, 
+            it will accept only combined import/export filters. For such filters the method XStorable::storeToURL() must be 
+            used that does not change the location of the object.
+            </remarks>
+        </member>
+        <member name="M:OOLib.OfficeDocument.StoreToUrl(System.String,System.Object[])">
+            <summary>
+            Stores the object's persistent data to a URL and continues to be a representation of the old URL. 
+            </summary>
+            <param name="url">Specifies the new location of this component as url.</param>
+            <param name="arguments">Optional parameters for saving (see ::com::sun::star::document::MediaDescriptor for further details)</param>
+            <remarks>
+            This is the normal behavior for UI's export feature.
+            This method accepts all kinds of export filters, not only combined import/export filters because it 
+            implements an exporting capability, not a persistence capability.
+            !!! Not tested !!!
+            </remarks>
+        </member>
+        <member name="M:OOLib.OfficeDocument.StoreToFileName(System.String,System.Object[])">
+            <summary>
+            Stores the object's persistent data to a file and continues to be a representation of the old URL. 
+            </summary>
+            <param name="fileName">Specifies the new location of this component as file name.</param>
+            <param name="arguments">Optional parameters for saving (see ::com::sun::star::document::MediaDescriptor for further details)</param>
+            <remarks>
+            This is the normal behavior for UI's export feature.
+            This method accepts all kinds of export filters, not only combined import/export filters because it 
+            implements an exporting capability, not a persistence capability.
+            </remarks>
+        </member>
+        <member name="M:OOLib.OfficeDocument.SupportsService(System.String)">
+            <summary>
+            Tests whether the specified service is supported, i.e. implemented by the implementation.
+            </summary>
+            <param name="serviceName">Name of service to be tested </param>
+            <returns>true, if service is supported, false otherwise</returns>
+        </member>
+        <member name="M:OOLib.OfficeDocument.GetSupportedServiceNames">
+            <summary>
+            Provides the supported service names of the implementation, including also indirect service names.
+            </summary>
+            <returns>Returns a sequence of service names that are supported.</returns>
+        </member>
+        <member name="P:OOLib.OfficeDocument.DocType">
+            <summary>
+            Gets the document type of this document.
+            </summary>
+        </member>
+        <member name="P:OOLib.OfficeDocument.Url">
+            <summary>
+            Gets information about the location of this model.
+            </summary>
+            <remarks>!!! Not tested !!!</remarks>
+        </member>
+        <member name="P:OOLib.OfficeDocument.Args">
+            <summary>
+            Gets read acces on currently representation of the ::com::sun::star::document::MediaDescriptor of this model which describes the model and his state
+            </summary>
+            <remarks>!!! Not tested !!!</remarks>
+        </member>
+        <member name="P:OOLib.OfficeDocument.HasControllerLocked">
+            <summary>
+            Gets if there is at least one lock remaining. 
+            </summary>
+            <remarks>
+            While there is at least one lock remaining, some notifications for display updates are not broadcasted to the controllers. 
+            !!! Not tested !!!
+            </remarks>
+        </member>
+        <member name="P:OOLib.OfficeDocument.CurrentController">
+            <summary>
+            Gets access to the controller which currently controls this model 
+            </summary>
+            <remarks>
+            If the controller which is active is a controller of this model, it will be returned. 
+            If not, the controller which was the last active of this model is returned. 
+            If no controller of this model ever was active, the controller first registered is returned. 
+            If no controller is registered for this model, NULL is returned. 
+            </remarks>
+        </member>
+        <member name="P:OOLib.OfficeDocument.CurrentSelection">
+            <summary>
+            Provides read access on current selection on controller .
+            </summary>
+            <remarks>
+            Returns the current selection in the current controller. If there is no current controller, it returns NULL
+            </remarks>
+        </member>
+        <member name="P:OOLib.OfficeDocument.HasLocation">
+            <summary>
+            Gets if object knows the location because it was loaded from there, or because it is stored there.
+            </summary>
+            <remarks>!!! Not tested !!!</remarks>
+        </member>
+        <member name="P:OOLib.OfficeDocument.IsReadonly">
+            <summary>
+            Gets if the data store is readonly or opened readonly.
+            </summary>
+            <remarks>
+            It is not possible to call XStorable::store() successfully when the data store is read-only. 
+            !!! Not tested !!!
+            </remarks>
+        </member>
+        <member name="P:OOLib.OfficeDocument.ImplementationName">
+            <summary>
+            Gets the implementation name of the service implementation.
+            </summary>
+        </member>
+        <member name="P:OOLib.OfficeDocument.AutomaticControlFocus">
+            <summary>
+            Gets or Sets the focus behaviour of the form controls in the document.
+            </summary>
+            <remarks>
+            If set to true, upon loading the document, the form controls will be in design mode.
+            If set to false, they will be alive, i.e. operational.
+            With this, you may control if your document works primarily as a form document. 
+            This property is optional!
+            !!! Not tested !!!
+            </remarks>
+        </member>
+        <member name="P:OOLib.OfficeDocument.ApplyFormDesignMode">
+            <summary>
+            Gets or sets the initial (on-load) behavior of the form controls in the document.
+            </summary>
+            <remarks>
+            If set to true, upon loading the document, the form controls will be in design mode.
+            If set to false, they will be alive, i.e. operational.
+            With this, you may control if your document works primarily as a form document. 
+            This property is optional!
+            !!! Not tested !!!
+            </remarks>
+        </member>
+        <member name="P:OOLib.OfficeDocument.RuntimeUID">
+            <summary>
+            Gets a unique id for the document.
+            </summary>
+            <remarks>
+            Once calculated, the id must not change until the document has been closed. Upon closing it will not be made persistent. 
+            Thus, the document may get a different id every time it gets loaded.
+            This property is optional!
+            !!! Not tested !!!
+            </remarks>
+        </member>
+        <member name="T:OOLib.IndexAccess">
+            <summary>
+            Provides access to the elements of a collection through an index.
+            </summary>
+            <remarks>
+            This interface should only be used if the data structure, itself, is indexed.
+            </remarks>
+        </member>
+        <member name="T:OOLib.ElementAccess">
+            <summary>
+            This is the base interface of all collection interfaces.
+            </summary>
+        </member>
+        <member name="T:OOLib.IElementAccess">
+            <summary>
+            This is the base interface of all collection interfaces.
+            </summary>
+        </member>
+        <member name="M:OOLib.IElementAccess.GetElementType">
+            <summary>
+            Returns the type of the elements. void means that it is a multi-type container and you cannot determine the exact types with this interface.
+            </summary>
+            <returns>Returns the type of the elements. void means that it is a multi-type container and you cannot determine the exact types with this interface.</returns>
+        </member>
+        <member name="P:OOLib.IElementAccess.HasElements">
+            <summary>
+            Gets if the collection has any elements.
+            </summary>
+            <remarks>
+            true if the object contain elements, otherwise false.
+            </remarks>
+        </member>
+        <member name="M:OOLib.ElementAccess.#ctor">
+            <summary>
+            Constructor
+            </summary>
+            <remarks>
+            After using this constructor, the ComObj must be set manually!
+            </remarks>
+        </member>
+        <member name="M:OOLib.ElementAccess.#ctor(System.Object)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="comObject">COM object</param>
+        </member>
+        <member name="M:OOLib.ElementAccess.GetElementType">
+            <summary>
+            Returns the type of the elements. void means that it is a multi-type container and you cannot determine the exact types with this interface.
+            </summary>
+            <returns>Returns the type of the elements. void means that it is a multi-type container and you cannot determine the exact types with this interface.</returns>
+            <remarks>!!! Not tested !!!</remarks>
+        </member>
+        <member name="P:OOLib.ElementAccess.HasElements">
+            <summary>
+            Gets if the collection has any elements.
+            </summary>
+            <remarks>
+            true if the object contain elements, otherwise false.
+            !!! Not tested !!!
+            </remarks>
+        </member>
+        <member name="T:OOLib.IIndexAccess">
+            <summary>
+            Provides access to the elements of a collection through an index.
+            </summary>
+            <remarks>
+            This interface should only be used if the data structure, itself, is indexed.
+            </remarks>
+        </member>
+        <member name="M:OOLib.IIndexAccess.GetByIndex(System.Int32)">
+            <summary>
+            Gets the element at the specified index.
+            </summary>
+            <param name="index">Specifies the position in the array. The first index is 0.</param>
+            <returns>Returns the element at the specified index.</returns>
+        </member>
+        <member name="P:OOLib.IIndexAccess.Count">
+            <summary>
+            Gets the number of elements in this container.
+            </summary>
+        </member>
+        <member name="M:OOLib.IndexAccess.#ctor">
+            <summary>
+            Constructor
+            </summary>
+            <remarks>
+            After using this constructor, the ComObj must be set manually!
+            </remarks>
+        </member>
+        <member name="M:OOLib.IndexAccess.#ctor(System.Object)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="comObject">COM object</param>
+        </member>
+        <member name="M:OOLib.IndexAccess.GetByIndex(System.Int32)">
+            <summary>
+            Gets the element at the specified index.
+            </summary>
+            <param name="index">Specifies the position in the array. The first index is 0.</param>
+            <returns>Returns the element at the specified index.</returns>
+            <remarks>!!! Not tested !!!</remarks>
+        </member>
+        <member name="P:OOLib.IndexAccess.Count">
+            <summary>
+            Gets the number of elements in this container.
+            </summary>
+            <remarks>!!! Not tested !!!</remarks>
+        </member>
+        <member name="P:OOLib.IndexAccess.Item(System.Int32)">
+            <summary>
+            Gets the element by its index.
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="T:OOLib.Frame">
+            <summary>
+            Represents the environment for a desktop component 
+            </summary>
+            <remarks>
+            Frames are the anchors for the office components and they are the components' link to the outside world. 
+            They create a skeleton for the whole office api infrastructure by building frame hierarchys. 
+            These hierarchies contains all currently loaded documents and make it possible to walk during these trees. 
+            A special service Desktop can(!) combine different of such trees to a global one which life time will be controlled by it. 
+            </remarks>
+        </member>
+        <member name="M:OOLib.Frame.#ctor">
+            <summary>
+            Constructor
+            </summary>
+            <remarks>
+            After using this constructor, the ComObj must be set manually!
+            </remarks>
+        </member>
+        <member name="M:OOLib.Frame.#ctor(System.Object)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="comObject">COM object</param>
+        </member>
+        <member name="M:OOLib.Frame.Initialize(OOLib.Window)">
+            <summary>
+            Is called to initialize the frame within a window - the container window. 
+            </summary>
+            <param name="window">The new container window</param>
+            <remarks>
+            This window will be used as parent for the component window and to support some UI relevant features of the frame service. 
+            Note: Re-parenting mustn't supported by a real frame implementation! It's designed for initializing - not for setting. 
+            This frame will take over ownership of the window refered from xWindow. 
+            Thus, the previous owner is not allowed to dispose this window anymore. 
+            !!! Not tested !!!
+            </remarks>
+        </member>
+        <member name="M:OOLib.Frame.FindFrame(System.String,System.Int32)">
+            <summary>
+            Searches for a frame with the specified name. 
+            </summary>
+            <param name="targetFrameName">
+            identify 
+            •(a) a special target ("_blank","_self" ...) or
+            •(b) any well known frame
+            to search it inside the current hierarchy 
+            </param>
+            <param name="searchFlags">optional parameter to regulate search if no special target was used for TargetFrameName</param>
+            <returns>Returns the found Frame</returns>
+            <remarks>
+            Frames may contain other frames (e.g., a frameset) and may be contained in other frames. 
+            This hierarchy is searched with this method. First some special names are taken into account, i.e. "", "_self", "_top", "_blank" etc. 
+            SearchFlags is ignored when comparing these names with TargetFrameName; further steps are controlled by SearchFlags. 
+            If allowed, the name of the frame itself is compared with the desired one, and then ( again if allowed ) the method is called for all children of the frame. 
+            Finally may be called for the siblings and then for parent frame (if allowed). 
+            List of special target names: 
+            ""/"_self" address the starting frame itself
+            "_parent" address the direct parent frame only
+            "_top" address the top frame of this subtree of the frametree
+            "_blank" creates a new top frame
+            If no frame with the given name is found, a new top frame is created; if this is allowed by a special flag FrameSearchFlag::CREATE. 
+            The new frame also gets the desired name. 
+            !!! Not tested !!!
+            </remarks>
+        </member>
+        <member name="M:OOLib.Frame.Activate">
+            <summary>
+            Activates this frame and thus the component within. 
+            </summary>
+            <remarks>
+            At first the frame sets itself as the active frame of its creator by calling XFramesSupplier::setActiveFrame(), 
+            then it broadcasts an FrameActionEvent with FrameAction::FRAME_ACTIVATED. 
+            The component within this frame may listen to this event to grab the focus on activation; for simple components this can be done by the FrameLoader. 
+            Finally, most frames may grab the focus to one of its windows or forward the activation to a sub-frame. 
+            !!! Not tested !!!
+            </remarks>
+        </member>
+        <member name="M:OOLib.Frame.Deactivate">
+            <summary>
+            Is called by the creator frame when another sub-frame gets activated.
+            </summary>
+            <remarks>
+            At first the frame deactivates its active sub-frame, if any. Then broadcasts a FrameActionEvent with FrameAction::FRAME_DEACTIVATING.
+            !!! Not tested !!!
+            </remarks>
+        </member>
+        <member name="M:OOLib.Frame.SetComponent(OOLib.Window,OOLib.Controller)">
+            <summary>
+            Sets a new component into the frame or release an existing one from a frame.
+            </summary>
+            <param name="componentWindow">
+            The window of the new component or NULL for release.
+            A valid component window should be a child of the frame container window. 
+            </param>
+            <param name="controller">
+            the controller of the new component or NULL for release.
+            Simple components may implement a ::com::sun::star::awt::XWindow only. In this case no controller must be given here. 
+            </param>
+            <returns>
+            true if setting of new component or release of an existing one was successfully.
+            false otherwise (especialy, if an existing controller disagree within his XController::suspend() call) 
+            </returns>
+            <remarks>!!! Not tested !!!</remarks>
+        </member>
+        <member name="M:OOLib.Frame.GetComponentWindow">
+            <summary>
+            Provides access to the component window 
+            </summary>
+            <returns>The current visible component in this frame or NULL if no one currently exist</returns>
+            <remarks>
+            Note: Don't dispose this window - the frame is the owner of it.
+            !!! Not tested !!!
+            </remarks>
+        </member>
+        <member name="M:OOLib.Frame.ContextChanged">
+            <summary>
+            Notifies the frame that the context of the controller within this frame changed (i.e. the selection). 
+            </summary>
+            <remarks>
+            According to a call to this interface, the frame calls XFrameEventListener::frameAction with FrameAction::CONTEXT_CHANGED to all 
+            listeners which are registered using XFrame::addFrameActionListener. For external controllers this event can be used to requery dispatches. 
+            !!! Not tested !!!
+            </remarks>
+        </member>
+        <member name="M:OOLib.Frame.AddFrameActionListener(System.Object)">
+            <summary>
+            Registers an event listener, which will be called when certain things happen to the components within this frame or within sub-frames of this frame. 
+            </summary>
+            <param name="listener">Specifies the listener which will be informed</param>
+            <remarks>
+            E.g., it is possible to determine instantiation/destruction and activation/deactivation of components.
+            !!! Not tested !!!
+            </remarks>
+        </member>
+        <member name="M:OOLib.Frame.RemoveFrameActionListener(System.Object)">
+            <summary>
+            Unregisters an event listener
+            </summary>
+            <param name="listener">Specifies the listener which will not be informed any longer.</param>
+            <remarks>!!! Not tested !!!</remarks>
+        </member>
+        <member name="P:OOLib.Frame.ContainerWindow">
+            <summary>
+            Gets the container window of the frame. 
+            </summary>
+            <remarks>
+            Normally this is used as the parent window of the component window. 
+            </remarks>
+        </member>
+        <member name="P:OOLib.Frame.Creator">
+            <summary>
+            gets or sets the frame container that created this frame.
+            </summary>
+            <remarks>
+            Only the creator is allowed to call this method. 
+            But creator doesn't mean the implementation which creates this instance ... it means the parent frame of the frame hierarchy. 
+            Because; normaly a frame should be created by using the api and is neccessary for searches inside the tree (e.g. XFrame::findFrame()) 
+            !!! Not tested !!!
+            </remarks>
+        </member>
+        <member name="P:OOLib.Frame.Name">
+            <summary>
+            Gets or sets the programmatic name of this frame
+            </summary>
+            <remarks>!!! Not tested !!!</remarks>
+        </member>
+        <member name="P:OOLib.Frame.IsTop">
+            <summary>
+            Gets if the frame is a top frame.
+            </summary>
+            <remarks>
+            In general a top frame is the frame which is a direct child of a task frame or which does not have a parent. 
+            Possible frame searches must stop the search at such a frame unless the flag FrameSearchFlag::TASKS is set. 
+            !!! Not tested !!!
+            </remarks>
+        </member>
+        <member name="P:OOLib.Frame.IsActive">
+            <summary>
+            Gets if the frame is active.
+            </summary>
+            <remarks>!!! Not tested !!!</remarks>
+        </member>
+        <member name="P:OOLib.Frame.Controller">
+            <summary>
+            Gets the controller.
+            </summary>
+            <remarks>
+            Note: Don't dispose it - the frame is the owner of it. Use XController::getFrame() to dispose the frame after 
+            you the controller agreed with a XController::suspend() call.
+            !!! Not tested !!!
+            </remarks>
+        </member>
+        <member name="P:OOLib.Frame.Title">
+            <summary>
+            Gets or sets the UI title on/from the frame container window.
+            </summary>
+            <remarks>
+            It depends from the type of the frame container window. If it is a system task window all will be OK. 
+            Otherwise the title can't be set. Setting/getting of the pure value of this property must be possible in every case. 
+            Only showing on the UI can be fail.
+            !!! Not tested !!!
+            </remarks>
+        </member>
+        <member name="P:OOLib.Frame.RecorderSupplier">
+            <summary>
+            Gets or sets the dispatch recorder of the frame.
+            </summary>
+            <remarks>
+            Such recorder can be used to record dispatch requests. The supplier contains a dispatch recorder and provide 
+            the functionality to use it for any dispatch object from outside which supports the interface XDispatch. 
+            A supplier is available only, if recording was enabled. That means: if somewhere whish to enable recoding 
+            on a frame he must set a supplier with a recorder object inside of it. Every user of dispatches has to check 
+            then if such supplier is available at this frame property. If value of this property is NULL he must call 
+            XDispatch::dispatch() on the original dispatch object. If it's a valid value he must use the supplier by 
+            calling his method XDispatchRecorderSupplier::dispatchAndRecord() with the original dispatch object as argument. 
+            Note: It's not recommended to cache an already getted supplier. Because there exist no possibility to check for enabled/disabled recording then. 
+            !!! Not tested !!!
+            </remarks>
+        </member>
+        <member name="P:OOLib.Frame.LayoutManager">
+            <summary>
+            Gets or sets the LayoutManager of the frame.
+            </summary>
+            <remarks>1!!! Not tested !!!</remarks>
+        </member>
+        <member name="T:OOLib.ComponentContext">
+            <summary>
+            Component context to be passed to a component via ::com::sun::star::lang::XSingleComponentFactory. 
+            Arbitrary values (e.g. deployment values) can be retrieved from the context.
+            </summary>
+        </member>
+        <member name="T:OOLib.IComponentContext">
+            <summary>
+            Component context to be passed to a component via ::com::sun::star::lang::XSingleComponentFactory. 
+            Arbitrary values (e.g. deployment values) can be retrieved from the context.
+            </summary>
+        </member>
+        <member name="M:OOLib.IComponentContext.GetValueByName(System.String)">
+            <summary>
+            Gets a value from the context.
+            </summary>
+            <param name="name">Name of value</param>
+            <returns>Returns the value.</returns>
+        </member>
+        <member name="P:OOLib.IComponentContext.ServiceManager">
+            <summary>
+            Gets the service manager instance to be used from key /singletons/com.sun.star.lang.theServiceManager (maybe null ref). 
+            This method has been added for convenience, because the service manager is used very often. 
+            </summary>
+        </member>
+        <member name="M:OOLib.ComponentContext.#ctor">
+            <summary>
+            Constructor
+            </summary>
+            <remarks>
+            After using this constructor, the ComObj must be set manually!
+            </remarks>
+        </member>
+        <member name="M:OOLib.ComponentContext.#ctor(System.Object)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="comObject">COM object</param>
+        </member>
+        <member name="M:OOLib.ComponentContext.GetValueByName(System.String)">
+            <summary>
+            Gets a value from the context.
+            </summary>
+            <param name="name">Name of value</param>
+            <returns>Returns the value.</returns>
+        </member>
+        <member name="P:OOLib.ComponentContext.ServiceManager">
+            <summary>
+            Gets the service manager instance to be used from key /singletons/com.sun.star.lang.theServiceManager (maybe null ref). 
+            This method has been added for convenience, because the service manager is used very often. 
+            </summary>
+        </member>
+        <member name="T:OOLib.ComponentContextImpl">
+            <summary>
+            Implementation of the IComponentContext interface
+            </summary>
+        </member>
+        <member name="M:OOLib.ComponentContextImpl.#ctor(OOLib.ComObjectWrapper)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="cow">COM object which should support the interface.</param>
+        </member>
+        <member name="M:OOLib.ComponentContextImpl.GetValueByName(System.String)">
+            <summary>
+            Gets a value from the context.
+            </summary>
+            <param name="name">Name of value</param>
+            <returns>Returns the value.</returns>
+            <remarks>!!! Not tested !!!</remarks>
+        </member>
+        <member name="P:OOLib.ComponentContextImpl.Cow">
+            <summary>
+            Gets the COM object wrapper which should support the interface.
+            </summary>
+        </member>
+        <member name="P:OOLib.ComponentContextImpl.ServiceManager">
+            <summary>
+            Gets the service manager instance to be used from key /singletons/com.sun.star.lang.theServiceManager (maybe null ref). 
+            This method has been added for convenience, because the service manager is used very often. 
+            </summary>
+            <remarks>!!! Not tested !!!</remarks>
+        </member>
+        <member name="T:OOLib.Window">
+            <summary>
+            Specifies the basic operations for a window component. 
+            </summary>
+            <remarks>
+            A window is a rectangular region on an output device with its own position, size, and internal coordinate system. 
+            A window is used for displaying data. In addition, the window receives events from the user.
+            </remarks>
+        </member>
+        <member name="T:OOLib.IWindow">
+            <summary>
+            Specifies the basic operations for a window component. 
+            </summary>
+            <remarks>
+            A window is a rectangular region on an output device with its own position, size, and internal coordinate system. 
+            A window is used for displaying data. In addition, the window receives events from the user.
+            </remarks>
+        </member>
+        <member name="M:OOLib.IWindow.SetPosSize(System.Int32,System.Int32,System.Int32,System.Int32,System.Int16)">
+            <summary>
+            Sets the outer bounds of the window. 
+            </summary>
+            <param name="x">The x-coordinate of the window.</param>
+            <param name="y">The y-coordinate of the window. </param>
+            <param name="width">The width of the window. </param>
+            <param name="height">The height of the window. </param>
+            <param name="flags">Flags are of type PosSize and specify, which parameters are taken 
+            into account when setting the outer bounds of the window. </param>
+        </member>
+        <member name="M:OOLib.IWindow.GetPosSize">
+            <summary>
+            Returns the outer bounds of the window. 
+            </summary>
+            <returns>Returns the outer bounds of the window.</returns>
+        </member>
+        <member name="M:OOLib.IWindow.SetVisible(System.Boolean)">
+            <summary>
+            Shows or hides the window depending on the parameter. 
+            </summary>
+            <param name="visible">true for visible, otherwise false</param>
+        </member>
+        <member name="M:OOLib.IWindow.SetEnable(System.Boolean)">
+            <summary>
+            Enables or disables the window depending on the parameter.
+            </summary>
+            <param name="enable">true to enable, otherwise false</param>
+        </member>
+        <member name="M:OOLib.IWindow.SetFocus">
+            <summary>
+            Sets the focus to the window. 
+            </summary>
+        </member>
+        <member name="P:OOLib.IWindow.IsVisible">
+            <summary>
+            Gets or sets if the window is visible.
+            </summary>
+        </member>
+        <member name="P:OOLib.IWindow.IsEnabled">
+            <summary>
+            Gets or sets if the window is enabled.
+            </summary>
+        </member>
+        <member name="M:OOLib.Window.#ctor">
+            <summary>
+            Constructor
+            </summary>
+            <remarks>
+            After using this constructor, the ComObj must be set manually!
+            </remarks>
+        </member>
+        <member name="M:OOLib.Window.#ctor(System.Object)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="comObject">COM object</param>
+        </member>
+        <member name="M:OOLib.Window.SetPosSize(System.Int32,System.Int32,System.Int32,System.Int32,System.Int16)">
+            <summary>
+            Sets the outer bounds of the window. 
+            </summary>
+            <param name="x">The x-coordinate of the window.</param>
+            <param name="y">The y-coordinate of the window. </param>
+            <param name="width">The width of the window. </param>
+            <param name="height">The height of the window. </param>
+            <param name="flags">Flags are of type PosSize and specify, which parameters are taken 
+            into account when setting the outer bounds of the window. </param>
+            <remarks>!!! Not tested !!!</remarks>
+        </member>
+        <member name="M:OOLib.Window.GetPosSize">
+            <summary>
+            Returns the outer bounds of the window. 
+            </summary>
+            <returns>Returns the outer bounds of the window.</returns>
+            <remarks>!!! Not tested !!!</remarks>
+        </member>
+        <member name="M:OOLib.Window.SetVisible(System.Boolean)">
+            <summary>
+            Shows or hides the window depending on the parameter. 
+            </summary>
+            <param name="visible">true for visible, otherwise false</param>
+        </member>
+        <member name="M:OOLib.Window.SetEnable(System.Boolean)">
+            <summary>
+            Enables or disables the window depending on the parameter.
+            </summary>
+            <param name="enable">true to enable, otherwise false</param>
+            <remarks>!!! Not tested !!!</remarks>
+        </member>
+        <member name="M:OOLib.Window.SetFocus">
+            <summary>
+            Sets the focus to the window. 
+            </summary>
+            <remarks>!!! Not tested !!!</remarks>
+        </member>
+        <member name="P:OOLib.Window.IsVisible">
+            <summary>
+            Gets or sets if the window is visible.
+            </summary>
+            <remarks>
+            The read support for the IsVisible property is maintained in C# code.
+            So it may be out of sync eventually.
+            </remarks>
+        </member>
+        <member name="P:OOLib.Window.IsEnabled">
+            <summary>
+            Gets or sets if the window is enabled.
+            </summary>
+            <remarks>
+            The read support for the IsEnabled property is maintained in C# code.
+            So it may be out of sync eventually.
+            </remarks>
+        </member>
+        <member name="T:OOLib.Controller">
+            <summary>
+            is an abstract service for a component which offers a deeper integration of desktop components than a ::com::sun::star::awt::XWindow can offer 
+            </summary>
+            <remarks>
+            Such components can be loaded into a Frame inside a Desktop environment. A controller is a richer component then a pure window, 
+            but full featured components need a XModel interface too. 
+            (see service ::com::sun::star::document::OfficeDocument for further information)
+            </remarks>
+        </member>
+        <member name="M:OOLib.Controller.#ctor">
+            <summary>
+            Constructor
+            </summary>
+            <remarks>
+            After using this constructor, the ComObj must be set manually!
+            </remarks>
+        </member>
+        <member name="M:OOLib.Controller.#ctor(System.Object)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="comObject">COM object</param>
+        </member>
+        <member name="M:OOLib.Controller.AttachFrame(OOLib.Frame)">
+            <summary>
+            Is called to attach the controller with its managing frame
+            </summary>
+            <param name="frame">The new owner frame of this controller</param>
+            <remarks>!!! Not tested !!!</remarks>
+        </member>
+        <member name="M:OOLib.Controller.AttachModel(OOLib.IModel)">
+            <summary>
+            Is called to attach the controller to a new model. 
+            </summary>
+            <param name="model">The new model for this controller</param>
+            <returns>Returns true if attach was successfully, false otherwise</returns>
+            <remarks>!!! Not tested !!!</remarks>
+        </member>
+        <member name="M:OOLib.Controller.Suspend(System.Boolean)">
+            <summary>
+            Is called to prepare the controller for closing the view.
+            </summary>
+            <param name="suspend">true force the controller to suspend his work, false try to reactivate the controller</param>
+            <returns>true if request was accepted and of course successfully finished, false otherwise</returns>
+            <remarks>!!! Not tested !!!</remarks>
+        </member>
+        <member name="M:OOLib.Controller.GetViewData">
+            <summary>
+            Provides access to current view status.
+            </summary>
+            <returns>Set of data that can be used to restore the current view status at later time by using XController::restoreViewData()</returns>
+            <remarks>!!! Not tested !!!</remarks>
+        </member>
+        <member name="M:OOLib.Controller.RestoreViewData(System.Object)">
+            <summary>
+            Restores the view status using the data gotten from a previous call to XController::getViewData().
+            </summary>
+            <param name="data">Set of data to restore it </param>
+            <remarks>!!! Not tested !!!</remarks>
+        </member>
+        <member name="P:OOLib.Controller.Model">
+            <summary>
+            Gets the currently attached model.
+            </summary>
+            <remarks>
+            This property returns a C# object.
+            Currently this must be one of the following types (services):
+            <list type="unordered">
+            <item>OfficeDocument (com.sun.star.document.OfficeDocument)</item>
+            </list>
+            For other types (services) use the property RawModel.
+            !!! Not tested !!!
+            </remarks>
+        </member>
+        <member name="P:OOLib.Controller.RawModel">
+            <summary>
+            Gets the currently attached model.
+            </summary>
+            <remarks>
+            This is the raw OpenOffice model.
+            Use property Model to get a C# object.
+            !!! Not tested !!!
+            </remarks>
+        </member>
+        <member name="P:OOLib.Controller.Frame">
+            <summary>
+            Gets the owner frame of this controller.
+            </summary>
+        </member>
+        <member name="T:OOLib.DocType">
+            <summary>
+            Document types
+            </summary>
+        </member>
+        <member name="F:OOLib.DocType.Unknown">
+            <summary>Unknown document type</summary>
+        </member>
+        <member name="F:OOLib.DocType.Writer">
+            <summary>Writer document (see TextDocument)</summary>
+        </member>
+        <member name="F:OOLib.DocType.Calc">
+            <summary>Calc document</summary>
+        </member>
+        <member name="F:OOLib.DocType.Draw">
+            <summary>Draw document</summary>
+        </member>
+        <member name="F:OOLib.DocType.Math">
+            <summary>Math (formula) document</summary>
+        </member>
+        <member name="T:OOLib.ControlCharacter">
+            <summary>
+            These constants are the codes for inserting control characters using XSimpleText::insertControlCharacter interface.
+            </summary>
+        </member>
+        <member name="F:OOLib.ControlCharacter.PARAGRAPH_BREAK">
+            <summary>This control character starts a new paragraph. </summary>
+        </member>
+        <member name="F:OOLib.ControlCharacter.LINE_BREAK">
+            <summary>This control character starts a new line in a paragraph.  </summary>
+        </member>
+        <member name="F:OOLib.ControlCharacter.HARD_HYPHEN">
+            <summary>This control character equals a dash but prevents this position from being hyphenated.  </summary>
+        </member>
+        <member name="F:OOLib.ControlCharacter.SOFT_HYPHEN">
+            <summary>
+            This control character defines a special position as a hyphenation point. 
+            If a word containing a soft hyphen must be split at the end of a line, then this position is preferred. 
+            </summary>
+        </member>
+        <member name="F:OOLib.ControlCharacter.HARD_SPACE">
+            <summary>This control character is used to link two words and prevents this concatenation from being hyphenated. It is printed as a space.</summary>
+        </member>
+        <member name="F:OOLib.ControlCharacter.APPEND_PARAGRAPH">
+            <summary>This control character appends a new paragraph.</summary>
+        </member>
+        <member name="T:OOLib.TextContentAnchorType">
+            <summary>
+            Specify how the text content is attached to its surrounding text.
+            </summary>
+        </member>
+        <member name="F:OOLib.TextContentAnchorType.AT_PARAGRAPH">
+            <summary>The anchor of the object is set at the top left position of the paragraph. </summary>
+        </member>
+        <member name="F:OOLib.TextContentAnchorType.AS_CHARACTER">
+            <summary>The object is anchored instead of a character. </summary>
+            <remarks>The size of the object influences the height of the text line.</remarks>
+        </member>
+        <member name="F:OOLib.TextContentAnchorType.AT_PAGE">
+            <summary>The object is anchored to the page. </summary>
+            <remarks>The position does not change if the content of the document is changed.</remarks>
+        </member>
+        <member name="F:OOLib.TextContentAnchorType.AT_FRAME">
+            <summary>The object is anchored to a text frame. </summary>
+        </member>
+        <member name="F:OOLib.TextContentAnchorType.AT_CHARACTER">
+            <summary>The object is anchored to a character. </summary>
+            <remarks>The position of the object changes if the position of this character is changed. </remarks>
+        </member>
+        <member name="T:OOLib.WrapTextMode">
+            <summary>
+            Enumeration values specify the text wrap around objects in a text.
+            </summary>
+        </member>
+        <member name="F:OOLib.WrapTextMode.NONE">
+            <summary>Text does not flow around the object.  </summary>
+        </member>
+        <member name="F:OOLib.WrapTextMode.THROUGHT">
+            <summary>Text flow ignores the object.</summary>
+        </member>
+        <member name="F:OOLib.WrapTextMode.PARALLEL">
+            <summary>Text flows to the left and right of the object.</summary>
+        </member>
+        <member name="F:OOLib.WrapTextMode.DYNAMIC">
+            <summary>Text flow depends on the situation. The text formatting decides the best way.</summary>
+        </member>
+        <member name="F:OOLib.WrapTextMode.LEFT">
+            <summary>Text flows to the left side of the object.</summary>
+        </member>
+        <member name="F:OOLib.WrapTextMode.RIGHT">
+            <summary>Text flows to the right side of the object.</summary>
+        </member>
+        <member name="T:OOLib.FrameSearchFlag">
+            <summary>
+            These types describe the algorithm to be used to search a frame.
+            </summary>
+            <remarks>
+            Such flags will be used on methods XFrame::findFrame(), XDispatchProvider::queryDispatch() or 
+            XComponentLoader::loadComponentFromURL() if no special target frame name (e.g. "_blank", "_self") is used.
+            </remarks>
+        </member>
+        <member name="F:OOLib.FrameSearchFlag.AUTO">
+            <summary>Using of this flag will do nothing. Use right combination of other flags instead of this one.</summary>
+        </member>
+        <member name="F:OOLib.FrameSearchFlag.PARENT">
+            <summary>allows search on the parent frames</summary>
+        </member>
+        <member name="F:OOLib.FrameSearchFlag.SELF">
+            <summary>includes the start frame himself</summary>
+        </member>
+        <member name="F:OOLib.FrameSearchFlag.CHILDREN">
+            <summary>includes all child frames of the start frame</summary>
+            <remarks>Note: That means all direct children and of course her childrens too. Search doesn't stop at the next level inside the tree!</remarks>
+        </member>
+        <member name="F:OOLib.FrameSearchFlag.CREATE">
+            <summary>frame will be created if not found</summary>
+        </member>
+        <member name="F:OOLib.FrameSearchFlag.SIBLINGS">
+            <summary>includes the direct siblings of the start frame </summary>
+            <remarks>
+            Normaly it's interpreted as search on the direct childs of the parent only. But in combination with e.g. the 
+            CHILDREN flag it can include all children of it too.
+            </remarks>
+        </member>
+        <member name="F:OOLib.FrameSearchFlag.TASKS">
+            <summary>allow the search outside the current sub task tree of the whole possible frame tree</summary>
+            <remarks>
+            If this flag isn't present, any search from bottom to top has to stop, if a top frame will be reached. 
+            It doesn't influence a search from top to bottom. But it can be used at the root of the frame tree to search on 
+            direct childrens of it only. Because the direct children of the root node are the root's of the task sub trees, 
+            which are top frames too. Instead of using the CHILDREN flag there, it's possible so to supress a deeper search so. 
+            </remarks>
+        </member>
+        <member name="F:OOLib.FrameSearchFlag.ALL">
+            <summary>includes all frames except frames in other tasks sub trees but doesn't create any new frame</summary>
+        </member>
+        <member name="F:OOLib.FrameSearchFlag.GLOBAL">
+            <summary>searches in the whole hierarchy of frames but doesn't create any new frame</summary>
+        </member>
+        <member name="T:OOLib.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:OOLib.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:OOLib.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="T:OOLib.MultiServiceFactory">
+            <summary>
+            Provides a collection of implementations of services. 
+            </summary>
+            <remarks>
+            The factories for instantiating objects of implemetations are accessed via a service name.
+            The ::com::sun::star::container::XContentEnumerationAccess interface can be supported optionally. 
+            If it is suported, it is possible to enumerate all implementations that support the service specified with 
+            the argument of ::com::sun::star::container::XContentEnumerationAccess::createContentEnumeration. 
+            The enumerator returns interfaces. The type of the interface is not specified. Commonly this is XSingleComponentFactory.
+            </remarks>
+        </member>
+        <member name="T:OOLib.IMultiServiceFactory">
+            <summary>
+            Provides a collection of implementations of services. 
+            </summary>
+            <remarks>
+            The factories for instantiating objects of implemetations are accessed via a service name.
+            The ::com::sun::star::container::XContentEnumerationAccess interface can be supported optionally. 
+            If it is suported, it is possible to enumerate all implementations that support the service specified with 
+            the argument of ::com::sun::star::container::XContentEnumerationAccess::createContentEnumeration. 
+            The enumerator returns interfaces. The type of the interface is not specified. Commonly this is XSingleComponentFactory.
+            </remarks>
+        </member>
+        <member name="M:OOLib.IMultiServiceFactory.CreateInstance(System.String)">
+            <summary>
+            Creates an instance classified by the specified name. 
+            </summary>
+            <param name="serviceSpecifier">Classified name of instance </param>
+            <returns>Return a new instance.</returns>
+        </member>
+        <member name="M:OOLib.IMultiServiceFactory.CreateInstanceWithArguments(System.String,System.Object[])">
+            <summary>
+            Creates an instance classified by the specified name and passes the arguments to that instance.
+            </summary>
+            <param name="serviceSpecifier">Classified name of instance</param>
+            <param name="arguments">Arguments passed to the instance</param>
+            <returns>Return a new instance.</returns>
+        </member>
+        <member name="M:OOLib.IMultiServiceFactory.GetAvailableServiceNames">
+            <summary>
+            Provides the available names of the factory to be used to create instances.
+            </summary>
+            <returns>Returns a sequence of all names.</returns>
+        </member>
+        <member name="T:OOLib.IMultiComponentFactory">
+            <summary>
+            Factory interface for creating component instances giving a context from which to retrieve deployment values.
+            </summary>
+        </member>
+        <member name="M:OOLib.IMultiComponentFactory.CreateInstanceWithContext(System.String,OOLib.ComponentContext)">
+            <summary>
+            Creates an instance of a component which supports the services specified by the factory. 
+            </summary>
+            <param name="serviceSpecifier">Service name</param>
+            <param name="context">Context the component instance gets its deployment values from</param>
+            <returns>Returns the component instance.</returns>
+        </member>
+        <member name="M:OOLib.IMultiComponentFactory.CreateInstanceWithArgumentsAndContext(System.String,System.Object[],OOLib.ComponentContext)">
+            <summary>
+            Creates an instance of a component which supports the services specified by the factory, 
+            and initializes the new instance with the given arguments and context. 
+            </summary>
+            <param name="serviceSpecifier">Service name</param>
+            <param name="arguments">Arguments</param>
+            <param name="context">Context the component instance gets its deployment values from</param>
+            <returns>Returns the component instance.</returns>
+        </member>
+        <member name="M:OOLib.IMultiComponentFactory.GetAvailableServiceNames">
+            <summary>
+            Gets the names of all supported services.
+            </summary>
+            <returns>Retunbs a sequence of all service names.</returns>
+        </member>
+        <member name="M:OOLib.MultiServiceFactory.#ctor">
+            <summary>
+            Constructor
+            </summary>
+            <remarks>
+            After using this constructor, the ComObj must be set manually!
+            </remarks>
+        </member>
+        <member name="M:OOLib.MultiServiceFactory.#ctor(System.Object)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="comObject">COM object</param>
+        </member>
+        <member name="M:OOLib.MultiServiceFactory.CreateInstance(System.String)">
+            <summary>
+            Creates an instance classified by the specified name. 
+            </summary>
+            <param name="serviceSpecifier">Classified name of instance </param>
+            <returns>Return a new instance.</returns>
+        </member>
+        <member name="M:OOLib.MultiServiceFactory.CreateInstanceWithArguments(System.String,System.Object[])">
+            <summary>
+            Creates an instance classified by the specified name and passes the arguments to that instance.
+            </summary>
+            <param name="serviceSpecifier">Classified name of instance</param>
+            <param name="arguments">Arguments passed to the instance</param>
+            <returns>Return a new instance.</returns>
+        </member>
+        <member name="M:OOLib.MultiServiceFactory.GetAvailableServiceNames">
+            <summary>
+            Provides the available names of the factory to be used to create instances.
+            </summary>
+            <returns>Returns a sequence of all names.</returns>
+        </member>
+        <member name="M:OOLib.MultiServiceFactory.CreateInstanceWithContext(System.String,OOLib.ComponentContext)">
+            <summary>
+            Creates an instance of a component which supports the services specified by the factory. 
+            </summary>
+            <param name="serviceSpecifier">Service name</param>
+            <param name="context">Context the component instance gets its deployment values from</param>
+            <returns>Returns the component instance.</returns>
+        </member>
+        <member name="M:OOLib.MultiServiceFactory.CreateInstanceWithArgumentsAndContext(System.String,System.Object[],OOLib.ComponentContext)">
+            <summary>
+            Creates an instance of a component which supports the services specified by the factory, 
+            and initializes the new instance with the given arguments and context. 
+            </summary>
+            <param name="serviceSpecifier">Service name</param>
+            <param name="arguments">Arguments</param>
+            <param name="context">Context the component instance gets its deployment values from</param>
+            <returns>Returns the component instance.</returns>
+        </member>
+        <member name="M:OOLib.MultiServiceFactory.SupportsService(System.String)">
+            <summary>
+            Tests whether the specified service is supported, i.e. implemented by the implementation.
+            </summary>
+            <param name="serviceName">Name of service to be tested </param>
+            <returns>true, if service is supported, false otherwise</returns>
+        </member>
+        <member name="M:OOLib.MultiServiceFactory.GetSupportedServiceNames">
+            <summary>
+            Provides the supported service names of the implementation, including also indirect service names.
+            </summary>
+            <returns>Returns a sequence of service names that are supported.</returns>
+        </member>
+        <member name="P:OOLib.MultiServiceFactory.ImplementationName">
+            <summary>
+            Gets the implementation name of the service implementation.
+            </summary>
+        </member>
+        <member name="T:OOLib.MultiServiceFactoryImpl">
+            <summary>
+            Implementation of the IMultiServiceFactory interface
+            </summary>
+        </member>
+        <member name="M:OOLib.MultiServiceFactoryImpl.#ctor(OOLib.ComObjectWrapper)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="cow">COM object which should support the interface.</param>
+        </member>
+        <member name="M:OOLib.MultiServiceFactoryImpl.CreateInstance(System.String)">
+            <summary>
+            Creates an instance classified by the specified name. 
+            </summary>
+            <param name="serviceSpecifier">Classified name of instance </param>
+            <returns>Return a new instance.</returns>
+            <remarks>!!! Not tested !!!</remarks>
+        </member>
+        <member name="M:OOLib.MultiServiceFactoryImpl.CreateInstanceWithArguments(System.String,System.Object[])">
+            <summary>
+            Creates an instance classified by the specified name and passes the arguments to that instance.
+            </summary>
+            <param name="serviceSpecifier">Classified name of instance</param>
+            <param name="arguments">Arguments passed to the instance</param>
+            <returns>Return a new instance.</returns>
+            <remarks>!!! Not tested !!!</remarks>
+        </member>
+        <member name="M:OOLib.MultiServiceFactoryImpl.GetAvailableServiceNames">
+            <summary>
+            Provides the available names of the factory to be used to create instances.
+            </summary>
+            <returns>Returns a sequence of all names.</returns>
+            <remarks>!!! Not tested !!!</remarks>
+        </member>
+        <member name="P:OOLib.MultiServiceFactoryImpl.Cow">
+            <summary>
+            Gets the COM object wrapper which should support the interface.
+            </summary>
+        </member>
+        <member name="T:OOLib.INamed">
+            <summary>
+            Specifies the name of the object. 
+            </summary>
+        </member>
+        <member name="P:OOLib.INamed.Name">
+            <summary>
+            Gets or sets the name of the object.
+            </summary>
+            <remarks>
+            The name is generally unique in the container of the object.
+            </remarks>
+        </member>
+        <member name="T:OOLib.ServiceManager">
+            <summary>
+            Provides a collection of implementations for services.
+            </summary>
+            <remarks>
+            This is a singleton you commonly find in your component context under key /singletons/com.sun.star.lang.theServiceManager.
+            The factories are accessed with a service name. It is possible to access the factories with their implementation names, 
+            but you should avoid this.
+            </remarks>
+        </member>
+        <member name="M:OOLib.ServiceManager.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:OOLib.ServiceManager.CreateInstance(System.String)">
+            <summary>
+            Creates an instance classified by the specified name. 
+            </summary>
+            <param name="serviceSpecifier">Classified name of instance </param>
+            <returns>Return a new instance.</returns>
+        </member>
+        <member name="M:OOLib.ServiceManager.CreateInstanceWithArguments(System.String,System.Object[])">
+            <summary>
+            Creates an instance classified by the specified name and passes the arguments to that instance.
+            </summary>
+            <param name="serviceSpecifier">Classified name of instance</param>
+            <param name="arguments">Arguments passed to the instance</param>
+            <returns>Return a new instance.</returns>
+        </member>
+        <member name="M:OOLib.ServiceManager.GetAvailableServiceNames">
+            <summary>
+            Provides the available names of the factory to be used to create instances.
+            </summary>
+            <returns>Returns a sequence of all names.</returns>
+        </member>
+        <member name="M:OOLib.ServiceManager.CreateDesktop">
+            <summary>
+            Creates a new Desktop object.
+            </summary>
+            <returns>Returns a new instance of Desktop.</returns>
+        </member>
+        <member name="P:OOLib.ServiceManager.Instance">
+            <summary>
+            Gets the singelton instance of the ServiceManager
+            </summary>
+        </member>
+        <member name="P:OOLib.ServiceManager.DefaultContext">
+            <summary>
+            Gets the default component context to be used, if instanciating services via MultiServiceFactory.
+            </summary>
+        </member>
+        <member name="P:OOLib.ServiceManager.CoreReflection">
+            <summary>
+            Gets a CoreReflection object.
+            </summary>
+        </member>
+        <member name="T:OOLib.EnumerationAccess">
+            <summary>
+            Used to enumerate objects in a container which contains objects. 
+            </summary>
+        </member>
+        <member name="T:OOLib.IEnumerationAccess">
+            <summary>
+            Used to enumerate objects in a container which contains objects. 
+            </summary>
+        </member>
+        <member name="M:OOLib.IEnumerationAccess.CreateEnumeration">
+            <summary>
+            Creates a new enumeration object for this container.
+            </summary>
+            <returns>Returns a new enumeration object for this container. It returns NULL if there are no objects in this container.</returns>
+        </member>
+        <member name="M:OOLib.EnumerationAccess.#ctor">
+            <summary>
+            Constructor
+            </summary>
+            <remarks>
+            After using this constructor, the ComObj must be set manually!
+            </remarks>
+        </member>
+        <member name="M:OOLib.EnumerationAccess.#ctor(System.Object)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="comObject">COM object</param>
+        </member>
+        <member name="M:OOLib.EnumerationAccess.CreateEnumeration">
+            <summary>
+            Creates a new enumeration object for this container.
+            </summary>
+            <returns>Returns a new enumeration object for this container. It returns NULL if there are no objects in this container.</returns>
+            <remarks>!!! Not tested !!!</remarks>
+        </member>
+        <member name="T:OOLib.TextDocument">
+            <summary>
+            A text document is a model component which contains text structured by paragraphs. 
+            Each paragraph and each portion of text can be fitted with some attributes (technically properties).
+            Its declared as generic text document, because its function is needed by different derived services (TextDocument/WebDocument/GlobalDocument).
+            In addition, all text objects can be searched.
+            </summary>
+        </member>
+        <member name="T:OOLib.IBookmarksSupplier">
+            <summary>
+            Provides access to the collection of all bookmarks associated with a data source. 
+            </summary>
+        </member>
+        <member name="P:OOLib.IBookmarksSupplier.Bookmarks">
+            <summary>
+            Gets the collection of all bookmarks associated with a data source.
+            </summary>
+            <remarks>
+            A bookmark is simply a string specifying the location of the bookmarked document.
+            </remarks>
+        </member>
+        <member name="M:OOLib.TextDocument.#ctor">
+            <summary>
+            Constructor
+            </summary>
+            <remarks>
+            After using this constructor, the ComObj must be set manually!
+            </remarks>
+        </member>
+        <member name="M:OOLib.TextDocument.#ctor(System.Object)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="comObject">COM object</param>
+        </member>
+        <member name="M:OOLib.TextDocument.CreateInstance(System.String)">
+            <summary>
+            Creates an instance classified by the specified name.
+            </summary>
+            <param name="serviceSpecifier">Classified name of instance.</param>
+            <returns>Returns a new instance.</returns>
+            <remarks>!!! Not tested !!!</remarks>
+        </member>
+        <member name="M:OOLib.TextDocument.CreateInstanceWithArguments(System.String,System.Object[])">
+            <summary>
+            Creates an instance classified by the specified name and passes the arguments to that instance.
+            </summary>
+            <param name="serviceSpecifier">Classified name of instance.</param>
+            <param name="arguments">Arguments passed to the instance.</param>
+            <returns>Returns a new instance.</returns>
+            <remarks>!!! Not tested !!!</remarks>
+        </member>
+        <member name="M:OOLib.TextDocument.GetAvailableServiceNames">
+            <summary>
+            Provides the available names of the factory to be used to create instances.
+            </summary>
+            <returns>Returns an array of all names.</returns>
+            <remarks>!!! Not tested !!!</remarks>
+        </member>
+        <member name="M:OOLib.TextDocument.Reformat">
+            <summary>
+            Reformats the contents of the document. 
+            </summary>
+            <remarks>!!! Not tested !!!</remarks>
+        </member>
+        <member name="M:OOLib.TextDocument.ReplaceBookmark(System.String,System.String)">
+            <summary>
+            Replaces the content of a bookmark.
+            </summary>
+            <param name="name">Name of the bookmark.</param>
+            <param name="str">String which replaces the bokkmark content.</param>
+            <remarks>!!! Not tested !!!</remarks>
+        </member>
+        <member name="M:OOLib.TextDocument.CopyBookmarkContent(System.String,OOLib.TextRange)">
+            <summary>
+            Copies the content of a bookmark.
+            </summary>
+            <param name="name">Name of the bookmark.</param>
+            <param name="targetRange">Target text range. If null, the bookmark text range is taken as target.</param>
+            <returns>return the target text range.</returns>
+        </member>
+        <member name="M:OOLib.TextDocument.CreateTextSection(System.String)">
+            <summary>
+            Creates a new text section.
+            </summary>
+            <param name="name">Name of the text section.</param>
+            <returns>Returns the new text section.</returns>
+        </member>
+        <member name="M:OOLib.TextDocument.CreateBookmark(System.String)">
+            <summary>
+            Creates a new bookmark, without adding it to the text.
+            </summary>
+            <param name="name">Name of the bookmark.</param>
+            <returns>Returns the new bookmark.</returns>
+        </member>
+        <member name="M:OOLib.TextDocument.AddBookmarkToText(System.String,OOLib.TextRange,System.Boolean)">
+            <summary>
+            Adds a new Bookmark to the text.
+            </summary>
+            <param name="name">Name of the bookmark.</param>
+            <param name="content">Content for the new Bookmark. Can be null.</param>
+            <param name="absorbContent">true if the content should be absorbed.</param>
+            <returns>Returns the new bookmark.</returns>
+        </member>
+        <member name="M:OOLib.TextDocument.Copy(OOLib.TextRange,OOLib.TextRange)">
+            <summary>
+            Copies source range to target range with all formatings
+            </summary>
+            <param name="source">Source text ranghe</param>
+            <param name="target">Target text range</param>
+            <returns>Returns the target text range.</returns>
+            <remarks>
+            This method does not use the clipboard!
+            </remarks>
+        </member>
+        <member name="P:OOLib.TextDocument.Text">
+            <summary>
+            Gets the major Text of the text document.
+            </summary>
+        </member>
+        <member name="P:OOLib.TextDocument.Bookmarks">
+            <summary>
+            Gets the collection of all bookmarks associated with a data source.
+            </summary>
+            <remarks>
+            A bookmark is simply a string specifying the location of the bookmarked document.
+            </remarks>
+        </member>
+        <member name="T:OOLib.TextCursor">
+            <summary>
+            A TextCursor is a TextRange which can be moved within a Text object.
+            </summary>
+        </member>
+        <member name="M:OOLib.TextCursor.#ctor">
+            <summary>
+            Constructor
+            </summary>
+            <remarks>
+            After using this constructor, the ComObj must be set manually!
+            </remarks>
+        </member>
+        <member name="M:OOLib.TextCursor.#ctor(System.Object)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="comObject">COM object</param>
+        </member>
+        <member name="M:OOLib.TextCursor.CollapseToStart">
+            <summary>
+            Sets the end of the position to the start.
+            </summary>
+            <remarks>!!! Not tested !!!</remarks>
+        </member>
+        <member name="M:OOLib.TextCursor.CollapseToEnd">
+            <summary>
+            Sets the start of the position to the end.
+            </summary>
+            <remarks>!!! Not tested !!!</remarks>
+        </member>
+        <member name="M:OOLib.TextCursor.GoLeft(System.Int32,System.Boolean)">
+            <summary>
+            Moves the cursor the specified number of characters to the left.
+            </summary>
+            <param name="count">The number of characters to move.</param>
+            <param name="expand">Specifies if the current selection of the cursor should be expanded or not.</param>
+            <returns>
+            true if the command was successfully completed. false otherwise. 
+            Note: Even if the command was not completed successfully it may be completed partially. E.g. if it was required 
+            to move 5 characters but it is only possible to move 3 false will be returned and the cursor moves only those 3 characters.
+            </returns>
+            <remarks>!!! Not tested !!!</remarks>
+        </member>
+        <member name="M:OOLib.TextCursor.GoRight(System.Int32,System.Boolean)">
+            <summary>
+            Moves the cursor the specified number of characters to the right.
+            </summary>
+            <param name="count">The number of characters to move.</param>
+            <param name="expand">Specifies if the current selection of the cursor should be expanded or not.</param>
+            <returns>
+            true if the command was successfully completed. false otherwise.
+            Note: Even if the command was not completed successfully it may be completed partially. E.g. if it was required 
+            to move 5 characters but it is only possible to move 3 false will be returned and the cursor moves only those 3 characters.
+            </returns>
+            <remarks>!!! Not tested !!!</remarks>
+        </member>
+        <member name="M:OOLib.TextCursor.GotoStart(System.Boolean)">
+            <summary>
+            Moves the cursor to the start of the text.
+            </summary>
+            <param name="expand">Specifies if the current selection of the cursor should be expanded or not.</param>
+            <remarks>!!! Not tested !!!</remarks>
+        </member>
+        <member name="M:OOLib.TextCursor.GotoEnd(System.Boolean)">
+            <summary>
+            Moves the cursor to the end of the text.
+            </summary>
+            <param name="expand">Specifies if the current selection of the cursor should be expanded or not.</param>
+            <remarks>!!! Not tested !!!</remarks>
+        </member>
+        <member name="M:OOLib.TextCursor.GotoRange(OOLib.TextRange,System.Boolean)">
+            <summary>
+            Moves or expands the cursor to a specified TextRange.
+            </summary>
+            <param name="range">TextRange</param>
+            <param name="expand">Specifies if the current selection of the cursor should be expanded or not.</param>
+            <remarks>!!! Not tested !!!</remarks>
+        </member>
+        <member name="P:OOLib.TextCursor.IsCollapsed">
+            <summary>
+            Get if the start and end positions are the same.
+            </summary>
+            <remarks>!!! Not tested !!!</remarks>
+        </member>
+        <member name="T:OOLib.Rectangle">
+            <summary>
+            Specifies a rectangular area by position and size.
+            </summary>
+        </member>
+        <member name="M:OOLib.Rectangle.#ctor">
+            <summary>
+            Constructor
+            </summary>
+            <remarks>
+            After using this constructor, the ComObj must be set manually!
+            </remarks>
+        </member>
+        <member name="M:OOLib.Rectangle.#ctor(System.Object)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="comObject">COM object</param>
+        </member>
+        <member name="P:OOLib.Rectangle.X">
+            <summary>
+            Gets or sets the x-coordinate.
+            </summary>
+        </member>
+        <member name="P:OOLib.Rectangle.Y">
+            <summary>
+            Gets or sets the y-coordinate.
+            </summary>
+        </member>
+        <member name="P:OOLib.Rectangle.Width">
+            <summary>
+            Gets or sets the width.
+            </summary>
+        </member>
+        <member name="P:OOLib.Rectangle.Height">
+            <summary>
+            Gets or sets the height.
+            </summary>
+        </member>
+        <member name="T:OOLib.ServiceInfoImpl">
+            <summary>
+            Implementation of the IServiceInfoImpl interface
+            </summary>
+        </member>
+        <member name="M:OOLib.ServiceInfoImpl.#ctor(OOLib.ComObjectWrapper)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="cow">COM object which should support the interface.</param>
+        </member>
+        <member name="M:OOLib.ServiceInfoImpl.SupportsService(System.String)">
+            <summary>
+            Tests whether the specified service is supported, i.e. implemented by the implementation.
+            </summary>
+            <param name="serviceName">Name of service to be tested </param>
+            <returns>true, if service is supported, false otherwise</returns>
+            <remarks>!!! Not tested !!!</remarks>
+        </member>
+        <member name="M:OOLib.ServiceInfoImpl.GetSupportedServiceNames">
+            <summary>
+            Provides the supported service names of the implementation, including also indirect service names.
+            </summary>
+            <returns>Returns a sequence of service names that are supported.</returns>
+            <remarks>!!! Not tested !!!</remarks>
+        </member>
+        <member name="P:OOLib.ServiceInfoImpl.Cow">
+            <summary>
+            Gets the COM object wrapper which should support the interface.
+            </summary>
+        </member>
+        <member name="P:OOLib.ServiceInfoImpl.ImplementationName">
+            <summary>
+            Gets the implementation name of the service implementation.
+            </summary>
+            <remarks>!!! Not tested !!!</remarks>
+        </member>
+        <member name="T:OOLib.Frames">
+            <summary>
+            Manages and creates frames.
+            </summary>
+            <remarks>
+            Frames may contain other frames (by implementing an XFrames interface) and may be contained in other frames.
+            </remarks>
+        </member>
+        <member name="T:OOLib.IFrames">
+            <summary>
+            Manages and creates frames.
+            </summary>
+            <remarks>
+            Frames may contain other frames (by implementing an XFrames interface) and may be contained in other frames.
+            </remarks>
+        </member>
+        <member name="M:OOLib.IFrames.AppendFrame(OOLib.Frame)">
+            <summary>
+            Appends the specified Frame to the list of sub-frames. 
+            </summary>
+            <param name="frame">New frame for inserting into this container </param>
+        </member>
+        <member name="M:OOLib.IFrames.QueryFrames(OOLib.FrameSearchFlag)">
+            <summary>
+            Provides access to the list of all currently existing frames inside this container and her sub frames.
+            </summary>
+            <param name="searchFlags">Use combinations of FrameSearchFlag to specify which frames should be found.</param>
+            <returns>Returns all frames of this container and all available frames of the whole frame tree which match search parameter SearchFlags.</returns>
+        </member>
+        <member name="M:OOLib.IFrames.Remove(OOLib.Frame)">
+            <summary>
+            Removes the frame from its container.
+            </summary>
+            <param name="frame">Frame which should be removed from this container.</param>
+            <remarks>
+            Note: 
+            The method XComponent::dispose() is not called implicitly by this method. 
+            The creator attribute of the frame must be reset by the caller of this method. 
+            </remarks>
+        </member>
+        <member name="M:OOLib.Frames.#ctor">
+            <summary>
+            Constructor
+            </summary>
+            <remarks>
+            After using this constructor, the ComObj must be set manually!
+            </remarks>
+        </member>
+        <member name="M:OOLib.Frames.#ctor(System.Object)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="comObject">COM object</param>
+        </member>
+        <member name="M:OOLib.Frames.AppendFrame(OOLib.Frame)">
+            <summary>
+            Appends the specified Frame to the list of sub-frames. 
+            </summary>
+            <param name="frame">New frame for inserting into this container</param>
+            <remarks>!!! Not tested !!!</remarks>
+        </member>
+        <member name="M:OOLib.Frames.QueryFrames(OOLib.FrameSearchFlag)">
+            <summary>
+            Provides access to the list of all currently existing frames inside this container and her sub frames.
+            </summary>
+            <param name="searchFlags">Use combinations of FrameSearchFlag to specify which frames should be found.</param>
+            <returns>Returns all frames of this container and all available frames of the whole frame tree which match search parameter SearchFlags.</returns>
+            /// <remarks>!!! Not tested !!!</remarks>
+        </member>
+        <member name="M:OOLib.Frames.Remove(OOLib.Frame)">
+            <summary>
+            Removes the frame from its container.
+            </summary>
+            <param name="frame">Frame which should be removed from this container.</param>
+            <remarks>
+            Note: 
+            The method XComponent::dispose() is not called implicitly by this method. 
+            The creator attribute of the frame must be reset by the caller of this method. 
+            !!! Not tested !!!
+            </remarks>
+        </member>
+        <member name="T:OOLib.IComponentLoader">
+            <summary>
+            This is a simple interface to load components by an URL into a frame environment.
+            </summary>
+        </member>
+        <member name="M:OOLib.IComponentLoader.LoadComponentFromURLRaw(System.String,System.String,System.Int32,System.Boolean)">
+            <summary>
+            Loads a component specified by an URL into the specified new or existing frame.
+            </summary>
+            <param name="url">
+            Specifies the URL of the document to load.
+            To create new documents, use "private:factory/scalc", "private:factory/swriter", 
+            etc. Other special protocols (e.g. "slot:", ".uno") are not allowed and raise an ::com::sun::star::lang::IllegalArgumentException. 
+            </param>
+            <param name="targetFrameName">
+            Specifies the name of the frame to view the document in.
+            If a frame with the specified name already exists, it is used, otherwise it is created. 
+            There exist some special targets which never can be used as real frame names: 
+            "_blank" always creates a new frame 
+            "_default" special UI functionality (e.g. detecting of already loaded documents, using of empty frames of creating of new top frames as fallback) 
+            "_self", ""(!) means frame himself 
+            "_parent" address direct parent of frame 
+            "_top" indicates top frame of current path in tree 
+            "_beamer" means special sub frame 
+            </param>
+            <param name="searchFlags">
+            Use the values of FrameSearchFlag to specify how to find the specified TargetFrameName.
+            Note: These flags are optional ones and will be used for non special target names only.
+            </param>
+            <param name="hidden">true if the Window in which the document is opend should be hidden, false otherwiese.</param>
+            <returns>Returns the raw Com object</returns>
+        </member>
+        <member name="M:OOLib.IComponentLoader.LoadComponentFromURLRaw(System.String,System.String,System.Int32,System.Object[])">
+            <summary>
+            Loads a component specified by an URL into the specified new or existing frame.
+            </summary>
+            <param name="url">
+            Specifies the URL of the document to load.
+            To create new documents, use "private:factory/scalc", "private:factory/swriter", 
+            etc. Other special protocols (e.g. "slot:", ".uno") are not allowed and raise an ::com::sun::star::lang::IllegalArgumentException. 
+            </param>
+            <param name="targetFrameName">
+            Specifies the name of the frame to view the document in.
+            If a frame with the specified name already exists, it is used, otherwise it is created. 
+            There exist some special targets which never can be used as real frame names: 
+            "_blank" always creates a new frame 
+            "_default" special UI functionality (e.g. detecting of already loaded documents, using of empty frames of creating of new top frames as fallback) 
+            "_self", ""(!) means frame himself 
+            "_parent" address direct parent of frame 
+            "_top" indicates top frame of current path in tree 
+            "_beamer" means special sub frame 
+            </param>
+            <param name="searchFlags">
+            Use the values of FrameSearchFlag to specify how to find the specified TargetFrameName.
+            Note: These flags are optional ones and will be used for non special target names only.
+            </param>
+            <param name="arguments">
+            these arguments specify component or filter specific behavior.
+            For example, "ReadOnly" with a boolean value specifies whether the document is opened read-only. 
+            "FilterName" specifies the component type to create and the filter to use, for example: 
+            "Text - CSV". For more information see ::com::sun::star::document::MediaDescriptor.
+            </param>
+            <returns>Returns the raw Com object</returns>
+        </member>
+        <member name="M:OOLib.IComponentLoader.LoadComponentFromURL``1(System.String,System.String,OOLib.FrameSearchFlag,System.Boolean)">
+            <summary>
+            Loads a component specified by an URL into the specified new or existing frame.
+            </summary>
+            <param name="url">
+            Specifies the URL of the document to load.
+            To create new documents, use "private:factory/scalc", "private:factory/swriter", 
+            etc. Other special protocols (e.g. "slot:", ".uno") are not allowed and raise an ::com::sun::star::lang::IllegalArgumentException. 
+            </param>
+            <param name="targetFrameName">
+            Specifies the name of the frame to view the document in.
+            If a frame with the specified name already exists, it is used, otherwise it is created. 
+            There exist some special targets which never can be used as real frame names: 
+            "_blank" always creates a new frame 
+            "_default" special UI functionality (e.g. detecting of already loaded documents, using of empty frames of creating of new top frames as fallback) 
+            "_self", ""(!) means frame himself 
+            "_parent" address direct parent of frame 
+            "_top" indicates top frame of current path in tree 
+            "_beamer" means special sub frame 
+            </param>
+            <param name="searchFlags">
+            Use the values of FrameSearchFlag to specify how to find the specified TargetFrameName.
+            Note: These flags are optional ones and will be used for non special target names only.
+            </param>
+            <param name="hidden">true if the Window in which the document is opend should be hidden, false otherwiese.</param>
+            <returns>
+            Returns a ::com::sun::star::lang::XComponent for successfully loaded documents or NULL if it failed .
+            This interface is a generic one and can be used to start further requests on loaded document or control the 
+            lifetime of it (means dispose() it after using). The real document service behind this interface can be one of follow three ones: 
+            ::com::sun::star::awt::XWindow for simple components Should be used for viewable components only. 
+            It is not allowed to dispose it after use directly, because the frame containing the component is its owner. 
+            Because the frame object is not accessible through the interface too, only an interacting user can do this by closing the frames' window. 
+            XController for richer components Should be used for real editable components which doesn't need a model. 
+            It is not allowed to dispose it after use directly, because the frame containing the component is its owner. 
+            Here the object can be disposed by disposing the frame, that the XController::getFrame() method of the controller returns. 
+            But for visible components the controller should be asked for permission by calling XController::suspend() before. 
+            XModel for full featured components
+            A model that in general can be shared between several view/controller pairs, does not have an explicit owner. 
+            Every view and also the component that loaded the document may consider itself as an owner. Simply calling XComponent::dispose 
+            on this model may cause problems, if some members of the "owner community" are currently busy working on the model. 
+            These problems are handled by explicit closing negotiations through the interface ::com::sun::star::util::XCloseable. 
+            Direct dispose of the model is allowed only, if this special interface doesn't exist.
+            </returns>
+        </member>
+        <member name="M:OOLib.IComponentLoader.LoadComponentFromURLWithArgs``1(System.String,System.String,OOLib.FrameSearchFlag,System.Object[])">
+            <summary>
+            Loads a component specified by an URL into the specified new or existing frame.
+            </summary>
+            <param name="url">
+            Specifies the URL of the document to load.
+            To create new documents, use "private:factory/scalc", "private:factory/swriter", 
+            etc. Other special protocols (e.g. "slot:", ".uno") are not allowed and raise an ::com::sun::star::lang::IllegalArgumentException. 
+            </param>
+            <param name="targetFrameName">
+            Specifies the name of the frame to view the document in.
+            If a frame with the specified name already exists, it is used, otherwise it is created. 
+            There exist some special targets which never can be used as real frame names: 
+            "_blank" always creates a new frame 
+            "_default" special UI functionality (e.g. detecting of already loaded documents, using of empty frames of creating of new top frames as fallback) 
+            "_self", ""(!) means frame himself 
+            "_parent" address direct parent of frame 
+            "_top" indicates top frame of current path in tree 
+            "_beamer" means special sub frame 
+            </param>
+            <param name="searchFlags">
+            Use the values of FrameSearchFlag to specify how to find the specified TargetFrameName.
+            Note: These flags are optional ones and will be used for non special target names only.
+            </param>
+            <param name="arguments">
+            these arguments specify component or filter specific behavior.
+            For example, "ReadOnly" with a boolean value specifies whether the document is opened read-only. 
+            "FilterName" specifies the component type to create and the filter to use, for example: 
+            "Text - CSV". For more information see ::com::sun::star::document::MediaDescriptor.
+            </param>
+            <returns>
+            Returns a ::com::sun::star::lang::XComponent for successfully loaded documents or NULL if it failed .
+            This interface is a generic one and can be used to start further requests on loaded document or control the 
+            lifetime of it (means dispose() it after using). The real document service behind this interface can be one of follow three ones: 
+            ::com::sun::star::awt::XWindow for simple components Should be used for viewable components only. 
+            It is not allowed to dispose it after use directly, because the frame containing the component is its owner. 
+            Because the frame object is not accessible through the interface too, only an interacting user can do this by closing the frames' window. 
+            XController for richer components Should be used for real editable components which doesn't need a model. 
+            It is not allowed to dispose it after use directly, because the frame containing the component is its owner. 
+            Here the object can be disposed by disposing the frame, that the XController::getFrame() method of the controller returns. 
+            But for visible components the controller should be asked for permission by calling XController::suspend() before. 
+            XModel for full featured components
+            A model that in general can be shared between several view/controller pairs, does not have an explicit owner. 
+            Every view and also the component that loaded the document may consider itself as an owner. Simply calling XComponent::dispose 
+            on this model may cause problems, if some members of the "owner community" are currently busy working on the model. 
+            These problems are handled by explicit closing negotiations through the interface ::com::sun::star::util::XCloseable. 
+            Direct dispose of the model is allowed only, if this special interface doesn't exist.
+            </returns>
+        </member>
+        <member name="M:OOLib.IComponentLoader.LoadComponentFromFile``1(System.String,System.String,OOLib.FrameSearchFlag,System.Boolean)">
+            <summary>
+            Loads a component specified by an URL into the specified new or existing frame.
+            </summary>
+            <param name="fileName">Specifies the file name of the document to load.</param>
+            <param name="targetFrameName">
+            Specifies the name of the frame to view the document in.
+            If a frame with the specified name already exists, it is used, otherwise it is created. 
+            There exist some special targets which never can be used as real frame names: 
+            "_blank" always creates a new frame 
+            "_default" special UI functionality (e.g. detecting of already loaded documents, using of empty frames of creating of new top frames as fallback) 
+            "_self", ""(!) means frame himself 
+            "_parent" address direct parent of frame 
+            "_top" indicates top frame of current path in tree 
+            "_beamer" means special sub frame 
+            </param>
+            <param name="searchFlags">
+            Use the values of FrameSearchFlag to specify how to find the specified TargetFrameName.
+            Note: These flags are optional ones and will be used for non special target names only.
+            </param>
+            <param name="hidden">true if the Window in which the document is opend should be hidden, false otherwiese.</param>
+            <returns>
+            Returns a ::com::sun::star::lang::XComponent for successfully loaded documents or NULL if it failed .
+            This interface is a generic one and can be used to start further requests on loaded document or control the 
+            lifetime of it (means dispose() it after using). The real document service behind this interface can be one of follow three ones: 
+            ::com::sun::star::awt::XWindow for simple components Should be used for viewable components only. 
+            It is not allowed to dispose it after use directly, because the frame containing the component is its owner. 
+            Because the frame object is not accessible through the interface too, only an interacting user can do this by closing the frames' window. 
+            XController for richer components Should be used for real editable components which doesn't need a model. 
+            It is not allowed to dispose it after use directly, because the frame containing the component is its owner. 
+            Here the object can be disposed by disposing the frame, that the XController::getFrame() method of the controller returns. 
+            But for visible components the controller should be asked for permission by calling XController::suspend() before. 
+            XModel for full featured components
+            A model that in general can be shared between several view/controller pairs, does not have an explicit owner. 
+            Every view and also the component that loaded the document may consider itself as an owner. Simply calling XComponent::dispose 
+            on this model may cause problems, if some members of the "owner community" are currently busy working on the model. 
+            These problems are handled by explicit closing negotiations through the interface ::com::sun::star::util::XCloseable. 
+            Direct dispose of the model is allowed only, if this special interface doesn't exist.
+            </returns>
+        </member>
+        <member name="M:OOLib.IComponentLoader.LoadComponentFromFileWithArgs``1(System.String,System.String,OOLib.FrameSearchFlag,System.Object[])">
+            <summary>
+            Loads a component specified by an URL into the specified new or existing frame.
+            </summary>
+            <param name="fileName">Specifies the file name of the document to load.</param>
+            <param name="targetFrameName">
+            Specifies the name of the frame to view the document in.
+            If a frame with the specified name already exists, it is used, otherwise it is created. 
+            There exist some special targets which never can be used as real frame names: 
+            "_blank" always creates a new frame 
+            "_default" special UI functionality (e.g. detecting of already loaded documents, using of empty frames of creating of new top frames as fallback) 
+            "_self", ""(!) means frame himself 
+            "_parent" address direct parent of frame 
+            "_top" indicates top frame of current path in tree 
+            "_beamer" means special sub frame 
+            </param>
+            <param name="searchFlags">
+            Use the values of FrameSearchFlag to specify how to find the specified TargetFrameName.
+            Note: These flags are optional ones and will be used for non special target names only.
+            </param>
+            <param name="arguments">
+            these arguments specify component or filter specific behavior.
+            For example, "ReadOnly" with a boolean value specifies whether the document is opened read-only. 
+            "FilterName" specifies the component type to create and the filter to use, for example: 
+            "Text - CSV". For more information see ::com::sun::star::document::MediaDescriptor.
+            </param>
+            <returns>
+            Returns a ::com::sun::star::lang::XComponent for successfully loaded documents or NULL if it failed .
+            This interface is a generic one and can be used to start further requests on loaded document or control the 
+            lifetime of it (means dispose() it after using). The real document service behind this interface can be one of follow three ones: 
+            ::com::sun::star::awt::XWindow for simple components Should be used for viewable components only. 
+            It is not allowed to dispose it after use directly, because the frame containing the component is its owner. 
+            Because the frame object is not accessible through the interface too, only an interacting user can do this by closing the frames' window. 
+            XController for richer components Should be used for real editable components which doesn't need a model. 
+            It is not allowed to dispose it after use directly, because the frame containing the component is its owner. 
+            Here the object can be disposed by disposing the frame, that the XController::getFrame() method of the controller returns. 
+            But for visible components the controller should be asked for permission by calling XController::suspend() before. 
+            XModel for full featured components
+            A model that in general can be shared between several view/controller pairs, does not have an explicit owner. 
+            Every view and also the component that loaded the document may consider itself as an owner. Simply calling XComponent::dispose 
+            on this model may cause problems, if some members of the "owner community" are currently busy working on the model. 
+            These problems are handled by explicit closing negotiations through the interface ::com::sun::star::util::XCloseable. 
+            Direct dispose of the model is allowed only, if this special interface doesn't exist.
+            </returns>
+        </member>
+        <member name="T:OOLib.TextSection">
+            <summary>
+            A TextSection is a range of complete paragraphs within a text.
+            </summary>
+            <remarks>
+            The content of the section may be the content of a link into another document, a link from the same document, 
+            or the result of a DDE operation.
+            TextSection instances can be linked from and to other texts.
+            </remarks>
+        </member>
+        <member name="T:OOLib.TextContent">
+            <summary>
+            Is an object which can be anchored in a text, like instances of TextFrame or TextField. 
+            </summary>
+            <remarks>
+            If the concrete TextContent has a textual representation which fades into the surrounding text, then XTextField is used. 
+            If the concrete TextContent has a "floating" object, like a graphic, ::com::sun::star::drawing::XShape is used.
+            </remarks>
+        </member>
+        <member name="M:OOLib.TextContent.#ctor">
+            <summary>
+            Constructor
+            </summary>
+            <remarks>
+            After using this constructor, the ComObj must be set manually!
+            </remarks>
+        </member>
+        <member name="M:OOLib.TextContent.#ctor(System.Object)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="comObject">COM object</param>
+        </member>
+        <member name="M:OOLib.TextContent.Attach(OOLib.TextRange)">
+            <summary>
+            Is called when this object gets embedded in a text. 
+            </summary>
+            <param name="textRange">The tesxt range to attach.</param>
+            <remarks>
+            This acts like a multi-phase construction, thus the object may be invalid until it is attached to a text position. 
+            In general, this method is called from within.
+            Both text objects and text content objects may only be connected to each other if they are created by the same component.
+            When implementing new components, this behaviour is deprecated.
+            </remarks>
+        </member>
+        <member name="M:OOLib.TextContent.GetAnchor">
+            <summary>
+            Gets the text range to which the content is attached.
+            </summary>
+            <returns>Returns the text range to which the content is attached.</returns>
+            <remarks>
+            Note: The anchor of the actual implementation for text tables does not have a position in the text. 
+            Thus that anchor can not be used for some operation like attach for example or insertTextContent or 
+            other function that require the object to have a position in the text.
+            The reason why a text table still needs an anchor is that for example tables should be insertable via 
+            insertTextContent and that interface uses a parameter of that type.
+            </remarks>
+        </member>
+        <member name="P:OOLib.TextContent.AnchorType">
+            <summary>
+            Specifies how the text content is attached to its surrounding Text. 
+            </summary>
+            <remarks>
+            Optional
+            !!! Not tested !!!
+            </remarks>
+        </member>
+        <member name="P:OOLib.TextContent.AnchorTypes">
+            <summary>
+            Gets the anchor type of the text content. 
+            </summary>
+            <remarks>
+            Optional
+            !!! Not tested !!!
+            </remarks>
+        </member>
+        <member name="P:OOLib.TextContent.TextWrap">
+            <summary>
+            Gets or set if the text content is a shape and how the text is wrapped around the shape.
+            </summary>
+            <remarks>
+            Optional
+            !!! Not tested !!!
+            </remarks>
+        </member>
+        <member name="M:OOLib.TextSection.#ctor">
+            <summary>
+            Constructor
+            </summary>
+            <remarks>
+            After using this constructor, the ComObj must be set manually!
+            </remarks>
+        </member>
+        <member name="M:OOLib.TextSection.#ctor(System.Object)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="comObject">COM object</param>
+        </member>
+        <member name="M:OOLib.TextSection.GetChildSections">
+            <summary>
+            Gets all text sections that are children of this text section (recursive). 
+            </summary>
+            <returns>Returns an array with all child sections.</returns>
+            <remarks>!!! Not tested !!!</remarks>
+        </member>
+        <member name="P:OOLib.TextSection.ParentSection">
+            <summary>
+            Gets the parent section.
+            </summary>
+            <remarks>
+            If the object is a child section, then this property returns the parent text section.
+            !!! Not tested !!!
+            </remarks>
+        </member>
+        <member name="P:OOLib.TextSection.Name">
+            <summary>
+            Gets or sets the name of the object.
+            </summary>
+            <remarks>
+            The name is generally unique in the container of the object.
+            !!! Not tested !!!
+            </remarks>
+        </member>
+        <member name="P:OOLib.TextSection.Condition">
+            <summary>
+            Gets or sets a conditional expression.
+            </summary>
+            <remarks>
+            If the result of the conditional expression is true and the property TextSection::IsVisible is false, then the section is hidden.
+            !!! Not tested !!!
+            </remarks>
+        </member>
+        <member name="P:OOLib.TextSection.IsVisible">
+            <summary>
+            Gets or sets if the section is visible.
+            </summary>
+            <remarks>
+            If this property is false, the text section is hidden.
+            !!! Not tested !!!
+            </remarks>
+        </member>
+        <member name="P:OOLib.TextSection.IsProtected">
+            <summary>
+            Gets or sets if the section is protected.
+            </summary>
+            <remarks>
+            If this property is true, the text section is protected and cannot be modified from the user interface.
+            !!! Not tested !!!
+            </remarks>
+        </member>
+        <member name="P:OOLib.TextSection.FileLink">
+            <summary>
+            Gets or sets the FileLink for this section.
+            </summary>
+            <remarks>
+            If this property is set, then the content of the section is read from the specified document.
+            </remarks>
+        </member>
+        <member name="P:OOLib.TextSection.LinkRegion">
+            <summary>
+            Gets or sets the source of a file link in the document that is specified in TextSection::FileLink.
+            </summary>
+            <remarks>
+            The source may be a text section or a bookmark. If TextSection::FileLink is empty, then the current document is 
+            searched for the source. If this property is empty and TextSection::FileLink is set, then the complete document 
+            content is linked into this section.
+            </remarks>
+        </member>
+        <member name="P:OOLib.TextSection.DDECommandType">
+            <summary>
+            Gets or sets the type of the command string for a DDE operation. 
+            </summary>
+            <remarks>
+            The type can be the name of the application that provides a DDE source.
+            !!! Not tested !!!
+            </remarks>
+        </member>
+        <member name="P:OOLib.TextSection.DDECommandFile">
+            <summary>
+            Gets or sets the source file name of the command string for a DDE operation.
+            </summary>
+            <remarks>!!! Not tested !!!</remarks>
+        </member>
+        <member name="P:OOLib.TextSection.DDECommandElement">
+            <summary>
+            Gets or sets the source element of the command string for a DDE operation.
+            </summary>
+            <remarks>
+            The element can be i.e. a name of a cell in a sheet or a bookmark.
+            !!! Not tested !!!
+            </remarks>
+        </member>
+        <member name="T:OOLib.SectionFileLink">
+            <summary>
+            Describes the link for a text section.
+            </summary>
+            <remarks>
+            If the URL is an empty string, then the section is not linked.
+            The bookmark of the URL (after the "#") is the name of a bookmark or a section name in the linked document. 
+            If a bookmark or section with this name exists in the document, then only this part is linked into the given text section.
+            FilterName is the internal name of the document filter. To use this struct, it is not necessary to set FilterName. 
+            It will be automatically assigned.
+            </remarks>
+        </member>
+        <member name="M:OOLib.SectionFileLink.#ctor">
+            <summary>
+            Constructor
+            </summary>
+            <remarks>
+            After using this constructor, the ComObj must be set manually!
+            </remarks>
+        </member>
+        <member name="M:OOLib.SectionFileLink.#ctor(System.Object)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="comObject">COM object</param>
+        </member>
+        <member name="P:OOLib.SectionFileLink.FileURL">
+            <summary>
+            Gets or sets the URL of the linked file.
+            </summary>
+        </member>
+        <member name="P:OOLib.SectionFileLink.FilterName">
+            <summary>
+            Gets or sets the name of the file filter that is used to load the linked file.
+            </summary>
+        </member>
+        <member name="T:OOLib.Desktop">
+            <summary>
+            Is the environment for components which can instantiate within frames 
+            </summary>
+            <remarks>
+            A desktop environment contains tasks with one or more frames in which components can be loaded. 
+            The term "task" or naming a frame as a "task frame" is not in any way related to any additional 
+            implemented interfaces, it's just because these frames use task windows.
+            </remarks>
+        </member>
+        <member name="M:OOLib.Desktop.#ctor">
+            <summary>
+            Constructor
+            </summary>
+            <remarks>
+            After using this constructor, the ComObj must be set manually!
+            </remarks>
+        </member>
+        <member name="M:OOLib.Desktop.#ctor(System.Object)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="comObject">COM object</param>
+        </member>
+        <member name="M:OOLib.Desktop.Terminate">
+            <summary>
+            Tries to terminate the desktop. 
+            </summary>
+            <returns>
+            true if all listener agree with this request 
+            false otherwise 
+            </returns>
+            <remarks>
+            First, every terminate listener is called by his XTerminateListener::queryTermination() method. 
+            Throwing of a TerminationVetoException can break the termination process and the listener how has 
+            done that will be the new "controller" of the desktop lifetime. He should try to terminate it by 
+            himself after his own processes will be finished. If nobody disagree with the termination request, 
+            every listener will be called by his XTerminateListener::notifyTermination() method. 
+            </remarks>
+        </member>
+        <member name="M:OOLib.Desktop.GetComponents">
+            <summary>
+            Provides read access to collection of all currently loaded components inside the frame tree.
+            </summary>
+            <returns>Returns the collection of all components.</returns>
+            <remarks>
+            The component is, by definition, the model of the control which is loaded into a frame, or if no model exists, 
+            into the control itself. The service Components which is available from this method is a collection of all 
+            components of the desktop which are open within a frame of the desktop.
+            !!! Not tested !!!
+            </remarks>
+        </member>
+        <member name="M:OOLib.Desktop.LoadComponentFromURLRaw(System.String,System.String,System.Int32,System.Boolean)">
+            <summary>
+            Loads a component specified by an URL into the specified new or existing frame.
+            </summary>
+            <param name="url">
+            Specifies the URL of the document to load.
+            To create new documents, use "private:factory/scalc", "private:factory/swriter", 
+            etc. Other special protocols (e.g. "slot:", ".uno") are not allowed and raise an ::com::sun::star::lang::IllegalArgumentException. 
+            </param>
+            <param name="targetFrameName">
+            Specifies the name of the frame to view the document in.
+            If a frame with the specified name already exists, it is used, otherwise it is created. 
+            There exist some special targets which never can be used as real frame names: 
+            "_blank" always creates a new frame 
+            "_default" special UI functionality (e.g. detecting of already loaded documents, using of empty frames of creating of new top frames as fallback) 
+            "_self", ""(!) means frame himself 
+            "_parent" address direct parent of frame 
+            "_top" indicates top frame of current path in tree 
+            "_beamer" means special sub frame 
+            </param>
+            <param name="searchFlags">
+            Use the values of FrameSearchFlag to specify how to find the specified TargetFrameName.
+            Note: These flags are optional ones and will be used for non special target names only.
+            </param>
+            <param name="hidden">true if the Window in which the document is opend should be hidden, false otherwiese.</param>
+            <returns>Returns the raw Com object</returns>
+        </member>
+        <member name="M:OOLib.Desktop.LoadComponentFromURLRaw(System.String,System.String,System.Int32,System.Object[])">
+            <summary>
+            Loads a component specified by an URL into the specified new or existing frame.
+            </summary>
+            <param name="url">
+            Specifies the URL of the document to load.
+            To create new documents, use "private:factory/scalc", "private:factory/swriter", 
+            etc. Other special protocols (e.g. "slot:", ".uno") are not allowed and raise an ::com::sun::star::lang::IllegalArgumentException. 
+            </param>
+            <param name="targetFrameName">
+            Specifies the name of the frame to view the document in.
+            If a frame with the specified name already exists, it is used, otherwise it is created. 
+            There exist some special targets which never can be used as real frame names: 
+            "_blank" always creates a new frame 
+            "_default" special UI functionality (e.g. detecting of already loaded documents, using of empty frames of creating of new top frames as fallback) 
+            "_self", ""(!) means frame himself 
+            "_parent" address direct parent of frame 
+            "_top" indicates top frame of current path in tree 
+            "_beamer" means special sub frame 
+            </param>
+            <param name="searchFlags">
+            Use the values of FrameSearchFlag to specify how to find the specified TargetFrameName.
+            Note: These flags are optional ones and will be used for non special target names only.
+            </param>
+            <param name="arguments">
+            these arguments specify component or filter specific behavior.
+            For example, "ReadOnly" with a boolean value specifies whether the document is opened read-only. 
+            "FilterName" specifies the component type to create and the filter to use, for example: 
+            "Text - CSV". For more information see ::com::sun::star::document::MediaDescriptor.
+            </param>
+            <returns>Returns the raw Com object</returns>
+        </member>
+        <member name="M:OOLib.Desktop.LoadComponentFromURL``1(System.String,System.String,OOLib.FrameSearchFlag,System.Boolean)">
+            <summary>
+            Loads a component specified by an URL into the specified new or existing frame.
+            </summary>
+            <param name="url">
+            Specifies the URL of the document to load.
+            To create new documents, use "private:factory/scalc", "private:factory/swriter", 
+            etc. Other special protocols (e.g. "slot:", ".uno") are not allowed and raise an ::com::sun::star::lang::IllegalArgumentException. 
+            </param>
+            <param name="targetFrameName">
+            Specifies the name of the frame to view the document in.
+            If a frame with the specified name already exists, it is used, otherwise it is created. 
+            There exist some special targets which never can be used as real frame names: 
+            "_blank" always creates a new frame 
+            "_default" special UI functionality (e.g. detecting of already loaded documents, using of empty frames of creating of new top frames as fallback) 
+            "_self", ""(!) means frame himself 
+            "_parent" address direct parent of frame 
+            "_top" indicates top frame of current path in tree 
+            "_beamer" means special sub frame 
+            </param>
+            <param name="searchFlags">
+            Use the values of FrameSearchFlag to specify how to find the specified TargetFrameName.
+            Note: These flags are optional ones and will be used for non special target names only.
+            </param>
+            <param name="hidden">true if the Window in which the document is opend should be hidden, false otherwiese.</param>
+            <returns>
+            Returns a ::com::sun::star::lang::XComponent for successfully loaded documents or NULL if it failed .
+            This interface is a generic one and can be used to start further requests on loaded document or control the 
+            lifetime of it (means dispose() it after using). The real document service behind this interface can be one of follow three ones: 
+            ::com::sun::star::awt::XWindow for simple components Should be used for viewable components only. 
+            It is not allowed to dispose it after use directly, because the frame containing the component is its owner. 
+            Because the frame object is not accessible through the interface too, only an interacting user can do this by closing the frames' window. 
+            XController for richer components Should be used for real editable components which doesn't need a model. 
+            It is not allowed to dispose it after use directly, because the frame containing the component is its owner. 
+            Here the object can be disposed by disposing the frame, that the XController::getFrame() method of the controller returns. 
+            But for visible components the controller should be asked for permission by calling XController::suspend() before. 
+            XModel for full featured components
+            A model that in general can be shared between several view/controller pairs, does not have an explicit owner. 
+            Every view and also the component that loaded the document may consider itself as an owner. Simply calling XComponent::dispose 
+            on this model may cause problems, if some members of the "owner community" are currently busy working on the model. 
+            These problems are handled by explicit closing negotiations through the interface ::com::sun::star::util::XCloseable. 
+            Direct dispose of the model is allowed only, if this special interface doesn't exist.
+            </returns>
+        </member>
+        <member name="M:OOLib.Desktop.LoadComponentFromURLWithArgs``1(System.String,System.String,OOLib.FrameSearchFlag,System.Object[])">
+            <summary>
+            Loads a component specified by an URL into the specified new or existing frame.
+            </summary>
+            <param name="url">
+            Specifies the URL of the document to load.
+            To create new documents, use "private:factory/scalc", "private:factory/swriter", 
+            etc. Other special protocols (e.g. "slot:", ".uno") are not allowed and raise an ::com::sun::star::lang::IllegalArgumentException. 
+            </param>
+            <param name="targetFrameName">
+            Specifies the name of the frame to view the document in.
+            If a frame with the specified name already exists, it is used, otherwise it is created. 
+            There exist some special targets which never can be used as real frame names: 
+            "_blank" always creates a new frame 
+            "_default" special UI functionality (e.g. detecting of already loaded documents, using of empty frames of creating of new top frames as fallback) 
+            "_self", ""(!) means frame himself 
+            "_parent" address direct parent of frame 
+            "_top" indicates top frame of current path in tree 
+            "_beamer" means special sub frame 
+            </param>
+            <param name="searchFlags">
+            Use the values of FrameSearchFlag to specify how to find the specified TargetFrameName.
+            Note: These flags are optional ones and will be used for non special target names only.
+            </param>
+            <param name="arguments">
+            these arguments specify component or filter specific behavior.
+            For example, "ReadOnly" with a boolean value specifies whether the document is opened read-only. 
+            "FilterName" specifies the component type to create and the filter to use, for example: 
+            "Text - CSV". For more information see ::com::sun::star::document::MediaDescriptor.
+            </param>
+            <returns>
+            Returns a ::com::sun::star::lang::XComponent for successfully loaded documents or NULL if it failed .
+            This interface is a generic one and can be used to start further requests on loaded document or control the 
+            lifetime of it (means dispose() it after using). The real document service behind this interface can be one of follow three ones: 
+            ::com::sun::star::awt::XWindow for simple components Should be used for viewable components only. 
+            It is not allowed to dispose it after use directly, because the frame containing the component is its owner. 
+            Because the frame object is not accessible through the interface too, only an interacting user can do this by closing the frames' window. 
+            XController for richer components Should be used for real editable components which doesn't need a model. 
+            It is not allowed to dispose it after use directly, because the frame containing the component is its owner. 
+            Here the object can be disposed by disposing the frame, that the XController::getFrame() method of the controller returns. 
+            But for visible components the controller should be asked for permission by calling XController::suspend() before. 
+            XModel for full featured components
+            A model that in general can be shared between several view/controller pairs, does not have an explicit owner. 
+            Every view and also the component that loaded the document may consider itself as an owner. Simply calling XComponent::dispose 
+            on this model may cause problems, if some members of the "owner community" are currently busy working on the model. 
+            These problems are handled by explicit closing negotiations through the interface ::com::sun::star::util::XCloseable. 
+            Direct dispose of the model is allowed only, if this special interface doesn't exist.
+            </returns>
+        </member>
+        <member name="M:OOLib.Desktop.LoadComponentFromFile``1(System.String,System.String,OOLib.FrameSearchFlag,System.Boolean)">
+            <summary>
+            Loads a component specified by an URL into the specified new or existing frame.
+            </summary>
+            <param name="fileName">Specifies the file name of the document to load.</param>
+            <param name="targetFrameName">
+            Specifies the name of the frame to view the document in.
+            If a frame with the specified name already exists, it is used, otherwise it is created. 
+            There exist some special targets which never can be used as real frame names: 
+            "_blank" always creates a new frame 
+            "_default" special UI functionality (e.g. detecting of already loaded documents, using of empty frames of creating of new top frames as fallback) 
+            "_self", ""(!) means frame himself 
+            "_parent" address direct parent of frame 
+            "_top" indicates top frame of current path in tree 
+            "_beamer" means special sub frame 
+            </param>
+            <param name="searchFlags">
+            Use the values of FrameSearchFlag to specify how to find the specified TargetFrameName.
+            Note: These flags are optional ones and will be used for non special target names only.
+            </param>
+            <param name="hidden">true if the Window in which the document is opend should be hidden, false otherwiese.</param>
+            <returns>
+            Returns a ::com::sun::star::lang::XComponent for successfully loaded documents or NULL if it failed .
+            This interface is a generic one and can be used to start further requests on loaded document or control the 
+            lifetime of it (means dispose() it after using). The real document service behind this interface can be one of follow three ones: 
+            ::com::sun::star::awt::XWindow for simple components Should be used for viewable components only. 
+            It is not allowed to dispose it after use directly, because the frame containing the component is its owner. 
+            Because the frame object is not accessible through the interface too, only an interacting user can do this by closing the frames' window. 
+            XController for richer components Should be used for real editable components which doesn't need a model. 
+            It is not allowed to dispose it after use directly, because the frame containing the component is its owner. 
+            Here the object can be disposed by disposing the frame, that the XController::getFrame() method of the controller returns. 
+            But for visible components the controller should be asked for permission by calling XController::suspend() before. 
+            XModel for full featured components
+            A model that in general can be shared between several view/controller pairs, does not have an explicit owner. 
+            Every view and also the component that loaded the document may consider itself as an owner. Simply calling XComponent::dispose 
+            on this model may cause problems, if some members of the "owner community" are currently busy working on the model. 
+            These problems are handled by explicit closing negotiations through the interface ::com::sun::star::util::XCloseable. 
+            Direct dispose of the model is allowed only, if this special interface doesn't exist.
+            </returns>
+        </member>
+        <member name="M:OOLib.Desktop.LoadComponentFromFileWithArgs``1(System.String,System.String,OOLib.FrameSearchFlag,System.Object[])">
+            <summary>
+            Loads a component specified by an URL into the specified new or existing frame.
+            </summary>
+            <param name="fileName">Specifies the file name of the document to load.</param>
+            <param name="targetFrameName">
+            Specifies the name of the frame to view the document in.
+            If a frame with the specified name already exists, it is used, otherwise it is created. 
+            There exist some special targets which never can be used as real frame names: 
+            "_blank" always creates a new frame 
+            "_default" special UI functionality (e.g. detecting of already loaded documents, using of empty frames of creating of new top frames as fallback) 
+            "_self", ""(!) means frame himself 
+            "_parent" address direct parent of frame 
+            "_top" indicates top frame of current path in tree 
+            "_beamer" means special sub frame 
+            </param>
+            <param name="searchFlags">
+            Use the values of FrameSearchFlag to specify how to find the specified TargetFrameName.
+            Note: These flags are optional ones and will be used for non special target names only.
+            </param>
+            <param name="arguments">
+            these arguments specify component or filter specific behavior.
+            For example, "ReadOnly" with a boolean value specifies whether the document is opened read-only. 
+            "FilterName" specifies the component type to create and the filter to use, for example: 
+            "Text - CSV". For more information see ::com::sun::star::document::MediaDescriptor.
+            </param>
+            <returns>
+            Returns a ::com::sun::star::lang::XComponent for successfully loaded documents or NULL if it failed .
+            This interface is a generic one and can be used to start further requests on loaded document or control the 
+            lifetime of it (means dispose() it after using). The real document service behind this interface can be one of follow three ones: 
+            ::com::sun::star::awt::XWindow for simple components Should be used for viewable components only. 
+            It is not allowed to dispose it after use directly, because the frame containing the component is its owner. 
+            Because the frame object is not accessible through the interface too, only an interacting user can do this by closing the frames' window. 
+            XController for richer components Should be used for real editable components which doesn't need a model. 
+            It is not allowed to dispose it after use directly, because the frame containing the component is its owner. 
+            Here the object can be disposed by disposing the frame, that the XController::getFrame() method of the controller returns. 
+            But for visible components the controller should be asked for permission by calling XController::suspend() before. 
+            XModel for full featured components
+            A model that in general can be shared between several view/controller pairs, does not have an explicit owner. 
+            Every view and also the component that loaded the document may consider itself as an owner. Simply calling XComponent::dispose 
+            on this model may cause problems, if some members of the "owner community" are currently busy working on the model. 
+            These problems are handled by explicit closing negotiations through the interface ::com::sun::star::util::XCloseable. 
+            Direct dispose of the model is allowed only, if this special interface doesn't exist.
+            </returns>
+        </member>
+        <member name="M:OOLib.Desktop.CreateTextDocument(System.Boolean)">
+            <summary>
+            Creates anew TextDocument
+            </summary>
+            <param name="hidden">true if document should be hidden, false otherwise.</param>
+            <returns>Returns the new TextDocument.</returns>
+        </member>
+        <member name="P:OOLib.Desktop.CurrentComponent">
+            <summary>
+            Gets read access to the component inside the tree which has the UI focus .
+            </summary>
+            <remarks>
+            Normally, the component is the model part of the active component. If no model exists it is the active controller (view) itself. 
+            !!! not tested !!!
+            </remarks>
+        </member>
+        <member name="P:OOLib.Desktop.CurrentFrame">
+            <summary>
+            Gets read access to the frame wich contains the current component.
+            </summary>
+            <remarks>
+            !!! Not tested !!!
+            </remarks>
+        </member>
+        <member name="T:OOLib.MultiComponentFactory">
+            <summary>
+            Factory interface for creating component instances giving a context from which to retrieve deployment values.
+            </summary>
+        </member>
+        <member name="M:OOLib.MultiComponentFactory.#ctor">
+            <summary>
+            Constructor
+            </summary>
+            <remarks>
+            After using this constructor, the ComObj must be set manually!
+            </remarks>
+        </member>
+        <member name="M:OOLib.MultiComponentFactory.#ctor(System.Object)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="comObject">COM object</param>
+        </member>
+        <member name="M:OOLib.MultiComponentFactory.CreateInstanceWithContext(System.String,OOLib.ComponentContext)">
+            <summary>
+            Creates an instance of a component which supports the services specified by the factory. 
+            </summary>
+            <param name="serviceSpecifier">Service name</param>
+            <param name="context">Context the component instance gets its deployment values from</param>
+            <returns>Returns the component instance.</returns>
+        </member>
+        <member name="M:OOLib.MultiComponentFactory.CreateInstanceWithArgumentsAndContext(System.String,System.Object[],OOLib.ComponentContext)">
+            <summary>
+            Creates an instance of a component which supports the services specified by the factory, 
+            and initializes the new instance with the given arguments and context. 
+            </summary>
+            <param name="serviceSpecifier">Service name</param>
+            <param name="arguments">Arguments</param>
+            <param name="context">Context the component instance gets its deployment values from</param>
+            <returns>Returns the component instance.</returns>
+        </member>
+        <member name="M:OOLib.MultiComponentFactory.GetAvailableServiceNames">
+            <summary>
+            Gets the names of all supported services.
+            </summary>
+            <returns>Retunbs a sequence of all service names.</returns>
+        </member>
+        <member name="T:OOLib.MultiComponentFactoryImpl">
+            <summary>
+            Implementation of the IMultiServiceFactory interface
+            </summary>
+        </member>
+        <member name="M:OOLib.MultiComponentFactoryImpl.#ctor(OOLib.ComObjectWrapper)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="cow">COM object which should support the interface.</param>
+        </member>
+        <member name="M:OOLib.MultiComponentFactoryImpl.CreateInstanceWithContext(System.String,OOLib.ComponentContext)">
+            <summary>
+            Creates an instance of a component which supports the services specified by the factory. 
+            </summary>
+            <param name="serviceSpecifier">Service name</param>
+            <param name="context">Context the component instance gets its deployment values from</param>
+            <returns>Returns the component instance.</returns>
+            <remarks>!!! Not tested !!!</remarks>
+        </member>
+        <member name="M:OOLib.MultiComponentFactoryImpl.CreateInstanceWithArgumentsAndContext(System.String,System.Object[],OOLib.ComponentContext)">
+            <summary>
+            Creates an instance of a component which supports the services specified by the factory, 
+            and initializes the new instance with the given arguments and context. 
+            </summary>
+            <param name="serviceSpecifier">Service name</param>
+            <param name="arguments">Arguments</param>
+            <param name="context">Context the component instance gets its deployment values from</param>
+            <returns>Returns the component instance.</returns>
+            <remarks>!!! Not tested !!!</remarks>
+        </member>
+        <member name="M:OOLib.MultiComponentFactoryImpl.GetAvailableServiceNames">
+            <summary>
+            Gets the names of all supported services.
+            </summary>
+            <returns>Retunbs a sequence of all service names.</returns>
+            <remarks>!!! Not tested !!!</remarks>
+        </member>
+        <member name="P:OOLib.MultiComponentFactoryImpl.Cow">
+            <summary>
+            Gets the COM object wrapper which should support the interface.
+            </summary>
+        </member>
+        <member name="T:OOLib.Bookmark">
+            <summary>
+            A bookmark is a TextContent, which is like a jump target or a label.
+            </summary>
+        </member>
+        <member name="M:OOLib.Bookmark.#ctor">
+            <summary>
+            Constructor
+            </summary>
+            <remarks>
+            After using this constructor, the ComObj must be set manually!
+            </remarks>
+        </member>
+        <member name="M:OOLib.Bookmark.#ctor(System.Object)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="comObject">COM object</param>
+        </member>
+        <member name="P:OOLib.Bookmark.Name">
+            <summary>
+            Gets or sets the name of the object.
+            </summary>
+            <remarks>
+            The name is generally unique in the container of the object.
+            !!! Not tested !!!
+            </remarks>
+        </member>
+        <member name="T:OOLib.NameAccess">
+            <summary>
+            Is used to access named objects within a container. 
+            </summary>
+            <remarks>
+            To implement inaccurate name access, support the ::com::sun::star::beans::XExactName interface.
+            </remarks>
+        </member>
+        <member name="M:OOLib.NameAccess.#ctor">
+            <summary>
+            Constructor
+            </summary>
+            <remarks>
+            After using this constructor, the ComObj must be set manually!
+            </remarks>
+        </member>
+        <member name="M:OOLib.NameAccess.#ctor(System.Object)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="comObject">COM object</param>
+        </member>
+        <member name="M:OOLib.NameAccess.GetByName(System.String)">
+            <summary>
+            Gets the object with the specified name.
+            </summary>
+            <param name="name">The name of the object.</param>
+            <returns>Returns the object with the specified name.</returns>
+            <remarks>!!! Not tested !!!</remarks>
+        </member>
+        <member name="M:OOLib.NameAccess.GetElemetNames">
+            <summary>
+            Gets a sequence of all element names in this container.
+            </summary>
+            <returns>Returns a sequence of all element names in this container.</returns>
+            <remarks>
+            The order of the names is not specified.
+            !!! Not tested !!!
+            </remarks>
+        </member>
+        <member name="M:OOLib.NameAccess.HasByName(System.String)">
+            <summary>
+            Gets if an element with this name is in the container.
+            </summary>
+            <param name="name">The name of the object.</param>
+            <returns>Returns true if an element with this name is in the container, false otherwise.</returns>
+            <remarks>!!! Not tested !!!</remarks>
+        </member>
+        <member name="P:OOLib.NameAccess.Item(System.String)">
+            <summary>
+            Gets the object with the specified name.
+            </summary>
+            <param name="name">The name of the object.</param>
+            <returns>Returns the object with the specified name.</returns>
+        </member>
+        <member name="T:OOLib.NameAccess`1">
+            <summary>
+            Is used to access named objects of a specific type within a container. 
+            </summary>
+        </member>
+        <member name="M:OOLib.NameAccess`1.#ctor">
+            <summary>
+            Constructor
+            </summary>
+            <remarks>
+            After using this constructor, the ComObj must be set manually!
+            </remarks>
+        </member>
+        <member name="M:OOLib.NameAccess`1.#ctor(System.Object)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="comObject">COM object</param>
+        </member>
+        <member name="M:OOLib.NameAccess`1.GetByName(System.String)">
+            <summary>
+            Gets the object with the specified name.
+            </summary>
+            <param name="name">The name of the object.</param>
+            <returns>Returns the object with the specified name.</returns>
+        </member>
+        <member name="P:OOLib.NameAccess`1.Item(System.String)">
+            <summary>
+            Gets the object with the specified name.
+            </summary>
+            <param name="name">The name of the object.</param>
+            <returns>Returns the object with the specified name.</returns>
+        </member>
+        <member name="T:OOLib.FramesSupplier">
+            <summary>
+            Provides access to sub frames of current one.
+            </summary>
+        </member>
+        <member name="T:OOLib.IFramesSupplier">
+            <summary>
+            Provides access to sub frames of current one.
+            </summary>
+        </member>
+        <member name="M:OOLib.IFramesSupplier.GetFrames">
+            <summary>
+            Provides access to this container and to all other XFramesSupplier which are available from this node of frame tree
+            </summary>
+            <returns>The collection of frames which is represented by a FramesContainer.</returns>
+        </member>
+        <member name="P:OOLib.IFramesSupplier.ActiveFrame">
+            <summary>
+            Gets or sets current active frame of this container (not of any other available supplier).
+            </summary>
+            <remarks>
+            This may be the frame itself. The active frame is defined as the frame which contains (recursively) the window with the focus. 
+            If no window within the frame contains the focus, this method returns the last frame which had the focus. 
+            If no containing window ever had the focus, the first frame within this frame is returned.
+            </remarks>
+        </member>
+        <member name="M:OOLib.FramesSupplier.#ctor">
+            <summary>
+            Constructor
+            </summary>
+            <remarks>
+            After using this constructor, the ComObj must be set manually!
+            </remarks>
+        </member>
+        <member name="M:OOLib.FramesSupplier.#ctor(System.Object)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="comObject">COM object</param>
+        </member>
+        <member name="M:OOLib.FramesSupplier.GetFrames">
+            <summary>
+            Provides access to this container and to all other XFramesSupplier which are available from this node of frame tree
+            </summary>
+            <returns>The collection of frames which is represented by a FramesContainer.</returns>
+            <remarks>!!! Not tested !!!</remarks>
+        </member>
+        <member name="P:OOLib.FramesSupplier.ActiveFrame">
+            <summary>
+            Gets or sets current active frame of this container (not of any other available supplier).
+            </summary>
+            <remarks>
+            This may be the frame itself. The active frame is defined as the frame which contains (recursively) the window with the focus. 
+            If no window within the frame contains the focus, this method returns the last frame which had the focus. 
+            If no containing window ever had the focus, the first frame within this frame is returned.
+            !!! Not tested !!!
+            </remarks>
+        </member>
+        <member name="T:OOLib.CoreReflection">
+            <summary>
+            This service is the implementation of the reflection API. You can obtain information about types, 
+            modify values of reflected types and call on objects.
+            </summary>
+        </member>
+        <member name="M:OOLib.CoreReflection.#ctor">
+            <summary>
+            Constructor
+            </summary>
+            <remarks>
+            After using this constructor, the ComObj must be set manually!
+            </remarks>
+        </member>
+        <member name="M:OOLib.CoreReflection.#ctor(System.Object)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="comObject">COM object</param>
+        </member>
+        <member name="M:OOLib.CoreReflection.ForName(System.String)">
+            <summary>
+            Obtaining a reflection interface for a type. You specify the type by its name. 
+            If the given type name can not be reflected, then a null-reference is returned.
+            </summary>
+            <param name="typeName">The type's name </param>
+            <returns>Returns the reflection interface for the demanded type (or null) </returns>
+        </member>
+        <member name="M:OOLib.CoreReflection.GetType(System.Object)">
+            <summary>
+            Obtaining a reflection interface for an object. This method takes the type of the object the any contains into account. 
+            If the any contains no object, then a null-reference is returned. 
+            </summary>
+            <param name="comObject">An object</param>
+            <returns>Returns the reflection interface of the type of the demanded object (or null)</returns>
+        </member>
+        <member name="M:OOLib.CoreReflection.CreateProperty(System.String,System.Object)">
+            <summary>
+            Creates a named property and assigns a value.
+            </summary>
+            <param name="name">Property name</param>
+            <param name="value">Property value</param>
+            <returns>Return a new property.</returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,170 @@
+
+INFORMACIÓN ACERCA DE LOS MÓDULOS EN ESTE INSTALADOR:
+
+Aquí cito los que descargué del mismo programa (en el programa se da clic en "Descargar" y allí se elige el que uno quiera)
+
+
+**************************************
+MÓDULOS DESCARGADOS DEL MISMO e-Sword:
+**************************************
+
+BIBLIAS
+
+GNT = Greek New Testament (Majority Text)
+GNT-TR =Textus Receptus Greek New Testament (w/Strong's Numbers)
+GNT-WH+ = Westcott-Hort Greek New Testament  (w/Strong's Numbers)
+HOT+ = Hebrew Old Testament (w/Strong's Numbers)
+MKJV = Modern King James Version
+NBLH = Nueva Biblia Latinoamericana de Hoy
+LBLA = La Biblia de Las Américas
+LXX+ = Geek Old Testament (Septuagint) (w/Strong's Numbers)
+SRV = Spanish Reina Valera Gómez
+SFB = Svenska Folkbibeln 98
+
+DICCIONARIOS:
+
+RMAC = Robinson's Morphological Analysis Codes.- Este sirve para las letras azules al lado de los números Strong de algunos modulos que tienen +, ejemplo: LXX+, GNT-WH+ (Este modulo es para el inglés y es el equivalente a Robinson en español)
+
+KJC = King James Concordance
+
+COMENTARIOS:
+
+Wesley = John Wesley's Notes on the Bible
+
+MHCC = Matthew Henry´s Concise Commentary (este es el equivalente al comentario CMH)
+
+
+DEVOCIONALES:
+
+Spurgeon = Morning & Evening (Charles H. Spurgeon)
+
+
+FERERENCE BOOKS:
+
+Wars of the Jews
+
+
+
+************************************
+MODULOS DESCARGADOS DEL LA WEB 2015:
+************************************
+
+BIBLIAS:
+
+DHH_Dios_Habla Hoy_20110624
+http://www.mediafire.com/download/sdvizg5w951gcdx/DHH_Dios_Habla+Hoy_20110624.exe
+
+Easy to Read Version - ERV - Bible Support (También trae un Diccionario ERV)
+http://www.biblesupport.com/e-sword-downloads/file/10037-easy-to-read-version/
+
+Palabra de Dios para todos PDT 
+http://eswordbibliotecahispana.blogspot.com/search/label/01.%20Biblia%20PDT
+Nota: estas dos Biblias ERV y PDT me parece a mi que son la misma versión para su correspondiente idioma, puede constatar esto en: https://www.bibleleague.org/bible-downloads/
+http://d1d7ektpm2nljo.cloudfront.net/lMYU7gLgtIKo8uIP7yKINQ/Spanish_Bible_00__Front_Matter.pdf
+http://d1d7ektpm2nljo.cloudfront.net/GvVXekJjVgj2pqHfy8Z7bg/ERV_English_Bible_00__Front_Matter.pdf
+
+
+DICCIONARIOS:
+
+Robinson = Códigos de Análisis Morfológico Robinson.- Este sirve para las letras azules al lado de los números Strong de algunos modulos que tienen +, ejemplo: LXX+, GNT-WH+. (Este modulo es para el español y es el equivalente a RMAC en inglés) lo encontré aquí: http://eswordbibliotecahispana.blogspot.com/2009/06/robinson-morfologia-robinson.html
+
+Strong (Esp) = Diccionario Strong en Español.- Sirve para algunos modulos que tienen +, ejemplo: LXX+, GNT-WH+, pero hay que configurarlo al programa para que los use, esto en: "Opciones/Referencia de números Strong..."
+http://eswordbibliotecahispana.blogspot.com/2012/07/strongesp-diccionario-strong-en-espanol.html
+
+
+DEVOCIONALES:
+
+MacDonald, William - One Day at a Time - Bible Support
+http://www.biblesupport.com/e-sword-downloads/file/8120-macdonald-william-one-day-at-a-time/
+
+De_Día_en_Día_W.MacDonald
+http://www.mediafire.com/download/ndk4myyzn3z/De_D%C3%ADa_en_D%C3%ADa_W.MacDonald_20100307.exe
+De: http://eswordbibliotecahispana.blogspot.com/
+
+Spurgeon, C.H. - Faith Checkbook - Bible Support
+http://www.biblesupport.com/e-sword-downloads/file/1353-spurgeon-ch-faith-checkbook/
+
+Chequera_Chequera_ de_ Spugeon_20091206
+http://www.mediafire.com/download/mmeztwt4oyo/Chequera_Chequera_+de_+Spugeon_20091206.exe
+De: http://eswordbibliotecahispana.blogspot.com/
+
+
+FERERENCE BOOKS:
+
+W.MacDonald_El_Verdadero_Discipulado_20110530
+http://www.mediafire.com/download/7gsiaznjwfqf0u9/W.MacDonald_El_Verdadero_Discipulado_20110530.exe
+Revisar un original en: http://www.clie.es/wp-content/uploads/2015/01/9788482674537-el-verdadero-discipulado-1capitulo.pdf
+
+Las 95 Tesis de Martín Lutero
+http://eswordbibliotecahispana.blogspot.com/search/label/06.refx.Las%2095%20Tesis
+
+ARMONÍAS:
+
+http://eswordbibliotecahispana.blogspot.com/search/label/05.%20Armonias.%20de%20la%20Biblia%20del%20Diario%20vivir
+http://eswordbibliotecahispana.blogspot.com/search/label/05.%20Armonias.%20Roberston
+http://eswordbibliotecahispana.blogspot.com/search/label/05.%20Armonias.Galvin
+http://eswordbibliotecahispana.blogspot.com/search/label/05.%20Armonias.Hayford
+http://eswordbibliotecahispana.blogspot.com/search/label/05.%20Armonias.Panoramas
+http://eswordbibliotecahispana.blogspot.com/search/label/05.%20Armonias.Thomson
+
+
+
+
+***************************************
+MODULOS QUE YA TENÍA ANTES, APROX. 2007
+***************************************
+
+En este instalador hay varios módulos que los tenía desde antes y como han pasado años las páginas donde los descargué las revisé para citarlas aquí pero ya no existen por lo que no citaré links de descargas, pero siempre puede ver la información de los mismos en el programa, ejemplo dando clic en: "Biblias/Información...". Bueno ahora si aquí la descripción:
+
+BIBLIAS:
+
+BJ Biblia Jerusalen.bblx
+BL95 Biblia Latinoamericana 95.bblx
+NVI Nueva Version Internacional.bblx
+RB96 Reina-Valera 1960.bblx
+
+COMENTARIOS:
+
+BP Comentario Biblia Plenitud.cmtx
+CMH Comentario Mathew Henry.cmtx
+VD Comentario Biblia Diario Vivir.cmtx
+
+DICCIONARIOS:
+
+Certeza.dctx
+Concordancia.dctx
+DICANEC (DICcionario ANECdotas e Ilustraciones).dctx
+Diccionario1 Ministerios Ebenezer.dctx
+DLP Diccionario lapalabra.org.dctx
+Donde Buscarlo.dctx
+Geografia Biblica.dctx
+MiniBio Mini Biografía.dctx
+NELSON-test.dctx
+Nombres RV1909.dctx
+Religiones.dctx
+Vine (ESP) AT.dctx
+Vine (ESP) NT.dctx
+
+
+MAPAS:
+
+Mapa Usos y Costumbres.- Es muy bueno, tenía curiosidad por saber qué cosas comían en esos tiempos
+
+TOP:
+
+Top e ST 03 Breve Historia del Canon Bíblico G. Báez.topx
+Top e ST 04 La poesía del Antiguo Testamento.. L. Zogbo, E.Wendland.topx
+Top Guerras de los Judíos.topx
+Top Halley Compendio Manual.topx
+Top Introducción a la Biblia por Casiodoro de Reina.topx
+Top Spurgeon Tesoro de David.topx
+Top Spurgeon Verdadera Esencia del Avivamiento.topx
+
+Estos top los descargué la mayoría de la página del Pastor David Cox, los links originales no los tengo pero si se busca en Google se pueden encontrar algunos. Estos que tengo aquí los tenía para la versión e-Sword 8 por lo que tuve que convertirlos con http://goodolclint.com/es/e-sword
+
+
+
+Atentamente:
+Washington Indacochea Delgado
+2016-01-06
+

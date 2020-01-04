@@ -1,0 +1,19 @@
+
+REFX Modules
+http://www.biblesupport.com/topic/2629-refx-modules/
+
+Bradley S. Cobb
+Christian
+ 
+
+LocationOklahoma (where the wind comes sweeping down the plains)
+OFFLINE
+Posted 22 June 2012 - 10:31 AM
+Yeah, basically what they said.
+
+1. Create a .topx file.
+2. Save it to your "documents/e-Sword" folder (NOT the "program files/e-Sword" folder).
+3. Open e-Sword.
+4. In the topic editor window, select your topx file.
+5. Hold ctrl and right click.
+6. Select "convert to reference book" 

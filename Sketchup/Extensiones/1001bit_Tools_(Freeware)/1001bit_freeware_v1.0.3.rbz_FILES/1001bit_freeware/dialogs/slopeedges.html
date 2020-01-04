@@ -1,0 +1,310 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+<HTML>
+  <HEAD>
+  <title> 1001bit.com - Slope selected edges</title>
+	<style type="text/css">
+	<!--
+	body,td,a,p,.h{font-family:arial,sans-serif; font-size:10pt;}
+	h1 {  font-size: 16pt; color: #ffffff;}
+	h2 { font-size: 12pt; }
+	h3 { font-size: 11pt; }
+	p { font-size: 10pt; }
+
+	.f1 {font-size: 16pt}
+	.f2 {font-size: 14pt}
+	a {text-decoration: none}
+	a:hover {color:#ff0000; font-size:12pt}
+	.textbox {
+	 background-color: white; font-size: 12px;
+	 border: 1px solid #000000;
+	}	
+
+	-->
+	</style>	
+  
+  <script language="Javascript" type="text/javascript">
+	
+      function SUslopeedgesMode(name)
+      {
+      DL_setPic2();
+      window.location='skp:set_slopeedgesMode@' + name;
+      }
+
+      function SUslopeedges_pickheight(val)
+      {
+	if (val==true) {
+		document.theForm.slopeedges_height.disabled=true;
+		document.theForm.slopeedges_angle.disabled=true;
+		document.theForm.slopeedges_ratio.disabled=true;
+	}
+	else {
+		document.theForm.slopeedges_height.disabled=false;
+		document.theForm.slopeedges_angle.disabled=false;
+		document.theForm.slopeedges_ratio.disabled=false;
+	}
+	window.location='skp:set_pickheight@' + val;
+      }
+
+      function SUdoslopeedges(name)
+      { 
+      window.location='skp:Doslopeedges@' + name;
+      }
+      function SUexitslopeedges(name)
+      {
+      window.location='skp:Exitslopeedges@' + name;
+      }
+
+      function DL_slopeedges_mode(i)
+      {
+      document.theForm.slopeedges_mode[i].checked = true;
+      }
+
+      function DL_setPic1()
+      {
+	document.myPic.src="images/slopeedges_1_1.png";
+      }
+
+      function DL_setPic2()
+      {
+        if (document.theForm.slopeedges_mode[0].checked==true) {
+         	document.myPic.src="images/slopeedges_2_0.png";
+        }
+        if (document.theForm.slopeedges_mode[1].checked==true) {
+        	document.myPic.src="images/slopeedges_2_1.png";
+        }      
+      }   
+
+      function DL_slopeedgeslength(wdh)
+      {
+        wdh = wdh.replace("ft", "\'");
+        wdh = wdh.replace("in", "\"");
+	wdh = wdh.replace("mm", "");
+	wdh = wdh.replace("cm", "");
+	wdh = wdh.replace("m", "");
+
+        document.theForm.slopeedges_length.value = wdh;
+      }
+      function DL_slopeedgesheight(hgt)
+     { 
+        hgt = hgt.replace("ft", "\'");
+        hgt = hgt.replace("in", "\"");
+        hgt = hgt.replace("mm", "");
+        hgt = hgt.replace("cm", "");
+        hgt = hgt.replace("m", "");
+
+        document.theForm.slopeedges_height.value = hgt;
+      }
+
+    function DL_enter_height()
+    {
+    document.theForm.slopeedges_height.select();
+	DL_setPic1();
+    } 
+    function DL_enter_angle()
+    {
+    document.theForm.slopeedges_angle.select();
+	DL_setPic1();
+    }  
+    function DL_enter_ratio()
+    {
+    document.theForm.slopeedges_ratio.select();
+	DL_setPic1();
+    }      
+    
+    function DL_mm_to_ft(num)
+    {
+	numin=(num/25.4);
+	numft=(numin/12.0).toString();
+	dcindex=numft.indexOf(".");
+	ft = numft.substring(0, dcindex);
+	inch =numft.substring(dcindex+1);
+	inch = "0."+inch;
+	inch = inch * 12.0;
+	result=ft + "\'" + inch.toFixed(3) + "\"";
+	return result;
+    }
+
+    function DL_ft_to_mm(num)
+    {
+	ftindex=num.indexOf("\'");
+	inindex=num.indexOf("\"");
+        fracindex=num.indexOf("/");
+	var inches=0;
+	if (ftindex > -1) {
+		ft=num.substring(0, ftindex);
+		inches= inches + (ft*12.0);
+	}
+	
+	if (inindex > -1) {
+		if (ftindex > -1) {
+			dblin=num.substring(ftindex+1, inindex);
+			
+		}
+		else {
+			dblin=num.substring(0, inindex);
+		}	
+
+		dblin=dblin.replace(/^\s+|\s+$/g,"");
+
+		frindex=dblin.indexOf("/");
+		if (frindex > -1) {
+			spindex=dblin.indexOf(" ");
+			dblinc=dblin.substring(0, spindex);
+			dblfracf=dblin.substring(spindex+1,frindex);
+			dblfracb=dblin.substring(frindex+1,inindex);
+			dblin=(dblinc*1.0)+(dblfracf / dblfracb);
+			inches=inches + dblin;
+		}
+		else {
+			inches=inches +(dblin*1.0);
+		}		
+	}
+
+	result=inches*25.4;
+	return result;
+    }
+
+    function DL_change_height()
+    {
+	len=document.theForm.slopeedges_length.value;
+	inindex=len.indexOf("\"");
+	ftindex=len.indexOf("\'");
+	if (inindex > -1 || ftindex > -1) {
+		len=DL_ft_to_mm(len);
+	}	
+
+	hgt=document.theForm.slopeedges_height.value;
+    	inindex=hgt.indexOf("\"");
+	ftindex=hgt.indexOf("\'");
+	if (inindex > -1 || ftindex > -1) {
+		hgt=DL_ft_to_mm(hgt);
+	}	
+
+	ang=Math.atan(hgt/len);
+	pi=Math.PI;
+	angd=(ang/(2*pi))*360.0;
+	document.theForm.slopeedges_angle.value=angd.toFixed(3);
+	ratio=len/hgt;
+	document.theForm.slopeedges_ratio.value=ratio.toFixed(3);
+     
+    }
+
+
+    function DL_change_angle()
+    {
+
+	len=document.theForm.slopeedges_length.value;
+	inindex=len.indexOf("\"");
+	ftindex=len.indexOf("\'");
+	if (inindex > -1 || ftindex > -1) {
+		len=DL_ft_to_mm(len);
+	}	
+
+	ang=document.theForm.slopeedges_angle.value;
+	hgt=len*Math.tan((ang/360.0)*(2*Math.PI));
+
+	len2=document.theForm.slopeedges_length.value;
+	inindex=len2.indexOf("\"");
+	ftindex=len2.indexOf("\'");
+	if (inindex > -1 || ftindex > -1) {
+		hgt2=DL_mm_to_ft(hgt);
+		document.theForm.slopeedges_height.value=hgt2;
+	} 
+	else {
+		document.theForm.slopeedges_height.value=hgt.toFixed(3);
+	}
+
+	
+
+	ratio=len/hgt;
+	document.theForm.slopeedges_ratio.value=ratio.toFixed(3);
+    }
+
+
+    function DL_change_ratio()
+    {
+	len=document.theForm.slopeedges_length.value;
+	inindex=len.indexOf("\"");
+	ftindex=len.indexOf("\'");
+	if (inindex > -1 || ftindex > -1) {
+		len=DL_ft_to_mm(len);
+	}	
+	ratio=document.theForm.slopeedges_ratio.value;
+	hgt=len/ratio;
+	if (inindex > -1 || ftindex > -1) {
+		hgt2=DL_mm_to_ft(hgt);
+		document.theForm.slopeedges_height.value=hgt2;
+	} 
+	else {
+		document.theForm.slopeedges_height.value=hgt.toFixed(3);
+	}
+
+	ang=Math.atan(hgt/len);
+	pi=Math.PI;
+	angd=(ang/(2*pi))*360.0;
+	document.theForm.slopeedges_angle.value=angd.toFixed(3);
+
+    }
+
+      function DL_chkbox_pickheight(val)
+      {
+	val=""+val;
+	
+      if (val=='true') {
+        document.theForm.pick_height.checked = true;
+        } 
+      else {
+	
+        document.theForm.pick_height.checked = false;
+        }
+      }
+
+    function DL_translate(id, newtext)
+    {
+      var newentry=document.getElementById(id);
+      newentry.firstChild.data=newtext;
+    }
+
+    function DL_translate_button(id, newtext)
+    {
+      var newentry=document.getElementById(id);
+      newentry.value=newtext;
+    }
+	
+
+</script>
+      
+  </HEAD>
+  <body bgcolor=#788B9A>
+      <div>
+      <form name="theForm" action="#">
+        
+	
+  <table>
+        <tr><td><h1><span name="title" id="title">Slope Edges</span> </h1></td></tr>
+        <tr><td colspan=2><img src='images/slopeedges_1_1.png' name="myPic" id="myPic"></td></tr>
+        <tr><td><span name="t1" id="t1">Distance on plan</span> (l)</td><td><input  type=text name="slopeedges_length" id="slopeedges_length" disabled></td></tr>
+        <tr><td><span name="t2" id="t2">Height</span> (h)</td><td><input  type=text name="slopeedges_height" id="slopeedges_height" onfocus="javascript:DL_enter_height()" onchange="javascript:DL_change_height()"></td></tr>
+        <tr><td><span name="t3" id="t3">Angle of slope</span> (a)</td><td><input  type=text name="slopeedges_angle" id="slopeedges_angle" onfocus="javascript:DL_enter_angle()" onchange="javascript:DL_change_angle()"></td></tr>
+        <tr><td><span name="t4" id="t4">Gradient 1 to</span> </td><td><input type=text class="textbox"  name="slopeedges_ratio" id="slopeedges_ratio" onfocus="javascript:DL_enter_ratio()" onchange="javascript:DL_change_ratio()"></td></tr>
+	<tr><td colspan=2><input type=radio name="slopeedges_mode" id="slopeedges_mode" value="0" checked =true
+        onClick="SUslopeedgesMode(this.value, this.checked)" ><span name="t5" id="t5">Draw new sloping edges</span></input> </td></tr>
+        <tr><td colspan=2><input type=radio name="slopeedges_mode" id="slopeedges_mode" value="1" checked =true
+        onClick="SUslopeedgesMode(this.value, this.checked)" ><span name="t6" id="t6">Move vertices on selected edges</span></input> </td></tr>
+	<tr><td colspan=2><input type=checkbox name="pick_height" id="pick_height" checked onClick="SUslopeedges_pickheight(this.checked)"><span name="t7" id="t7">Pick upper level in drawing</span></td></tr>
+	</table>
+	
+  <hr>
+        <input type=button name="do_slopeedges" id="do_slopeedges" value="Slope selected edges"
+         onClick="SUdoslopeedges(this.value)">
+        <input type=button name="exit_slopeedges" id="exit_slopeedges" value="Exit" 
+        onClick="SUexitslopeedges(this.value)">
+        
+        </form>
+       	<font size="2pt"><i><span name="author" id="author">.</span></i></font>
+      </div>
+      
+ 
+      </body>
+      
+</html>

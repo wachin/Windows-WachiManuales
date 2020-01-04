@@ -1,0 +1,3 @@
+
+
+yo pegaba excel desde office 2010 a Autocad 2007 pero al imprimir no aparecía nada de la tabla. La solución fue pegar desde LibreOffice

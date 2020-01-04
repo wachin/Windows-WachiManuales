@@ -1,0 +1,65 @@
+
+Instrucciones para Instalar Texto a Voz Balabolka + Voces RealSpeak en Ubuntu 16.04 (PlayOnLinux))
+
+00 Primero instalar playonlinux
+sudo apt-get install playonlinux
+Instale la versión de wine 1.9.22 
+
+01 INSTALE BALABOLKA EN UNA NUEVA UNIDAD VIRTUAL, PONGALE UN NOMBRE COMO:
+
+balabolka-wine1922
+
+y escoja 
+
+- (marcar)user otra version de wine
+- (marcar)Configurar wine
+- configure Wine para Windows ME
+- Cuando se acabe de instalar desmarque la opcion para ejecutar despues de instalar
+- a lo que aparece la ventana, cree el atajo para:
+
+balabolka.exe
+
+pongale nombre
+
+Balabolka 2.11 (wine 1.9.22)
+
+luego que aparece la ventana otra vez, digale que ya 
+
+"No quiero crear otro atajo"
+
+y siguiente
+
+02 INSTALE SAPI 5.1, EL "Microsoft-English-TTS-51.msi" QUE VIENE AQUÍ EN ESTE TUTORIAL (EL UNICO QUE FUNCIONA). 
+
+Para instalarlo de clic en el programa instalado y luego en la tuerca de PlayOnLinux y clic en la pestaña "Miscelaneo" y clic en:
+
+"Ejecutar un archivo .exe en esta unidad"
+
+busque el archivo e instalelo
+
+03 INSTALÉ LAS VOCES ALTA CALIDAD DE REALSPEAK
+
+descarguelas de aquí:
+
+http://cross-plus-a.com/balabolka.htm
+
+o la que vienen aquí en este tutorial como respaldo. Instalelas allí mismo en "Miscelaneo" y clic en:
+
+"Ejecutar un archivo .exe en esta unidad"
+
+y busque el ejecutable de la voz que quiere e instalelo
+
+Nota: En este tutorial viene una version que usted puede descargar, es por un caso la nueva que salga no funcione:
+http://www.cross-plus-a.com/balabolka.htm
+
+04 INSTALE ASPELL
+
+Instale todos los ejecutables de Aspell para poder corregir la ortografía
+
+05 INSTALE WINDOWS MEDIA FORMAT 9
+
+Esto es para poder convertir el texto a mp3
+
+Adaptado y mejorado para PlayOnLinux desde:
+http://www.texttospeechblog.com/2007/02/windows-tts-on-linux.html
+

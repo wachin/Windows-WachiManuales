@@ -1,0 +1,19 @@
+Crear particiones en windows 7 sin ningun Programa
+
+http://www.taringa.net/posts/info/4871848/Crear-particiones-en-windows-7-sin-ningun-Programa.html
+
+**********
+OPCIÓN UNO:
+**********
+
+Poner en el Buscador (Tecla de Windows):
+
+Administrador de Discos
+
+**********
+OPCIÓN DOS
+**********
+Nos vamos a Panel de control
+una vez aquí, damos clic en "Sistema y seguridad"
+Luego damos clic en "Herramientas Administrativas" donde dice "Crear y formatear particiones del disco duro"
+y nos saldra una ventana administrador de discos.

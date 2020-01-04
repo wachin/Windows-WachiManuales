@@ -1,0 +1,112 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+<HTML>
+  <HEAD>
+  <title> 1001bit.com - Build Roof Rafters </title>
+	<style type="text/css">
+	<!--
+	body,td,a,p,.h{font-family:arial,sans-serif; font-size:10pt;}
+	h1 {  font-size: 16pt; color: #ffffff;}
+	h2 { font-size: 12pt; }
+	h3 { font-size: 11pt; }
+	p { font-size: 10pt; }
+
+	.f1 {font-size: 16pt}
+	.f2 {font-size: 14pt}
+	a {text-decoration: none}
+	a:hover {color:#ff0000; font-size:12pt}
+	.textbox {
+	 background-color: white; font-size: 12px;
+	 border: 1px solid #000000;
+	}	
+
+
+	-->
+	</style>	
+  
+  <script language="Javascript" type="text/javascript">
+      function SUdorafter1(name)
+      { 
+      window.location='skp:Dorafter1@' + name;
+      }
+      function SUexitrafter1(name)
+      {
+      window.location='skp:Exitrafter1@' + name;
+      }
+
+      function DL_rafter1Rwidth(wdh)
+      {
+        wdh = wdh.replace("ft", "\'");
+        wdh = wdh.replace("in", "\"");
+        document.theForm.rafter1_Rwidth.value = wdh;
+      }
+      function DL_rafter1Rheight(hgt)
+     { 
+        hgt = hgt.replace("ft", "\'");
+        hgt = hgt.replace("in", "\"");
+        document.theForm.rafter1_Rheight.value = hgt;
+      }
+    function DL_rafter1Rspace(spc)
+     { 
+        spc = spc.replace("ft", "\'");
+        spc = spc.replace("in", "\"");
+        document.theForm.rafter1_Rspacing.value = spc;
+      }
+    function DL_enter_width()
+    {
+    document.myPic.src="images/rafter1_2.png";
+    document.theForm.rafter1_Rwidth.select();
+    }
+    function DL_enter_depth()
+    {
+    document.myPic.src="images/rafter1_2.png";
+    document.theForm.rafter1_Rheight.select();
+    } 
+    function DL_enter_spacing()
+    {
+    document.myPic.src="images/rafter1_1.png";
+    document.theForm.rafter1_Rspacing.select();
+    }    
+    
+    function DL_translate(id, newtext)
+    {
+      var newentry=document.getElementById(id);
+      newentry.firstChild.data=newtext;
+    }
+
+    function DL_translate_button(id, newtext)
+    {
+      var newentry=document.getElementById(id);
+      newentry.value=newtext;
+    }
+    
+</script>
+      
+  </HEAD>
+  <body bgcolor=#788B9A>
+      <div>
+      <form name="theForm" action="#">
+        
+	<hr>
+  <table>
+        <tr><td><h1><span name="title" id="title">Create Roof Rafters</span> </h1></td></tr>
+        <tr><td colspan=2><img src='images/rafter1_1.png' name="myPic" id="myPic"></td></tr>
+        <tr><td><span name="t1" id="t1">Rafter Width</span> (w)</td><td><input type=text class="textbox"  name="rafter1_Rwidth" id="rafter1_Rwidth" onfocus="javascript:DL_enter_width()"></td></tr>
+        <tr><td><span name="t2" id="t2">Rafter Depth</span> (d)</td><td><input type=text class="textbox"  name="rafter1_Rheight" id="rafter1_Rheight" onfocus="javascript:DL_enter_depth()"></td></tr>
+        <tr><td><span name="t3" id="t3">Rafter Spacing</span> (s)</td><td><input type=text class="textbox"  name="rafter1_Rspacing" id="rafter1_Rspacing" onfocus="javascript:DL_enter_spacing()"></td></tr>
+        
+	</table>
+
+  <hr>
+        <input type=button name="do_rafter1" id="do_rafter1" value="Create Rafters"
+         onClick="SUdorafter1(this.value)">
+        <input type=button name="exit_rafter1" id="exit_rafter1" value="Exit" 
+        onClick="SUexitrafter1(this.value)">
+        
+        </form>
+       	<font size="2pt"><i><span name="author" id="author">.</span></i></font>
+      </div>
+      
+ 
+      </body>
+      
+</html>

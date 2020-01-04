@@ -1,0 +1,185 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+<HTML>
+  <HEAD>
+  <title> 1001bit.com - Build Screen (type 1)</title>
+	<style type="text/css">
+	<!--
+	body,td,a,p,.h{font-family:arial,sans-serif; font-size:10pt;}
+	h1 {font-size: 16pt; color: #ffffff; }
+	h2 { font-size: 12pt; }
+	h3 { font-size: 11pt; }
+	p { font-size: 10pt; }
+
+	.f1 {font-size: 16pt}
+	.f2 {font-size: 14pt}
+	a {text-decoration: none}
+	a:hover {color:#ff0000; font-size:12pt}
+	.textbox {
+	 background-color: white; font-size: 12px;
+	 border: 1px solid #000000;
+	}	
+
+
+	-->
+	</style>	
+  
+  <script language="Javascript" type="text/javascript">
+      function SUdoScrn1(name)
+      {
+      window.location='skp:DoScrn1@' + name;
+      }
+      function SUsetupProfile(name)
+      {
+      window.location='skp:set_Scrn1Profile@' + name; 
+      }
+      function SUclearProfile(name)
+      {
+      window.location='skp:clear_Scrn1Profile@' + name; 
+      }
+      
+      function SUexitScrn1(name)
+      {
+      window.location='skp:ExitScrn1@' + name;
+      }
+
+
+      function SUScrn1Location(name)
+      {
+      window.location='skp:set_Scrn1_location@' + name;
+      }
+
+
+
+      function DL_Scrn1width(wdh)
+      {
+        wdh = wdh.replace("ft", "\'");
+        wdh = wdh.replace("in", "\"");
+        document.theForm.Scrn1_width.value = wdh;
+      }
+      function DL_Scrn1height(hgt)
+     { 
+        hgt = hgt.replace("ft", "\'");
+        hgt = hgt.replace("in", "\"");
+        document.theForm.Scrn1_height.value = hgt;
+      }
+    function DL_Scrn1thick(thk)
+     { 
+        thk = thk.replace("ft", "\'");
+        thk = thk.replace("in", "\"");
+        document.theForm.Scrn1_thick.value = thk;
+      }
+    function DL_Scrn1angle(ang)
+     { 
+      document.theForm.Scrn1_angle.value = ang;
+      }
+    function DL_Scrn1colgap(wdh)
+      {
+        wdh = wdh.replace("ft", "\'");
+        wdh = wdh.replace("in", "\"");
+        document.theForm.Scrn1_colgap.value = wdh;
+      }
+    function DL_Scrn1rowgap(hgt)
+     { 
+        hgt = hgt.replace("ft", "\'");
+        hgt = hgt.replace("in", "\"");
+        document.theForm.Scrn1_rowgap.value = hgt;
+      }
+    function DL_enter_w()
+    {
+      document.myPic.src="images/screen1_2.png";
+      document.theForm.Scrn1_width.select();
+    }
+    function DL_enter_h()
+    {
+      document.myPic.src="images/screen1_2.png";
+      document.theForm.Scrn1_height.select();
+    }
+    function DL_enter_cs()
+    {
+      document.myPic.src="images/screen1_2.png";
+      document.theForm.Scrn1_colgap.select();
+    }
+    function DL_enter_rs()
+    {
+      document.myPic.src="images/screen1_2.png";
+      document.theForm.Scrn1_rowgap.select();
+    }
+    function DL_enter_t()
+    {
+      document.myPic.src="images/screen1_2.png";
+      document.theForm.Scrn1_thick.select();
+    }
+    function DL_enter_profile()
+    {
+      document.myPic.src="images/screen1_3.png";
+      }
+    function DL_enter_norm()
+    {
+      document.myPic.src="images/screen1_1.png";
+      }
+      
+    function DL_Scrn1_location(i)
+    { 
+      document.theForm.Scrn1_location[i].checked = true;
+    }
+    
+  function DL_translate(id, newtext)
+	{
+		var newentry=document.getElementById(id);
+		newentry.firstChild.data=newtext;
+
+	}
+
+	function DL_translate_button(id, newtext)
+	{
+				
+		var newentry=document.getElementById(id);
+		newentry.value=newtext;
+
+	}
+
+
+</script>
+      
+  </HEAD>
+  <body bgcolor=#788B9A>
+      <div>
+      <form name="theForm" action="#">
+
+  <table>
+        <tr><td colspan=2> <h1><span name="title" id="title">Create Screen</span></h1></td></tr>
+        <tr><td colspan=2 width=505 height=214><img src="images/screen1_1.png" name="myPic" id="myPic" align=center></td></tr>
+        <tr><td><span name="t1" id="t1">Opening Width</span> (w)</td><td><input type=text class="textbox"  name="Scrn1_width"  id="Scrn1_width"  onfocus="javascript:DL_enter_w()"></td></tr>
+        <tr><td><span name="t2" id="t2">Opening Height</span> (h)</td><td><input type=text class="textbox"  name="Scrn1_height" id="Scrn1_height" onfocus="javascript:DL_enter_h()"></td></tr>
+        <tr><td><span name="t3" id="t3">Column spacing</span> (cs)</td><td><input type=text class="textbox"  name="Scrn1_colgap" id="Scrn1_colgap" onfocus="javascript:DL_enter_cs()"></td></tr>
+        <tr><td><span name="t4" id="t4">Row spacing</span> (rs)</td><td><input type=text class="textbox"  name="Scrn1_rowgap" id="Scrn1_rowgap" onfocus="javascript:DL_enter_rs()"></td></tr>
+        <tr><td><span name="t5" id="t5">Angle of opening</span> </td><td><input type=text class="textbox"  name="Scrn1_angle" id="Scrn1_angle" onfocus="javascript:document.theForm.Scrn1_angle.select()"></td></tr>
+        <tr><td><span name="t6" id="t6">Screen Thickness</span> (t)</td><td><input type=text class="textbox"  name="Scrn1_thick" id="Scrn1_thick" onfocus="javascript:DL_enter_t()"></td></tr>
+        <tr><td colspan=2><span name="t7" id="t7">Screen location (in relation to selected face)</span>:
+	<input type=radio name="Scrn1_location" id="Scrn1_location" value="0" checked =true
+        onClick="SUScrn1Location(this.value, this.checked)" ><span name="t8" id="t8">front</span></input>
+	<input type=radio name="Scrn1_location" id="Scrn1_location" value="1" checked =false
+        onClick="SUScrn1Location(this.value, this.checked)" ><span name="t9" id="t9">middle</span></input>
+	<input type=radio name="Scrn1_location" id="Scrn1_location" value="2" checked =true
+        onClick="SUScrn1Location(this.value, this.checked)" ><span name="t10" id="t10">back</span></input></td></tr>
+	</table>
+	<hr>
+        <input type=button name="setup_profile"  id="setup_profile"  value="Setup profile"
+          onClick="SUsetupProfile(this.value)" onMouseover="javascript:DL_enter_profile()" onMouseout="javascript:DL_enter_norm()">
+        <input type=button name="clear_profile"  id="clear_profile"  value="Clear profile"
+          onClick="SUclearProfile(this.value)">
+  <hr>
+        <input type=button name="do_Scrn1" id="do_Scrn1" value="Create Screen"
+        onClick="SUdoScrn1(this.value)">
+        <input type=button name="exit_Scrn1" id="exit_Scrn1" value="Exit" 
+        onClick="SUexitScrn1(this.value)">
+        
+        </form>
+                	<font size="2pt"><i><span name="author" id="author">.</span></i></font>
+
+      </div>
+      
+ 
+      </body>
+      
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+<HTML>
+  <HEAD>
+  <title> 1001bit.com - Linear Array </title>
+	<style type="text/css">
+	<!--
+	body,td,a,p,.h{font-family:arial,sans-serif; font-size:10pt;}
+	h1 { font-size: 16pt; color: #ffffff;}
+	h2 { font-size: 12pt; }
+	h3 { font-size: 11pt; }
+	p { font-size: 10pt; }
+
+	.f1 {font-size: 16pt}
+	.f2 {font-size: 14pt}
+	a {text-decoration: none}
+	a:hover {color:#ff0000; font-size:12pt}
+	.textbox {
+	 background-color: white; font-size: 12px;
+	 border: 1px solid #000000;
+	}	
+
+
+	-->
+	</style>	
+  
+  <script language="Javascript" type="text/javascript">
+
+function SUlinArAlignBottom(val)
+      {
+      window.location='skp:set_lin_ar_alignbottom@' + val;
+      }
+function SUlinArDisHor(val)
+      {
+      window.location='skp:set_lin_ar_dishor@' + val;
+      }
+function SUlinArMode(name)
+      {
+      set_pic();     
+      window.location='skp:set_lin_ar_mode@' + name;
+
+      }
+function SUlinArArrange(name)
+      {
+      document.theForm.lin_ar_mode[0].checked=true;
+      set_pic();  
+      window.location='skp:set_lin_ar_arrange@' + name;
+      }      
+function SUlinArArrangeFD(name)
+      {
+      document.theForm.lin_ar_mode[1].checked=true;
+      set_pic();  
+      window.location='skp:set_lin_ar_arrangeFD@' + name;
+      }      
+function SUdoLinArray(name)
+      {
+      window.location='skp:DoLinearArray@' + name;
+      }
+function SUexitLinArray(name)
+      {
+      window.location='skp:ExitLinearArray@' + name;
+      }
+function DL_lin_ar_nos(nos)
+      {
+     document.theForm.lin_ar_nos.value = nos;
+      }
+function DL_lin_ar_fixdis(dis)
+      {
+      dis = dis.replace("ft", "\'");
+      dis = dis.replace("in", "\"");
+      document.theForm.lin_ar_fixdis.value = dis;
+      }
+function DL_lin_ar_maxdis(dis)
+      {
+      dis = dis.replace("ft", "\'");
+      dis = dis.replace("in", "\"");
+      document.theForm.lin_ar_maxdis.value = dis;
+      }
+function DL_lin_ar_mode(i)
+      {
+      document.theForm.lin_ar_mode[i].checked = true;
+      }
+function DL_lin_ar_arrange(i)
+      {
+      document.theForm.lin_ar_arrange[i].checked = true;
+      }
+function DL_lin_ar_arrangeFD(i)
+      {
+      document.theForm.lin_ar_arrangeFD[i].checked = true;
+      }
+function DL_lin_ar_dishor(val)
+      {
+      if (val=='true') {
+        document.theForm.hor_dis.checked = true;
+        } 
+      else {
+        document.theForm.hor_dis.checked = false;
+        }
+      }
+function DL_lin_ar_alignbottom(val)
+      {
+      if (val=='true') {
+        document.theForm.align_bottom.checked = true;
+        } 
+      else {
+        document.theForm.align_bottom.checked = false;
+        }
+      }
+function set_pic()
+      {
+        if (document.theForm.lin_ar_mode[0].checked==true) {
+          if (document.theForm.lin_ar_arrange[0].checked==true) {
+            document.myPic.src="images/lin_ar_1-1.png";
+          }
+          else
+          {
+            document.myPic.src="images/lin_ar_1-2.png";
+          }
+        }
+        if (document.theForm.lin_ar_mode[1].checked==true) {
+          if (document.theForm.lin_ar_arrangeFD[0].checked==true) {
+            document.myPic.src="images/lin_ar_2-1.png";
+          }
+          if (document.theForm.lin_ar_arrangeFD[1].checked==true) {
+            document.myPic.src="images/lin_ar_2-2.png";
+          }
+          if (document.theForm.lin_ar_arrangeFD[2].checked==true) {
+            document.myPic.src="images/lin_ar_2-3.png";
+          }
+        }
+        if (document.theForm.lin_ar_mode[2].checked==true) {
+          document.myPic.src="images/lin_ar_3-1.png";
+        }
+      }
+  function DL_enter_nos()
+      {
+      document.theForm.lin_ar_mode[0].checked=true;
+      document.theForm.lin_ar_nos.select();
+      set_pic();
+      }
+  function DL_enter_fixdis()
+      {
+      document.theForm.lin_ar_mode[1].checked=true;
+      document.theForm.lin_ar_fixdis.select();
+      set_pic();
+      }
+  function DL_enter_maxdis()
+      {
+      document.theForm.lin_ar_mode[2].checked=true;
+      document.theForm.lin_ar_maxdis.select();
+      set_pic();
+      } 
+      
+  function DL_translate(id, newtext)
+	{
+		var newentry=document.getElementById(id);
+		newentry.firstChild.data=newtext;
+
+	}
+
+	function DL_translate_button(id, newtext)
+	{
+				
+		var newentry=document.getElementById(id);
+		newentry.value=newtext;
+
+	}
+
+      
+  </script>
+      
+  </HEAD>
+  <body bgcolor=#788B9A>
+      <div>
+      <form name="theForm" action="#">
+        
+
+        <table>
+        <tr><td colspan=3><h1><span name="title" id="title">Linear Array</span></h1></td></tr>
+        <tr><td colspan=3 bgcolor=#788B9A><img name="myPic" id="myPic" src='images/lin_ar_1-1.png' align="center"></td></tr>
+	<tr><td><input type=radio name="lin_ar_mode" id="lin_ar_mode" value="freedis" checked =true
+        onClick="SUlinArMode(this.value, this.checked)" ></input></td>
+        <td><b><span name="t1" id="t1">Number of entities (evenly distributed)</span></td><td><input type=text class="textbox"  name="lin_ar_nos" id="lin_ar_nos" onfocus="DL_enter_nos()"></td></tr>
+        <tr><td></td><td><i><b><span name="t2" id="t2">Entity arrangement</span></td><td></td></tr>
+        <tr><td></td><td colspan=2><input type=radio name="lin_ar_arrange" id="lin_ar_arrange" value="bothends" checked =true
+          onClick="SUlinArArrange(this.value, this.checked)" ><span name="t3" id="t3">Place entities at both ends</span></input></td></tr>
+        <tr><td></td><td colspan=2><input type=radio name="lin_ar_arrange" id="lin_ar_arrange" value="middle" checked =false
+          onClick="SUlinArArrange(this.value, this.checked)" ><span name="t4" id="t4">Place entities at middle point of each segments</span></input></td></tr>
+        <tr><td></td><td colspan=2><hr></td></tr>
+    
+  <tr><td><input type=radio name="lin_ar_mode" id="lin_ar_mode" value="fixeddis" checked =false
+        onClick="SUlinArMode(this.value, this.checked)" ></input></td>
+        <td><b><span name="t5" id="t5">Fixed distance between entities</span></td><td><input type=text class="textbox"  name="lin_ar_fixdis" id="lin_ar_fixdis" onfocus="DL_enter_fixdis()"></td></tr>
+        <tr><td></td><td><i><b><span name="t6" id="t6">Entity arrangement</span></td><td></td></tr>
+        <tr><td></td><td colspan=2><input type=radio name="lin_ar_arrangeFD" id="lin_ar_arrangeFD" value="middle" checked =true
+          onClick="SUlinArArrangeFD(this.value, this.checked)" ><span name="t7" id="t7">Setting out from middle point (entity on middle point)</span></input></td></tr>
+        <tr><td></td><td colspan=2><input type=radio name="lin_ar_arrangeFD" id="lin_ar_arrangeFD" value="middlespace" checked =false
+          onClick="SUlinArArrangeFD(this.value, this.checked)" ><span name="t8" id="t8">Setting out from middle (spaced from middle point)</span></input></td></tr>
+        <tr><td></td><td colspan=2><input type=radio name="lin_ar_arrangeFD" id="lin_ar_arrangeFD" value="startpoint" checked =false
+          onClick="SUlinArArrangeFD(this.value, this.checked)" ><span name="t9" id="t9">Setting out from start point</span></input></td></tr>
+        <tr><td></td><td colspan=2><hr></td></tr>      
+  
+  <tr><td><input type=radio name="lin_ar_mode" id="lin_ar_mode" value="rangedis" checked =false
+        onClick="SUlinArMode(this.value, this.checked)" ></input></td>
+        <td><b><span name="t10" id="t10">Evenly distribute entities. Spacing does not exceed</span></td><td><input type=text class="textbox"  name="lin_ar_maxdis" id="lin_ar_maxdis" onfocus="DL_enter_maxdis()"></td></tr>
+          <tr><td></td><td colspan=2><hr></td></tr>   
+        
+ 	<tr><td></td><td colspan=2><input type=checkbox name="hor_dis" id="hor_dis" checked onClick="SUlinArDisHor(this.checked)"> <span name="t11" id="t11">Distances are measured horizontally</span></td></tr>
+  <tr><td></td><td colspan=2><input type=checkbox name="align_bottom" id="align_bottom" checked onClick="SUlinArAlignBottom(this.checked)"> <span name="t12" id="t12">Entities are bottom aligned on path</span></td></tr>
+
+  </table>
+
+  <hr>
+        <input type=button  name="do_linarray" id="do_linarray" value="Build Array"
+        onClick="SUdoLinArray(this.value)">
+        <input type=button name="exit_linarray" id="exit_linarray" value="Exit" 
+        onClick="SUexitLinArray(this.value)">
+        
+        </form>
+        	<font size="2pt"><i><span name="author" id="author">.</span></i></font>
+
+      </div>
+      
+ 
+      </body>
+      
+</html>

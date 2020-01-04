@@ -1,0 +1,67 @@
+Building Structure Tool|BUILDING STRUCTURE TOOL
+Structure Tool|
+Draw Building Structure|
+Draw Multi Building Structures|
+ALL|
+ALL(SEARCH)|All(Search)
+STEEL_GIRDER|Steel-Girder
+STEEL_BEAM|Steel-Beam
+STEEL_COLUMN|Steel-Column
+RC_GIRDER|RC-Girder
+RC_BEAM|RC-Beam
+RC_COLUMN|RC-Column
+RC_FOOTING|RC-Footing
+RC_WALL|RC-Wall
+RC_SLAB|RC-Slab
+WALL|
+BEAM|
+SLAB|
+GIRDER|
+COLUMN|
+FOOTING|
+ALL DIALOG RESeT|All Dialog Reset
+Change PROFILE-LIST File|Change Profile List Path
+Change Language File|
+EXTEND|Extend
+EXTEND to Face|Extend to face
+GROW|Grow
+COMBINE WITH|Combine With
+EXCHANGE|Exchange
+Select 1st Structure|
+Extend Trim Structure|
+Select ‚Qnd structure|
+select face extended to|
+First point or Search Keyword|
+First point|
+Search Word?(BLANK to ALL)|
+Start from searching with Words?|
+Nothing Match.All list will appear|
+Center|
+Left|
+Right|
+Top|
+Middle|
+Bottom|
+Yes|
+No|
+HEIGHT|
+AXIS|
+LENGTH|
+Justification: |
+Vertical Just:|
+Draw axis:|
+Beam Spec:|
+Mirror aboutZ:|
+Fix Z Input to(BLANK to Free)|
+Top:|
+Height:|
+Rotate:|
+Auto Create from selected edges(and clines)?|
+First Point or Search word:Current|
+cannot convert to a Length|
+Zero length invalid !|
+Next point:[Esc]=Quit|
+Extend Structure|
+Combine with Structure|
+Select CSV File|
+The language convert will be effecvie after Sketchup restarted|

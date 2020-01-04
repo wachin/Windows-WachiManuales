@@ -1,0 +1,88 @@
+
+Instrucciones para Instalar Texto a Voz Balabolka + Voces RealSpeak en Ubuntu 16.04 (PlayOnLinux))
+
+00 Primero instalar playonlinux
+sudo apt-get install playonlinux
+Instale la versión de wine 1.9.22 
+
+01 INSTALE BALABOLKA EN UNA NUEVA UNIDAD VIRTUAL, PONGALE UN NOMBRE COMO:
+
+balabolka-wine1922
+
+y escoja 
+
+- (marcar)user otra version de wine
+- (marcar)Configurar wine
+- Cuando se acabe de instalar desmarque la opcion para ejecutar despues de instalar
+- a lo que aparece la ventana, cree el atajo para:
+
+balabolka.exe
+
+pongale nombre
+
+Balabolka 2.11 (wine 1.9.22)
+
+luego que aparece la ventana otra vez, digale que ya 
+
+"No quiero crear otro atajo"
+
+y siguiente
+
+02 INSTALE 
+
+Microsoft Speech Platform - Runtime 11
+https://www.microsoft.com/en-us/download/details.aspx?id=27225
+
+elija para 32 o 64 bits
+
+x86_SpeechPlatformRuntime\SpeechPlatformRuntime.msi  2.2 MB
+
+x64_SpeechPlatformRuntime\SpeechPlatformRuntime.msi  2.6 MB
+
+descarguelo, para instalarlo de clic en el programa que hemos instalado en PlayOnLinux y luego clic en la tuerca de PlayOnLinux y clic en la pestaña "Miscelaneo" y clic en:
+
+"Ejecutar un archivo .exe en esta unidad"
+
+busque el archivo e instalelo
+
+
+03 INSTALÉ LAS VOCES ALTA CALIDAD DE MICROSOFT
+
+descarguelas de aquí:
+
+Microsoft Speech Platform - Runtime Languages (Version 11) 
+https://www.microsoft.com/en-us/download/details.aspx?id=27224
+
+instale el lenguage que usted necesite, le recomiendo:
+
+    MSSpeech_TTS_en-US_Helen.msi
+    MSSpeech_TTS_en-US_ZiraPro.msi
+    MSSpeech_TTS_es-ES_Helena.msi
+    MSSpeech_TTS_es-MX_Hilda.msi
+    MSSpeech_TTS_en-GB_Hazel.msi
+
+Nota: Sólo funcionan los TTS
+
+Instalelas allí mismo en "Miscelaneo" y clic en:
+
+"Ejecutar un archivo .exe en esta unidad"
+
+y busque el ejecutable de la voz que quiere e instalelo
+
+04 INSTALAR EL COMPONENTES msxml3
+
+En la pestaña "Instalar Componentes" buscar msxml3 e instalarlo
+
+05 INSTALE HUNSPELL
+
+http://www.cross-plus-a.com/es/balabolka.htm
+
+para poder corregir la ortografía
+
+Nota de Agradecimiento: 
+Gracias indirectas al que respondió al mensaje de error OLE que aunque no era para Balabolka funcionó (allí dice que hay que instalar msxml3):
+
+wine - OLE error 80004001 - running keynote app
+https://ubuntuforums.org/showthread.php?t=1727499
+
+

@@ -1,0 +1,219 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+<HTML>
+  <HEAD>
+  <title> 1001bit.com - Build window frame</title>
+	<style type="text/css">
+	<!--
+	body,td,a,p,.h{font-family:arial,sans-serif; font-size:10pt;}
+	h1 {font-size: 16pt; color: #ffffff; }
+	h2 { font-size: 12pt; }
+	h3 { font-size: 11pt; }
+	p { font-size: 10pt; }
+
+	.f1 {font-size: 16pt}
+	.f2 {font-size: 14pt}
+	a {text-decoration: none}
+	a:hover {color:#ff0000; font-size:12pt}
+	.textbox {
+	 background-color: white; font-size: 12px;
+	 border: 1px solid #000000;
+	}	
+
+	-->
+	</style>	
+  
+  <script language="Javascript" type="text/javascript">
+      function SUdopaneldivide(name)
+      {
+      window.location='skp:Dopaneldivide@' + name;
+      }
+      
+      function SUexitpaneldivide(name)
+      {
+      window.location='skp:Exitpaneldivide@' + name;
+      }
+
+      function SUpaneldivideMode(name)
+      {
+	set_pic();
+      window.location='skp:set_paneldivide_mode@' + name;
+      }
+
+
+      function SUpaneldivideLocation(name)
+      {
+	
+      window.location='skp:set_paneldivide_location@' + name;
+      }
+
+
+      function DL_paneldividedepth(dpt)
+     { 
+        dpt = dpt.replace("ft", "\'");
+        dpt = dpt.replace("in", "\"");
+        document.theForm.paneldivide_depth.value = dpt;
+      }
+    function DL_paneldividethick(thk)
+     { 
+        thk = thk.replace("ft", "\'");
+        thk = thk.replace("in", "\"");
+        document.theForm.paneldivide_thick.value = thk;
+      }
+    function DL_paneldividedthick(dthk)
+     { 
+        dthk = dthk.replace("ft", "\'");
+        dthk = dthk.replace("in", "\"");
+        document.theForm.paneldivide_dthick.value = dthk;
+      }
+
+
+      function DL_paneldividemdepth(dpt2)
+     { 
+        dpt2 = dpt2.replace("ft", "\'");
+        dpt2 = dpt2.replace("in", "\"");
+        document.theForm.paneldivide_mdepth.value = dpt2;
+      }
+    function DL_paneldividemthick(thk2)
+     { 
+        thk2 = thk2.replace("ft", "\'");
+        thk2 = thk2.replace("in", "\"");
+        document.theForm.paneldivide_mthick.value = thk2;
+      }
+
+    function DL_paneldividerowno(rowno)
+     {
+	document.theForm.paneldivide_rowno.value = rowno;
+     }
+
+    function DL_paneldividecolno(colno)
+     {
+	document.theForm.paneldivide_colno.value = colno;
+     }
+
+    function DL_enter_d()
+    {
+      document.theForm.paneldivide_depth.select();
+    }
+
+    function DL_enter_t()
+    {
+      document.theForm.paneldivide_thick.select();
+    }
+    function DL_enter_md()
+    {
+      document.theForm.paneldivide_mdepth.select();
+    }
+
+    function DL_enter_mt()
+    {
+      document.theForm.paneldivide_mthick.select();
+    }
+    function DL_enter_dt()
+    {
+      document.theForm.paneldivide_dthick.select();
+    }
+    function DL_enter_rowno()
+    {
+      document.theForm.paneldivide_rowno.select();
+    }
+    function DL_enter_colno()
+    {
+      document.theForm.paneldivide_colno.select();
+    }
+
+    function DL_paneldivide_mode(i)
+    {
+      document.theForm.paneldivide_mode[i].checked = true;
+	set_pic();
+    }
+
+    function DL_paneldivide_location(i)
+    {
+      document.theForm.paneldivide_location[i].checked = true;
+    }
+
+      
+    function set_pic()
+      {
+        if (document.theForm.paneldivide_mode[0].checked==true) 
+	{
+            document.myPic.src="images/paneldivide0_1.png";
+        }
+        if (document.theForm.paneldivide_mode[1].checked==true) 
+	{
+            document.myPic.src="images/paneldivide1_1.png";
+        }
+        if (document.theForm.paneldivide_mode[2].checked==true) 
+	{
+            document.myPic.src="images/paneldivide2_1.png";
+        }
+
+      }
+      
+  function DL_translate(id, newtext)
+	{
+		var newentry=document.getElementById(id);
+		newentry.firstChild.data=newtext;
+
+	}
+
+	function DL_translate_button(id, newtext)
+	{
+				
+		var newentry=document.getElementById(id);
+		newentry.value=newtext;
+
+	}
+ 
+      
+
+</script>
+      
+  </HEAD>
+  <body bgcolor=#788B9A>
+      <div>
+      <form name="theForm" action="#">
+
+  <table>
+        <tr><td colspan=4> <h1><span name="title" id="title">Panel Divider</span></h1></td></tr>
+        <tr><td colspan=4 width=555 height=191><img src="images/paneldivide0_1.png" name="myPic" id="myPic" align=center></td></tr>
+	<tr><td colspan=4><input type=radio name="paneldivide_mode" id="paneldivide_mode" value="0" checked =true
+        onClick="SUpaneldivideMode(this.value, this.checked)" ><span name="t1" id="t1">rectangular frame</span></input></td></tr>
+	<tr><td colspan=4><input type=radio name="paneldivide_mode" id="paneldivide_mode" value="1" checked =false
+        onClick="SUpaneldivideMode(this.value, this.checked)" ><span name="t2" id="t2">rectangular frame bevelled edge</span></input></td></tr>
+	<tr><td colspan=4><input type=radio name="paneldivide_mode" id="paneldivide_mode" value="2" checked =true
+        onClick="SUpaneldivideMode(this.value, this.checked)" ><span name="t3" id="t3">rectangular frame recessed/extruded edge</span></input></td></tr>
+        <tr><td><span name="t13" id="t13">Number of rows (rows)</span></td><td><input type=text class="textbox"  name="paneldivide_rowno"  id="paneldivide_rowno"  onfocus="javascript:DL_enter_rowno()"></td>
+            <td><span name="t14" id="t14">Number of columns (cols)</span></td><td><input type=text class="textbox"  name="paneldivide_colno"  id="paneldivide_colno"  onfocus="javascript:DL_enter_colno()"></td></tr>
+
+        <tr><td><span name="t4" id="t4">Frame depth</span> (d)</td><td><input type=text class="textbox"  name="paneldivide_depth"  id="paneldivide_depth"  onfocus="javascript:DL_enter_d()"></td>
+            <td><span name="t5" id="t5">Recess/bevel/extrusion depth</span> (d2)</td><td><input type=text class="textbox"  name="paneldivide_mdepth"  id="paneldivide_mdepth"  onfocus="javascript:DL_enter_md()"></td></tr>
+        <tr><td><span name="t6" id="t6">Frame width</span> (w)</td><td><input type=text class="textbox"  name="paneldivide_thick" id="paneldivide_thick" onfocus="javascript:DL_enter_t()"></td>
+        <td><span name="t7" id="t7">Divider width</span> (w2)</td><td><input type=text class="textbox"  name="paneldivide_dthick" id="paneldivide_dthick" onfocus="javascript:DL_enter_dt()"></td></tr>
+        <tr><td><span name="t8" id="t8">Recess/bevel/extrusion width</span> (w3)</td><td><input type=text class="textbox"  name="paneldivide_mthick" id="paneldivide_mthick" onfocus="javascript:DL_enter_mt()"></td>
+	    <td></td><td></td></tr>
+	<tr><td colspan=4><span name="t9" id="t9">Panel location (in relation to selected face)</span>:
+	<input type=radio name="paneldivide_location" id="paneldivide_location" value="0" checked =true
+        onClick="SUpaneldivideLocation(this.value, this.checked)" ><span name="t10" id="t10">front</span></input>
+	<input type=radio name="paneldivide_location" id="paneldivide_location" value="1" checked =false
+        onClick="SUpaneldivideLocation(this.value, this.checked)" ><span name="t11" id="t11">middle</span></input>
+	<input type=radio name="paneldivide_location" id="paneldivide_location" value="2" checked =true
+        onClick="SUpaneldivideLocation(this.value, this.checked)" ><span name="t12" id="t12">back</span></input></td></tr>
+
+
+	</table>
+  <hr>
+        <input type=button name="do_paneldivide" id="do_paneldivide" value="Create Window Frame"
+        onClick="SUdopaneldivide(this.value)">
+        <input type=button name="exit_paneldivide" id="exit_paneldivide" value="Exit" 
+        onClick="SUexitpaneldivide(this.value)">
+        
+        </form>
+                	<font size="2pt"><i><span name="author" id="author">.</span></i></font>
+
+      </div>
+      
+ 
+      </body>
+      
+</html>

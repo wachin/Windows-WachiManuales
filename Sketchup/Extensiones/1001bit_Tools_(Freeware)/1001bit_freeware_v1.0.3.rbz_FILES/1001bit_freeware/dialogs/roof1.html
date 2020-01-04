@@ -1,0 +1,179 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+<HTML>
+  <HEAD>
+  <title> 1001bit.com - Build Roof Rafters and Battens/Purlins (type 1)</title>
+	<style type="text/css">
+	<!--
+	body,td,a,p,.h{font-family:arial,sans-serif; font-size:10pt;}
+	h1 {font-size: 16pt; color: #ffffff;}
+	h2 { font-size: 12pt; }
+	h3 { font-size: 11pt; }
+	p { font-size: 10pt; }
+
+	.f1 {font-size: 16pt}
+	.f2 {font-size: 14pt}
+	a {text-decoration: none; color:black}
+	a:hover {color:#ff0000; font-size:10pt; color:black}
+	.textbox {
+	 background-color: white; font-size: 12px;
+	 border: 1px solid #000000;
+	}	
+
+
+	-->
+	</style>	
+  
+  <script language="Javascript" type="text/javascript">
+      function SUdoRoof1(name)
+      {
+      window.location='skp:DoRoof1@' + name;
+      }
+      function SUexitRoof1(name)
+      {
+      window.location='skp:ExitRoof1@' + name;
+      }
+      function SURoof1_dopurlin(val)
+      {
+        if (document.theForm.do_purlin.checked==true) {
+          document.myPic.src="images/roof1_1.png";
+        }
+        else {
+          document.myPic.src="images/roof1_2.png";
+        }
+      window.location='skp:set_dopurlin@' + val;
+      }
+      function DL_Roof1Rwidth(wdh)
+      {
+        wdh = wdh.replace("ft", "\'");
+        wdh = wdh.replace("in", "\"");
+        document.theForm.Roof1_Rwidth.value = wdh;
+      }
+      function DL_Roof1Rheight(hgt)
+     { 
+        hgt = hgt.replace("ft", "\'");
+        hgt = hgt.replace("in", "\"");
+        document.theForm.Roof1_Rheight.value = hgt;
+      }
+    function DL_Roof1Rspace(spc)
+     { 
+        spc = spc.replace("ft", "\'");
+        spc = spc.replace("in", "\"");
+        document.theForm.Roof1_Rspacing.value = spc;
+      }
+      function DL_Roof1Pwidth(wdh)
+      {
+        wdh = wdh.replace("ft", "\'");
+        wdh = wdh.replace("in", "\"");
+        document.theForm.Roof1_Pwidth.value = wdh;
+      }
+      function DL_Roof1Pheight(hgt)
+     { 
+        hgt = hgt.replace("ft", "\'");
+        hgt = hgt.replace("in", "\"");
+        document.theForm.Roof1_Pheight.value = hgt;
+      }
+    function DL_Roof1Pspace(spc)
+     { 
+        spc = spc.replace("ft", "\'");
+        spc = spc.replace("in", "\"");
+        document.theForm.Roof1_Pspacing.value = spc;
+      }
+      function DL_Roof1_dopurlin(val)
+      {
+      if (val=='true') {
+        document.theForm.do_purlin.checked = true;
+        document.myPic.src="images/roof1_1.png";
+        } 
+      else {
+        document.theForm.do_purlin.checked = false;
+        document.myPic.src="images/roof1_2.png";
+        }
+      }
+      
+      function DL_enter_rs()
+      {
+        document.myPic.src="images/roof1_3.png";
+        document.theForm.Roof1_Rspacing.select();
+      }
+      function DL_enter_rw()
+      {
+        document.theForm.Roof1_Rwidth.select();
+        document.myPic.src="images/roof1_3.png";
+      }
+      function DL_enter_rd()
+      {
+        document.theForm.Roof1_Rheight.select();
+        document.myPic.src="images/roof1_3.png";
+      }
+      
+      function DL_enter_ps()
+      {
+        
+        document.myPic.src="images/roof1_4.png";
+        document.theForm.do_purlin.checked = true;
+        document.theForm.Roof1_Pspacing.select();
+      }
+      function DL_enter_pw()
+      {
+        document.theForm.Roof1_Pwidth.select();
+        document.theForm.do_purlin.checked = true;
+        document.myPic.src="images/roof1_4.png";
+      }
+      function DL_enter_pd()
+      {
+        document.theForm.Roof1_Pheight.select();
+        document.theForm.do_purlin.checked = true;
+        document.myPic.src="images/roof1_4.png";
+      }
+      
+  function DL_translate(id, newtext)
+	{
+		var newentry=document.getElementById(id);
+		newentry.firstChild.data=newtext;
+
+	}
+
+	function DL_translate_button(id, newtext)
+	{
+				
+		var newentry=document.getElementById(id);
+		newentry.value=newtext;
+
+	}
+ 
+      
+</script>
+      
+  </HEAD>
+  <body  bgcolor=#788B9A>
+      <div>
+      <form name="theForm" action="#">
+        
+
+  <table>
+        <tr><td colspan=2><h1><span name="title" id="title">Create Roof Rafters and Battens/Purlins</span> </h1></td></tr>
+        <tr><td colspan=2 height=218 width=540><img src="images/roof1_1.png" name="myPic" id="myPic" valign=center align=center></td></tr>
+        <tr><td><span name="t1" id="t1">Rafter Width</span> (rw)</td><td><input type=text class="textbox"  name="Roof1_Rwidth" id="Roof1_Rwidth" onfocus="javascript:DL_enter_rw()"></td></tr>
+        <tr><td><span name="t2" id="t2">Rafter Depth</span> (rd)</td><td><input type=text class="textbox"  name="Roof1_Rheight" id="Roof1_Rheight" onfocus="javascript:DL_enter_rd()"></td></tr>
+        <tr><td><span name="t3" id="t3">Rafter spacing</span> (rs)</td><td><input type=text class="textbox"  name="Roof1_Rspacing" id="Roof1_Rspacing" onfocus="javascript:DL_enter_rs()"></td></tr>
+        
+        <tr><td><span name="t4" id="t4">Batten/Purlin Width</span> (pw)</td><td><input type=text class="textbox"  name="Roof1_Pwidth" id="Roof1_Pwidth" onfocus="javascript:DL_enter_pw()"></td></tr>
+        <tr><td><span name="t5" id="t5">Batten/Purlin Depth</span>  (pd)</td><td><input type=text class="textbox"  name="Roof1_Pheight" id="Roof1_Pheight" onfocus="javascript:DL_enter_pd()"></td></tr>
+        <tr><td><span name="t6" id="t6">Batten/Purlin spacing</span> (ps)</td><td><input type=text class="textbox"  name="Roof1_Pspacing" id="Roof1_Pspacing" onfocus="javascript:DL_enter_ps()"></td></tr>
+        <tr><td colspan=2><input type=checkbox name="do_purlin" id="do_purlin" checked onClick="SURoof1_dopurlin(this.checked)"><span name="t7" id="t7">Build battens/purlins</span></td></tr>
+	</table>
+
+  <hr>
+        <input type=button name="do_Roof1" id="do_Roof1" value="Create Rafters and Battens/Purlins"
+        onClick="SUdoRoof1(this.value)">
+        <input type=button name="exit_Roof1" id="exit_Roof1" value="Exit" 
+        onClick="SUexitRoof1(this.value)">
+        
+        </form>
+        	<font size="2pt"><i><span name="author" id="author">.</span></i></font>
+      </div>
+      
+ 
+      </body>
+      
+</html>

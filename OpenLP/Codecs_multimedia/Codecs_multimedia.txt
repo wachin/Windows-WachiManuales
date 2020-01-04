@@ -1,0 +1,5 @@
+Troubleshooting — OpenLP 2.4 Reference Manual
+https://manual.openlp.org/troubleshooting.html
+
+Microsoft Windows
+Later versions of Microsoft Windows (Vista, Windows 7) generally come with everything you need to play most media formats. If for some reason you need additional codecs we have seen success from the Combined Community Codec Pack (CCCP). You might also wish to check out the K-Lite Codec Pack. If you are having issues, results do seem to vary with the different options. What works for some may not for others, so some trial and error may be required. 

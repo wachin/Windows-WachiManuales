@@ -1,0 +1,186 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+<HTML>
+  <HEAD>
+  <title> 1001bit.com - Build window frame</title>
+	<style type="text/css">
+	<!--
+	body,td,a,p,.h{font-family:arial,sans-serif; font-size:10pt;}
+	h1 {font-size: 16pt; color: #ffffff; }
+	h2 { font-size: 12pt; }
+	h3 { font-size: 11pt; }
+	p { font-size: 10pt; }
+
+	.f1 {font-size: 16pt}
+	.f2 {font-size: 14pt}
+	a {text-decoration: none}
+	a:hover {color:#ff0000; font-size:12pt}
+	.textbox {
+	 background-color: white; font-size: 12px;
+	 border: 1px solid #000000;
+	}	
+
+
+	-->
+	</style>	
+  
+  <script language="Javascript" type="text/javascript">
+      function SUdowframe(name)
+      {
+      window.location='skp:Dowframe@' + name;
+      }
+      
+      function SUexitwframe(name)
+      {
+      window.location='skp:Exitwframe@' + name;
+      }
+
+      function SUwframeMode(name)
+      {
+	set_pic();
+      window.location='skp:set_wframe_mode@' + name;
+      }
+
+      function SUwframeLocation(name)
+      {
+      window.location='skp:set_wframe_location@' + name;
+      }
+
+
+      function DL_wframedepth(dpt)
+     { 
+        dpt = dpt.replace("ft", "\'");
+        dpt = dpt.replace("in", "\"");
+        document.theForm.wframe_depth.value = dpt;
+      }
+    function DL_wframethick(thk)
+     { 
+        thk = thk.replace("ft", "\'");
+        thk = thk.replace("in", "\"");
+        document.theForm.wframe_thick.value = thk;
+      }
+
+
+      function DL_wframemdepth(dpt2)
+     { 
+        dpt2 = dpt2.replace("ft", "\'");
+        dpt2 = dpt2.replace("in", "\"");
+        document.theForm.wframe_mdepth.value = dpt2;
+      }
+    function DL_wframemthick(thk2)
+     { 
+        thk2 = thk2.replace("ft", "\'");
+        thk2 = thk2.replace("in", "\"");
+        document.theForm.wframe_mthick.value = thk2;
+      }
+
+    function DL_enter_d()
+    {
+      document.theForm.wframe_depth.select();
+    }
+
+    function DL_enter_t()
+    {
+      document.theForm.wframe_thick.select();
+    }
+    function DL_enter_md()
+    {
+      document.theForm.wframe_mdepth.select();
+    }
+
+    function DL_enter_mt()
+    {
+      document.theForm.wframe_mthick.select();
+    }
+    function DL_wframe_mode(i)
+    {
+      document.theForm.wframe_mode[i].checked = true;
+	set_pic();
+    }
+
+    function DL_wframe_location(i)
+    { 
+      document.theForm.wframe_location[i].checked = true;
+    }
+      
+    function set_pic()
+      {
+        if (document.theForm.wframe_mode[0].checked==true) 
+        {
+            document.myPic.src="images/wframe0_1.png";
+        }
+        if (document.theForm.wframe_mode[1].checked==true) 
+        {
+            document.myPic.src="images/wframe1_1.png";
+        }
+        if (document.theForm.wframe_mode[2].checked==true) 
+        {
+            document.myPic.src="images/wframe2_1.png";
+        }
+
+      }
+
+	function DL_translate(id, newtext)
+	{
+		var newentry=document.getElementById(id);
+		newentry.firstChild.data=newtext;
+
+	}
+
+	function DL_translate_button(id, newtext)
+	{
+				
+		var newentry=document.getElementById(id);
+		newentry.value=newtext;
+
+	}
+
+
+
+
+</script>
+      
+  </HEAD>
+  <body bgcolor=#788B9A>
+      <div>
+      <form name="theForm" action="#">
+
+  <table>
+        <tr><td colspan=2> <h1><span name="title" id="title">Create Window Frame</span></h1></td></tr>
+        <tr><td colspan=2 width=538 height=251><img src="images/wframe0_1.png" name="myPic" id="myPic" align=center></td></tr>
+	<tr><td colspan=2><input type=radio name="wframe_mode" id="wframe_mode" value="0" checked =true
+        onClick="SUwframeMode(this.value, this.checked)" ><span name="t1" id="t1">rectangular frame</span></input></td></tr>
+	<tr><td colspan=2><input type=radio name="wframe_mode" id="wframe_mode" value="1" checked =false
+        onClick="SUwframeMode(this.value, this.checked)" ><span name="t2" id="t2">rectangular frame bevelled edge</span></input></td></tr>
+	<tr><td colspan=2><input type=radio name="wframe_mode" id="wframe_mode" value="2" checked =true
+        onClick="SUwframeMode(this.value, this.checked)" ><span name="t3" id="t3">rectangular frame recessed/extruded edge</span></input></td></tr>
+
+
+        <tr><td><span name="t4" id="t4">Frame depth</span> (d)</td><td><input type=text class="textbox"  name="wframe_depth" id="wframe_depth"   onfocus="javascript:DL_enter_d()"></td></tr>
+        <tr><td><span name="t5" id="t5">Recess/bevel/extrusion depth</span> (d2)</td><td><input type=text class="textbox"  name="wframe_mdepth"  id="wframe_mdepth"  onfocus="javascript:DL_enter_md()"></td></tr>
+        <tr><td><span name="t6" id="t6">Frame width</span> (w)</td><td><input type=text class="textbox"  name="wframe_thick" id="wframe_thick" onfocus="javascript:DL_enter_t()"></td></tr>
+        <tr><td><span name="t7" id="t7">Recess/bevel/extrusion width</span> (w2)</td><td><input type=text class="textbox"  name="wframe_mthick" id="wframe_mthick" onfocus="javascript:DL_enter_mt()"></td></tr>
+	<tr><td colspan=2><span name="t8" id="t8">Window frame location (in relation to selected face)</span>:
+	<input type=radio name="wframe_location" id="wframe_location" value="0" checked =true
+        onClick="SUwframeLocation(this.value, this.checked)" ><span name="t9" id="t9">front</span></input>
+	<input type=radio name="wframe_location" id="wframe_location" value="1" checked =false
+        onClick="SUwframeLocation(this.value, this.checked)" ><span name="t10" id="t10">middle</span></input>
+	<input type=radio name="wframe_location" id="wframe_location" value="2" checked =true
+        onClick="SUwframeLocation(this.value, this.checked)" ><span name="t11" id="t11">back</span></input></td></tr>
+
+
+	</table>
+  <hr>
+        <input type=button name="do_wframe" id="do_wframe" value="Create Window Frame"
+        onClick="SUdowframe(this.value)">
+        <input type=button name="exit_wframe" id="exit_wframe" value="Exit" 
+        onClick="SUexitwframe(this.value)">
+        
+        </form>
+	<font size="2pt"><i><span name="author" id="author">.</span></i></font>
+  </div>
+      
+ 
+      </body>
+
+</html>
+      

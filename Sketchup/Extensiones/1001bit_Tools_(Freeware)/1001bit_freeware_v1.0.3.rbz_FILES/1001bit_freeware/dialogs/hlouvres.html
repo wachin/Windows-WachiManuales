@@ -1,0 +1,141 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+<HTML>
+  <HEAD>
+  <title> 1001bit.com - Build Horizontal Louvres</title>
+	<style type="text/css">
+	<!--
+	body,td,a,p,.h{font-family:arial,sans-serif; font-size:10pt;}
+	h1 {font-size: 16pt; color: #ffffff; }
+	h2 { font-size: 12pt; }
+	h3 { font-size: 11pt; }
+	p { font-size: 10pt; }
+
+	.f1 {font-size: 16pt}
+	.f2 {font-size: 14pt}
+	a {text-decoration: none}
+	a:hover {color:#ff0000; font-size:12pt}
+	.textbox {
+	 background-color: white; font-size: 12px;
+	 border: 1px solid #000000;
+	}	
+
+
+	-->
+	</style>	
+  
+  <script language="Javascript" type="text/javascript">
+      function SUdoHLvr(name)
+      {
+      window.location='skp:DoHLvr@' + name;
+      }
+      
+      function SUexitHLvr(name)
+      {
+      window.location='skp:ExitHLvr@' + name;
+      }
+
+      function SUHLvrLocation(name)
+      {
+      window.location='skp:set_HLvr_location@' + name;
+      }
+
+
+    function DL_HLvr_location(i)
+    { 
+      document.theForm.HLvr_location[i].checked = true;
+    }
+
+
+
+      function DL_HLvrdepth(dpt)
+     { 
+        dpt = dpt.replace("ft", "\'");
+        dpt = dpt.replace("in", "\"");
+        document.theForm.HLvr_depth.value = dpt;
+      }
+    function DL_HLvrthick(thk)
+     { 
+        thk = thk.replace("ft", "\'");
+        thk = thk.replace("in", "\"");
+        document.theForm.HLvr_thick.value = thk;
+      }
+    function DL_HLvrangle(ang)
+     { 
+      document.theForm.HLvr_angle.value = ang;
+      }
+
+    function DL_HLvrrowgap(hgt)
+     { 
+        hgt = hgt.replace("ft", "\'");
+        hgt = hgt.replace("in", "\"");
+        document.theForm.HLvr_rowgap.value = hgt;
+      }
+    function DL_enter_d()
+    {
+      document.theForm.HLvr_depth.select();
+    }
+
+    function DL_enter_rs()
+    {
+      document.theForm.HLvr_rowgap.select();
+    }
+    function DL_enter_t()
+    {
+      document.theForm.HLvr_thick.select();
+    }
+
+	function DL_translate(id, newtext)
+	{
+		var newentry=document.getElementById(id);
+		newentry.firstChild.data=newtext;
+
+	}
+
+	function DL_translate_button(id, newtext)
+	{
+				
+		var newentry=document.getElementById(id);
+		newentry.value=newtext;
+
+	}
+
+
+      
+</script>
+      
+  </HEAD>
+  <body bgcolor=#788B9A>
+      <div>
+      <form name="theForm" action="#">
+
+  <table>
+        <tr><td colspan=2> <h1><span name="title" id="title">Create Horizontal Louvres</span></h1></td></tr>
+        <tr><td colspan=2 width=388 height=201><img src="images/hlouvres1_1.png" name="myPic" id="myPic" align=center></td></tr>
+        <tr><td><span name="t1" id="t1">Louvre depth</span> (d)</td><td><input type=text class="textbox"  name="HLvr_depth"  id="HLvr_depth"  onfocus="javascript:DL_enter_d()"></td></tr>
+        <tr><td><span name="t2" id="t2">Louvre Thickness</span> (t)</td><td><input type=text class="textbox"  name="HLvr_thick" id="HLvr_thick" onfocus="javascript:DL_enter_t()"></td></tr>
+        <tr><td><span name="t3" id="t3">Louvre spacing</span> (rs)</td><td><input type=text class="textbox"  name="HLvr_rowgap" id="HLvr_rowgap" onfocus="javascript:DL_enter_rs()"></td></tr>
+        <tr><td><span name="t4" id="t4">Louvre angle</span> (a) </td><td><input type=text class="textbox"  name="HLvr_angle" id="HLvr_angle" onfocus="javascript:document.theForm.HLvr_angle.select()"></td></tr>
+	<tr><td colspan=2><span name="t5" id="t5">Louvres location (in relation to selected face)</span>:<br>
+	<input type=radio name="HLvr_location" id="HLvr_location" value="0" checked =true
+        onClick="SUHLvrLocation(this.value, this.checked)" ><span name="t6" id="t6">front</span></input>
+	<input type=radio name="HLvr_location" id="HLvr_location" value="1" checked =false
+        onClick="SUHLvrLocation(this.value, this.checked)" ><span name="t7" id="t7">middle</span></input>
+	<input type=radio name="HLvr_location" id="HLvr_location" value="2" checked =true
+        onClick="SUHLvrLocation(this.value, this.checked)" ><span name="t8" id="t8">back</span></input></td></tr>
+
+	</table>
+  <hr>
+        <input type=button name="do_HLvr" id="do_HLvr" value="Create Louvres"
+        onClick="SUdoHLvr(this.value)">
+        <input type=button name="exit_HLvr" id="exit_HLvr" value="Exit" 
+        onClick="SUexitHLvr(this.value)">
+        
+        </form>
+        	<font size="2pt"><i><span name="author" id="author">.</span></i></font>
+ 
+      </div>
+      
+ 
+      </body>
+      
+</html>

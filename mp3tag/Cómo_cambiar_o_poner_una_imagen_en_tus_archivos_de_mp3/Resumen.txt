@@ -1,0 +1,9 @@
+
+Con mp3tag
+
+- Tener preparada una imágen a 500x500px, copiarla en el lugar donde están todos los mp3
+- añadir una carpeta con todos los mp3 a cambiar o poner una imagen
+- Seleccionar todos los mp3
+- Dar clic derecho en el icono de la carátula, y seleccionar la imágen
+- Guardar los cambios (como están seleccionados todos los archivos se guardará en todos)
+ 

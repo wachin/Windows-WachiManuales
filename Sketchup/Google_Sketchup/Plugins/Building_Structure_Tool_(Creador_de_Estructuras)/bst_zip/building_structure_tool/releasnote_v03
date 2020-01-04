@@ -1,0 +1,27 @@
+I corrected this script. 
+The version changes to 0.3.
+
+The contents are
+1: Creating Walls continuously.
+2: Add new option for Free Width Wall.
+    With Dialog,
+    select "RCW-0" in item of "Beam spec"
+    and,input value in item of "Wall Width Override".
+3:Add new function for creating Slab.
+   With Dialog
+   The Item of "Top Level" is the level for top of slab.
+   The Item of "Hit Level" is the level for searching plane.
+   The Item of "Hit range" is size of area for seaching.
+   And Clicking on screen will creat slab. 
+4.Improved to reading CSV.
+   The csv is text file.
+   when editing csv with like excel,it creates text include double quotation,sometime.
+   In this version,this plugin read csv like that.
+   ( Although it cannot say that it can probably do completely )
+Explanation of a new function was uploaded to youtube. 
+I created the PDF of the naming convention of the item "Profile" in the pflist,csv.
+pflist csv is a structures list that used in this plugin. 
+Please have a look. 
+
+I will write document about pflist.csv.please wait.
+Thank you. 

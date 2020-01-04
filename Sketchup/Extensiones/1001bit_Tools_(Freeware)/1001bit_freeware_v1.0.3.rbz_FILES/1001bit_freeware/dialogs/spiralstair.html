@@ -1,0 +1,310 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+<HTML>
+  <HEAD>
+  <title> 1001bit.com - Spiral Staircase</title>
+	<style type="text/css">
+	<!--
+	body,td,a,p,.h{font-family:arial,sans-serif; font-size:10pt;}
+	h1 { font-size: 16pt; color: #ffffff; }
+	h2 { font-size: 12pt; }
+	h3 { font-size: 11pt; }
+	p { font-size: 10pt; }
+
+	.f1 {font-size: 16pt}
+	.f2 {font-size: 14pt}
+	a {text-decoration: none}
+	a:hover {color:#ff0000; font-size:12pt}
+	.textbox {
+	 background-color: white; font-size: 12px;
+	 border: 1px solid #000000;
+	}	
+
+	-->
+	</style>	
+  
+  <script language="Javascript" type="text/javascript">
+      function SUspstrDoRail(val)
+      {
+      DL_setPic1();
+      window.location='skp:set_dorail@' + val;
+      }
+      function SUstType(name)
+      {
+      DL_setPic1();
+      window.location='skp:set_StairType@' + name;
+      }
+      function SUdoStair(name)
+      {
+      window.location='skp:DoStair@' + name;
+      }
+      function SUexitStair(name)
+      {
+      window.location='skp:ExitStair@' + name;
+      }
+      function DL_stair_width(wdh)
+      {
+        wdh = wdh.replace("ft", "\'");
+        wdh = wdh.replace("in", "\"");
+        document.theForm.stair_width.value = wdh;
+      }
+      function DL_stair_riser(hgt)
+     { 
+        hgt = hgt.replace("ft", "\'");
+        hgt = hgt.replace("in", "\"");
+        document.theForm.stair_riser.value = hgt;
+      }
+      function DL_stair_angle(ang)
+     { 
+        document.theForm.stair_angle.value = ang;
+      }
+      function DL_stair_raildia(dia)
+     { 
+        dia = dia.replace("ft", "\'");
+        dia = dia.replace("in", "\"");
+        document.theForm.stair_raildia.value = dia;
+      }
+      function DL_stair_mraildia(mdia)
+     { 
+        mdia = mdia.replace("ft", "\'");
+        mdia = mdia.replace("in", "\"");
+        document.theForm.stair_mraildia.value = mdia;
+      }
+      function DL_stair_poledia(pdia)
+     { 
+        pdia = pdia.replace("ft", "\'");
+        pdia = pdia.replace("in", "\"");
+        document.theForm.stair_poledia.value = pdia;
+      }
+      function DL_stair_railoffset(roff)
+     { 
+        roff = roff.replace("ft", "\'");
+        roff = roff.replace("in", "\"");
+        document.theForm.stair_railoffset.value = roff;
+      }
+      function DL_stair_railheight(rhgt)
+     { 
+        rhgt = rhgt.replace("ft", "\'");
+        rhgt = rhgt.replace("in", "\"");
+        document.theForm.stair_railheight.value = rhgt;
+      }
+      
+    function DL_stair_slabthk(slt)
+     { 
+        slt = slt.replace("ft", "\'");
+        slt = slt.replace("in", "\"");
+        document.theForm.stair_slabthk.value = slt;
+      }
+      
+      function DL_stair_strwidth(sw)
+     { 
+        sw = sw.replace("ft", "\'");
+        sw = sw.replace("in", "\"");
+        document.theForm.stair_strwidth.value = sw;
+      }
+      function DL_stair_strdepth(sd)
+     { 
+        sd = sd.replace("ft", "\'");
+        sd = sd.replace("in", "\"");
+        document.theForm.stair_strdepth.value = sd;
+      }
+      function DL_stair_nos(nos)
+     { 
+        document.theForm.stair_nos.value = nos;
+      }
+      function DL_stair_angle(ang)
+     { 
+        document.theForm.stair_angle.value = ang;
+      }
+      function DL_stair_type(i)
+      {
+      document.theForm.stair_type[i].checked = true;
+      DL_setPic1();
+      }
+      
+      function DL_stair_dorail(val)
+      {
+      if (val=='true') {
+        document.theForm.stair_dorail.checked = true;
+        } 
+      else {
+        document.theForm.stair_dorail.checked = false;
+        }
+      }
+
+     function DL_enter_typeA()
+      {
+        DL_setPic1();
+      }
+     function DL_enter_typeB()
+      {
+        DL_setPic1();
+      }
+      
+    function DL_setPic1()
+    {
+      if (document.theForm.stair_type[0].checked==true) {
+       if (document.theForm.stair_dorail.checked==true) { 
+          document.myPic.src="images/spiralstair_1_1.png";
+        }
+        else
+        {
+          document.myPic.src="images/spiralstair_1_2.png";
+        }
+      }
+      if (document.theForm.stair_type[1].checked==true) {
+       if (document.theForm.stair_dorail.checked==true) { 
+          document.myPic.src="images/spiralstair_2_1.png";
+        }
+        else
+        {
+          document.myPic.src="images/spiralstair_2_2.png";
+        }
+        
+      }      
+    }   
+    
+    function DL_setPic2()
+    {
+      if (document.theForm.stair_type[0].checked==true) {
+          document.myPic.src="images/spiralstair_1_3.png";
+      }
+      if (document.theForm.stair_type[1].checked==true) {
+          document.myPic.src="images/spiralstair_2_3.png";
+      }      
+    }   
+
+    function DL_setPic3()
+    {
+      if (document.theForm.stair_type[0].checked==true) {
+        if (document.theForm.stair_dorail.checked==true) {
+          document.myPic.src="images/spiralstair_1_4.png";
+          }
+          else
+          {
+          document.myPic.src="images/spiralstair_1_5.png";
+          }
+      }
+      if (document.theForm.stair_type[1].checked==true) {
+        if (document.theForm.stair_dorail.checked==true) {
+          document.myPic.src="images/spiralstair_2_4.png";
+          }
+          else
+          {
+            document.myPic.src="images/spiralstair_2_5.png";
+          }
+      }      
+    }   
+
+    function DL_enter_width()
+      {
+        DL_setPic2();
+        document.theForm.stair_width.select();
+      }
+     function DL_enter_riser()
+      {
+        DL_setPic2();
+        document.theForm.stair_riser.select();
+      }
+     function DL_enter_angle()
+      {
+        DL_setPic2();
+        document.theForm.stair_angle.select();
+      }
+     function DL_enter_nos()
+      {
+        document.theForm.stair_nos.select();
+      }
+     function DL_enter_slabthk()
+      {
+        DL_setPic2();
+        document.theForm.stair_slabthk.select();
+      }
+     function DL_enter_raildia()
+      {
+        DL_setPic3();
+        document.theForm.stair_raildia.select();
+      }
+     function DL_enter_mraildia()
+      {
+        DL_setPic3();
+        document.theForm.stair_mraildia.select();
+      }
+     function DL_enter_railoffset()
+      {
+        DL_setPic3();
+        document.theForm.stair_railoffset.select();
+      }
+     function DL_enter_railheight()
+      {
+        DL_setPic3();
+        document.theForm.stair_railheight.select();
+      }
+     function DL_enter_poledia()
+      {
+        DL_setPic3();
+        document.theForm.stair_poledia.select();
+      }
+
+  function DL_translate(id, newtext)
+	{
+		var newentry=document.getElementById(id);
+		newentry.firstChild.data=newtext;
+
+	}
+
+	function DL_translate_button(id, newtext)
+	{
+				
+		var newentry=document.getElementById(id);
+		newentry.value=newtext;
+
+	}
+
+
+      </script>
+      
+  </HEAD>
+  <body bgcolor=#788B9A>
+      <div>
+      <form name="theForm" action="#">
+
+  <table>
+  <tr><td colspan=4><h1><span name="title" id="title">Create Spiral Staircase</span></h1></td></tr>
+          <tr><td colspan=4 align=center>
+                <img src='images/spiralstair_1_1.png' name="myPic" id="myPic"></td></tr>
+  <tr><td colspan=4><span name="t1" id="t1">Staircase type</span><br>
+        <input type=radio name="stair_type" id="stair_type" value="A" checked =true
+        onClick="SUstType(this.value, this.checked)" ><span name="t2" id="t2">Type A</span></input>
+        <input type=radio name="stair_type" id="stair_type" value="B"
+          onClick="SUstType(this.value, this.checked)"  ><span name="t3" id="t3">Type B</span></input>
+         <br><hr>
+        </td></tr>
+
+        <tr><td width=150><span name="t4" id="t4">Step width</span> (a)</td><td width=100><input type=text class="textbox"  name="stair_width" id="stair_width" onfocus="javascript:DL_enter_width()"></td>
+                <td width=150><span name="t5" id="t5">Riser height</span> (b) </td><td width=100><input type=text class="textbox"  name="stair_riser" id="stair_riser" onfocus="javascript:DL_enter_riser()"></td></tr>
+        <tr><td width=150><span name="t6" id="t6">Step angle</span> (c) </td><td width=100><input type=text class="textbox"  name="stair_angle" id="stair_angle" onfocus="javascript:DL_enter_angle()"></td>
+                <td width=150><span name="t7" id="t7">Number of risers</span> </td><td width=100><input type=text class="textbox"  name="stair_nos" id="stair_nos" onfocus="javascript:DL_enter_nos()"></td></tr>
+        <tr><td width=150><span name="t8" id="t8">Step thickness</span> (d)</td><td width=100><input type=text class="textbox"  name="stair_slabthk" id="stair_slabthk" onfocus="javascript:DL_enter_slabthk()"></td>   
+               <td width=150><span name="t9" id="t9">Center pole diameter</span> (e)</td><td width=100><input type=text class="textbox"  name="stair_poledia" id="stair_poledia" onfocus="javascript:DL_enter_poledia()"></td></tr>
+        <tr><td width=150><span name="t10" id="t10">Handrail guiding lines offset</span> (f)</td><td width=100><input type=text class="textbox"  name="stair_railoffset" id="stair_railoffset" onfocus="javascript:DL_enter_railoffset()"></td>
+                <td width=150><span name="t11" id="t11">Handrail guiding lines height</span> (g)</td><td width=100><input type=text class="textbox"  name="stair_railheight" id="stair_railheight" onfocus="javascript:DL_enter_railheight()"></td></tr>      
+        <tr><td width=150><span name="t12" id="t12">Handrail diameter</span> (h)</td><td width=100><input type=text class="textbox"  name="stair_raildia" id="stair_raildia" onfocus="javascript:DL_enter_raildia()"></td>
+                <td width=150><span name="t13" id="t13">Intermediate rail diameter</span> (i)</td><td width=100><input type=text class="textbox"  name="stair_mraildia" id="stair_mraildia" onfocus="javascript:DL_enter_mraildia()"></td></tr>      
+        <tr><td colspan=4><input type=checkbox name="stair_dorail" id="stair_dorail" checked onClick="SUspstrDoRail(this.checked)"><span name="t14" id="t14">Build hand rail and intermediate rails</span></td>
+        </tr>
+
+</table>
+  <hr>
+        <input type=button name="do_stair" id="do_stair" value="Build staircase"
+        onClick="SUdoStair(this.value)">
+        <input type=button name="exit_stair" id="exit_stair" value="Exit" 
+        onClick="SUexitStair(this.value)">
+        
+        </form>
+        <font size="2pt"><i><span name="author" id="author">.</span></i></font>
+
+      </div>
+      
+ 
+      </body>
+</html>

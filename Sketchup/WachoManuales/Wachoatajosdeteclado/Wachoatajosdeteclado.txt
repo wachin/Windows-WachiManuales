@@ -1,0 +1,10 @@
+
+
+En "ventana/Preferencias/met... abreviados"
+
+
+Ocultar(está en Seleccion/ocultar)
+buscando ocultar, puse "Alt+O"
+
+Mostrar ultimo (está en seleccion/mostrar/ultimo)
+buscando en mostrar, puse "Alt+S"

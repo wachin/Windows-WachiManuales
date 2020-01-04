@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+
+<html>
+
+   <head>
+      <meta name="generator" content="HTML Tidy for Windows (vers 19 April 2007), see www.w3.org">
+      <link rel="stylesheet" href="style.css" type="text/css" />
+      <script type="text/javascript" src="moveit.js"> </script>
+      <title>JF MoveIt</title>
+   </head>
+
+   <body>
+   <div id=plugin_name>JF MoveIt v<span id="plugin_version"></span></div>
+      <span class="xsmall hand" onClick="window.location='skp:undo';">undo</span>
+      <span class="xsmall hand" onClick="window.location='skp:top';">top</span>
+      <fieldset>
+	 <legend onClick="align_view();">MOVE</legend>
+	    <label for="move_amt">Dist</label>
+	    <input id="move_amt" onfocus="select_text(this.id);" size="7" value="0">
+	    <!--<label for="repeat">Repeat</label>-->
+	    <!--<input id="repeat" onfocus="select_text(this.id);" size="5" value="0">-->
+	    <!--<br />-->
+	    <!--<label for="cpy">Copy</label>-->
+	    <!--<input onclick= "window.location='skp:checkbox_state@'+ this.checked" name= "copy" type="checkbox" id="cpy">-->
+	 <table>
+	    <tr>
+	       <td><button onclick="move('nw');"><img src="./images/nw.png" /></button></td>
+	       <td><button id="ypos" onclick="move('n');"><img src="./images/arrow_green_up.jpg" /></button></td>
+	       <td><button onclick="move('ne');"><img src="./images/ne.png"></button></td>
+	       <td><button id="zpos" onclick="move('u');"><img src="./images/arrow_blue_up.jpg"></button></td>
+	    </tr>
+
+	    <tr>
+	       <td><button id="xneg" onclick="move('w');"><img src="./images/arrow_red_lt.jpg"></button></td>
+	       <td align="center"><button onclick="move('o');">O</button></td>
+	       <td><button id="xpos"  onclick="move('e');"><img src="./images/arrow_red_rt.jpg"/></button></td>
+	       <td><button onclick="drop();"><img src="./images/xyplane.png" alt="Drop to XY plane. Ctrl = drop on surface."></button></td>
+	    </tr>
+
+	    <tr>
+	       <td><button onclick="move('sw');"><img src="./images/sw.png"></button></td>
+	       <td><button id="yneg" onclick="move('s');"><img src="./images/arrow_green_dn.jpg"></button></td>
+	       <td><button onclick="move('se');"><img src="./images/se.png"></button></td>
+	       <td><button id="zneg" onclick="move('d');"><img src="./images/arrow_blue_dn.jpg"></button></td>
+	    </tr>
+	 </table>
+	 <div style="text-align: center; font-size: small;">Ctrl to copy</div>
+      </fieldset>
+
+      <fieldset>
+	 <legend>ROTATE</legend>
+	    <label for="rot_amt">Deg</label>
+	    <input id="rot_amt" onfocus="this.select();" size="5" value="15">
+	    <br/>
+	    <input type=radio name="axis" onClick="setAxis('x')">x
+	    <input type=radio name="axis" onClick="setAxis('y')">y
+	    <input type=radio name="axis" onClick="setAxis('z')" checked>z
+	    <br />
+	    <button class="b35" onclick="rotate('ccw')">CCW</button>
+	    <button class="b35" onclick="rotate('cw')"> CW</button>
+	    <button class="b35" onclick="rotate('r')">RAND</button>
+	    <button class="b35" onclick="rotate('z')">Rst</button>
+	    <!--<button onclick="rotate(15)">15</button>-->
+	    <!--<button onclick="rotate(45)">45</button>-->
+	    <!--<button onclick="rotate(90)">90</button>-->
+	    <!--<button onclick="rotate(0)">?</button>  -->
+      </fieldset>
+
+      <!-- 
+      <fieldset>
+	 <legend>Use Axes</legend>
+	 <input type=radio name="trans_scope" value="global" checked>world
+	 <input type=radio name="trans_scope" value="local">object
+      </fieldset>
+      -->
+
+      
+      <span style="display: none;">keyCode:<span id="key">?</span></span>
+   </body>
+</html>

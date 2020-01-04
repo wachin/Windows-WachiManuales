@@ -1,0 +1,33 @@
+
+http://www.texttospeechblog.com/2007/02/windows-tts-on-linux.html
+TUESDAY, FEBRUARY 27, 2007
+Windows TTS on Linux
+Great article from our friend Del about using windows emulator to get TextAloud and good voices working on linux. Full article in NextUp Forum Here. Be sure to check out the forum for follow-ups.
+
+I seem to have got TextAloud running on Linux with NeoSpeech US English premium voices. 
+
+TextAloud icon is now sitting on my Linux desktop and I can simply click it to start using this great application in Linux. An important point is that TextAloud gets integrated with Linux environment so that I can now directly open and save documents in TextAloud on my Linux machine. Running TextAloud on Linux also lets me directly convert texts to WAV and MP3 audio files that are flawlessly written to the hard disk using Linux file system.
+
+I decided to post a scenario that helped me get TextAloud to work on Linux with the hope that other users looking forward to moving TextAloud to Linux could probably find these guidelines helpful.
+
+1. Install Wine. Wine is needed to run TextAloud on Linux. If Wine is not installed on your system, you will have to download and install appropriate package. See Wine User Guide for detailed instructions. 
+
+2. Configure Wine. Latest builds have graphic interface and are easy to configure. Just run 'winecfg' in terminal window to invoke the configuration applet.
+
+A. I’d strongly recommend setting Wine to emulate Windows Me. I’ve tried other Windows systems on top a Red Had based Linux and have found that Windows Me was the fastest and didn’t cause any issues with opening and saving files in TextAloud.
+
+B. Make sure Wine is set to use appropriate sound drivers. Older Linux distributions (kernel 2.4) typically use the OSS driver, while 2.6 kernels have switched to ALSA. (In my setup ALSA worked fine.) Also set Acceleration to ‘Standard’ and uncheck ‘Driver Emulation’ box under audio settings tab.
+
+3. Install SAPI5. You will need SAPI5 to use NeoSpeech premium voices with TextAloud on Linux. If you want to check whether or not SAPI5 has already been installed, download, unzip and run FixRegistry utility
+If FixRegistry reports a SAPI error, download and install SAPI5
+
+4. Install TextAloud. For some unknown reasons, TextAloud v 223x might need being reinstalled to work properly on Linux. It was not until I reinstalled TextAloud that its icon showed up on my Linux desktop and TextAloud started ok. I installed TextAloud using default options suggested by the installer and then just installed it for the second time on top the first installation.
+
+5. Launch TextAloud to verify it works ok with SAPI5 Microsoft voices and then exit. If you see the splash screen but TextAloud doesn’t actually start and freezes at the initialization stage, you should try different audio settings in Wine. The reason to freeze is that, most likely, TextAloud just can’t find the audio device. Try switching to a different audio driver in Wine.
+
+6. Install NeoSpeech voices. Please note, that NeoSpeech temporary files take about 1 GB of disk space so the system might ‘freeze’ for a minute or two during the install.
+
+7. Launch TextAloud and enjoy using this great program with NeoSpeech premium voices on Linux. 
+
+Hopefully this info can be of any help to users who want to start using TextAloud in Linux. As it’s impossible to work out a universal scenario applicable to all Linux versions, I’d greatly appreciate any comments, corrections, and additions to this topic.
+Posted by Ken White at 7:28 AM 

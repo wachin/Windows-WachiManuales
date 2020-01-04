@@ -1,0 +1,446 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>MySword for Android Migration Tools ReadMe</title>
+  <style type="text/css">
+  h1,h3 {color:#700;}
+  pre {background-color:#eeb; padding:1em;}
+  </style>
+</head>
+
+<body>
+<h1>MySword for Android Migration Tools v.3.1</h1>
+
+<h3>May 19, 2015</h3>
+
+<p>How to use these set of Migration tools.</p>
+
+<p>Note that the executable files were designed to work in the Console (Command
+prompt, or what many people know as the DOS prompt).</p>
+<ol>
+  <li><a href="#WhatsNew3_1">What's New in Version 3.1</a></li>
+  <li><a href="#WhatsNew3_0">What's New in Version 3.0</a></li>
+  <li><a href="#WhatsNew2_4">What's New in Version 2.4</a></li>
+  <li><a href="#WhatsNew2_3">What's New in Version 2.3</a></li>
+  <li><a href="#WhatsNew2_2">What's New in Version 2.2</a></li>
+  <li><a href="#WhatsNew2_1">What's New in Version 2.1</a></li>
+  <li><a href="#WhatsNew2_0">What's New in Version 2.0</a></li>
+  <li><a href="#WhatsNew1_2">What's New in Version 1.2</a></li>
+  <li><a href="#WhatsNew1_1">What's New in Version 1.1</a></li>
+  <li><a href="#Installation">Installation</a></li>
+  <li><a href="#MigratingBible">Migrating TheWord Bible Modules</a></li>
+  <li><a href="#MigratingCommentary">Migrating TheWord Commentary
+  Modules</a></li>
+  <li><a href="#MigratingDictionary">Migrating TheWord Dictionary
+  Modules</a></li>
+  <li><a href="#MigratingBook">Migrating TheWord Book/Devotional/Graphics
+    Modules</a></li>
+  <li><a href="#Errors">Migration Errors</a></li>
+  <li><a href="#Issues">Known Issues</a></li>
+</ol>
+
+<p></p>
+<ol>
+  <li><h3><a name="WhatsNew3_1"></a>What's New in Version 3.1</h3>
+	<ol>
+	  <li>Support for books with content type jpg and png like for some maps converted from e-Sword to The Word.</li>
+	  <li>RTF2MySwordHTML.dll <b>RTF</b> and <b>RVF</b> migration of links improvements for Book, Dictionary and Commentary migration tools:
+		<ol>
+		  <li>Links to other modules with id or title in links are now fully supported. For modules with id given by TheWord so that the file name is not in the link, TheWordIdMap.txt must be created to map the name like d10 or c4 to the actual file that must exist (in each line, the id must be followed by a tab character then the mapped file name).</li>
+		  <li>Links to modules with non-English/Latin names and links with title that are non-English/Latin are now supported.</li>
+		  <li>Self-links with titles that are non-English are now supported.</li>
+		  <li>Bible references to specific translation is now supported. The TheWordIdMap.txt can also be used to map a case of file name (and not abbreviation because The Word seems to favor Latin file names if the abbreviation is non Latin) to abbreviation for MySword use.</li>
+		</ol>
+	  </li>
+	  <li>Other RTF2MySwordHTML.dll <b>RTF</b> conversion improvements:
+		<ol>
+		  <li>\caps for capitalization command is now supported (it is used by some old modules for list subsequent items' first letter of the first word).</li>
+		  <li>Underlined Book_#:# Bible references are now directly supported in Use Open Office (it is used by some old modules) without detecting the verses in The Word then converting back to RTF.</li>
+		  <li>\line is now converted to HTML break</li>
+		</ol>
+	  </li>
+	  <li><b>RTF to HTML conversion via OpenOffice improvements:</b>
+		<ol>
+		  <li>Support for Libre Office 5 which used small letters in HTML tags, font size enclosed in double quotes, and does not URL encode the pipe (|) used in links making them not work properly because of the |_AUTODETECT_| not removed. <strong>NOTE: </strong> Libre Office is unreliable in migrating RTF content when it gets larger. In case the records you are migrating are large like in Barnes, it is advisable to reduce RTF2HTMLOO_GroupCount so that some text in one record will not mixed up with the next. It is even more advisable to use Open Office instead.</li>
+		  <li>New setting default to false: RTF2HTMLOO_CleanEmptyParagraphs. This is useful for Poole's commentary from TheWord which has empty paragraphs which embed HTML break (BR tag) rendering them as extra line space but not very good for mobile device. The non-OpenOffice migrator migrates also empty paragraphs but without embedding breaks that is why they are ignored and not rendered.</li>
+		  <li>New lines (CRLF) are now converted to space so that quoted/phrase search will properly work.</li>
+		  <li>In case saving the temporary RTF to rtf.rtf failed due to access denied because previous group's process is still using it, rtf1.rtf will be used instead so conversion can proceed.</li>
+		</ol>
+	  </li>
+	  <li>Commentary migration bug fix: When using Open Office option, some self links are not corrected (points to dictionary) because the display text contained new lines.</li>
+	</ol>
+  </li>
+  <li><h3><a name="WhatsNew3_0"></a>What's New in Version 3.0</h3>
+	<ol>
+	  <li>Dictionary migrator improvements: 
+		<ol>
+		  <li>Added migration of relative order (use MySword 5.7).</li>
+		  <li>Duplicate entries are no longer added as a separate entry with added number,
+		  instead they are appended to the end of the previous similar entry separated by
+		  a horizontal rule.</li>
+		</ol>
+	  </li>
+	  <li>Dictionary/Book migrator improvements: 
+		<ol>
+ 		  <li>Links with bookmark (anchor) are now properly migrated which are useful for popups. E.g. LSJ (try creating bookmarks and hyperlinks to these bookmarks within the same entry and from other entries. Note that only MySword 6.2 supports bookmark range, older versions only support no range [Until (passage) is set to None]. The options for Until (passage) combo box:
+			<ol type='a'>
+			  <li>[None] - Dictionary behaves like [Next] but Journal/Book like [None] showing whole content but scrolling to the bookmark</li>
+			  <li>[Next] - means text from the bookmark up to before the next bookmark (if any) only will be included</li>
+			  <li>bookmark - means up to before this bookmark will be included</li>
+			</ol>
+		  </li>
+		</ol>
+	  </li>
+	  <li>RTF2MySwordHTML.dll <b>RTF</b> conversion improvements: 
+		<ol>
+		  <li>Links within links and some nested UNICODE are now properly migrated
+		  by performing 2 passes for links and 3 passes for other tags.</li>
+		  <li>http links are now properly migrated.</li>
+		  <li>Links of the following form are now properly migrated:
+		  <pre>{\field{\*\fldinst{HYPERLINK "..."}}{\fldrslt ...}}</pre>
+		  Prior, \fldinst and HYPERLINK should only be separated by a space.
+		  </li>
+		  <li>Fixed bug: LSJ Greek spaces between words being removed.</li>
+		  <li>Fixed bug: RTF is not converted when the Module's content is RVF but the entry is RTF.</li>
+		  <li>Fixed bug: popup links with text containing \'XX where X is a hexadecimal digit are not converted.</li>
+		  <li>Proper support for UTF-8 RTFEncodingContent for RTF \'XX as UTF-8 requires encoding by block and not by byte.</li>
+		</ol>
+	  </li>
+	  <li><b>New Experimental RTF to HTML conversion via OpenOffice</b> (required to be installed) which can include formatting not supported by RVF converter nor plain RTF converter like colors (foreground and background), margins, alignment (center and right), tables, etc. Note that the conversion is slower compared to the simpler RTF converter; for example, Eastons dictionary with 3965 entries converts in 1.5 minutes while it is just 15 seconds in the simple RTF converter.
+	  <p>The following are the config's appSettings entries to use the feature:</p>
+		<ol>
+		  <li>RTF2HTMLViaOpenOffice - must be set to true to enable the feature</li>
+		  <li>RTF2HTMLOO_GroupCount - the number of records to batch convert through one call to OpenOffice for speed. If the setting is 1, every record will mean one call while 100 will mean 100 records to aggregate to a single call. Eastons dictionary with 3965 records converted using group count of 1 required 16 minutes (very slow) while a setting of 100 to 200 required only 1.5 minutes. Note that if the setting is greater than 1, all records must be in RTF, otherwise an error will be thrown.
+		  <p>Limitations: records with different RTF color tables will have problems when grouped that is why the group count will be smaller as only the same consecutive records with the same color tables will be grouped. In case all records have unique color tables or alternating different color tables, the effect will be a group count of 1. RTF has built-in standard palette of 16 colors (intense and mid-intensity red, green, blue, cyan, magenta, yellow, white and black). If all records use the standard palette then they will all have the same color table.</p></li>
+		  <li>RTF2HTMLOO_ReformatLists - must be set to true if the emulated list as indented paragraphs should be converted into HTML bullet and number lists.</li>
+		  <li>RTF2HTMLOO_CleanFont - must be set to true if HTML font tags should be removed. Note that it is advisable to remove them as they will affect the text scaling in MySword.</li>
+		  <li>RTF2HTMLOO_CleanTopBottomMargins - must be set to true if the style attribute entries for margin-top, margin-bottom and line-height should be removed.</li>
+		  <li>RTF2HTMLOO_ThemeColor - must be set to true if the embedded colors should be made compatible with MySword themes light or dark background.</li>
+		  <li>RTF2HTMLOO_MinFontSize - set to 10 if you want 10 pt and below, as normal</li>
+		  <li>RTF2HTMLOO_MaxRetrySaveHTML - Maximum number of tries to retry save as HTML as OpenOffice may fail the first time. 3 is advisable.</li>
+		</ol>
+		<p>Note that if there are records that contained non-English/Latin characters like Greek and Hebrew and they do not have the \rtf header and correct \fonttbl, garbage characters will result on those text (e.g. some records in VWS like Mark 1:1). These records will have to be corrected in TheWord by converting the module first to RVF (make it a first User editable module) via Detect verses, then convert it back to RTF.</p>
+	  </li>
+	</ol>
+  </li>
+  <li><h3><a name="WhatsNew2_4"></a>What's New in Version 2.4</h3>
+	<ol>
+	  <li>Bible migrator improvements: 
+		<ol>
+		  <li>biblebase.sqlite not in the folder where the Bible is will no
+			longer throw an exception.</li>
+		  <li>Simple support for verse.rule(s) requiring MySword 5.1. Please
+			note that toggle and TheWord links are not supported so they are
+			dropped. Also, you may need to replace some rules to be more
+			theme-independent. e.g.
+			<pre>verse.rule="&lt;HE&gt;(.+?)&lt;He&gt;" "&lt;font name=[Hebrew] size=+2 color=#800000&gt;$1&lt;/font&gt;"</pre>
+			<p>Can be replaced by:</p>
+			<pre>verse.rule="&lt;HE&gt;(.+?)&lt;He&gt;" "&lt;span class='red' style='font-size:1.6em'&gt;$1&lt;/span&gt;"</pre>
+			<p>Or:</p>
+			<pre>verse.rule="&lt;HE&gt;(.+?)&lt;He&gt;" "&lt;span class='red'&gt;$1&lt;/span&gt;"</pre>
+		  </li>
+		  <li>Bibles with <strong>version.date</strong> that is only has year
+			will no longer throw an exception.</li>
+		  <li>Included the following fields in the migration if present
+			(displayed in MySword About Module):
+			title (set to description if not present), publisher, author,
+			creator, source, language and editorial comments.</li>
+		  <li><strong>description</strong> with multiple lines of text is now
+			possible (prior, only the first line is read).</li>
+		  <li>SQLite database compaction (VACUUM command) is done to make the
+			file size a bit smaller but ensuring the Details record is still
+			found at the end of the file (used as flag for complete
+		  download).</li>
+		  <li>The migrator will try to convert embedded font color to MySword
+			standard: red, orange, brown, yellowgreen, green, bluegreen, blue,
+			violet, pink and gray. Almost black color will be removed so that
+			the normal text color will be used.</li>
+		</ol>
+	  </li>
+	  <li>Migrator improvements: 
+		<ol>
+		  <li>It is now possible to drag and drop multiple files onto
+			TheWordBible2MySword.exe, TheWordCommentary2MySword.exe,
+			TheWordDictionary2MySword.exe and TheWordBook2MySword.exe to do
+			multiple conversions. If there is an error, a Press any key message
+			will appear and pause the execution at the end.</li>
+		  <li>In the console, it is possible to use the wildcard * and ? but it
+			only works on the current directory. For example, to convert all
+			*.ont, *.nt and *.ot files in the current folder, you can do: 
+			<pre style="margin-left:2em;">TheWordBible2MySword.exe *.ont *.nt *.ot</pre>
+			<p>Similarly, you can convert all The Word dictionaries in the
+			current directory using this:</p>
+			<pre style="margin-left:2em;">TheWordDictionary2MySword.exe *.dct.twm</pre>
+		  </li>
+		  <li>Commentary, dictionary and book migrators now included the
+			following fields in the migration if present (displayed in MySword
+			About Module): publisher, author,
+			creator, source, language and editorial comments.</li>
+		</ol>
+	  </li>
+	  <li>RTF2MySwordHTML.dll <b>RTF</b> conversion improvements: 
+		<ol>
+		  <li>Support for \s1 to \s6 for heading h1 to h6.</li>
+		  <li>Simple support for tables. The merging of rows and cells are not
+			supported so the final output might need to be manually
+		  adjusted.</li>
+		  <li>Embedded font support by using span and CSS class selectors. The
+			names of the fonts must be specified in the config's Fonts
+			appSettings entry which must be comma separated and the
+			corresponding CSS class names in FontClasses.
+			TheWordDictionary2MySword.exe.config gives a commented out example
+			which was used for AHLB module. If these config settings are
+			present, a customCSS field is created in the Details table but the
+			embedding of the fonts themselves must be done manually (please see
+			AHLB.dct.mysword.zip). Note also that some old fonts cannot be
+			rendered via @font-face so they must be converted. For example, the
+			original font files for AHLB must be opened then regenerated using
+			FontForge in order for them to work in HTML/CSS as well as
+		  MySword.</li>
+		  <li>MLSJ/AMGL conversion of special Hyperlink tw://*.*?txt=Entry
+		  or just plain double quotes delimited string will be
+			properly converted as a Note popup similar to Translators' Notes.
+			MySword 5.1 will properly display the Module abbreviation as title.</li>
+		</ol>
+	  </li>
+	</ol>
+  </li>
+  <li><h3><a name="WhatsNew2_3"></a>What's New in Version 2.3</h3>
+	<ol>
+	  <li>RTF2MySwordHTML.dll improvements: 
+		<ol>
+		  <li>MLSJ conversion of special Hyperlink tw://*.*?txt=Entry will be
+			properly converted. Currently, this is just converted to a
+			self-link which actually means there is no entry in MLSJ as only
+			Greek entries exist.</li>
+		  <li>bold/italic wrapping hyperlinks are now properly converted.</li>
+		  <li>initial support for RVF bullets and numbers lists including
+			nesting. New lines (breaks entered in TheWord via Shift-ENTER) in
+			items are also supported.</li>
+		  <li>support for Bible links without tags in RTF conversion if the
+			format is BookAbbr_Chapter_Verse(range), e.g. Joh_3:16. This is
+			because copy-paste of links in e-Sword Study Notes then migrate to
+			TheWord commentary may not have link tags.</li>
+		  <li>RTF fonttbl whose list are separated by new lines are now
+		  ignored.</li>
+		  <li>RTF Bible links will now use the custom text link for display so
+			that you can now see Bible links like "Ps lxx 1" as in Matthew
+			Henry. </li>
+		  <li>RVF dictionary links without tid= is now supported.</li>
+		  <li>RTF dictionary links will now use the custom text link for
+			display.</li>
+		  <li>RTF commentary self links will now work and not linked to
+			dictionary entry.</li>
+		</ol>
+	  </li>
+	  <li>Updated TheWordBible2MySword.exe to include the publish.date if
+		present in the TheWord file. Also made the logic that extracts
+		information at the end of the TheWord file case-insensitive (some
+		modules use About instead of about).</li>
+	  <li>Updated the dictionary migrator so that empty entries are excluded
+		and will no longer throw an exception of Specified cast is not
+	  valid.</li>
+	  <li>Updated the commentary migrator so that the record that cause an
+		error will be indicated so that it can be rectified. </li>
+	</ol>
+  </li>
+  <li><h3><a name="WhatsNew2_2"></a>What's New in Version 2.2</h3>
+	<ol>
+	  <li>Initial support for RTL for Commentary, Dictionary and Book
+		migration. The r2l field is now copied to a new field in the details
+		table righttoleft and used by MySword 2.0 RC3 for proper alignment.
+		However, the Android device must have the patch that manufacturers
+		normally provided for their Arabic and Hebrew customers or the Android
+		version must be at least Honeycomb.</li>
+	  <li>Updated RTF2MySwordHTML.dll so that the conversion of the RFT Unicode
+		escapes of the form \u9999 will also ignore the possibly succeeding
+		space. This will remove the unnecessary space in between Greek letters
+		in Strong's dictionary.</li>
+	  <li>RTF fonttbl (font table) support. An RTF content not using Unicode
+		escapes (old RTF version) but with Greek, Hebrew and Baltic character
+		sets can now be properly converted (will not use one global character
+		set). The makers of the K&amp;D and other modules actually stripped off
+		the font table from the content (maybe to reduced the size) so there is
+		now a default list of fonts: 
+		<ul>
+		  <li>font 0 (default) - Windows-1252</li>
+		  <li>font 1 - Greek - Windows-1253</li>
+		  <li>font 2 - Hebrew - Windows-1255</li>
+		</ul>
+	  </li>
+	  <li>Dictionary originally in RTF format converted to RVF via TheWord's
+		"Detect all verse references..." still has data in Text data type
+		causing no data to be migrated using the old migrator.</li>
+	  <li>Fixed the RTF migration of Bible reference with verse 0 and dropped
+		the :0, e.g. Psa 92:0 will become Psa 92, as reported by Peter
+	  Pellerin.</li>
+	</ol>
+  </li>
+  <li><h3><a name="WhatsNew2_1"></a>What's New in Version 2.1</h3>
+	<p>Fixed picture extraction bug in RTF2MySwordHTML.dll for RVF content
+	whose embedded picture contained extra RVF Strings (used for height and
+	width). Morrish Galilee does not show as reported by a user because the
+	image is invalid due to extra bytes at the beginning. The American Tract
+	dictionary is also affected. Here are the entries affected:</p>
+	<ol>
+	  <li>Morrish 
+		<ul>
+		  <li>Accad</li>
+		  <li>Embalming</li>
+		  <li>Fig, Fig-tree</li>
+		  <li>Galilee</li>
+		  <li>Seasons - two pictures at the end</li>
+		</ul>
+	  </li>
+	  <li>American Tract 
+		<ul>
+		  <li>Idol, Idolatry</li>
+		  <li>Sepulchre - 3rd picture</li>
+		  <li>Shalmaneser</li>
+		</ul>
+	  </li>
+	</ol>
+  </li>
+  <li><h3><a name="WhatsNew2_0"></a>What's New in Version 2.0</h3>
+	<ol>
+	  <li>Migration of TheWord Book, Devotional and Graphics Modules. The
+		modules created require at least MySword version 2.0.</li>
+	  <li>Numerous fixes in RTF2MySwordHTML.dll's RTF and RVF conversion
+		routines. Notably, the problem with Hebrew fonts in Barnes, some
+		missing sections in Clarke, About/Comments in Bible having \'XX where X
+		is a hexadecimal number are fixed. The appropriate Character Encoding
+		to use for RTF's \'XX must be set in the *.config file of the specific
+		migrator EXE.</li>
+	  <li>Graphics support for Books/Journals (to make the Maps possible),
+		Dictionaries (Morrish now grew from being 4MB to 18MB due to pictures,
+		and we now have American Tract Society Bible Dictionary with pictures)
+		and Commentaries (have not yet tested though).</li>
+	  <li>Initial support for RTL for Bible migration. The r2l field is now
+		copied to details table's RightToLeft and used by MySword 2.0 for
+		proper alignment. However, the Android device must have the patch that
+		manufacturers normally provided for their Arabic and Hebrew
+	  customers.</li>
+	</ol>
+  </li>
+  <li><h3><a name="WhatsNew1_2"></a>What's New in Version 1.2</h3>
+	<ol>
+	  <li>Corrected some bugs in the RTF2MySwordHTML.dll used by
+		TheWordDictionary2MySword and TheWordCommentary2MySword. </li>
+	  <li>Trimmed also the Dictionary subject some words in French Strong's of
+		Daniel Poulin have trailing space so a strong link tap from the Bible
+		may not find an entry.</li>
+	  <li>Also, updated all migrators except Bible so that it will prompt the
+		user if the module is compressed or encrypted and cannot be
+	  migrated.</li>
+	</ol>
+  </li>
+  <li><h3><a name="WhatsNew1_1"></a>What's New in Version 1.1</h3>
+	<p>TheWordDictionary2MySword is updated to support self references or links
+	to entries in the same dictionary module using ID numbers instead of word
+	key. Version 1.0 only supports word keys and Strong's numbers. The need
+	arises when migrating Noah Webster's 1828 Dictionary of American English.
+	</p>
+  </li>
+  <li><h3><a name="Installation"></a>Installation</h3>
+	<p>This program is designed to run in Microsoft Windows with .NET Framework
+	3.5. It has not yet been tested in Mono Framework.</p>
+	<p>Simply unzip the archive file to a certain location.</p>
+	<p>For 64-bit Windows, please copy the System.Data.SQLite.DLL file located
+	at the x64 folder into the main folder overwriting the same file there
+	(which is actually for 32-bit Windows). </p>
+  </li>
+  <li><h3><a name="MigratingBible"></a>Migrating TheWord Bible Modules</h3>
+	<p>Open a Command Prompt (CMD.exe) and go to the location where you
+	unzipped the archive file and make sure you go to the inside folder
+	(MySwordMigrationTools).</p>
+	<p>In the Command Prompt, if the module to be migrated is bbe.ont and is
+	placed in the same folder where the executables are, type the following:
+	</p>
+	<pre style="margin-left:2em;">TheWordBible2MySword bbe.ont</pre>
+	<p>This will create bbe.bbl.mysword. You can now just copy this file into
+	your selected Modules Path/Folder in your Android device. </p>
+	<p>Please note that the TheWord .ot, .nt or .ont file must be in UTF-8
+	format for the migration to be successful unless only 7-bit ASCII
+	characters are in the file. To determine if the file is in UTF-8 format,
+	you can open it in Notepad++ and go to the Encoding menu. To change the
+	format to UTF-8 format, select Encoding-&gt;Convert to UTF-8 without BOM,
+	then save the file. You can also opt to use UTF-8 with BOM if you want.
+	After this, you can now use TheWordBible2MySword.</p>
+	<p>You can also check the resulting SQLite database outside MySword by
+	using Firefox SQLite Manager plugin/extension. Open the migrated file and
+	check the contents by going to Bible table and selecting Browse &amp;
+	Search tab. Check if there are no problems with the text.</p>
+  </li>
+  <li><h3><a name="MigratingCommentary"></a>Migrating TheWord Commentary
+	Modules</h3>
+	<p>Open a Command Prompt (CMD.exe) and go to the location where you
+	unzipped the archive file and make sure you go to the inside folder
+	(MySwordMigrationTools).</p>
+	<p>In the Command Prompt, if the module to be migrated is tsk.cmt.twm and
+	is placed in the same folder where the executables are, type the
+	following:</p>
+	<pre style="margin-left:2em;">TheWordCommentary2MySword tsk.cmt.twm</pre>
+	<p>This will create tsk.cmt.mysword. You can now just copy this file into
+	your selected Modules Path/Folder in your Android device.</p>
+	<p>You can also use Firefox SQLite Manager plugin/extension to see the
+	output SQLite database without using MySword. Check the Commentary
+	table.</p>
+  </li>
+  <li><h3><a name="MigratingDictionary"></a>Migrating TheWord Dictionary
+	Modules</h3>
+	<p>Open a Command Prompt (CMD.exe) and go to the location where you
+	unzipped the archive file and make sure you go to the inside folder
+	(MySwordMigrationTools).</p>
+	<p>In the Command Prompt, if the module to be migrated is eastons.dct.twm
+	and is placed in the same folder where the executables are, type the
+	following: </p>
+	<pre style="margin-left:2em;">TheWordDictionary2MySword eastons.dct.twm</pre>
+	<p>This will create eastons.dct.mysword. You can now just copy this file
+	into your selected Modules Path/Folder in your Android device. </p>
+	<p>You can also use Firefox SQLite Manager plugin/extension to see the
+	output SQLite database without using MySword. Check the Dictionary
+	table.</p>
+  </li>
+  <li><h3><a name="MigratingBook"></a>Migrating TheWord
+	Book/Devotional/Graphics Modules</h3>
+	<p>TheWord General Book (*.gbk.twm) Devotional (*.dev.twm) and
+	Maps/Graphics (*.map.twm) all have the same format and can be migrated to
+	MySword v.2.0 Journal or Book format (*.bok.mybible). This migration
+	program will automatically use the extention .bok.mybible but you can
+	always rename it to .jor.mybible. Also, the migration program will
+	automatically set the readonly field in the details table to 1. If you
+	intend to allow editing of the journal/book in MySword, you will have to
+	set it to 0 manually (please see below on how you can use Firefox and
+	SQLite manager to do that). But please note that Journal/Book editing in
+	MySword is limited to 7 entries if the Premium Version is not activated.
+	This can be activated for a generous donation of any amount to support
+	MySword development, hosting and support.</p>
+	<p>Open a Command Prompt (CMD.exe) and go to the location where you
+	unzipped the archive file and make sure you go to the inside folder
+	(MySwordMigrationTools). </p>
+	<p>In the Command Prompt, if the module to be migrated is eastons.dct.twm
+	and is placed in the same folder where the executables are, type the
+	following:</p>
+	<pre style="margin-left:2em;">TheWordBook2MySword wight-manners.gbk.twm</pre>
+	<p>This will create eastons.dct.mysword. You can now just copy this file
+	into your selected Modules Path/Folder in your Android device.</p>
+	<p>You can also use Firefox SQLite Manager plugin/extension to see the
+	output SQLite database without using MySword. Check the Dictionary
+	table.</p>
+  </li>
+  <li><h3><a name="Errors"></a>Migration Errors</h3>
+	<p>Note that Bible References that do not have correct book number and
+	chapter number will not be properly migrated (so there will be no link) but
+	the migration process will still continue. The errors are reported to the
+	console though.</p>
+  </li>
+  <li><h3><a name="Issues"></a>Known Issues</h3>
+	<p>The migration program will crash in case of IO Exceptions like the one
+	triggered when the .mysword file is opened in Firefox SQLite Manager or you
+	are running the wrong version of System.Data.SQLite.DLL (32-bit in a 64-bit
+	Windows for example). </p>
+  </li>
+</ol>
+</body>
+</html>

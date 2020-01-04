@@ -1,0 +1,4 @@
+
+
+No se puede instalar Windows en este disco. El disco seleccionado tiene estilo de partición GPT. 
+No se puede instalar Windows en este dispositivo. Es posible que el hardware de este equipo no sea capaz de arrancar en este disco. Asegúrese de que la controladora de disco está habilitada en el menú BIOS del equipo 

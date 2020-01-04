@@ -1,0 +1,197 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+<HTML>
+  <HEAD>
+  <title> 1001bit.com - Divide Selected Edge </title>
+	<style type="text/css">
+	<!--
+	body,td,a,p,.h{font-family:arial,sans-serif; font-size:10pt;}
+	h1 { font-size: 16pt; color: #ffffff;}
+	h2 { font-size: 12pt; }
+	h3 { font-size: 11pt; }
+	p { font-size: 10pt; }
+
+	.f1 {font-size: 16pt}
+	.f2 {font-size: 14pt}
+	a {text-decoration: none}
+	a:hover {color:#ff0000; font-size:12pt}
+	.textbox {
+	 background-color: white; font-size: 12px;
+	 border: 1px solid #000000;
+	}	
+
+
+	-->
+	</style>	
+  
+  <script language="Javascript" type="text/javascript">
+
+
+function SUdvMode(name)
+      {
+      set_pic();
+      window.location='skp:set_dv_mode@' + name;
+      }
+function SUdvArrange(name)
+      {
+      document.theForm.dv_mode[0].checked=true;
+      set_pic();
+      window.location='skp:set_dv_arrange@' + name;
+      }      
+function SUdvArrangeFD(name)
+      {
+      document.theForm.dv_mode[1].checked=true;
+      set_pic();
+      window.location='skp:set_dv_arrangeFD@' + name;
+      }      
+function SUdoDivide(name)
+      {
+      window.location='skp:DoDivide@' + name;
+      }
+function SUexitDivide(name)
+      {
+      window.location='skp:ExitDivide@' + name;
+      }
+function DL_dv_nos(nos)
+      {
+     document.theForm.dv_nos.value = nos;
+      }
+function DL_dv_fixdis(dis)
+      {
+      dis = dis.replace("ft", "\'");
+      dis = dis.replace("in", "\"");
+      document.theForm.dv_fixdis.value = dis;
+      }
+function DL_dv_maxdis(dis)
+      {
+      dis = dis.replace("ft", "\'");
+      dis = dis.replace("in", "\"");
+      document.theForm.dv_maxdis.value = dis;
+      }
+function DL_dv_mode(i)
+      {
+      document.theForm.dv_mode[i].checked = true;
+      }
+function DL_dv_arrange(i)
+      {
+      document.theForm.dv_arrange[i].checked = true;
+      }
+function DL_dv_arrangeFD(i)
+      {
+      document.theForm.dv_arrangeFD[i].checked = true;
+      }
+function set_pic()
+      {
+        if (document.theForm.dv_mode[0].checked==true) {
+          if (document.theForm.dv_arrange[0].checked==true) {
+            document.myPic.src="images/divide_1-1.png";
+          }
+          else
+          {
+            document.myPic.src="images/divide_1-2.png";
+          }
+        }
+        if (document.theForm.dv_mode[1].checked==true) {
+          if (document.theForm.dv_arrangeFD[0].checked==true) {
+            document.myPic.src="images/divide_2-1.png";
+          }
+          if (document.theForm.dv_arrangeFD[1].checked==true) {
+            document.myPic.src="images/divide_2-2.png";
+          }
+          if (document.theForm.dv_arrangeFD[2].checked==true) {
+            document.myPic.src="images/divide_2-3.png";
+          }
+        }
+        if (document.theForm.dv_mode[2].checked==true) {
+          document.myPic.src="images/divide_3-1.png";
+        }
+      }
+  function DL_enter_nos()
+      {
+      document.theForm.dv_mode[0].checked=true;
+      document.theForm.dv_nos.select();
+      set_pic();
+      }
+  function DL_enter_fixdis()
+      {
+      document.theForm.dv_mode[1].checked=true;
+      document.theForm.dv_fixdis.select();
+      set_pic();
+      }
+  function DL_enter_maxdis()
+      {
+      document.theForm.dv_mode[2].checked=true;
+      document.theForm.dv_maxdis.select();
+      set_pic();
+      }
+
+	function DL_translate(id, newtext)
+	{
+		var newentry=document.getElementById(id);
+		newentry.firstChild.data=newtext;
+
+	}
+
+	function DL_translate_button(id, newtext)
+	{
+				
+		var newentry=document.getElementById(id);
+		newentry.value=newtext;
+
+	}
+
+
+
+</script>
+      
+  </HEAD>
+  <body bgcolor=#788B9A>
+      <div>
+      <form name="theForm" action="#">
+        
+
+        <table>
+        <tr><td colspan=3><h1><span name="title" id="title">Divide Selected Edge</span></h1></td></tr>
+        <tr><td colspan=3 bgcolor=#788B9A><img name="myPic" id="myPic" src='images/divide_1-1.png' align="center"></td></tr>
+	<tr><td><input type=radio name="dv_mode" id="dv_mode" value="freedis" checked =true
+        onClick="SUdvMode(this.value, this.checked)" ></input></td>
+        <td><b><span name="t1" id="t1">Number of segments (evenly distributed)</span></td><td><input type=text class="textbox" name="dv_nos" id="dv_nos" onfocus="DL_enter_nos()"></td></tr>
+        <tr><td></td><td><i><b><span name="t2" id="t2">Entity arrangement</span></td><td></td></tr>
+        <tr><td></td><td colspan=2><input type=radio name="dv_arrange" id="dv_arrange" value="bothends" checked =true
+          onClick="SUdvArrange(this.value, this.checked)" ><span name="t3" id="t3">Place points at both ends</span></input></td></tr>
+        <tr><td></td><td colspan=2><input type=radio name="dv_arrange" id="dv_arrange" value="middle" checked =false
+          onClick="SUdvArrange(this.value, this.checked)" ><span name="t4" id="t4">Place points at middle of each segments</span></input></td></tr>
+        <tr><td></td><td colspan=2><hr></td></tr>
+    
+  <tr><td><input type=radio name="dv_mode" id="dv_mode" value="fixeddis" checked =false
+        onClick="SUdvMode(this.value, this.checked)" ></input></td>
+        <td><b><span name="t5" id="t5">Fixed distance for each segment</span></td><td><input type=text class="textbox" name="dv_fixdis" id="dv_fixdis" onfocus="DL_enter_fixdis()"></td></tr>
+        <tr><td></td><td><i><b><span name="t6" id="t6">Entity arrangement</span></td><td></td></tr>
+        <tr><td></td><td colspan=2><input type=radio name="dv_arrangeFD" id="dv_arrangeFD" value="middle" checked =true
+          onClick="SUdvArrangeFD(this.value, this.checked)" ><span name="t7" id="t7">Setting out from middle point (entity on middle point)</span></input></td></tr>
+        <tr><td></td><td colspan=2><input type=radio name="dv_arrangeFD" id="dv_arrangeFD" value="middlespace" checked =false
+          onClick="SUdvArrangeFD(this.value, this.checked)" ><span name="t8" id="t8">Setting out from middle (spaced from middle point)</span></input></td></tr>
+        <tr><td></td><td colspan=2><input type=radio name="dv_arrangeFD" id="dv_arrangeFD" value="startpoint" checked =false
+          onClick="SUdvArrangeFD(this.value, this.checked)" ><span name="t9" id="t9">Setting out from start point</span></input></td></tr>
+        <tr><td></td><td colspan=2><hr></td></tr>      
+  
+  <tr><td><input type=radio name="dv_mode" id="dv_mode" value="rangedis" checked =false
+        onClick="SUdvMode(this.value, this.checked)" ></input></td>
+        <td><b><span name="t10" id="t10">Evenly divided. Each segment does not exceed</span></td><td><input type=text class="textbox" name="dv_maxdis" id="dv_maxdis" onfocus="DL_enter_maxdis()"></td></tr>
+        
+        
+ 	</table>
+
+  <hr>
+        <input type=button name="do_divide" id="do_divide" value="Divide Edge"
+        onClick="SUdoDivide(this.value)">
+        <input type=button name="exit_divide" id="exit_divide" value="Exit" 
+        onClick="SUexitDivide(this.value)">
+        </form>
+	<font size="2pt"><i><span name="author" id="author">.</span></i></font>
+
+      </div>
+      
+ 
+      </body>
+      
+</html>

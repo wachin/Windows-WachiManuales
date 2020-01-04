@@ -1,0 +1,20 @@
+**************************
+PROBANDO E-SWORD EN UBUNTU
+**************************
+Lo siguiente es para verificar que todo funcione bien
+- Clic en versículos no se salta.- Probar esto dando clic en cada versículo en la Biblia que uno tenga abierta
+
+- Busqueda de palabras.- Clic en el binocular y elegir la Biblia en el idioma que uno va a buscar una palabra y así mismo la versión, y de clic en el binocular a la derecha
+
+- Búsqueda extendida en Diccionarios.- Dar clic en "Diccionario/Búsqueda Extendida" y poner una palabra a buscar (ejemplos: pan, aceite, pescado), dar clic en el icono de los diccionarios y abajo "Seleccionar todos", cerrar esa ventana y dar clic en el binocular
+
+- Busqueda en libros Hebreo y Griego.- Elejir una Biblia que use numeros Strong como la LXX+ y clic en "Biblia/Búsqueda" escribir por ejemplo G2316 y dar clic en el binocular
+
+- Búsqueda de palabras de las Biblias en los Diccionarios.- Esto es dandole doble clic a alguna palabra importante en el visor de las Biblias y debe aparecer abajo en Diccionarios unas "i" de información, allí uno le da clic a la pestaña que tenga a ver que dice
+
+- Reference Library.- Dar clic en "Herramientas/Reference Library..."
+
+- Devocionales Diarios.- Clic en "Herramientas/Devocionales Diarios..."
+
+- Visor de Gráficas.- Clic en "Herramientas/Visor de Gráficas"
+

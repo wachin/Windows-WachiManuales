@@ -1,0 +1,112 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+<HTML>
+  <HEAD>
+  <title> 1001bit.com - Build Hip Roof  </title>
+	<style type="text/css">
+	<!--
+	body,td,a,p,.h{font-family:arial,sans-serif; font-size:10pt;}
+	h1 {  font-size: 16pt; color: #ffffff;}
+	h2 { font-size: 12pt; }
+	h3 { font-size: 11pt; }
+	p { font-size: 10pt; }
+
+	.f1 {font-size: 16pt}
+	.f2 {font-size: 14pt}
+	a {text-decoration: none}
+	a:hover {color:#ff0000; font-size:12pt}
+	.textbox {
+	 background-color: white; font-size: 12px;
+	 border: 1px solid #000000;
+	}	
+
+
+	-->
+	</style>	
+  
+  <script language="Javascript" type="text/javascript">
+      function SUdohiproof(name)
+      { 
+      window.location='skp:Dohiproof@' + name;
+      }
+      function SUexithiproof(name)
+      {
+      window.location='skp:Exithiproof@' + name;
+      }
+
+      function DL_hiproof_overhang(wdh)
+      {
+        wdh = wdh.replace("ft", "\'");
+        wdh = wdh.replace("in", "\"");
+        document.theForm.hiproof_overhang.value = wdh;
+      }
+      function DL_hiproof_pitch(ang)
+     { 
+        document.theForm.hiproof_pitch.value = ang;
+      }
+
+    function DL_enter_overhang()
+    {
+    document.myPic.src="images/hiproof_2.png";
+    document.theForm.hiproof_overhang.select();
+    }
+    function DL_enter_pitch()
+    {
+    document.myPic.src="images/hiproof_1.png";
+    document.theForm.hiproof_pitch.select();
+    } 
+
+
+	function DL_translate(id, newtext)
+	{
+		var newentry=document.getElementById(id);
+		newentry.firstChild.data=newtext;
+
+	}
+
+	function DL_translate_button(id, newtext)
+	{
+				
+		var newentry=document.getElementById(id);
+		newentry.value=newtext;
+
+	}
+
+
+
+
+
+
+
+
+
+
+
+</script>
+      
+  </HEAD>
+  <body bgcolor=#788B9A>
+      <div>
+      <form name="theForm" action="#">
+        
+	
+  <table>
+        <tr><td><h1><span name="title" id="title">Create Hip Roof</span> </h1></td></tr>
+        <tr><td colspan=2><img src='images/hiproof_1.png' name="myPic" id="myPic"></td></tr>
+        <tr><td><span name="t1" id="t1">Roof pitch</span> (a)</td><td><input type=text class="textbox"  name="hiproof_pitch" id="hiproof_pitch" onfocus="javascript:DL_enter_pitch()"></td></tr>
+        <tr><td><span name="t2" id="t2">Roof overhang</span> (b)</td><td><input type=text class="textbox"  name="hiproof_overhang" id="hiproof_overhang" onfocus="javascript:DL_enter_overhang()"></td></tr>
+	</table>
+
+  <hr>
+        <input type=button name="do_hiproof" id="do_hiproof" value="Create Hip Roof"
+         onClick="SUdohiproof(this.value)">
+        <input type=button name="exit_hiproof" id="exit_hiproof" value="Exit" 
+        onClick="SUexithiproof(this.value)">
+        
+        </form>
+	<font size="2pt"><i><span name="author" id="author">.</span></i></font>
+      </div>
+      
+ 
+      </body>
+      
+</html>

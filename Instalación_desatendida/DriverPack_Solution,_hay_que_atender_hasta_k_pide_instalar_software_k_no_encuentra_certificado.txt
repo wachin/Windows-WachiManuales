@@ -1,0 +1,2 @@
+
+solo que al final de la instalación hay que desinstalar Yake y otros dos, eso de busquedas o algo así que instala automáticamente

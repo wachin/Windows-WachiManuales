@@ -1,0 +1,67 @@
+Building Structure Tool|構造ツール
+Structure Tool|構造ツール
+Draw Building Structure|構造を描く
+Draw Multi Building Structures|構造をまとめて描く
+ALL|すべて
+ALL(SEARCH)|すべて（探す）
+STEEL_GIRDER|鉄骨梁
+STEEL_BEAM|鉄骨小梁
+STEEL_COLUMN|鉄骨柱
+RC_GIRDER|RC梁
+RC_BEAM|RC小梁
+RC_COLUMN|RC柱
+RC_FOOTING|RC基礎
+RC_WALL|RC壁
+RC_SLAB|RC床
+WALL|壁
+BEAM|小梁
+SLAB|床
+GIRDER|梁
+COLUMN|柱
+FOOTING|基礎
+ALL DIALOG RESeT|ダイアログのリセット
+Change PROFILE-LIST File|断面形状リストの変更
+Change Language File|言語設定ファイルの変更
+EXTEND|伸ばす
+EXTEND to Face|面まで伸ばす
+GROW|上へ（下へ）伸ばす
+COMBINE WITH|突きつける
+EXCHANGE|構造要素へ変換
+Select 1st Structure|最初の構造要素を選択
+Extend Trim Structure|構造を伸縮する
+Select ２nd structure|次の構造要素を選択
+select face extended to|伸ばす先の面を選択
+First point or Search Keyword|最初の点の入力　もしくは　検索文字の入力
+First point|最初の点の入力
+Search Word?(BLANK to ALL)|検索文字の入力（空白の場合は全部表示）
+Start from searching with Words?|検索してからダイアログ開始
+Nothing Match.All list will appear|なにも適合しなかった。すべて表示します。
+Center|
+Left|
+Right|
+Top|
+Middle|
+Bottom|
+Yes|
+No|
+HEIGHT|
+AXIS|
+LENGTH|
+Justification: |
+Vertical Just:|
+Draw axis:|
+Beam Spec:|
+Mirror aboutZ:|
+Fix Z Input to(BLANK to Free)|Z方向の固定（空白は無制限）
+Top:|
+Height:|
+Rotate:|
+Auto Create from selected edges(and clines)?|選択された辺（構築線）から自動的に作図しますか？
+First Point or Search word:Current|
+cannot convert to a Length|
+Zero length invalid !|
+Next point:[Esc]=Quit|
+Extend Structure|
+Combine with Structure|
+Select CSV File|
+The language convert will be effecvie after Sketchup restarted|スケッチアップ再起動後に言語設定は有効になります

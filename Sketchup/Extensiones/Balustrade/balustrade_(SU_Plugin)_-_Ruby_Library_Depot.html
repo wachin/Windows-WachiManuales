@@ -1,0 +1,216 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	
+	<meta name="description" content="Library of Ruby scripts to add useful commands to SketchUp." />
+	<meta name="Keywords" content="Sketchup, SketchUp, scripts, Ruby, plugins, library, depot" />
+	<meta name="Distribution" content="Global" />
+	<meta name="Author" content="Didier Bur - bur@crai.archi.fr" />
+	<meta name="Robots" content="index,follow,all" />
+	<meta name="author" content="DB" />
+	
+	<link rel="icon" type="image/png" href="images/favicon.png" />
+	<link rel="stylesheet" type="text/css" href="css/BrightSide.css" />
+	
+	<script type="text/javascript" src="scripts/random_banner.js"></script>
+	<script type="text/javascript" src="scripts/jquery.js"></script>
+	<script type="text/javascript" src="scripts/ajax.js"></script>
+	
+	<script type="text/javascript">
+	/* <![CDATA[ */
+	var RecaptchaOptions = {
+	   theme : 'white'
+	};
+	/* ]]> */
+	</script>
+
+	<!--Google search javascript -->
+	<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+	<script type="text/javascript">
+	/* <![CDATA[ */
+		google.load('search', '1');
+		google.setOnLoadCallback(function() {
+		google.search.CustomSearchControl.attachAutoCompletion(
+		  '007061006241415989448:rjv2ur48mei',
+		  document.getElementById('q'),
+		  'cse-search-box');
+		});
+	/* ]]> */
+	</script>
+	
+	
+	<title>balustrade (SU Plugin) - Ruby Library Depot</title>
+
+</head>
+
+
+<body onload="pickBanner(); $('#picture_banner').fadeIn('fast'); disableAjaxLink();">
+
+
+<div id="wrap">
+
+
+<div id="header">
+    <h1 id="logo">ruby <span class="green">library</span> depot    <img src="images/logo_rld.png" alt="" /></h1>
+    
+    <h2 id="slogan">Plugins for SketchUp...</h2>
+    
+    <ul>
+        <li >
+			<a href="index.php"><span>Home</span></a></li>
+		<li >
+			<a href="about.php"><span>About</span></a></li>
+        
+         <li><a href="plugin_details.php?id=30&lang=fr"><span>
+				<img src="images/icons/fr.png" alt="" /> Français</span></a></li>        
+        
+    </ul>
+
+</div>
+
+<div id="div_banner">
+	<img id="picture_banner" src="images/banners/default-banner.png" style="display:none;" alt="" />
+</div>
+
+<div id="content-wrap">
+
+	
+	<div id="sidebar">
+		
+		<h2>Menu</h2>
+		<ul class="sidemenu">
+			<li><a href="newest_plugins.php">Newest Plugins</a></li>
+			<li class=""><a href="plugins_sections.php">Plugins Sections</a></li>
+			<li><a href="plugins_list_az.php">Plugins from A to Z</a></li>
+			<li><a href="authors_list.php">Authors list</a></li>
+			<li><a href="plugin_su2pov.php">POV-Ray Plugin</a></li>
+			<!--
+			<li><a href="pov_ray_plugin.php">Submit a plugin</a></li>
+			-->
+		</ul>
+		
+		
+		
+		<h2>Search for a plugin</h2>
+		
+		<form id="menu-search-form" action="http://www.google.com/cse">
+		  <div>
+			<input type="hidden" name="cx" value="007061006241415989448:rjv2ur48mei" />
+			<input type="hidden" name="ie" value="UTF-8" />
+			<input type="text" name="q" id="q" autocomplete="off" size="22" />
+			<input type="submit" name="sa" value="Go !" />
+		  </div>
+		</form>
+		<script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&lang=en"></script>
+		
+		
+		
+		<h2>Links</h2>
+		<ul class="sidemenu">
+			<li><a href="links_ruby_sites.php">Ruby Sites</a></li>
+			<li><a href="links_plugins_sites.php">Plugins/Docs Sites</a></li>
+			<li><a href="links_forums.php">Ruby SketchUp Forums</a></li>
+			<li><a href="automatic_SketchUp.php">Ruby Books</a></li>
+		</ul>
+		
+		<br />
+		
+		<p class="logo"><a href="http://www.crai.archi.fr/ninter-dev/">
+			<img src="images/logo_MAP-CRAI.jpg" title="MAP-CRAI Site (fr)" alt="" /></a>
+		</p>
+		
+		<p class="logo"><a href="http://www.nancy.archi.fr/">
+			<img src="images/logo_ensan.gif" title="" alt="" /></a>
+		</p>
+	</div>
+
+	<div id="main">
+
+	
+	
+<h2>balustrade</h2>
+
+<div id="plugin_downloads">
+<p><a href="download.php?file=balustrade.rb"><img src="images/icons/download.png" alt="Download the plugin" title="Download the plugin" />Download<br />&nbsp;</a>
+</p>
+
+<p><a href="download.php?file=balustrade_fr.rb"><img src="images/icons/download_fr.png" alt="Download the plugin" title="Download the plugin" />Download french version</a>
+</p>
+
+<p class="dl_count"><em>Plugin downloaded 16598 times.</em></p></div>
+
+
+<p id="plugin_authors">by <a href="author_details.php?id=27">D. Bur</a>, <a href="author_details.php?id=90">T. Marek</a></p><p id="plugin_categories">Sections: <a href="plugins_list_cat.php?cat=2">Architecture</a></p><p id="plugin_description">Creates balustrade with desired dimensions. Modified and enhanced version.</p>
+
+<p id="plugin_install"><strong>How to install</strong>: Just drop it in Plugins folder.<br /><strong>UI Location</strong>: Draw</p>
+
+<p id="plugin_compatibility">SketchUp version: <strong>4</strong> <br /><img src="images/icons/windows.png" alt="Windows supported" title="Windows supported" /><img src="images/icons/mac.png" alt="Mac supported" title="Mac supported" /></p>
+
+<p id="plugin_date">Added to the site on 30 November 2005</p>
+
+<form action='https://www.paypal.com/cgi-bin/webscr' method='post'><input type='hidden' name='cmd' value='_s-xclick'><input type='hidden' name='hosted_button_id' value='4RMGVPR98BURL'><input type='image' src='https://www.paypal.com/en_GB/i/btn/btn_donate_SM.gif' border='0' name='submit' alt='PayPal - The safer, easier way to pay online.'><img alt='' border='0' src='https://www.paypal.com/fr_FR/i/scr/pixel.gif' width='1' height='1'></form>
+
+<hr class="plugin_hr"/>
+
+<h2 class="green">Comments</h2>
+	<table id="plugin_comments">
+		<tr class="comment">
+				<td class="comment_datetime">
+				<p>
+					
+					<span class="comment_date">Feb 20th</span><br />
+					<span class="comment_year">2011</span>
+				</p>
+				</td>
+				
+				<td class="comment_message">
+				
+					<p class="comment_author"><a href="http://iphonebluetooth.windowinstallationhelp.com/">iphone bluetooth</a> said:
+				</p>
+					
+					<p>
+					Heya <br />
+ <br />
+Will there be a bluetooth for the iphone 4 besides the new iphone wireless bluetooth as well as the JAW BONE wireless bluetooth? <br />
+I'm just in need of something a touch a smaller amount within price. The particular jawbone ear phones i think is actually $100 or a little more and the Apple Wireless bluetooth will be $130. May anyone know when there is a Wireless bluetooth that could use my personal iPhone, I see everyone purchasing a ton using their headphones with regard to similar to 50, 62 even $80 dollars...  <br />
+Please help! Thanks !!
+					</p>
+				</td>
+			</tr>
+	</table>
+		
+		<p id="end_comments">&nbsp;</p>
+		<p class="disabled_feature">Comments are disabled.</p>	
+
+	</div>
+	
+</div>
+
+
+<div id="footer">
+	<div class="footer-left">
+	<p> &copy; 2014 <strong>CRAI-MAP CNRS UMR 3495</strong> | 
+		Design by <a href="http://www.styleshout.com/">styleshout</a> + DB + AS | <a class="admin_connect" href="admconnect.php">(admin)</a></p>
+	</div>
+</div>
+
+<!-- Google Analytics-->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+	var pageTracker = _gat._getTracker("UA-10488931-3");
+	pageTracker._trackPageview();
+}
+catch(err) {}
+</script>
+<!-- /Google Analytics-->
+
+</div>
+
+</body>
+</html>

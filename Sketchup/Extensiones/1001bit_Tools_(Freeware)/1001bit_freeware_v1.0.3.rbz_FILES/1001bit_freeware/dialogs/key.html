@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+<HTML>
+  <HEAD>
+  <title> 1001bit.com - Enter registration key </title>
+	<style type="text/css">
+	<!--
+	body,td,a,p,.h{font-family:arial,sans-serif; font-size:10pt;}
+	h1 { font-size: 16pt; color: #ffffff;  }
+	h2 { font-size: 12pt; }
+	h3 { font-size: 11pt; }
+	p { font-size: 10pt; }
+
+	.f1 {font-size: 16pt}
+	.f2 {font-size: 14pt}
+	a {text-decoration: none}
+	a:hover {color:#ff0000; font-size:12pt}
+	.textbox {
+	 background-color: white; font-size: 12px;
+	 border: 1px solid #000000;
+	}	
+
+
+	-->
+	</style>	
+  
+  <script language="Javascript" type="text/javascript">
+
+      function SUdoKey(name)
+      {
+      window.location='skp:DoKey@' + name;
+      }
+      function SUexitKey(name)
+      {
+      window.location='skp:ExitKey@' + name;
+      }
+      
+	function DL_translate(id, newtext)
+	{
+		var newentry=document.getElementById(id);
+		newentry.firstChild.data=newtext;
+
+	}
+
+	function DL_translate_button(id, newtext)
+	{
+				
+		var newentry=document.getElementById(id);
+		newentry.value=newtext;
+
+	}
+
+
+
+      </script>
+      
+  </HEAD>
+  <body bgcolor=#788B9A>
+      <div>
+      <form name="theForm" action="#">
+        <h1><span name="title" id="title">Enter registration key</span></h1>
+           
+        <span name="t1" id="t1">Copy and paste your registration key in the text area below</span><br>
+	<textarea name="regkey" id="regkey" cols="80" rows="20" value=""/></textarea>
+	<hr>
+        <input type=button name="do_key" id="do_key" value="Activate"
+        onClick="SUdoKey(this.value)">
+        <input type=button name="exit_key" id="exit_key" value="Cancel" 
+        onClick="SUexitKey(this.value)">
+        
+        </form>
+        	<font size="2pt"><i><span name="author" id="author">.</span></i></font>
+
+      </div>
+      
+ 
+      </body>
+      
+</html>

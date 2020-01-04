@@ -1,0 +1,447 @@
+#04#
+*0000*
+Bienaventurado sea Usted
+
+*0001*
+
+
+*0002*
+<b><fontsize=12>Dios le bendiga, este es el programa de instalación de #title</font></b>.
+
+*0003*
+Este programa te permitirá instalar #title en tu disco duro.
+
+*0004*
+Se recomienda que antes de continuar, se asegure de que ningún otro programa de Windows estén funcionando.
+
+*0005*
+Si no desea instalar #title, pulse sobre 'Salir' ahora, si no pulse sobre 'Siguiente' para continuar.
+
+*0100*
+Información
+
+*0101*
+Lea por favor la información de abajo.
+
+*0102*
+
+
+*0103*
+
+
+*0200*
+Licencia
+
+*0201*
+Lea por favor el acuerdo de licencia de abajo.
+
+*0202*
+Lea por favor el acuerdo de licencia de abajo y seleccione "Aceptar" si usted acepta los términos y condiciones.
+
+*0203*
+ 
+ <b><fontsize=12>¡Hola! soy Wachin, Dios te ama</font></b>.
+ 
+Me gustaría que pudieras pensar en algún amigo, familiar, o alguien que puidera necesitar tener en su computadora la Biblia y 
+muchos recursos de estudio los cuales aquí los puedes encontrar. 
+Si quieres puedes ir donde esa persona e instalarle el e-Sword 9 con los Módulos, y también le puedes dejar este instalador 
+para que los instale en otra PC...........Medite en esto:
+
+"No mirando cada uno por lo suyo propio, sino cada cual también por lo de los otros. Haya, pués, en vosotros éste sentir que 
+hubo también en Cristo Jesús" Filipenses 2:4,5  (así era Jesús)
+
+ <b><fontsize=12>El contenido de estos Módulos para e-Swod 9 es:</font></b>.
+
+
+
+Armonia-Galvin.harx
+Armonia-Hayford.harx
+Armonia-Panoramas.harx
+Armonia-Robertson(Es).harx
+Armonia-Thompson.harx
+Biblia-al-Dia.bblx
+Biblia-Dios-Habla-Hoy.bblx
+Biblia-Greek-New-Testament-(Majority-Text)(gnt).bblx
+Biblia-Greek-Old-Testament(Septuagint)(lxx).bblx
+Biblia-Hebreo-Antiguo-Testamento-(hot).bblx
+Biblia-Hebreo-Antiguo-Testamento-+-numeros-Strong(hot+).bblx
+Biblia-Interlineal-Esp-NA27+.bblx
+Biblia-Interlineal-Esp-Tisch+.bblx
+Biblia-Internacional-Standard-Version(isv).bblx
+Biblia-Jerusalen.bblx
+Biblia-King-James-2000.bblx
+Biblia-La-Biblia-de-Las-Americas.bblx
+Biblia-Latinoamericana-95.bblx
+Biblia-Latinoamericana-de-Hoy.bblx
+Biblia-Lenguaje-Sencillo.bblx
+Biblia-NVI.bblx
+Biblia-para-Todos.bblx
+Biblia-RV-1960.bblx
+Biblia-Sagradas-Escrituras.bblx
+Biblia-Scrivener-Textus-Receptus-(Greek-New-Testament-Textus-R.)(gnt-tr).bblx
+Biblia-Sueca-Svenska-Folkbibeln-98-(sfb).bblx
+Biblia-Torah-(5-libros).bblx
+kjv+.bblx
+kjv.bblx
+Comantario-Notas-La-Biblia-Las-Americas-27-6.cmtx
+Comentario-Biblia-Diario-Vivir.cmtx
+Comentario-Biblia-Plenitud.cmtx
+Comentario-Dios-Habla-Hoy.cmtx
+Comentario-Mathew-Henry.cmtx
+Comentario-Notas-Biblia-Latinoamericana-95.cmtx
+Comentario-Notas-Reina-Valera-95-.cmtx
+Devocional-Spurgeon-Eng.devx
+Devocional-William-MacDonald.devx
+Diccionario-Barclay.dctx
+Diccionario-Biblico-Siglo21.dctx
+Diccionario-Bíblico-Arqueológico-Charles-Pfeiffer.dctx
+Diccionario-CAMR.dctx
+Diccionario-Certeza.dctx
+Diccionario-Concordancia.dctx
+Diccionario-de-Anecdotas.dctx
+Diccionario-de-Hebreo-Bíblico-(con-Strong-).dctx
+Diccionario-de-las-ReligionesI.dctx
+Diccionario-de-Nombres-RV1909.dctx
+Diccionario-DLP.dctx
+Diccionario-Donde-Buscar.dctx
+Diccionario-DRAE1.dctx
+Diccionario-DRAE2.dctx
+Diccionario-Ebenezer1.dctx
+Diccionario-Geografia.dctx
+Diccionario-Hitchcock.dctx
+Diccionario-Léxico-Griego-Español-del-NT-A.Tuggy.dctx
+Diccionario-MiniBiografía.dctx
+Diccionario-Nelson.dctx
+Diccionario-RAVASI.dctx
+Diccionario-Strong-Español.dctx
+Diccionario-Vine-AT.dctx
+Diccionario-Vine-NT.dctx
+Top-e-ST-03-Breve-Historia-del-Canon-Bíblico---G.-Báez.topx
+Top-e-ST-04-La-poesía-del-Antiguo-Testamento..-L.-Zogbo,-E.Wendland.topx
+Top-e-ST-05-Significado-y-Diversidad-Cultural--E.-Nida,W.-Reyburn.topx
+Top-e-ST-09-Aprendamos-griego-Hale,-Clarence.topx
+Top-Guerras-de-los-Judíos.topx
+Top-Halley-Compendio-Manual.topx
+Top-Introducción-a-la-Biblia-por-Casiodoro-de-Reina.topx
+Top-Spurgeon-Tesoro-de-David.topx
+Top-Spurgeon-Verdadera-Esencia-del-Avivamiento.topx
+Mapa-de-la-Biblia-Inernacional-Standard-Version(isv).mapx
+Mapa-División-de-las-12-Tribus.mapx
+Mapa-Israel-Wanderings.mapx
+Mapa-Usos-y-Costumbres.mapx
+Mapa-Vida,-Eventos-y-Ministerio-de-Jesús.mapx
+
+ <b><fontsize=12>Dirección de descarga</font></b>.
+Los Módulos en español los descargué:
+
+http://amistadcuauti.wordpress.com/2009/06/12/pack-de-modulos-para-e-sword-9-en-espanol/
+
+Reviselo algún día por un caso pongan alguno más, de allí yo he descargado estos:
+
+http://rapidshare.com/files/243774800/Pack_de_Biblias.exe
+http://rapidshare.com/files/243776624/Pack_de_Comentarios.exe
+http://rapidshare.com/files/243777196/Pack_de_Devocionales.exe
+http://rapidshare.com/files/243778303/Pack_de_Diccionarios.exe
+http://rapidshare.com/files/243778926/Pack_de_T_picos.exe
+http://rapidshare.com/files/245362369/Pack_de_Armonias.exe
+http://rapidshare.com/files/245362705/Pack_de_Mapas.exe
+
+Los módulos del Hebreo y Griego orignales de la Biblia los descargué de (y otros mas):
+
+www.e-sword.net 
+
+y en Ingles algunos los descargué de:
+
+http://www.blogger.com/feeds/7698748072203931209/posts/default
+
+Nota: En este momento todavía no hay muchos lugares donde se pueden descargar modulos para e-Sword 9, con el paso del tiempo 
+los habrá, podrías luego buscar en otros lados (estos módulos no funcionan para e-Sword 8 y anteriores).
+
+Martes, 5 de Octubre de 2009
+
+por: Washington Indacochea Delgado
+
+Jipijapa/Manabí/Ecuador
+
+wachin_id@hotmail.com
+
+
+*0204*
+Estoy de acuerdo con los términos y condiciones siguientes
+
+*0205*
+No estoy de acuerdo
+
+*0300*
+Directorio
+
+*0301*
+Elija una carpeta donde instalar y pulse sobre Siguiente para continuar.
+
+*0302*
+Los archivos de #Title se instalarán en la siguiente carpeta:
+
+*0303*
+ 
+
+*0304*
+ 
+
+*0305*
+Pulse 'Siguiente' para continuar.
+
+*0306*
+Espacio en disco necesario :
+
+*0307*
+Espacio disponible :
+
+*0308*
+%d Mb
+
+*0400*
+Confirmar
+
+*0401*
+Ya está todo preparado para instalar #title.
+
+*0402*
+
+
+*0403*
+Este programa instalará #title dentro de %s.
+
+*0404*
+
+
+*0405*
+Pulse 'Empezar' para instalar #title.
+
+*0500*
+Instalando...
+
+*0501*
+Instalación en proceso, por favor espere.
+
+*0502*
+Archivo :
+
+*0503*
+
+
+*0600*
+Terminado
+
+*0601*
+Instalación completada.
+
+*0602*
+#Title ha sido instalado satisfactoriamente.
+
+*0603*
+
+
+*0604*
+
+
+*0605*
+#Title no se ha instalado completamente por la siguiente razón:
+%s
+Vuelve a ejecutar la instalación para volver a intentar instalar #title.
+
+*0606*
+Mirar %s
+
+*0607*
+Ejecutar #title
+
+*0608*
+Es necesario reiniciar Windows para terminar la instalación. Pulse sobre 'Reiniciar' si quieres reiniciar inmediatamente.
+
+*0609*
+
+
+*0700*
+Instalación de #Title
+
+*0701*
+Por favor, selecccione un directorio
+
+*0702*
+Nombre del directorio:
+
+*0703*
+Unidades
+
+*0704*
+Comprobando...
+
+*0705*
+Directorio inválido.
+
+*0706*
+El directorio destino no existe. ¿Desea crearlo?
+
+*0707*
+Uno o más archivos están protegidos de escrituras. ¿Desea sobreescribir de todos modos?
+
+*0708*
+Este programa no pudo instalar #title por la siguiente razón:
+
+*0709*
+No se tuvo acceso al archivo siguiente:
+%s
+
+*0710*
+El siguiente archivo se encuentra en uso:
+%s
+Po favor, cierralo y vuelve a intentar de nuevo.
+
+*0711*
+No hay suficiente espacio en el disco de destino. ¿Desea seguir de todos modos?
+
+*0712*
+¡Sin memoria!
+
+*0713*
+Se está instalando componentes ahora mismo. Si usted sale ahora, estos componentes no serán instalados correctamente.
+¿Estás seguro de querer cancelar?
+
+*0714*
+Instalación no completada. ¿Estás seguro de querer salir?
+
+*0715*
+El Asistente de Instalación no terminó la instalación con éxito.
+
+*0716*
+No se puede abrir el siguiente archivo:
+%s
+
+*0717*
+No se puede crear el siguiente archivo:
+%s
+
+*0718*
+Archivo corrupto o ilegible:
+%s
+
+*0719*
+No se puede escribir el archivo siguiente:
+%s
+
+*0720*
+¡Disco lleno!
+
+*0721*
+CRC error - no se puede instalar el archivo siguiente:
+%s
+
+*0722*
+El acceso al archivo siguiente fué denegado:
+%s
+
+*0723*
+actualizado con éxito
+
+*0724*
+borrado con éxito
+
+*0725*
+instalado con éxito
+
+*0726*
+no se puede borrar, acceso denegado
+
+*0727*
+error - no se puede substituir, acceso denegado
+
+*0728*
+Por favor, inserte el disco %d.
+
+*0729*
+
+
+*0730*
+%s
+Este archivo existe en un lenguaje diferente al archivo a instalar.
+¿Desea sobreescribir la versión instalada de todos modos?
+
+*0731*
+Este archivo contiene datos inválidos.
+
+*0732*
+Error de datos en el archivo siguiente:
+%s
+Desea seguir de todos modos?
+
+*0800*
+< &Atrás
+
+*0801*
+&Siguiente >
+
+*0802*
+S&alir
+
+*0803*
+&Empezar
+
+*0804*
+Aceptar
+
+*0805*
+&Cancelar
+
+*0806*
+&Reiniciar
+
+*0900*
+Desinstalar
+
+*0901*
+Este programa desinstalará #title de tu disco duro. Pulse sobre Aceptar para continuar.
+
+*0902*
+#Title se ha quitado con éxito de su disco duro.
+
+*0903*
+&Si
+
+*0904*
+Si a &todo
+
+*0905*
+&No
+
+*0906*
+N&o a todo
+
+*0907*
+¡Sin memoria!
+
+*0908*
+Información de Desinstalación Inválida. Este programa No desinstalará #title.
+
+*0909*
+El archivo siguiente está protegido contra escritura:
+%s
+¿Desea quitarlo de todos modos?
+
+*0910*
+El siguiente archivo del Sistema aparentemente no es necesario:
+%s
+¿Desea quitarlo?
+
+*0911*
+Borrando archivos...
+
+*0912*
+Borrando iconos...
+
+*0913*
+Borrando directorios...
+
+*0914*
+Borrando registros...
+
+

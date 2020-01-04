@@ -1,0 +1,221 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+<HTML>
+  <HEAD>
+  <title> 1001bit.com - Build Vertical Wall </title>
+	<style type="text/css">
+	<!--
+	body,td,a,p,.h{font-family:arial,sans-serif; font-size:10pt;}
+	h1 { font-size: 16pt; color: #ffffff;  }
+	h2 { font-size: 12pt; }
+	h3 { font-size: 11pt; }
+	p { font-size: 10pt; }
+
+	.f1 {font-size: 16pt}
+	.f2 {font-size: 14pt}
+	a {text-decoration: none}
+	a:hover {color:#ff0000; font-size:12pt}
+	.textbox {
+	 background-color: white; font-size: 12px;
+	 border: 1px solid #000000;
+	}	
+
+	-->
+	</style>	
+  
+  <script language="Javascript" type="text/javascript">
+      function SUwMode(name)
+      {
+      DL_setPic1();
+      window.location='skp:set_WallMode@' + name;
+      }
+      function SUdoWall(name)
+      {
+      window.location='skp:DoWall@' + name;
+      }
+      function SUgroupWall(val)
+      {
+      window.location='skp:set_groupwall@' + val;
+      }
+      function DL_groupWall(val)
+      {
+      if (val=='true') {
+        document.theForm.do_groupwall.checked = true;
+        } 
+      else {
+        document.theForm.do_groupwall.checked = false;
+        }
+      }
+
+
+      function SUsetupProfile(name)
+      {
+      profilemode=1;
+      mypic="images/wall1_p.png";
+      DL_setPic2();
+      window.location='skp:set_WProfile@' + name; 
+      }
+      function SUclearProfile(name)
+      {
+      profilemode=0;
+      mypic="images/wall1_1.png";
+      DL_setPic2();
+      window.location='skp:clear_WProfile@' + name; 
+      }
+      
+      function SUexitWall(name)
+      {
+      window.location='skp:ExitWall@' + name;
+      }
+      function DL_wthick(thk)
+      {
+	thk = thk.replace("ft", "\'");
+	thk = thk.replace("in", "\"");
+     document.theForm.wall_thick.value = thk;
+      }
+      function DL_wheight(hgt)
+     { 
+	hgt = hgt.replace("ft", "\'");
+	hgt = hgt.replace("in", "\"");
+     document.theForm.wall_height.value = hgt;
+      }
+      function DL_wmode(i)
+      {
+      document.theForm.wall_mode[i].checked = true;
+      }
+    function DL_mouseover_profile()
+    {
+     mypic=document.myPic.src; 
+      document.myPic.src="images/wall1_p.png";
+    }
+    function DL_mouseout_profile()
+    {
+      document.myPic.src=mypic;
+    }
+    function DL_mouseover_clearprofile()
+    {
+     mypic=document.myPic.src; 
+      document.myPic.src="images/wall1_1.png";
+    }
+    function DL_mouseout_clearprofile()
+    {
+      document.myPic.src=mypic;
+    }
+      
+    function DL_enter_profile()
+    {
+     profilemode=1; 
+      DL_setPic2();
+    }
+    function DL_enter_norm()
+    {
+     profilemode=0; 
+      DL_setPic2();
+    } 
+    function DL_enter_thick()
+    {
+     profilemode=0; 
+      DL_setPic2();
+      document.theForm.wall_thick.select();
+    }
+    function DL_enter_height()
+    {
+     profilemode=0; 
+      DL_setPic2();
+      document.theForm.wall_height.select();
+    }
+    function DL_setPic1()
+    {
+      if (document.theForm.wall_mode[1].checked==true) {
+        document.myPic.src="images/wall1_22.png";
+      }
+      if (document.theForm.wall_mode[2].checked==true) {
+        document.myPic.src="images/wall1_23.png";
+      }      
+      if (document.theForm.wall_mode[0].checked==true) {
+        document.myPic.src="images/wall1_21.png";
+      }
+    }   
+    
+    function DL_setPic2()
+    {
+      if (profilemode==0) {
+        document.myPic.src="images/wall1_1.png";
+      }
+      else
+      {
+       document.myPic.src="images/wall1_p.png";
+      }
+    }
+//-------------------------------------------
+      
+  function DL_translate(id, newtext)
+	{
+		var newentry=document.getElementById(id);
+		newentry.firstChild.data=newtext;
+
+	}
+
+  function DL_translate_button(id, newtext)
+	{
+				
+		var newentry=document.getElementById(id);
+		newentry.value=newtext;
+
+	}
+  
+//----------------------------------------------------
+
+//-----------------------------------------------------------
+    
+</script>
+
+
+
+
+
+
+      
+  </HEAD>
+  <body bgcolor=#788B9A>
+      <div>
+      <form name="theForm" action="#">
+      <table>
+        <tr><td colspan=2><h1><span name="title" id="title">Create Vertical Wall</span></h1></td></tr>
+        <tr><td colspan=2 align=center><img src='images/wall1_1.png' name="myPic" id="myPic" height=200></td></tr>
+        <tr><td colspan=2>   
+        <span name="t1" id="t1">Wall alignment</span><br>
+        <input type=radio name="wall_mode" id="wall_mode" value="left"
+        onClick="SUwMode(this.value, this.checked)"  >  <span name="t4" id="t4">Left</span> </input>
+        <input type=radio name="wall_mode" id="wall_mode" value="center" checked =true
+        onClick="SUwMode(this.value, this.checked)" > <span name="t2" id="t2">Center</span></input>
+        <input type=radio name="wall_mode" id="wall_mode" value="right"
+        onClick="SUwMode(this.value, this.checked)"  >  <span name="t3" id="t3">Right</span> </input>
+
+        <br><hr>
+        </td></tr>
+	<tr><td><span name="t5" id="t5">Wall Thickness</span> (a)</td><td><input type=text class="textbox" name="wall_thick" id="wall_thick" onfocus="javascript:DL_enter_thick()"></td></tr>
+        <tr><td><span name="t6" id="t6">Wall Height</span> (b)</td><td><input type=text class="textbox" name="wall_height" id="wall_height" onfocus="javascript:DL_enter_height()"></td></tr>
+	<tr><td colspan=2><input type=checkbox name="do_groupwall" id="do_groupwall" checked onClick="SUgroupWall(this.checked)"><span name="t7" id="t7">Build wall as a group</span></td>
+        
+  </table>
+
+	<hr>
+        <input type=button name="setup_profile"  id="setup_profile"  value="Setup profile"
+          onClick="SUsetupProfile(this.value)" onMousedown="javascript:DL_mouseover_profile()">
+        <input type=button name="clear_profile"  id="clear_profile"  value="Clear profile"
+          onClick="SUclearProfile(this.value)">
+  <hr>
+        <input type=button name="do_wall" id="do_wall" value="Build Wall"
+        onClick="SUdoWall(this.value)">
+        <input type=button name="exit_wall" id="exit_wall" value="Exit" 
+        onClick="SUexitWall(this.value)">
+        
+        </form>
+        <font size="2pt"><i><span name="author" id="author">.</span></i></font>
+
+      </div>
+      
+ 
+      </body>
+
+</html>      

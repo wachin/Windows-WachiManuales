@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+<HTML>
+  <HEAD>
+  <title> 1001bit.com - Rectangular Array </title>
+	<style type="text/css">
+	<!--
+	body,td,a,p,.h{font-family:arial,sans-serif; font-size:10pt;}
+	h1 {font-size: 16pt; color: #ffffff;}
+	h2 { font-size: 12pt; }
+	h3 { font-size: 11pt; }
+	p { font-size: 10pt; }
+
+	.f1 {font-size: 16pt}
+	.f2 {font-size: 14pt}
+	a {text-decoration: none}
+	a:hover {color:#ff0000; font-size:12pt}
+	.textbox {
+	 background-color: white; font-size: 12px;
+	 border: 1px solid #000000;
+	}	
+
+
+	-->
+	</style>	
+  
+  <script language="Javascript" type="text/javascript">
+
+      function SUdoRectArray(name)
+      {
+      window.location='skp:DoRectArray@' + name;
+      }
+      function SUexitRectArray(name)
+      {
+      window.location='skp:ExitRectArray@' + name;
+      }
+      function DL_coldis(dis)
+      {
+	dis = dis.replace("ft", "\'");
+	dis = dis.replace("in", "\"");
+     document.theForm.col_dis.value = dis;
+      }
+      function DL_rowdis(dis)
+     { 
+	dis = dis.replace("ft", "\'");
+	dis = dis.replace("in", "\"");
+     document.theForm.row_dis.value = dis;
+      }
+      function DL_colnos(nos)
+      {
+     document.theForm.col_nos.value = nos;
+      }
+      function DL_rownos(nos)
+      {
+     document.theForm.row_nos.value = nos;
+      }
+     
+  function DL_translate(id, newtext)
+	{
+		var newentry=document.getElementById(id);
+		newentry.firstChild.data=newtext;
+
+	}
+
+	function DL_translate_button(id, newtext)
+	{
+				
+		var newentry=document.getElementById(id);
+		newentry.value=newtext;
+
+	}
+
+     
+      </script>
+      
+  </HEAD>
+  <body bgcolor=#788B9A>
+      <div>
+      <form name="theForm" action="#">
+        
+
+        <table>
+        <tr><td colspan=4><h1><span name="title" id="title">Rectangular Array</span></h1></td></tr>
+        <tr><td colspan=4><img src='images/rect_array_1.png' name="myPic" id="myPic" align=center></td></tr>
+	<tr><td><span name="t1" id="t1">Column distance</span></td><td><input type=text class="textbox"  name="col_dis" id="col_dis" onfocus="javascript:document.theForm.col_dis.select()"></td>
+          <td><span name="t2" id="t2">Number of columns</span></td><td><input type=text class="textbox"  name="col_nos" id="col_nos" onfocus="javascript:document.theForm.col_nos.select()"></td></tr>
+  <tr><td><span name="t3" id="t3">Row distance</span></td><td><input type=text class="textbox"  name="row_dis" id="row_dis" onfocus="javascript:document.theForm.row_dis.select()"></td>
+          <td><span name="t4" id="t4">Number of rows</span></td><td><input type=text class="textbox"  name="row_nos" id="row_nos" onfocus="javascript:document.theForm.row_nos.select()"></td></tr>
+	</table>
+
+  <hr>
+        <input type=button name="do_rectarray" id="do_rectarray" value="Build Array"
+        onClick="SUdoRectArray(this.value)">
+        <input type=button name="exit_rectarray" id="exit_rectarray" value="Exit" 
+        onClick="SUexitRectArray(this.value)">
+        
+        </form>
+       	<font size="2pt"><i><span name="author" id="author">.</span></i></font>
+      </div>
+      
+ 
+      </body>
+      
+</html>

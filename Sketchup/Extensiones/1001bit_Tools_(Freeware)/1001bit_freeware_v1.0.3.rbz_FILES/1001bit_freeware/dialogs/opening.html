@@ -1,0 +1,104 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+<HTML>
+  <HEAD>
+  <title> 1001bit.com - Wall Opening </title>
+	<style type="text/css">
+	<!--
+	body,td,a,p,.h{font-family:arial,sans-serif; font-size:10pt;}
+	h1 { font-size: 16pt; color: #ffffff; }
+	h2 { font-size: 12pt; }
+	h3 { font-size: 11pt; }
+	p { font-size: 10pt; }
+
+	.f1 {font-size: 16pt}
+	.f2 {font-size: 14pt}
+	a {text-decoration: none}
+	a:hover {color:#ff0000; font-size:12pt}
+	.textbox {
+	 background-color: white; font-size: 12px;
+	 border: 1px solid #000000;
+	}	
+
+	-->
+	</style>	
+  
+  <script language="Javascript" type="text/javascript">
+      function SUdoOp(name)
+      {
+      window.location='skp:DoOp@' + name;
+      }
+      function SUsetupProfile(name)
+      {
+      window.location='skp:set_OpProfile@' + name; 
+      }
+      function SUclearProfile(name)
+      {
+      window.location='skp:clear_OpProfile@' + name; 
+      }
+      
+      function SUexitOp(name)
+      {
+      window.location='skp:ExitOp@' + name;
+      }
+      function DL_opwidth(wdh)
+      {
+	wdh = wdh.replace("ft", "\'");
+	wdh = wdh.replace("in", "\"");
+     document.theForm.op_width.value = wdh;
+      }
+      function DL_opheight(hgt)
+     { 
+	hgt = hgt.replace("ft", "\'");
+	hgt = hgt.replace("in", "\"");
+     document.theForm.op_height.value = hgt;
+      }
+      
+  function DL_translate(id, newtext)
+	{
+		var newentry=document.getElementById(id);
+		newentry.firstChild.data=newtext;
+
+	}
+
+	function DL_translate_button(id, newtext)
+	{
+				
+		var newentry=document.getElementById(id);
+		newentry.value=newtext;
+
+	}
+</script>
+      
+  </HEAD>
+  <body bgcolor=#788B9A>
+      <div>
+      <form name="theForm" action="#">
+        
+        <table>
+        <tr><td colspan=2> <h1><span name="title" id="title">Create Wall Opening</span></h1></td></tr>
+        <tr><td colspan=2> <img src='images/opening_1.png' align=center name="myPic" id="myPic"></td></tr>
+	<tr><td><span name="t1" id="t1">Opening Width</span> (w)</td><td><input type=text class="textbox"  name="op_width" id="op_width" onfocus="javascript:document.theForm.op_width.select()"></td></tr>
+        <tr><td><span name="t2" id="t2">Opening Height</span> (h)</td><td><input type=text class="textbox"  name="op_height" id="op_height" onfocus="javascript:document.theForm.op_height.select()"></td></tr>
+	</table>
+	<hr>
+        <span name="t3" id="t3">Custom defined profile of opening (can be any shape)</span><br><br>
+        <input type=button name="setup_profile"  id="setup_profile"  value="Setup profile"
+          onClick="SUsetupProfile(this.value)">
+        <input type=button name="clear_profile"  id="clear_profile"  value="Clear profile"
+          onClick="SUclearProfile(this.value)">
+  <hr>
+        <input type=button name="do_op" id="do_op" value="Create Opening"
+        onClick="SUdoOp(this.value)">
+        <input type=button name="exit_op" id="exit_op" value="Exit" 
+        onClick="SUexitOp(this.value)">
+        
+        </form>
+        <font size="2pt"><i><span name="author" id="author">.</span></i></font>
+
+      </div>
+      
+ 
+      </body>
+
+</html>
+      

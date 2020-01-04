@@ -1,0 +1,12 @@
+
+
+CREANDO GRUPOS DE UNIDADES 
+
+Seleccionar varios soldados, 
+
+Se le da doble clic a cada soldado y de allí se le aplasta Ctrl + 1
+
+
+Seleccionar enfermeras
+
+Se le da clic a una enfermera, se aplasta Ctrl y automaticamente se seleccionarán todas las enfermeras, ahroa se aplasta Ctrl + 2  y se creará otro grupo de unidades

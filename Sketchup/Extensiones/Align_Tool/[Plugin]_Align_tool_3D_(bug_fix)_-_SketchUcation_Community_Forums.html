@@ -1,0 +1,2758 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-gb" xml:lang="en-gb">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta http-equiv="content-style-type" content="text/css" />
+<meta http-equiv="content-language" content="en-gb" />
+<meta http-equiv="imagetoolbar" content="no" />
+<meta name="resource-type" content="document" />
+<meta name="distribution" content="global" />
+<meta name="copyright" content="2000, 2002, 2005, 2007 phpBB Group" />
+<meta name="keywords" content="SketchUp, Trimble, SketchUcation, Plugin, Plugins, SketchUp Plugins, Ruby, Community, 3D, Engineering, Design, Architecture, Landscape, Learn, Support, Help" />
+<meta name="description" content="3D SketchUp Community for Design and Engineering Professionals" />
+
+<title>[Plugin] Align tool 3D (bug fix) &bull; SketchUcation Community Forums</title>
+<link rel="alternate" type="application/atom+xml" title="Feed - SketchUcation Community Forums" href="http://sketchucation.com/forums/feed.php" /><link rel="alternate" type="application/atom+xml" title="Feed - News" href="http://sketchucation.com/forums/feed.php?mode=news" /><link rel="alternate" type="application/atom+xml" title="Feed - Active Topics" href="http://sketchucation.com/forums/feed.php?mode=topics_active" /><link rel="alternate" type="application/atom+xml" title="Feed - Forum - Plugins" href="http://sketchucation.com/forums/feed.php?f=323" /><link rel="alternate" type="application/atom+xml" title="Feed - Topic - [Plugin] Align tool 3D (bug fix)" href="http://sketchucation.com/forums/feed.php?f=323&amp;t=11224" />
+<script type="text/javascript">
+// <![CDATA[
+var jump_page = 'Enter the page number you wish to go to:';
+var on_page = '1';
+var per_page = '30';
+var base_url = './viewtopic.php?f=323&amp;t=11224';
+var style_cookie = 'phpBBstyle';
+var style_cookie_settings = '; path=/; domain=.sketchucation.com';
+var onload_functions = new Array();
+var onunload_functions = new Array();
+
+function find_username(url) { popup(url, 760, 570, '_usersearch'); return false; }
+window.onload = function() { for (var i = 0; i < onload_functions.length; i++) { eval(onload_functions[i]); }};
+window.onunload = function() { for (var i = 0; i < onunload_functions.length; i++) { eval(onunload_functions[i]); }};
+</script>
+<script type="text/javascript" src="http://jroot.sketchucation.com/forums/styles/prosilver/template/styleswitcher_forum_fn.js"></script>
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Vollkorn" type="text/css" />
+<link href="http://jroot.sketchucation.com/forums/styles/halcyon/theme/gantry_css/gantry_grid-12.css" rel="stylesheet" type="text/css" media="screen, projection" />
+
+<link href="http://jroot.sketchucation.com/forums/styles/halcyon/theme/gantry_css/joomla.css" rel="stylesheet" type="text/css" media="screen, projection" />
+
+<link href="http://jroot.sketchucation.com/forums/styles/halcyon/theme/rt_css/joomla.css" rel="stylesheet" type="text/css" media="screen, projection" />
+<link href="http://jroot.sketchucation.com/forums/styles/halcyon/theme/rt_css/main-light.css" rel="stylesheet" type="text/css" media="screen, projection" />
+<link href="http://jroot.sketchucation.com/forums/styles/halcyon/theme/rt_css/blue.css" rel="stylesheet" type="text/css" media="screen, projection" />
+<link href="http://jroot.sketchucation.com/forums/styles/halcyon/theme/rt_css/typography.css" rel="stylesheet" type="text/css" media="screen, projection" />
+<link href="http://jroot.sketchucation.com/forums/styles/halcyon/theme/rt_css/extensions_overlays_light.css" rel="stylesheet" type="text/css" media="screen, projection" />
+<link href="http://jroot.sketchucation.com/forums/styles/halcyon/theme/rt_css/template.css" rel="stylesheet" type="text/css" media="screen, projection" />
+
+
+
+<link href="./style.php?id=23&amp;lang=en" rel="stylesheet" type="text/css" media="screen, projection" />
+
+<link href="http://jroot.sketchucation.com/forums/styles/halcyon/theme/rt_css/overlays.css" rel="stylesheet" type="text/css" media="screen, projection" />
+<link href="http://jroot.sketchucation.com/forums/styles/halcyon/theme/rt_css/fusionmenu.css" rel="stylesheet" type="text/css" media="screen, projection" />
+<link href="http://jroot.sketchucation.com/forums/styles/halcyon/theme/rt_css/template-webkit.css" rel="stylesheet" type="text/css" media="screen, projection"  />
+<link href="http://jroot.sketchucation.com/forums/styles/halcyon/theme/light-phpbb3.css" rel="stylesheet" type="text/css" media="screen, projection" />
+<link href="http://jroot.sketchucation.com/forums/styles/halcyon/theme/normal.css" rel="stylesheet" type="text/css" title="A" />
+<link rel="canonical" href="http://sketchucation.com/forums/viewtopic.php?f=323&amp;t=11224" />
+<style type="text/css">
+#rt-top-surround, #roksearch_results,#rt-top-surround #rokajaxsearch .rokajaxsearch .inputbox {background-color:#191919;}
+#rt-top a, #rt-header a, .menutop li > .item, #rt-top-surround .roktabs-wrapper .roktabs-links ul li.active span  {color:#fff;}
+#rt-footer-surround,#rt-footer-surround #rokajaxsearch .rokajaxsearch .inputbox {background-color:#191919;}
+#rt-footer-surround a, #rt-bottom a, #rt-footer a,#rt-footer-surround .roktabs-wrapper .roktabs-links ul li.active span {color:#ccc;}
+#rt-footer { width:960px; margin: auto; }
+body #rt-logo {width:100%;height:90px;}
+
+.postprofile {float: left; border-right: 0 none;border-left:0 none; margin-left: -6px;width: 21%;}
+.postbody {float: right;}
+ul.profile-icons {margin-right: 40px;}
+.online {background-position: 17% -1%;}
+
+#suc-logo { width:100% !important; }
+.suc-mod { margin: 0 !important; }
+.bottom-ad, .top-ad { width:768px; margin: 0 auto; margin-top:10px; }
+li.row:hover { background: #F3F3F3; }
+.sticky:hover, .announce:hover, .global-announce:hover { background-color: transparent !important; }
+</style>
+<script type="text/javascript" src="http://jroot.sketchucation.com/forums/styles/halcyon/template/rt_js/mootools.js"></script>
+
+<script type="text/javascript" src="http://jroot.sketchucation.com/forums/styles/halcyon/template/rt_js/gantry-inputs.js"></script>
+<script type="text/javascript" src="http://jroot.sketchucation.com/forums/styles/halcyon/template/rt_js/load-transition.js"></script>
+<script type="text/javascript" src="http://jroot.sketchucation.com/forums/styles/halcyon/template/rt_js/gantry-totop.js"></script>
+
+<script type="text/javascript" src="http://jroot.sketchucation.com/forums/styles/halcyon/template/rt_js/fusion.js"></script>
+
+<script type="text/javascript">
+InputsExclusion.push('.content_vote','#rt-popup','#rt-popuplogin')
+
+InputsExclusion.push('#rt-popup','#gallery','#postingbox fieldset.fields1 dd','#login','#cp-main','.panel')			
+window.addEvent('load', function() { new Fusion('ul.menutop', { pill: 0, effect: 'slide and fade', opacity:  1, hideDelay:  500, centered:  0, tweakInitial: {'x': -11, 'y': -18}, tweakSubsequent: {'x':  -8, 'y':  -18}, tweakSizes: {'width': 20, 'height': 20}, menuFx: {duration:  300, transition: Fx.Transitions.Circ.easeOut}, pillFx: {duration:  400, transition: Fx.Transitions.Back.easeOut} }); });
+</script>
+
+<script type="text/javascript" src="http://jroot.sketchucation.com/forums/styles/halcyon/template/rokbox/rokbox.js"></script>
+<link href="http://jroot.sketchucation.com/forums/styles/halcyon/template/rokbox/themes/light/rokbox-style.css" rel="stylesheet" type="text/css" media="screen, projection" />
+
+<!--
+<style type="text/css">
+h1,h2,li.header dt, li.header dd, h3,li.header dt a  {font-family: Vollkorn, arial, serif !important; }
+</style>
+-->
+
+<script type="text/javascript">
+function valami() {if(document.getElementById('bsap_1239051').offsetWidth<=10) {var css=".download-plugin,div.inline-attachment dl.file dt,div.inline-attachment dl.file dd,dl.attachbox dd,dl.attachbox>dt,dl.attachbox dl.file,body#phpbb dl.thumbnail>dt>a>img,body#phpbb dl.thumbnail>a>img,body#phpbb dl.thumbnail>a.postlink{display:none;}dl.attachbox{border:none;background-color:transparent;}div.inline-attachment:last-of-type  dl.file:before,dl.attachbox:before,body#phpbb dl.thumbnail:first-of-type>a:after{width:650px;font-size:16px;text-align:center;display:inline-block;border:1px solid red;margin:10px 0;padding:12px;border-radius:6px;background-color:pink;font-weight:bold;content:\"Disable browser AdBlocking addons to view images and download attachments\";color:maroon;}"; var head = document.getElementsByTagName('head')[0]; var s123 = document.createElement('style'); s123.setAttribute('type', 'text/css'); if (s123.styleSheet) { s123.styleSheet.cssText = css; } else { s123.appendChild(document.createTextNode(css)); } head.appendChild(s123); } }
+onload_functions.push('valami()');
+</script>
+
+
+<script type="text/javascript">
+var ratehttp;
+function rateUpDown(postID,userID,rate) {
+if(window.XMLHttpRequest) { 
+ratehttp=new XMLHttpRequest(); 
+ratehttp.onreadystatechange= function() { 
+if ((ratehttp.readyState==4) && (ratehttp.status==200)) {
+		var resultarr=ratehttp.responseText.split(',');
+		if(resultarr[1]!=0) { 
+		    var counter=document.getElementById('forum-post-rate-' + resultarr[1]);
+		    if(resultarr[0]=='1') { counter.innerHTML=Number(counter.innerHTML) + 1; }
+		    if(resultarr[0]=='2') { counter.innerHTML=Number(counter.innerHTML) - 1; }
+		}
+	    }
+	}
+	ratehttp.open('GET','http://sketchucation.com/forums/forums_rate_posts.php?u=' + userID + '&p=' + postID + '&r=' + rate + '&c=' + (Math.random()*1000000),true); 
+	ratehttp.send();
+    }
+}
+</script>
+
+<link rel="stylesheet" href="http://jroot.sketchucation.com/font-awesome/css/font-awesome.css" type="text/css" />
+<link rel="stylesheet" href="http://jroot.sketchucation.com/templates/rt_halcyon/css/forum-custom-v-1-0.css" type="text/css" />
+<script type="text/javascript" async>
+var _gaq = _gaq || []; _gaq.push(['_setAccount', 'UA-10182674-1']); _gaq.push(['_trackPageview']);
+(function() { var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })();
+</script>
+
+<script type="text/javascript">
+function hideProfile( divid ) { var divid = 'grh-' + divid; document.getElementById( divid ).style.display="none"; }
+function revealProfile( divid ) {  var divid = 'grh-' + divid; document.getElementById( divid ).style.display="block"; }
+</script>
+
+</head>
+<body  id="phpbb" class="section-viewtopic ltr readonstyle-button font-family-Vollkorn font-size-is-default logo-enabled-0 menu-type-fusionmenu typography-style-light col12 layout-full ">
+
+<!-- BuySellAds.com Ad Code -->
+<script type="text/javascript" async>
+(function(){ var bsa = document.createElement('script'); bsa.type = 'text/javascript'; bsa.async = true; bsa.src = 'http://s3.buysellads.com/ac/bsa.js';
+(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa); })();
+</script>
+<!-- End BuySellAds.com Ad Code -->
+<div id="nagger"></div>
+<style type="text/css">#nagger{display:none;width:100%;text-align:center;color:white;padding:1px 0px;border-bottom:1px solid #999;background-color:#e74c3c;z-index:999;font-size:16px;}.nagclose {cursor:pointer;padding-left:25px;margin-right:10px;cursor:pointer;display:inline-block;float:right;}.nagtext {display:inline-block;margin-left:auto;margin-right:auto;font-size:.7em;}.nagtext a {color:#f1c40f;}.nagtext a:hover {color:#fff !important;}</style>
+<!-- ns=P -->
+
+<!-- nu=306282 -->
+
+<script type="text/javascript">
+var nagCookieName = 'SUCNagnag-43=';
+window.addEvent('domready',function() {
+	var allCookies = document.cookie.split(';');
+	var cookieValue = '';	for(var i=0;i<allCookies.length;i++) {
+		var c = allCookies[i];
+		while(c.charAt(0) == ' ') c = c.substring(1,c.length);
+		if (c.indexOf(nagCookieName) == 0) {
+			cookieValue = c.substring(nagCookieName.length,c.length);
+			break;
+		}
+	}
+	if((cookieValue != 'nag-43')) {
+		document.getElementById('nagger').innerHTML='<div class="nagtext">Clara.io model and render in your web browser....<a href="http://bit.ly/clara-io">More Info</a></div><div class="nagclose" onclick="switchOffNag();">X</div>';
+		document.getElementById('nagger').style.display='inline-block';
+}});
+function switchOffNag() {
+	document.getElementById('nagger').style.display='none';
+	var date = new Date();
+	date.setTime(date.getTime() + 1209600000);
+	var expires = 'expires=' + date.toGMTString();
+	var cookiestr = nagCookieName + 'nag-43' + '; ' + expires + ' path=/';
+	document.cookie = cookiestr;
+	var xmlhttp = new XMLHttpRequest();
+console.log( xmlhttp );
+	xmlhttp.open('GET','/nagger/nagoff.php?s=P&u=306282',true);
+	xmlhttp.send();
+console.log( xmlhttp );
+}
+</script>
+
+<div class="scf-header-container">
+<div class="scf-icons-social">
+<ul class="scf-icons-social-ul">
+	<li class="scf-icon-social-li"><a href="https://www.facebook.com/plugins/like.php?href=https://www.facebook.com/SketchUcation" class="scf-social-a" title="Like our Facebook page!" onclick="window.open(this.href,'','scrollbars=yes,resizable=no,location=no,menubar=no,status=no,toolbar=no,left='+(screen.availWidth/2-150)+',top='+(screen.availHeight/2-50)+',width=300,height=100');return false;"><i class="icon-facebook icon-large"></a></i></li>
+	<li class="scf-icon-social-li"><a href="https://twitter.com/intent/user?screen_name=SketchUcation" title="Follow us on Twitter" onclick="window.open(this.href,'Follow%20SketchUcation%20on%20Twitter','scrollbars=yes,resizable=yes,location=no,menubar=no,status=no,toolbar=no,left='+(screen.availWidth/2-300)+',top='+(screen.availHeight/2-300)+',width=600,height=600');return false;" class="scf-social-a"><i class="icon-twitter icon-large"></i></a></li>
+	<li class="scf-icon-social-li"><a href="/gplus.php" title="G+1 us!" onclick="window.open(this.href,'','scrollbars=yes,resizable=no,location=no,menubar=no,status=no,toolbar=no,left='+(screen.availWidth/2-100)+',top='+(screen.availHeight/2-50)+',width=200,height=100');return false;" class="scf-social-a"><i class="icon-google-plus icon-large"></i></a></li>
+	<li class="scf-icon-social-li"><a href="https://www.youtube.com/subscription_center?add_user=irishsketchup" href="https://twitter.com/intent/user?screen_name=SketchUcation" title="Sign up to our Youtube channel!" onclick="window.open(this.href,'','scrollbars=yes,resizable=no,location=no,menubar=no,status=no,toolbar=no,left='+(screen.availWidth/2-490)+',top='+(screen.availHeight/2-300)+',width=980,height=600');return false;" class="scf-social-a"><i class="icon-youtube-play icon-large"></i></a></li>
+</ul>
+</div>
+
+<ul class="scf-loginlogout-ul">
+<li class="scf-search-li"><div class="scf-searchbox-wrapper">
+<form name="rokajaxsearch" id="rokajaxsearch" class="light" action="http://sketchucation.com/forums/searchgoogle.php" method="GET">
+<div class="rokajaxsearch">
+	<div class="roksearch-wrapper">
+		<input id="roksearch_search_str" name="keyword" type="text" class="inputbox" value="" />
+	</div>
+
+	<div id="roksearch_results"></div>
+</div>
+<div id="rokajaxsearch_tmp" style="visibility:hidden;display:none;"></div>
+</form>
+</div></li>
+<li class="scf-upgrade-button-li"><a href="/upgrade-to-premium" class="btn btn-error">Upgrade</a></li>
+<li class="scf-username-li"><a href="/forums/ucp.php?i=profile&mode=profile_info" class="scf-username-text">wachin</a></li>
+<li class="scf-logout-li"><a href="/forums/ucp.php?mode=logout&sid=bc76ba276f81e52653416ffe3dafab20" class="scf-logout-text"><i class="icon-off"></i></a></li>
+</ul>
+
+
+</div>
+<div id="rt-top-surround" class="topblock-overlay-dark"><div id="rt-drawer"><div class="rt-container" style="width: 960px"><div class="clear"></div>
+</div>
+</div>
+<div id="rt-top-pattern">
+<div id="rt-header"><div class="rt-container" style="width: 960px">
+
+<div class="clear"></div></div></div><div id="rt-navigation"><div class="rt-container"><div class="rt-grid-12 rt-alpha rt-omega">
+
+	<div class="rt-block menu-block">
+		<div class="rt-fusionmenu">
+<!-- Inserted by  Gabor -->
+<h1 class="title suclogo"><a href="http://sketchucation.com/">sketch<span class="red-u">U</span>cation</a></h1>
+<!-- END Gabor insert fusionmenu -->
+<div class="nopill">
+<div class="rt-menubar">
+<ul class="menutop level1 " >
+        <li class="item104 parent root" >
+                        	<a class="daddy item bullet" href="/community"  >
+<span>
+Community<span class="daddyicon"></span>
+</span>
+</a>
+<div class="fusion-submenu-wrapper level2 " style="width:180px;">
+<ul class="level2" style="width:180px;">
+<li class="item167" >
+                        	<a class="orphan item bullet" href="/forums"  >
+<span>
+Forums</span>
+</a>
+</li>
+<li class="item168" >
+                        	<a class="orphan item bullet" href="/community/gallery"  >
+<span>
+Gallery</span>
+</a>
+</li>
+</ul>
+<div class="drop-bot"></div></div>
+</li>
+        <li class="item111 parent root" >
+                        	<a class="daddy item bullet" href="/resources"  >
+<span>
+Resources<span class="daddyicon"></span>
+</span>
+</a>
+<div class="fusion-submenu-wrapper level2 " style="width:180px;">
+<ul class="level2" style="width:180px;">
+<li class="item290" >
+                        	<a class="orphan item bullet" href="/resources/plugin-store-download"  >
+<span>
+Plugin Store Download</span>
+</a>
+</li>
+<li class="item291" >
+                        	<a class="orphan item bullet" href="/resources/premium-downloads"  >
+<span>
+Premium Downloads</span>
+</a>
+</li>
+<li class="item178" >
+                        	<a class="orphan item bullet" href="/resources/tutorials"  >
+<span>
+Tutorials</span>
+</a>
+</li>
+</ul>
+<div class="drop-bot"></div></div>
+</li>
+        <li class="item110 parent root" >
+                        	<a class="daddy item bullet" href="/shop"  >
+<span>
+Shop<span class="daddyicon"></span>
+</span>
+</a>
+<div class="fusion-submenu-wrapper level2 " style="width:180px;">
+<ul class="level2" style="width:180px;">
+<li class="item354" >
+                        	<a class="orphan item bullet" href="/shop/thea"  >
+<span>
+Thea</span>
+</a>
+</li>
+<li class="item316 parent" >
+                        	<a class="daddy item bullet" href="/shop/textures"  >
+<span>
+Textures</span>
+</a>
+<div class="fusion-submenu-wrapper level3 " style="width:180px;">
+<ul class="level3" style="width:180px;">
+<li class="item315" >
+                        	<a class="orphan item bullet" href="/shop/textures/hdri"  >
+<span>
+HDRI</span>
+</a>
+</li>
+<li class="item317" >
+                        	<a class="orphan item bullet" href="/shop/textures/normal"  >
+<span>
+Normal</span>
+</a>
+</li>
+</ul>
+<div class="drop-bot"></div></div>
+</li>
+<li class="item314 parent" >
+                        	<a class="daddy item bullet" href="/shop/models"  >
+<span>
+Models</span>
+</a>
+<div class="fusion-submenu-wrapper level3 " style="width:180px;">
+<ul class="level3" style="width:180px;">
+<li class="item323" >
+                        	<a class="orphan item bullet" href="/shop/models/landscape"  >
+<span>
+Landscape</span>
+</a>
+</li>
+<li class="item324" >
+                        	<a class="orphan item bullet" href="/shop/models/furniture"  >
+<span>
+Furniture</span>
+</a>
+</li>
+</ul>
+<div class="drop-bot"></div></div>
+</li>
+<li class="item318" >
+                        	<a class="orphan item bullet" href="/shop/extensions"  >
+<span>
+Extensions</span>
+</a>
+</li>
+<li class="item319" >
+                        	<a class="orphan item bullet" href="/shop/styles"  >
+<span>
+Styles</span>
+</a>
+</li>
+<li class="item320 parent" >
+                        	<a class="daddy item bullet" href="/shop/books"  >
+<span>
+Books</span>
+</a>
+<div class="fusion-submenu-wrapper level3 " style="width:180px;">
+<ul class="level3" style="width:180px;">
+<li class="item321" >
+                        	<a class="orphan item bullet" href="/shop/books/intermediate"  >
+<span>
+Intermediate</span>
+</a>
+</li>
+<li class="item322" >
+                        	<a class="orphan item bullet" href="/shop/books/beginner"  >
+<span>
+Beginner</span>
+</a>
+</li>
+</ul>
+<div class="drop-bot"></div></div>
+</li>
+<li class="item300 parent" >
+                        	<a class="daddy item bullet" href="/shop/videos"  >
+<span>
+Videos</span>
+</a>
+<div class="fusion-submenu-wrapper level3 " style="width:180px;">
+<ul class="level3" style="width:180px;">
+<li class="item342" >
+                        	<a class="orphan item bullet" href="/shop/videos/sketchup"  >
+<span>
+SketchUp</span>
+</a>
+</li>
+<li class="item343" >
+                        	<a class="orphan item bullet" href="/shop/videos/autocad"  >
+<span>
+AutoCAD</span>
+</a>
+</li>
+<li class="item344" >
+                        	<a class="orphan item bullet" href="/shop/videos/solidworks"  >
+<span>
+SolidWorks</span>
+</a>
+</li>
+<li class="item345" >
+                        	<a class="orphan item bullet" href="/shop/videos/revit"  >
+<span>
+Revit</span>
+</a>
+</li>
+<li class="item346" >
+                        	<a class="orphan item bullet" href="/shop/videos/bentley"  >
+<span>
+Bentley</span>
+</a>
+</li>
+</ul>
+<div class="drop-bot"></div></div>
+</li>
+</ul>
+<div class="drop-bot"></div></div>
+</li>
+        <li class="item115 parent root" >
+                        	<a class="daddy item bullet" href="/sketchucation-services"  >
+<span>
+Services<span class="daddyicon"></span>
+</span>
+</a>
+<div class="fusion-submenu-wrapper level2 " style="width:180px;">
+<ul class="level2" style="width:180px;">
+<li class="item187" >
+                        	<a class="orphan item bullet" href="/sketchucation-services/authorized-sketchup-training"  >
+<span>
+SketchUp Training</span>
+</a>
+</li>
+<li class="item191" >
+                        	<a class="orphan item bullet" href="/sketchucation-services/modelling-services"  >
+<span>
+Modelling Services</span>
+</a>
+</li>
+</ul>
+<div class="drop-bot"></div></div>
+</li>
+        <li class="item197 parent root" >
+                        	<a class="daddy item bullet" href="/all-news"  >
+<span>
+News<span class="daddyicon"></span>
+</span>
+</a>
+<div class="fusion-submenu-wrapper level2 " style="width:180px;">
+<ul class="level2" style="width:180px;">
+<li class="item114" >
+                        	<a class="orphan item bullet" href="/all-news/catch-up"  >
+<span>
+CatchUp</span>
+</a>
+</li>
+</ul>
+<div class="drop-bot"></div></div>
+</li>
+        <li class="item113 root" >
+                        	<a class="orphan item bullet" href="/pluginstore"  >
+<span>
+PluginStore</span>
+</a>
+</li>
+    </ul>
+</div>
+<div class="clear"></div>
+</div>
+</div>		<div class="clear"></div>
+	</div> 
+<div class="clear"></div></div></div><div class="clear"></div></div></div></div></div><div id="rt-transition" class="rt-hidden"><div id="rt-main-container" class="main-body-light">
+<div id="rt-body-surround">
+<div class="rt-container"><div id="rt-utility"><div class="rt-container">
+
+<div class="clear"></div></div></div>
+					
+<div id="rt-maintop"><div class="rt-container">
+
+<div class="clear"></div></div></div>
+
+<div id="rt-breadcrumbs"><div class="rt-container"><div class="rt-grid-12"><div class="block-shadow"><div class="rt-block"><div class="rt-breadcrumb-surround">
+<span class="breadcrumbs pathway"><a href="./index.php" id="breadcrumbs-home">Board index</a>
+<img src="http://jroot.sketchucation.com/forums/styles/halcyon/theme/images/arrow.png" alt="" /><a href="./viewforum.php?f=262">SketchUcation Community Forums</a>
+<img src="http://jroot.sketchucation.com/forums/styles/halcyon/theme/images/arrow.png" alt="" /><a href="./viewforum.php?f=332">Resources</a>
+<img src="http://jroot.sketchucation.com/forums/styles/halcyon/theme/images/arrow.png" alt="" /><a href="./viewforum.php?f=323">Plugins</a></span>
+</div></div></div></div></div><div class="clear"></div></div>
+
+<div id="rt-main" class=""><div class="rt-container">
+<table style="width: 100%;" border="0" cellpadding="0" cellspacing="0">
+<tr><td>
+<div class="rt-grid-12  rt-alpha"><div>
+<h6 style="width:766px;height:88px;margin-top:10px;"><div class="bsa">
+<div id="bsap_1239051" class="bsarocks bsap_b35c76fd1b1509301d8767d019b8f183"></div></div><br/>&nbsp;
+</h6>
+</div><div id="rt-main-column"><div id="rt-content-top"><div class="rt-grid-6 rt-alpha">
+
+</div>
+										
+<div class="clear"></div></div><div class="rt-block component-block"><div id="rt-mainbody"><div class="component-content rt-joomla"><div class="rt-joomla "><div class="rt-article"><div id="wrap"><a id="top" name="top" accesskey="t"></a><div id="page-header">
+
+<div class="navbar"><div class="inner">
+
+<ul class="linklist leftside">
+<li class="icon-ucp">
+
+<a href="./ucp.php" title="Settings" accesskey="e"><i class="icon-cog"></i> Settings</a> <a href="./ucp.php?i=pm&amp;folder=inbox"><i class="icon-envelope"></i> <strong>0</strong> messages</a>
+ <a href="./search.php?search_id=egosearch">&nbsp;&nbsp;<i class="icon-comment"></i> Your posts</a>
+
+ <a href="./search.php?search_id=unreadposts">&nbsp;&nbsp;<i class="icon-eye-close"></i> Unread posts</a> <a href="./search.php?search_id=newposts">&nbsp;&nbsp;<i class="icon-star"></i> New posts</a> <a href="./search.php?search_id=active_topics">&nbsp;&nbsp;<i class="icon-level-up"></i> Active topics</a>
+
+
+</div>
+</div>
+</div>
+<a name="start_here"></a>
+<div id="page-body">
+<h2><a href="./viewtopic.php?f=323&amp;t=11224">[Plugin] Align tool 3D (bug fix)</a> </h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+
+<div class="topic-actions">
+
+	<div class="rdn_buttons">
+	
+		<div class="readon"><a href="./posting.php?mode=reply&amp;f=323&amp;t=11224"  class="button button4">Post a reply</a></div>
+	
+	</div>
+
+	
+		<div class="search-box">
+			<form method="get" id="topic-search" action="./search.php">
+			<fieldset>
+				<input class="inputbox search tiny"  type="text" name="keywords" id="search_keywords" size="20" value="Search this topic…" onclick="if(this.value=='Search this topic…')this.value='';" onblur="if(this.value=='')this.value='Search this topic…';" />
+				<div class="readon">
+				<input class="button" type="submit" value="Search" />
+				</div>
+				<input type="hidden" name="t" value="11224" />
+<input type="hidden" name="sf" value="msgonly" />
+
+			</fieldset>
+			</form>
+		</div>
+	
+		<div class="pagination">
+			51 posts
+			 &bull; <a href="#" onclick="jumpto(); return false;" title="Click to jump to page…">Page <strong>1</strong> of <strong>2</strong></a> &bull; <span><strong>1</strong><span class="page-sep">, </span><a href="./viewtopic.php?f=323&amp;t=11224&amp;start=30">2</a></span>
+		</div>
+	
+
+</div>
+<div class="clear"></div>
+
+
+<div class="post-bg">
+	<div class="rt-block">
+	
+	<div id="p76774" class="post bg2">
+		
+
+		<div class="postbody">
+			
+				<ul class="profile-icons">
+					<li class="report-icon"><a href="./report.php?f=323&amp;p=76774" title="Report this post"><span>Report this post</span></a></li><li class="quote-icon"><a href="./posting.php?mode=quote&amp;f=323&amp;p=76774" title="Reply with quote"><span>Reply with quote</span></a></li>
+				</ul>
+			
+
+			<h3 class="first"><a href="#p76774">[Plugin] Align tool 3D (bug fix)</a></h3>
+			<p class="author"><a href="./viewtopic.php?p=76774#p76774"><img src="./styles/halcyon/imageset/icon_post_target.svg" width="11" height="11" alt="Post" title="Post" /></a>by <strong>Didier Bur</strong> &raquo; Sat Jul 12, 2008 6:47 pm </p>
+
+			
+
+			<div class="content">Hi,<br />Here is an updated version of my align tool with a bug fix (components were deformed when non orthogonal axis were clicked). User guide also added.<br />Regards,</div>
+
+			<div class="scf-vote"><a href="#" onclick="rateUpDown(76774,'306282',1);return false;"><i class="icon-thumbs-up icon-large scf-vote-green"></i></a> <span id="forum-post-rate-76774" class="scf-vote-counter"> 1 </span> <a href="#" onclick="rateUpDown(76774,'306282',2);return false;"><i class="icon-thumbs-down icon-large scf-vote-red"></i></a></div>
+
+				<dl class="attachbox">
+					<dt>Attachments</dt>
+					
+						<dd>
+		<dl class="file">
+			<dt><img src="./images/upload_icons/zip.png" alt="" /> <a class="postlink" href="./download/file.php?id=11842">align_tool.zip</a></dt>
+			<dd><em>English version - Unzip in Plugins folder</em></dd>
+			<dd>(185.43 KiB) Downloaded 11358 times</dd>
+		</dl>
+		</dd>
+					
+						<dd>
+		<dl class="file">
+			<dt><img src="./images/upload_icons/zip.png" alt="" /> <a class="postlink" href="./download/file.php?id=11843">fr_align_tool.zip</a></dt>
+			<dd><em>Version française - Deziper dans le dossier Plugins</em></dd>
+			<dd>(185.52 KiB) Downloaded 1288 times</dd>
+		</dl>
+		</dd>
+					
+				</dl>
+			<div id="sig76774" class="signature">Didier Bur (Bytes Farmer)<br />Ecole Nationale Supérieure d'Architecture de Nancy (F)<br /><a href="http://rld.crai.archi.fr/rubylibrarydepot/" class="postlink">http://rld.crai.archi.fr/rubylibrarydepot/</a></div>
+
+		</div>
+
+		
+			<dl class="postprofile" id="profile76774">
+			<dt>
+
+				<span class="x3dom-avatar" id="287"><img src="./download/file.php?avatar=287_1363727281.gif" width="90" height="90" alt="User avatar" /></span><br />
+				<strong>Didier Bur</strong>&nbsp;<span onmouseover="revealProfile( 76774 ); return false;" onmouseout="hideProfile( 76774 ); return false;"><i class="icon-info-sign"></i></span>
+
+		
+			</dt>
+
+			
+
+		<dd>&nbsp;</dd>
+
+<div id="grh-76774" style="display:none;">
+		<dd><strong>Posts:</strong> 1264</dd><dd><strong>Joined:</strong> Wed Nov 14, 2007 10:07 pm</dd><dd><strong>Location:</strong> Nancy, France</dd>
+			<dd><strong>Name:</strong> Didier Bur</dd>
+		
+			<dd><strong>Operating system:</strong> Windows</dd>
+		
+			<dd><strong>SketchUp version:</strong> 2013</dd>
+		
+			<dd><strong>License type:</strong> Pro</dd>
+		
+			<dd><strong>SketchUp use:</strong> architecture</dd>
+		
+			<dd><strong>Level of SketchUp:</strong> Advanced</dd>
+		
+</div>
+		
+			<dd>
+				<ul class="profile-icons">
+					<li class="web-icon"><a href="http://rhin.crai.archi.fr/RubyLibraryDepot/" title="WWW: http://rhin.crai.archi.fr/RubyLibraryDepot/"><span>Website</span></a></li>
+				</ul>
+			</dd>
+		
+
+		</dl>
+	
+
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		
+	</div>
+	
+</div>
+	</div>
+	<hr class="divider" />
+
+<div class="post-bg">
+	<div class="rt-block">
+	
+	<div id="p76778" class="post bg1">
+		
+
+		<div class="postbody">
+			
+				<ul class="profile-icons">
+					<li class="report-icon"><a href="./report.php?f=323&amp;p=76778" title="Report this post"><span>Report this post</span></a></li><li class="quote-icon"><a href="./posting.php?mode=quote&amp;f=323&amp;p=76778" title="Reply with quote"><span>Reply with quote</span></a></li>
+				</ul>
+			
+
+			<h3 ><a href="#p76778">Re: [Plugin] Align tool 3D (bug fix)</a></h3>
+			<p class="author"><a href="./viewtopic.php?p=76778#p76778"><img src="./styles/halcyon/imageset/icon_post_target.svg" width="11" height="11" alt="Post" title="Post" /></a>by <strong>bianhai</strong> &raquo; Sat Jul 12, 2008 6:53 pm </p>
+
+			
+
+			<div class="content">Thank you very mach! <img src="./images/smilies/thumbu.gif" alt=":thumb:" title="Thumbs Up" /></div>
+
+			<div class="scf-vote"><a href="#" onclick="rateUpDown(76778,'306282',1);return false;"><i class="icon-thumbs-up icon-large scf-vote-green"></i></a> <span id="forum-post-rate-76778" class="scf-vote-counter"> 0 </span> <a href="#" onclick="rateUpDown(76778,'306282',2);return false;"><i class="icon-thumbs-down icon-large scf-vote-red"></i></a></div>
+
+
+		</div>
+
+		
+			<dl class="postprofile" id="profile76778">
+			<dt>
+
+				<span class="x3dom-avatar" id="877"></span><br />
+				<strong>bianhai</strong>&nbsp;<span onmouseover="revealProfile( 76778 ); return false;" onmouseout="hideProfile( 76778 ); return false;"><i class="icon-info-sign"></i></span>
+
+		
+			</dt>
+
+			<dd>Banned</dd>
+
+		<dd>&nbsp;</dd>
+
+<div id="grh-76778" style="display:none;">
+		<dd><strong>Posts:</strong> 191</dd><dd><strong>Joined:</strong> Fri Nov 30, 2007 3:05 pm</dd><dd><strong>Location:</strong> Shanghai China</dd>
+			<dd><strong>Name:</strong> Brian</dd>
+		
+</div>
+		
+
+		</dl>
+	
+
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		
+	</div>
+	
+</div>
+	</div>
+	<hr class="divider" />
+
+<div class="post-bg">
+	<div class="rt-block">
+	
+	<div id="p76804" class="post bg2">
+		
+
+		<div class="postbody">
+			
+				<ul class="profile-icons">
+					<li class="report-icon"><a href="./report.php?f=323&amp;p=76804" title="Report this post"><span>Report this post</span></a></li><li class="quote-icon"><a href="./posting.php?mode=quote&amp;f=323&amp;p=76804" title="Reply with quote"><span>Reply with quote</span></a></li>
+				</ul>
+			
+
+			<h3 ><a href="#p76804">Re: [Plugin] Align tool 3D (bug fix)</a></h3>
+			<p class="author"><a href="./viewtopic.php?p=76804#p76804"><img src="./styles/halcyon/imageset/icon_post_target.svg" width="11" height="11" alt="Post" title="Post" /></a>by <strong>watkins</strong> &raquo; Sat Jul 12, 2008 8:25 pm </p>
+
+			
+
+			<div class="content">Dear Didier,<br /><br />I cannot seem to get the &quot;Align Group/Component&quot; option to work properly from the right-click context menu. The &quot;Align&quot; option works fine. When I try the &quot;Align Group/Component&quot; option the script first toggles on the group/component axes and then sets the starting co-ordinate system co-incident with the axes of the selected group/component(no choice given). It then asks one to define the end co-ordinate system. I was expecting to define the start co-ordinate system, as per your user guide. Also, in this mode I have to toggle off the group/component axes by going to Model Info and then deselecting the component axes option.<br /><br />Is this how you intended the script to work?<br /><br />Regards,<br />Bob</div>
+
+			<div class="scf-vote"><a href="#" onclick="rateUpDown(76804,'306282',1);return false;"><i class="icon-thumbs-up icon-large scf-vote-green"></i></a> <span id="forum-post-rate-76804" class="scf-vote-counter"> 0 </span> <a href="#" onclick="rateUpDown(76804,'306282',2);return false;"><i class="icon-thumbs-down icon-large scf-vote-red"></i></a></div>
+
+
+		</div>
+
+		
+			<dl class="postprofile" id="profile76804">
+			<dt>
+
+				<span class="x3dom-avatar" id="267"></span><br />
+				<strong>watkins</strong>&nbsp;<span onmouseover="revealProfile( 76804 ); return false;" onmouseout="hideProfile( 76804 ); return false;"><i class="icon-info-sign"></i></span>
+
+		
+			</dt>
+
+			
+
+		<dd>&nbsp;</dd>
+
+<div id="grh-76804" style="display:none;">
+		<dd><strong>Posts:</strong> 1401</dd><dd><strong>Joined:</strong> Wed Nov 14, 2007 5:47 pm</dd>
+</div>
+		
+
+		</dl>
+	
+
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		
+	</div>
+	
+</div>
+	</div>
+	<hr class="divider" />
+
+<div class="post-bg">
+	<div class="rt-block">
+	
+	<div id="p78023" class="post bg1">
+		
+
+		<div class="postbody">
+			
+				<ul class="profile-icons">
+					<li class="report-icon"><a href="./report.php?f=323&amp;p=78023" title="Report this post"><span>Report this post</span></a></li><li class="quote-icon"><a href="./posting.php?mode=quote&amp;f=323&amp;p=78023" title="Reply with quote"><span>Reply with quote</span></a></li>
+				</ul>
+			
+
+			<h3 ><a href="#p78023">Re: [Plugin] Align tool 3D (bug fix)</a></h3>
+			<p class="author"><a href="./viewtopic.php?p=78023#p78023"><img src="./styles/halcyon/imageset/icon_post_target.svg" width="11" height="11" alt="Post" title="Post" /></a>by <strong>watkins</strong> &raquo; Thu Jul 17, 2008 10:43 am </p>
+
+			
+
+			<div class="content">Dear Didier,<br /><br />Have you had time to look at this?<br /><br />Regards,<br />Bob</div>
+
+			<div class="scf-vote"><a href="#" onclick="rateUpDown(78023,'306282',1);return false;"><i class="icon-thumbs-up icon-large scf-vote-green"></i></a> <span id="forum-post-rate-78023" class="scf-vote-counter"> 0 </span> <a href="#" onclick="rateUpDown(78023,'306282',2);return false;"><i class="icon-thumbs-down icon-large scf-vote-red"></i></a></div>
+
+
+		</div>
+
+		
+			<dl class="postprofile" id="profile78023">
+			<dt>
+
+				<span class="x3dom-avatar" id="267"></span><br />
+				<strong>watkins</strong>&nbsp;<span onmouseover="revealProfile( 78023 ); return false;" onmouseout="hideProfile( 78023 ); return false;"><i class="icon-info-sign"></i></span>
+
+		
+			</dt>
+
+			
+
+		<dd>&nbsp;</dd>
+
+<div id="grh-78023" style="display:none;">
+		<dd><strong>Posts:</strong> 1401</dd><dd><strong>Joined:</strong> Wed Nov 14, 2007 5:47 pm</dd>
+</div>
+		
+
+		</dl>
+	
+
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		
+	</div>
+	
+</div>
+	</div>
+	<hr class="divider" />
+
+<div class="post-bg">
+	<div class="rt-block">
+	
+	<div id="p78068" class="post bg2">
+		
+
+		<div class="postbody">
+			
+				<ul class="profile-icons">
+					<li class="report-icon"><a href="./report.php?f=323&amp;p=78068" title="Report this post"><span>Report this post</span></a></li><li class="quote-icon"><a href="./posting.php?mode=quote&amp;f=323&amp;p=78068" title="Reply with quote"><span>Reply with quote</span></a></li>
+				</ul>
+			
+
+			<h3 ><a href="#p78068">Re: [Plugin] Align tool 3D (bug fix)</a></h3>
+			<p class="author"><a href="./viewtopic.php?p=78068#p78068"><img src="./styles/halcyon/imageset/icon_post_target.svg" width="11" height="11" alt="Post" title="Post" /></a>by <strong><span style="color: #7f8c8d;" class="username-coloured">Edson</span></strong> &raquo; Thu Jul 17, 2008 12:34 pm </p>
+
+			
+
+			<div class="content"><blockquote><div><cite>watkins wrote:</cite>Dear Didier,<br /><br />I cannot seem to get the &quot;Align Group/Component&quot; option to work properly from the right-click context menu. The &quot;Align&quot; option works fine. When I try the &quot;Align Group/Component&quot; option the script first toggles on the group/component axes and then sets the starting co-ordinate system co-incident with the axes of the selected group/component(no choice given). It then asks one to define the end co-ordinate system. I was expecting to define the start co-ordinate system, as per your user guide. Also, in this mode I have to toggle off the group/component axes by going to Model Info and then deselecting the component axes option.<br /><br />Is this how you intended the script to work?<br /><br />Regards,<br />Bob</div></blockquote><br />bob,<br /><br />i also wondered about that but later realized <span style="font-style: italic">i</span> was not 'working properly'. in many cases all you need is to set the ending system; in this cases go for <span style="font-style: italic">align group/component</span> (as it takes the axis alignment of the group/component as the origin system); it saves you half of the work involved in the process. in cases when you do need to set the origin, then choose <span style="font-style: italic">align</span> and set both systems. does it make sense to you?</div>
+
+			<div class="scf-vote"><a href="#" onclick="rateUpDown(78068,'306282',1);return false;"><i class="icon-thumbs-up icon-large scf-vote-green"></i></a> <span id="forum-post-rate-78068" class="scf-vote-counter"> 0 </span> <a href="#" onclick="rateUpDown(78068,'306282',2);return false;"><i class="icon-thumbs-down icon-large scf-vote-red"></i></a></div>
+<div id="sig78068" class="signature"><span style="font-weight: bold">edson mahfuz, architect</span><br /><span style="color: #80BFFF"><a href="http://www.mahfuz.arq.br" class="postlink">http://www.mahfuz.arq.br</a></span><br /><br /><span style="color: #804040">Anyone can get you more for more, but it takes genius to get you more for less</span>.</div>
+
+		</div>
+
+		
+			<dl class="postprofile" id="profile78068">
+			<dt>
+
+				<span class="x3dom-avatar" id="67"><img src="./download/file.php?avatar=67_1355997566.jpg" width="140" height="140" alt="User avatar" /></span><br />
+				<strong><span style="color: #7f8c8d;" class="username-coloured">Edson</span></strong>&nbsp;<span onmouseover="revealProfile( 78068 ); return false;" onmouseout="hideProfile( 78068 ); return false;"><i class="icon-info-sign"></i></span>
+
+		
+			</dt>
+
+			<dd>Global Moderator</dd>
+
+		<dd>&nbsp;</dd>
+
+<div id="grh-78068" style="display:none;">
+		<dd><strong>Posts:</strong> 2730</dd><dd><strong>Joined:</strong> Mon Oct 22, 2007 1:46 pm</dd><dd><strong>Location:</strong> Porto Alegre, Brasil</dd>
+			<dd><strong>Name:</strong> Edson Mahfuz</dd>
+		
+			<dd><strong>Operating system:</strong> Mac</dd>
+		
+			<dd><strong>SketchUp version:</strong> 2013</dd>
+		
+			<dd><strong>License type:</strong> Pro</dd>
+		
+			<dd><strong>SketchUp use:</strong> architecture</dd>
+		
+			<dd><strong>Level of SketchUp:</strong> Advanced</dd>
+		
+</div>
+		
+			<dd>
+				<ul class="profile-icons">
+					<li class="web-icon"><a href="http://www.mahfuz.arq.br" title="WWW: http://www.mahfuz.arq.br"><span>Website</span></a></li>
+				</ul>
+			</dd>
+		
+
+		</dl>
+	
+
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		
+	</div>
+	
+</div>
+	</div>
+	<hr class="divider" />
+
+<div class="post-bg">
+	<div class="rt-block">
+	
+	<div id="p78115" class="post bg1">
+		
+
+		<div class="postbody">
+			
+				<ul class="profile-icons">
+					<li class="report-icon"><a href="./report.php?f=323&amp;p=78115" title="Report this post"><span>Report this post</span></a></li><li class="quote-icon"><a href="./posting.php?mode=quote&amp;f=323&amp;p=78115" title="Reply with quote"><span>Reply with quote</span></a></li>
+				</ul>
+			
+
+			<h3 ><a href="#p78115">Re: [Plugin] Align tool 3D (bug fix)</a></h3>
+			<p class="author"><a href="./viewtopic.php?p=78115#p78115"><img src="./styles/halcyon/imageset/icon_post_target.svg" width="11" height="11" alt="Post" title="Post" /></a>by <strong>watkins</strong> &raquo; Thu Jul 17, 2008 3:11 pm </p>
+
+			
+
+			<div class="content">Dear Edson,<br /><br />Yes, that does make sense. It also makes me think more carefully about the axes when creating a component.<br /><br />Thanks for your interest.<br /><br />Kind regards,<br />Bob</div>
+
+			<div class="scf-vote"><a href="#" onclick="rateUpDown(78115,'306282',1);return false;"><i class="icon-thumbs-up icon-large scf-vote-green"></i></a> <span id="forum-post-rate-78115" class="scf-vote-counter"> 0 </span> <a href="#" onclick="rateUpDown(78115,'306282',2);return false;"><i class="icon-thumbs-down icon-large scf-vote-red"></i></a></div>
+
+
+		</div>
+
+		
+			<dl class="postprofile" id="profile78115">
+			<dt>
+
+				<span class="x3dom-avatar" id="267"></span><br />
+				<strong>watkins</strong>&nbsp;<span onmouseover="revealProfile( 78115 ); return false;" onmouseout="hideProfile( 78115 ); return false;"><i class="icon-info-sign"></i></span>
+
+		
+			</dt>
+
+			
+
+		<dd>&nbsp;</dd>
+
+<div id="grh-78115" style="display:none;">
+		<dd><strong>Posts:</strong> 1401</dd><dd><strong>Joined:</strong> Wed Nov 14, 2007 5:47 pm</dd>
+</div>
+		
+
+		</dl>
+	
+
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		
+	</div>
+	
+</div>
+	</div>
+	<hr class="divider" />
+
+<div class="post-bg">
+	<div class="rt-block">
+	
+	<div id="p78156" class="post bg2">
+		
+
+		<div class="postbody">
+			
+				<ul class="profile-icons">
+					<li class="report-icon"><a href="./report.php?f=323&amp;p=78156" title="Report this post"><span>Report this post</span></a></li><li class="quote-icon"><a href="./posting.php?mode=quote&amp;f=323&amp;p=78156" title="Reply with quote"><span>Reply with quote</span></a></li>
+				</ul>
+			
+
+			<h3 ><a href="#p78156">Re: [Plugin] Align tool 3D (bug fix)</a></h3>
+			<p class="author"><a href="./viewtopic.php?p=78156#p78156"><img src="./styles/halcyon/imageset/icon_post_target.svg" width="11" height="11" alt="Post" title="Post" /></a>by <strong>Didier Bur</strong> &raquo; Thu Jul 17, 2008 6:02 pm </p>
+
+			
+
+			<div class="content">Edson,<br />You've understand ALL (and explained it clearly too).</div>
+
+			<div class="scf-vote"><a href="#" onclick="rateUpDown(78156,'306282',1);return false;"><i class="icon-thumbs-up icon-large scf-vote-green"></i></a> <span id="forum-post-rate-78156" class="scf-vote-counter"> 0 </span> <a href="#" onclick="rateUpDown(78156,'306282',2);return false;"><i class="icon-thumbs-down icon-large scf-vote-red"></i></a></div>
+<div id="sig78156" class="signature">Didier Bur (Bytes Farmer)<br />Ecole Nationale Supérieure d'Architecture de Nancy (F)<br /><a href="http://rld.crai.archi.fr/rubylibrarydepot/" class="postlink">http://rld.crai.archi.fr/rubylibrarydepot/</a></div>
+
+		</div>
+
+		
+			<dl class="postprofile" id="profile78156">
+			<dt>
+
+				<span class="x3dom-avatar" id="287"><img src="./download/file.php?avatar=287_1363727281.gif" width="90" height="90" alt="User avatar" /></span><br />
+				<strong>Didier Bur</strong>&nbsp;<span onmouseover="revealProfile( 78156 ); return false;" onmouseout="hideProfile( 78156 ); return false;"><i class="icon-info-sign"></i></span>
+
+		
+			</dt>
+
+			
+
+		<dd>&nbsp;</dd>
+
+<div id="grh-78156" style="display:none;">
+		<dd><strong>Posts:</strong> 1264</dd><dd><strong>Joined:</strong> Wed Nov 14, 2007 10:07 pm</dd><dd><strong>Location:</strong> Nancy, France</dd>
+			<dd><strong>Name:</strong> Didier Bur</dd>
+		
+			<dd><strong>Operating system:</strong> Windows</dd>
+		
+			<dd><strong>SketchUp version:</strong> 2013</dd>
+		
+			<dd><strong>License type:</strong> Pro</dd>
+		
+			<dd><strong>SketchUp use:</strong> architecture</dd>
+		
+			<dd><strong>Level of SketchUp:</strong> Advanced</dd>
+		
+</div>
+		
+			<dd>
+				<ul class="profile-icons">
+					<li class="web-icon"><a href="http://rhin.crai.archi.fr/RubyLibraryDepot/" title="WWW: http://rhin.crai.archi.fr/RubyLibraryDepot/"><span>Website</span></a></li>
+				</ul>
+			</dd>
+		
+
+		</dl>
+	
+
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		
+	</div>
+	
+</div>
+	</div>
+	<hr class="divider" />
+
+<div class="post-bg">
+	<div class="rt-block">
+	
+	<div id="p245841" class="post bg1">
+		
+
+		<div class="postbody">
+			
+				<ul class="profile-icons">
+					<li class="report-icon"><a href="./report.php?f=323&amp;p=245841" title="Report this post"><span>Report this post</span></a></li><li class="quote-icon"><a href="./posting.php?mode=quote&amp;f=323&amp;p=245841" title="Reply with quote"><span>Reply with quote</span></a></li>
+				</ul>
+			
+
+			<h3 ><a href="#p245841">Re: [Plugin] Align tool 3D (bug fix)</a></h3>
+			<p class="author"><a href="./viewtopic.php?p=245841#p245841"><img src="./styles/halcyon/imageset/icon_post_target.svg" width="11" height="11" alt="Post" title="Post" /></a>by <strong>Magnus123</strong> &raquo; Sat May 15, 2010 9:25 am </p>
+
+			
+
+			<div class="content">Ohh Thanks Didier this will come veeeery handy for me! <img src="./images/smilies/dd2.gif" alt=":berserk:" title="Berserk" /></div>
+
+			<div class="scf-vote"><a href="#" onclick="rateUpDown(245841,'306282',1);return false;"><i class="icon-thumbs-up icon-large scf-vote-green"></i></a> <span id="forum-post-rate-245841" class="scf-vote-counter"> 0 </span> <a href="#" onclick="rateUpDown(245841,'306282',2);return false;"><i class="icon-thumbs-down icon-large scf-vote-red"></i></a></div>
+
+
+		</div>
+
+		
+			<dl class="postprofile" id="profile245841">
+			<dt>
+
+				<span class="x3dom-avatar" id="33636"></span><br />
+				<strong>Magnus123</strong>&nbsp;<span onmouseover="revealProfile( 245841 ); return false;" onmouseout="hideProfile( 245841 ); return false;"><i class="icon-info-sign"></i></span>
+
+		
+			</dt>
+
+			
+
+		<dd>&nbsp;</dd>
+
+<div id="grh-245841" style="display:none;">
+		<dd><strong>Posts:</strong> 12</dd><dd><strong>Joined:</strong> Mon Nov 30, 2009 10:00 pm</dd>
+			<dd><strong>Name:</strong> Magnus123</dd>
+		
+</div>
+		
+
+		</dl>
+	
+
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		
+	</div>
+	
+</div>
+	</div>
+	<hr class="divider" />
+
+<div class="post-bg">
+	<div class="rt-block">
+	
+	<div id="p248980" class="post bg2">
+		
+
+		<div class="postbody">
+			
+				<ul class="profile-icons">
+					<li class="report-icon"><a href="./report.php?f=323&amp;p=248980" title="Report this post"><span>Report this post</span></a></li><li class="quote-icon"><a href="./posting.php?mode=quote&amp;f=323&amp;p=248980" title="Reply with quote"><span>Reply with quote</span></a></li>
+				</ul>
+			
+
+			<h3 ><a href="#p248980">Re: [Plugin] Align tool 3D (bug fix)</a></h3>
+			<p class="author"><a href="./viewtopic.php?p=248980#p248980"><img src="./styles/halcyon/imageset/icon_post_target.svg" width="11" height="11" alt="Post" title="Post" /></a>by <strong>SU Reviewer</strong> &raquo; Sun May 30, 2010 8:18 pm </p>
+
+			
+
+			<div class="content">Great plugin! I have been l;ooking for something like this  <img src="./images/smilies/dd2.gif" alt=":berserk:" title="Berserk" /> <br /><br />At first it was tough to use but I got used to it. I made a little instructional animation enjoy..<br /><dl class="thumbnail"><a href="http://sketchuppluginreviews.com/wp-content/uploads/2010/05/align_tool.gif" rel="rokbox(rokalbum)[ ]"><img src="http://sketchuppluginreviews.com/wp-content/uploads/2010/05/align_tool.gif" title="Click to enlarge" style="max-width: 640px; height: auto;" /></a></dl></div>
+
+			<div class="scf-vote"><a href="#" onclick="rateUpDown(248980,'306282',1);return false;"><i class="icon-thumbs-up icon-large scf-vote-green"></i></a> <span id="forum-post-rate-248980" class="scf-vote-counter"> 0 </span> <a href="#" onclick="rateUpDown(248980,'306282',2);return false;"><i class="icon-thumbs-down icon-large scf-vote-red"></i></a></div>
+<div id="sig248980" class="signature">Living Einstein's dream through SketchUp. <br />&quot;Imagination is a preview of life's coming attractions&quot; - Albert Einstein<br /><br />Joe Simhon ~ SketchUp Plugin Reviews</div>
+
+		</div>
+
+		
+			<dl class="postprofile" id="profile248980">
+			<dt>
+
+				<span class="x3dom-avatar" id="42643"></span><br />
+				<strong>SU Reviewer</strong>&nbsp;<span onmouseover="revealProfile( 248980 ); return false;" onmouseout="hideProfile( 248980 ); return false;"><i class="icon-info-sign"></i></span>
+
+		
+			</dt>
+
+			
+
+		<dd>&nbsp;</dd>
+
+<div id="grh-248980" style="display:none;">
+		<dd><strong>Posts:</strong> 9</dd><dd><strong>Joined:</strong> Wed Mar 10, 2010 5:17 am</dd>
+			<dd><strong>Name:</strong> SU Reviewer</dd>
+		
+</div>
+		
+			<dd>
+				<ul class="profile-icons">
+					<li class="web-icon"><a href="http://www.SketchUpPluginReviews.com" title="WWW: http://www.SketchUpPluginReviews.com"><span>Website</span></a></li>
+				</ul>
+			</dd>
+		
+
+		</dl>
+	
+
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		
+	</div>
+	
+</div>
+	</div>
+	<hr class="divider" />
+
+<div class="post-bg">
+	<div class="rt-block">
+	
+	<div id="p268325" class="post bg1">
+		
+
+		<div class="postbody">
+			
+				<ul class="profile-icons">
+					<li class="report-icon"><a href="./report.php?f=323&amp;p=268325" title="Report this post"><span>Report this post</span></a></li><li class="quote-icon"><a href="./posting.php?mode=quote&amp;f=323&amp;p=268325" title="Reply with quote"><span>Reply with quote</span></a></li>
+				</ul>
+			
+
+			<h3 ><a href="#p268325">Re: [Plugin] Align tool 3D (bug fix)</a></h3>
+			<p class="author"><a href="./viewtopic.php?p=268325#p268325"><img src="./styles/halcyon/imageset/icon_post_target.svg" width="11" height="11" alt="Post" title="Post" /></a>by <strong>Design Tech</strong> &raquo; Fri Sep 03, 2010 2:28 pm </p>
+
+			
+
+			<div class="content">Hi,<br /><br />I am trying to install the Align tool in sketchup pro 7 on a mac. I followed the simple instruction in the PDF file but still cant seem to get it to work.  <br /><br />What am i missing here, or what am i doing wrong?<br /><br />I put the file in my plugins folder and restarted sketchup, but dont see where the tool shows up to use? <br /><br />please help</div>
+
+			<div class="scf-vote"><a href="#" onclick="rateUpDown(268325,'306282',1);return false;"><i class="icon-thumbs-up icon-large scf-vote-green"></i></a> <span id="forum-post-rate-268325" class="scf-vote-counter"> 0 </span> <a href="#" onclick="rateUpDown(268325,'306282',2);return false;"><i class="icon-thumbs-down icon-large scf-vote-red"></i></a></div>
+
+
+		</div>
+
+		
+			<dl class="postprofile" id="profile268325">
+			<dt>
+
+				<span class="x3dom-avatar" id="59103"></span><br />
+				<strong>Design Tech</strong>&nbsp;<span onmouseover="revealProfile( 268325 ); return false;" onmouseout="hideProfile( 268325 ); return false;"><i class="icon-info-sign"></i></span>
+
+		
+			</dt>
+
+			
+
+		<dd>&nbsp;</dd>
+
+<div id="grh-268325" style="display:none;">
+		<dd><strong>Posts:</strong> 1</dd><dd><strong>Joined:</strong> Thu Sep 02, 2010 9:56 pm</dd>
+</div>
+		
+
+		</dl>
+	
+
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		
+	</div>
+	
+</div>
+	</div>
+	<hr class="divider" />
+
+<div class="post-bg">
+	<div class="rt-block">
+	
+	<div id="p268499" class="post bg2">
+		
+
+		<div class="postbody">
+			
+				<ul class="profile-icons">
+					<li class="report-icon"><a href="./report.php?f=323&amp;p=268499" title="Report this post"><span>Report this post</span></a></li><li class="quote-icon"><a href="./posting.php?mode=quote&amp;f=323&amp;p=268499" title="Reply with quote"><span>Reply with quote</span></a></li>
+				</ul>
+			
+
+			<h3 ><a href="#p268499">Re: [Plugin] Align tool 3D (bug fix)</a></h3>
+			<p class="author"><a href="./viewtopic.php?p=268499#p268499"><img src="./styles/halcyon/imageset/icon_post_target.svg" width="11" height="11" alt="Post" title="Post" /></a>by <strong>Didier Bur</strong> &raquo; Sat Sep 04, 2010 10:05 am </p>
+
+			
+
+			<div class="content">Hi,<br /><br />Doc says: &quot;...you'll find a menu item under the &quot;Tools&quot; menu&quot;,...&quot;if you select some entities and right-click, you'll find an &quot;Align&quot; option in the context menu, &quot;if you select a group or a component and right-click, you'll find an &quot;Align group/component&quot; option in the context menu&quot;.<br /><br />So if you don't have any of these opttions in your menus, there is something wrong.<br /><br />Please open the Ruby Console and type: $align_loaded (Enter)<br />Please report what it says then.<br /><br />Regards,</div>
+
+			<div class="scf-vote"><a href="#" onclick="rateUpDown(268499,'306282',1);return false;"><i class="icon-thumbs-up icon-large scf-vote-green"></i></a> <span id="forum-post-rate-268499" class="scf-vote-counter"> 0 </span> <a href="#" onclick="rateUpDown(268499,'306282',2);return false;"><i class="icon-thumbs-down icon-large scf-vote-red"></i></a></div>
+<div id="sig268499" class="signature">Didier Bur (Bytes Farmer)<br />Ecole Nationale Supérieure d'Architecture de Nancy (F)<br /><a href="http://rld.crai.archi.fr/rubylibrarydepot/" class="postlink">http://rld.crai.archi.fr/rubylibrarydepot/</a></div>
+
+		</div>
+
+		
+			<dl class="postprofile" id="profile268499">
+			<dt>
+
+				<span class="x3dom-avatar" id="287"><img src="./download/file.php?avatar=287_1363727281.gif" width="90" height="90" alt="User avatar" /></span><br />
+				<strong>Didier Bur</strong>&nbsp;<span onmouseover="revealProfile( 268499 ); return false;" onmouseout="hideProfile( 268499 ); return false;"><i class="icon-info-sign"></i></span>
+
+		
+			</dt>
+
+			
+
+		<dd>&nbsp;</dd>
+
+<div id="grh-268499" style="display:none;">
+		<dd><strong>Posts:</strong> 1264</dd><dd><strong>Joined:</strong> Wed Nov 14, 2007 10:07 pm</dd><dd><strong>Location:</strong> Nancy, France</dd>
+			<dd><strong>Name:</strong> Didier Bur</dd>
+		
+			<dd><strong>Operating system:</strong> Windows</dd>
+		
+			<dd><strong>SketchUp version:</strong> 2013</dd>
+		
+			<dd><strong>License type:</strong> Pro</dd>
+		
+			<dd><strong>SketchUp use:</strong> architecture</dd>
+		
+			<dd><strong>Level of SketchUp:</strong> Advanced</dd>
+		
+</div>
+		
+			<dd>
+				<ul class="profile-icons">
+					<li class="web-icon"><a href="http://rhin.crai.archi.fr/RubyLibraryDepot/" title="WWW: http://rhin.crai.archi.fr/RubyLibraryDepot/"><span>Website</span></a></li>
+				</ul>
+			</dd>
+		
+
+		</dl>
+	
+
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		
+	</div>
+	
+</div>
+	</div>
+	<hr class="divider" />
+
+<div class="post-bg">
+	<div class="rt-block">
+	
+	<div id="p286174" class="post bg1">
+		
+
+		<div class="postbody">
+			
+				<ul class="profile-icons">
+					<li class="report-icon"><a href="./report.php?f=323&amp;p=286174" title="Report this post"><span>Report this post</span></a></li><li class="quote-icon"><a href="./posting.php?mode=quote&amp;f=323&amp;p=286174" title="Reply with quote"><span>Reply with quote</span></a></li>
+				</ul>
+			
+
+			<h3 ><a href="#p286174">Re: [Plugin] Align tool 3D (bug fix)</a></h3>
+			<p class="author"><a href="./viewtopic.php?p=286174#p286174"><img src="./styles/halcyon/imageset/icon_post_target.svg" width="11" height="11" alt="Post" title="Post" /></a>by <strong>Panoplos</strong> &raquo; Wed Nov 10, 2010 4:14 am </p>
+
+			
+
+			<div class="content">Hello Didier,<br /><br />I am also trying to install this on the Mac Version of Sketchup Pro 7.  The plugins folder contains files with extensions of .plugin, not .rb.  I tried both using the .rb and .plugin extensions with no luck.<br /><br />When typing $align_loaded in the Ruby Console, the variable is nil.<br /><br />Perhaps there has been some change the to plugin format in version 7?<br /><br />I am looking forward to using this tool, so your support is much appreciated!</div>
+
+			<div class="scf-vote"><a href="#" onclick="rateUpDown(286174,'306282',1);return false;"><i class="icon-thumbs-up icon-large scf-vote-green"></i></a> <span id="forum-post-rate-286174" class="scf-vote-counter"> 0 </span> <a href="#" onclick="rateUpDown(286174,'306282',2);return false;"><i class="icon-thumbs-down icon-large scf-vote-red"></i></a></div>
+
+
+		</div>
+
+		
+			<dl class="postprofile" id="profile286174">
+			<dt>
+
+				<span class="x3dom-avatar" id="65454"></span><br />
+				<strong>Panoplos</strong>&nbsp;<span onmouseover="revealProfile( 286174 ); return false;" onmouseout="hideProfile( 286174 ); return false;"><i class="icon-info-sign"></i></span>
+
+		
+			</dt>
+
+			
+
+		<dd>&nbsp;</dd>
+
+<div id="grh-286174" style="display:none;">
+		<dd><strong>Posts:</strong> 1</dd><dd><strong>Joined:</strong> Wed Nov 10, 2010 3:51 am</dd>
+</div>
+		
+
+		</dl>
+	
+
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		
+	</div>
+	
+</div>
+	</div>
+	<hr class="divider" />
+
+<div class="post-bg">
+	<div class="rt-block">
+	
+	<div id="p286176" class="post bg2">
+		
+
+		<div class="postbody">
+			
+				<ul class="profile-icons">
+					<li class="report-icon"><a href="./report.php?f=323&amp;p=286176" title="Report this post"><span>Report this post</span></a></li><li class="quote-icon"><a href="./posting.php?mode=quote&amp;f=323&amp;p=286176" title="Reply with quote"><span>Reply with quote</span></a></li>
+				</ul>
+			
+
+			<h3 ><a href="#p286176">Re: [Plugin] Align tool 3D (bug fix)</a></h3>
+			<p class="author"><a href="./viewtopic.php?p=286176#p286176"><img src="./styles/halcyon/imageset/icon_post_target.svg" width="11" height="11" alt="Post" title="Post" /></a>by <strong><span style="color: #7f8c8d;" class="username-coloured">jeff hammond</span></strong> &raquo; Wed Nov 10, 2010 4:22 am </p>
+
+			
+
+			<div class="content"><blockquote><div><cite>Panoplos wrote:</cite>Hello Didier,<br /><br />I am also trying to install this on the Mac Version of Sketchup Pro 7.  The plugins folder contains files with extensions of .plugin, not .rb.  I tried both using the .rb and .plugin extensions with no luck.<br /><br />When typing $align_loaded in the Ruby Console, the variable is nil.<br /><br />Perhaps there has been some change the to plugin format in version 7?<br /><br />I am looking forward to using this tool, so your support is much appreciated!</div></blockquote><br />yikes panoplos, you're in the wrong spot.. <br /><br />if your 'plugins' folder is showing .plugin files then you're at <br /><br />applications folder &gt; <span style="color: #FF0000">sketchup.app</span> &gt; (show package contents) &gt; contents &gt; plugins..<br />that's the actual app and those 'plugins' are the file importer/exporters..<br /><br />ruby plugins go here:<br /><br />Macintosh HD&gt; Library&gt; Application Support&gt; Google SketchUp (#)&gt; SketchUp&gt; plugins<br /><br />try that out instead.</div>
+
+			<div class="scf-vote"><a href="#" onclick="rateUpDown(286176,'306282',1);return false;"><i class="icon-thumbs-up icon-large scf-vote-green"></i></a> <span id="forum-post-rate-286176" class="scf-vote-counter"> 0 </span> <a href="#" onclick="rateUpDown(286176,'306282',2);return false;"><i class="icon-thumbs-down icon-large scf-vote-red"></i></a></div>
+<div id="sig286176" class="signature">dotdotdot</div>
+
+		</div>
+
+		
+			<dl class="postprofile" id="profile286176">
+			<dt>
+
+				<span class="x3dom-avatar" id="2657"><img src="./download/file.php?avatar=2657_1358831565.jpg" width="140" height="140" alt="User avatar" /></span><br />
+				<strong><span style="color: #7f8c8d;" class="username-coloured">jeff hammond</span></strong>&nbsp;<span onmouseover="revealProfile( 286176 ); return false;" onmouseout="hideProfile( 286176 ); return false;"><i class="icon-info-sign"></i></span>
+
+		
+			</dt>
+
+			<dd>Global Moderator</dd>
+
+		<dd>&nbsp;</dd>
+
+<div id="grh-286176" style="display:none;">
+		<dd><strong>Posts:</strong> 4955</dd><dd><strong>Joined:</strong> Thu Jan 24, 2008 11:16 pm</dd><dd><strong>Location:</strong> newyorkcity</dd>
+			<dd><strong>Name:</strong> Jeff Hammond</dd>
+		
+			<dd><strong>Operating system:</strong> Mac</dd>
+		
+			<dd><strong>SketchUp version:</strong> 2014</dd>
+		
+			<dd><strong>License type:</strong> Pro</dd>
+		
+			<dd><strong>SketchUp use:</strong> architecture</dd>
+		
+			<dd><strong>Level of SketchUp:</strong> Advanced</dd>
+		
+</div>
+		
+
+		</dl>
+	
+
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		
+	</div>
+	
+</div>
+	</div>
+	<hr class="divider" />
+
+<div class="post-bg">
+	<div class="rt-block">
+	
+	<div id="p324475" class="post bg1">
+		
+
+		<div class="postbody">
+			
+				<ul class="profile-icons">
+					<li class="report-icon"><a href="./report.php?f=323&amp;p=324475" title="Report this post"><span>Report this post</span></a></li><li class="quote-icon"><a href="./posting.php?mode=quote&amp;f=323&amp;p=324475" title="Reply with quote"><span>Reply with quote</span></a></li>
+				</ul>
+			
+
+			<h3 ><a href="#p324475">Re: [Plugin] Align tool 3D (bug fix)</a></h3>
+			<p class="author"><a href="./viewtopic.php?p=324475#p324475"><img src="./styles/halcyon/imageset/icon_post_target.svg" width="11" height="11" alt="Post" title="Post" /></a>by <strong>irsa</strong> &raquo; Sun Apr 24, 2011 7:37 am </p>
+
+			
+
+			<div class="content">thank you so much, its so useful</div>
+
+			<div class="scf-vote"><a href="#" onclick="rateUpDown(324475,'306282',1);return false;"><i class="icon-thumbs-up icon-large scf-vote-green"></i></a> <span id="forum-post-rate-324475" class="scf-vote-counter"> 0 </span> <a href="#" onclick="rateUpDown(324475,'306282',2);return false;"><i class="icon-thumbs-down icon-large scf-vote-red"></i></a></div>
+
+
+		</div>
+
+		
+			<dl class="postprofile" id="profile324475">
+			<dt>
+
+				<span class="x3dom-avatar" id="83671"></span><br />
+				<strong>irsa</strong>&nbsp;<span onmouseover="revealProfile( 324475 ); return false;" onmouseout="hideProfile( 324475 ); return false;"><i class="icon-info-sign"></i></span>
+
+		
+			</dt>
+
+			
+
+		<dd>&nbsp;</dd>
+
+<div id="grh-324475" style="display:none;">
+		<dd><strong>Posts:</strong> 1</dd><dd><strong>Joined:</strong> Sun Apr 24, 2011 7:10 am</dd>
+			<dd><strong>Name:</strong> irsa</dd>
+		
+</div>
+		
+
+		</dl>
+	
+
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		
+	</div>
+	
+</div>
+	</div>
+	<hr class="divider" />
+
+<div class="post-bg">
+	<div class="rt-block">
+	
+	<div id="p325523" class="post bg2">
+		
+
+		<div class="postbody">
+			
+				<ul class="profile-icons">
+					<li class="report-icon"><a href="./report.php?f=323&amp;p=325523" title="Report this post"><span>Report this post</span></a></li><li class="quote-icon"><a href="./posting.php?mode=quote&amp;f=323&amp;p=325523" title="Reply with quote"><span>Reply with quote</span></a></li>
+				</ul>
+			
+
+			<h3 ><a href="#p325523">Re: [Plugin] Align tool 3D (bug fix)</a></h3>
+			<p class="author"><a href="./viewtopic.php?p=325523#p325523"><img src="./styles/halcyon/imageset/icon_post_target.svg" width="11" height="11" alt="Post" title="Post" /></a>by <strong>simon le bon</strong> &raquo; Thu Apr 28, 2011 10:55 pm </p>
+
+			
+
+			<div class="content">Hi!<br />until  <a href="http://forums.sketchucation.com/viewtopic.php?f=323&amp;t=11224#p248980" class="postlink">Joe Simhon</a> showed how &quot;Align Tool 3D&quot; was working I hadn't noticed its interest..<br /><br />Playtime:<dl class="thumbnail"><a href="http://i274.photobucket.com/albums/jj245/Spendauballet/SketchUp/170px-Rhombictriacontahedron.gif" rel="rokbox(rokalbum)[ ]"><img src="http://i274.photobucket.com/albums/jj245/Spendauballet/SketchUp/170px-Rhombictriacontahedron.gif" title="Click to enlarge" style="max-width: 640px; height: auto;" /></a></dl><br /><span style="font-style: italic">A rhombic triacontahedron consists of 30 golden rhombus perfectly identical. This Quasicrystal (Quasicrystals discovered in 1984) has been many fears for crystallographers because some had seen as a crystal with a symmetry of order 5, which is not like any self-respecting crystallographer knows!</span><br /><br /><!-- m --><a class="postlink" href="http://en.wikipedia.org/wiki/Quasicrystal">http://en.wikipedia.org/wiki/Quasicrystal</a><!-- m --><br /><br /><!-- m --><a class="postlink" href="http://en.wikipedia.org/wiki/Golden_rhombus">http://en.wikipedia.org/wiki/Golden_rhombus</a><!-- m --><br /><br /><!-- m --><a class="postlink" href="http://en.wikipedia.org/wiki/Rhombic_triacontahedron">http://en.wikipedia.org/wiki/Rhombic_triacontahedron</a><!-- m --><br /><br /><a href="http://i274.photobucket.com/albums/jj245/Spendauballet/SketchUp/GoldenRhombus.jpg" class="postlink"><dl class="thumbnail"><a href="http://i274.photobucket.com/albums/jj245/Spendauballet/SketchUp/GoldenRhombus_th.jpg" rel="rokbox(rokalbum)[ ]"><img src="http://i274.photobucket.com/albums/jj245/Spendauballet/SketchUp/GoldenRhombus_th.jpg" title="Click to enlarge" style="max-width: 640px; height: auto;" /></a></dl></a><br /><br /><a href="http://i274.photobucket.com/albums/jj245/Spendauballet/SketchUp/RhombicTriacontahedron_02.jpg" class="postlink"><dl class="thumbnail"><a href="http://i274.photobucket.com/albums/jj245/Spendauballet/SketchUp/RhombicTriacontahedron_02_th.jpg" rel="rokbox(rokalbum)[ ]"><img src="http://i274.photobucket.com/albums/jj245/Spendauballet/SketchUp/RhombicTriacontahedron_02_th.jpg" title="Click to enlarge" style="max-width: 640px; height: auto;" /></a></dl></a><br /><br /><object classid="clsid:D27CDB6E-AE6D-11CF-96B8-444553540000" codebase="http://active.macromedia.com/flash2/cabs/swflash.cab#version=5,0,0,0" width="640" height="480"><param name="movie" value="http://www.youtube.com/v/qjuIm6Bd33s" /><param name="play" value="false" /><param name="loop" value="false" /><param name="quality" value="high" /><param name="allowScriptAccess" value="never" /><param name="allowNetworking" value="internal" /><embed src="http://www.youtube.com/v/qjuIm6Bd33s" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" width="640" height="480" play="false" loop="false" quality="high" allowscriptaccess="never" allownetworking="internal"></embed></object><br /><br />++ simonlebon</div>
+
+			<div class="scf-vote"><a href="#" onclick="rateUpDown(325523,'306282',1);return false;"><i class="icon-thumbs-up icon-large scf-vote-green"></i></a> <span id="forum-post-rate-325523" class="scf-vote-counter"> 0 </span> <a href="#" onclick="rateUpDown(325523,'306282',2);return false;"><i class="icon-thumbs-down icon-large scf-vote-red"></i></a></div>
+
+
+		</div>
+
+		
+			<dl class="postprofile" id="profile325523">
+			<dt>
+
+				<span class="x3dom-avatar" id="2713"><img src="./download/file.php?avatar=2713_1304191467.jpg" width="140" height="81" alt="User avatar" /></span><br />
+				<strong>simon le bon</strong>&nbsp;<span onmouseover="revealProfile( 325523 ); return false;" onmouseout="hideProfile( 325523 ); return false;"><i class="icon-info-sign"></i></span>
+
+		
+			</dt>
+
+			
+
+		<dd>&nbsp;</dd>
+
+<div id="grh-325523" style="display:none;">
+		<dd><strong>Posts:</strong> 1077</dd><dd><strong>Joined:</strong> Sat Jan 26, 2008 10:22 am</dd><dd><strong>Location:</strong> Chouy/ Picardie/ France</dd>
+			<dd><strong>Name:</strong> Simon Bonnet</dd>
+		
+</div>
+		
+
+		</dl>
+	
+
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		
+	</div>
+	
+</div>
+	</div>
+	<hr class="divider" />
+
+<div class="post-bg">
+	<div class="rt-block">
+	
+	<div id="p325530" class="post bg1">
+		
+
+		<div class="postbody">
+			
+				<ul class="profile-icons">
+					<li class="report-icon"><a href="./report.php?f=323&amp;p=325530" title="Report this post"><span>Report this post</span></a></li><li class="quote-icon"><a href="./posting.php?mode=quote&amp;f=323&amp;p=325530" title="Reply with quote"><span>Reply with quote</span></a></li>
+				</ul>
+			
+
+			<h3 ><a href="#p325530">Re: [Plugin] Align tool 3D (bug fix)</a></h3>
+			<p class="author"><a href="./viewtopic.php?p=325530#p325530"><img src="./styles/halcyon/imageset/icon_post_target.svg" width="11" height="11" alt="Post" title="Post" /></a>by <strong><span style="color: #008040;" class="username-coloured">Pilou</span></strong> &raquo; Thu Apr 28, 2011 11:57 pm </p>
+
+			
+
+			<div class="content"><blockquote class="uncited"><div>hadn't noticed its interest</div></blockquote><br />Indispensable as soon as you have some objects who are not regulary oriented!  <img src="./images/smilies/icon_e_wink.gif" alt=";)" title="Wink" /></div>
+
+			<div class="scf-vote"><a href="#" onclick="rateUpDown(325530,'306282',1);return false;"><i class="icon-thumbs-up icon-large scf-vote-green"></i></a> <span id="forum-post-rate-325530" class="scf-vote-counter"> 0 </span> <a href="#" onclick="rateUpDown(325530,'306282',2);return false;"><i class="icon-thumbs-down icon-large scf-vote-red"></i></a></div>
+<div id="sig325530" class="signature">Frenchy Pilou<br />Is beautiful that please without concept!<br /><a href="https://market.renderosity.com/mod/gallery/browse.php?user_id=131347" class="postlink">Speedy Galerie</a></div>
+
+		</div>
+
+		
+			<dl class="postprofile" id="profile325530">
+			<dt>
+
+				<span class="x3dom-avatar" id="2621"><img src="./download/file.php?avatar=2621_1201125725.gif" width="90" height="81" alt="User avatar" /></span><br />
+				<strong><span style="color: #008040;" class="username-coloured">Pilou</span></strong>&nbsp;<span onmouseover="revealProfile( 325530 ); return false;" onmouseout="hideProfile( 325530 ); return false;"><i class="icon-info-sign"></i></span>
+
+		
+			</dt>
+
+			<dd>Top SketchUcator</dd>
+
+		<dd>&nbsp;</dd>
+
+<div id="grh-325530" style="display:none;">
+		<dd><strong>Posts:</strong> 12318</dd><dd><strong>Joined:</strong> Wed Jan 23, 2008 10:33 pm</dd>
+			<dd><strong>Operating system:</strong> Windows</dd>
+		
+			<dd><strong>SketchUp version:</strong> 6</dd>
+		
+			<dd><strong>License type:</strong> Free/Make</dd>
+		
+			<dd><strong>SketchUp use:</strong> hobby</dd>
+		
+			<dd><strong>Level of SketchUp:</strong> Advanced</dd>
+		
+</div>
+		
+			<dd>
+				<ul class="profile-icons">
+					<li class="web-icon"><a href="http://piloumaison.weebly.com" title="WWW: http://piloumaison.weebly.com"><span>Website</span></a></li>
+				</ul>
+			</dd>
+		
+
+		</dl>
+	
+
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		
+	</div>
+	
+</div>
+	</div>
+	<hr class="divider" />
+
+<div class="post-bg">
+	<div class="rt-block">
+	
+	<div id="p328267" class="post bg2">
+		
+
+		<div class="postbody">
+			
+				<ul class="profile-icons">
+					<li class="report-icon"><a href="./report.php?f=323&amp;p=328267" title="Report this post"><span>Report this post</span></a></li><li class="quote-icon"><a href="./posting.php?mode=quote&amp;f=323&amp;p=328267" title="Reply with quote"><span>Reply with quote</span></a></li>
+				</ul>
+			
+
+			<h3 ><a href="#p328267">Re: [Plugin] Align tool 3D (bug fix)</a></h3>
+			<p class="author"><a href="./viewtopic.php?p=328267#p328267"><img src="./styles/halcyon/imageset/icon_post_target.svg" width="11" height="11" alt="Post" title="Post" /></a>by <strong>alexdobras</strong> &raquo; Thu May 12, 2011 9:33 pm </p>
+
+			
+
+			<div class="content">thank you !</div>
+
+			<div class="scf-vote"><a href="#" onclick="rateUpDown(328267,'306282',1);return false;"><i class="icon-thumbs-up icon-large scf-vote-green"></i></a> <span id="forum-post-rate-328267" class="scf-vote-counter"> 0 </span> <a href="#" onclick="rateUpDown(328267,'306282',2);return false;"><i class="icon-thumbs-down icon-large scf-vote-red"></i></a></div>
+
+
+		</div>
+
+		
+			<dl class="postprofile" id="profile328267">
+			<dt>
+
+				<span class="x3dom-avatar" id="45823"></span><br />
+				<strong>alexdobras</strong>&nbsp;<span onmouseover="revealProfile( 328267 ); return false;" onmouseout="hideProfile( 328267 ); return false;"><i class="icon-info-sign"></i></span>
+
+		
+			</dt>
+
+			
+
+		<dd>&nbsp;</dd>
+
+<div id="grh-328267" style="display:none;">
+		<dd><strong>Posts:</strong> 45</dd><dd><strong>Joined:</strong> Mon Apr 12, 2010 12:14 pm</dd>
+</div>
+		
+
+		</dl>
+	
+
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		
+	</div>
+	
+</div>
+	</div>
+	<hr class="divider" />
+
+<div class="post-bg">
+	<div class="rt-block">
+	
+	<div id="p353849" class="post bg1">
+		
+
+		<div class="postbody">
+			
+				<ul class="profile-icons">
+					<li class="report-icon"><a href="./report.php?f=323&amp;p=353849" title="Report this post"><span>Report this post</span></a></li><li class="quote-icon"><a href="./posting.php?mode=quote&amp;f=323&amp;p=353849" title="Reply with quote"><span>Reply with quote</span></a></li>
+				</ul>
+			
+
+			<h3 ><a href="#p353849">Re: [Plugin] Align tool 3D (bug fix)</a></h3>
+			<p class="author"><a href="./viewtopic.php?p=353849#p353849"><img src="./styles/halcyon/imageset/icon_post_target.svg" width="11" height="11" alt="Post" title="Post" /></a>by <strong>jbrfrk</strong> &raquo; Sat Sep 10, 2011 8:51 am </p>
+
+			
+
+			<div class="content">really useful.... thanks<br /> <img src="./images/smilies/thumbu.gif" alt=":thumb:" title="Thumbs Up" /></div>
+
+			<div class="scf-vote"><a href="#" onclick="rateUpDown(353849,'306282',1);return false;"><i class="icon-thumbs-up icon-large scf-vote-green"></i></a> <span id="forum-post-rate-353849" class="scf-vote-counter"> 0 </span> <a href="#" onclick="rateUpDown(353849,'306282',2);return false;"><i class="icon-thumbs-down icon-large scf-vote-red"></i></a></div>
+<div id="sig353849" class="signature">J=K</div>
+
+		</div>
+
+		
+			<dl class="postprofile" id="profile353849">
+			<dt>
+
+				<span class="x3dom-avatar" id="33036"></span><br />
+				<strong>jbrfrk</strong>&nbsp;<span onmouseover="revealProfile( 353849 ); return false;" onmouseout="hideProfile( 353849 ); return false;"><i class="icon-info-sign"></i></span>
+
+		
+			</dt>
+
+			
+
+		<dd>&nbsp;</dd>
+
+<div id="grh-353849" style="display:none;">
+		<dd><strong>Posts:</strong> 2</dd><dd><strong>Joined:</strong> Tue Nov 24, 2009 11:49 am</dd>
+			<dd><strong>Name:</strong> JIBRAN KHAN</dd>
+		
+</div>
+		
+
+		</dl>
+	
+
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		
+	</div>
+	
+</div>
+	</div>
+	<hr class="divider" />
+
+<div class="post-bg">
+	<div class="rt-block">
+	
+	<div id="p359776" class="post bg2">
+		
+
+		<div class="postbody">
+			
+				<ul class="profile-icons">
+					<li class="report-icon"><a href="./report.php?f=323&amp;p=359776" title="Report this post"><span>Report this post</span></a></li><li class="quote-icon"><a href="./posting.php?mode=quote&amp;f=323&amp;p=359776" title="Reply with quote"><span>Reply with quote</span></a></li>
+				</ul>
+			
+
+			<h3 ><a href="#p359776">Re: [Plugin] Align tool 3D (bug fix)</a></h3>
+			<p class="author"><a href="./viewtopic.php?p=359776#p359776"><img src="./styles/halcyon/imageset/icon_post_target.svg" width="11" height="11" alt="Post" title="Post" /></a>by <strong>archman212</strong> &raquo; Wed Oct 12, 2011 3:52 am </p>
+
+			
+
+			<div class="content">fantastic..i have been looking for this one... <img src="./images/smilies/thumbu.gif" alt=":thumb:" title="Thumbs Up" /></div>
+
+			<div class="scf-vote"><a href="#" onclick="rateUpDown(359776,'306282',1);return false;"><i class="icon-thumbs-up icon-large scf-vote-green"></i></a> <span id="forum-post-rate-359776" class="scf-vote-counter"> 0 </span> <a href="#" onclick="rateUpDown(359776,'306282',2);return false;"><i class="icon-thumbs-down icon-large scf-vote-red"></i></a></div>
+
+
+		</div>
+
+		
+			<dl class="postprofile" id="profile359776">
+			<dt>
+
+				<span class="x3dom-avatar" id="102749"></span><br />
+				<strong>archman212</strong>&nbsp;<span onmouseover="revealProfile( 359776 ); return false;" onmouseout="hideProfile( 359776 ); return false;"><i class="icon-info-sign"></i></span>
+
+		
+			</dt>
+
+			
+
+		<dd>&nbsp;</dd>
+
+<div id="grh-359776" style="display:none;">
+		<dd><strong>Posts:</strong> 2</dd><dd><strong>Joined:</strong> Sat Oct 08, 2011 7:57 pm</dd>
+			<dd><strong>Name:</strong> ARCHman212</dd>
+		
+</div>
+		
+
+		</dl>
+	
+
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		
+	</div>
+	
+</div>
+	</div>
+	<hr class="divider" />
+
+<div class="post-bg">
+	<div class="rt-block">
+	
+	<div id="p368339" class="post bg1">
+		
+
+		<div class="postbody">
+			
+				<ul class="profile-icons">
+					<li class="report-icon"><a href="./report.php?f=323&amp;p=368339" title="Report this post"><span>Report this post</span></a></li><li class="quote-icon"><a href="./posting.php?mode=quote&amp;f=323&amp;p=368339" title="Reply with quote"><span>Reply with quote</span></a></li>
+				</ul>
+			
+
+			<h3 ><a href="#p368339">Re: [Plugin] Align tool 3D (bug fix)</a></h3>
+			<p class="author"><a href="./viewtopic.php?p=368339#p368339"><img src="./styles/halcyon/imageset/icon_post_target.svg" width="11" height="11" alt="Post" title="Post" /></a>by <strong>Omez</strong> &raquo; Mon Nov 28, 2011 1:51 pm </p>
+
+			
+
+			<div class="content">THANK YOU! <img src="./images/smilies/thumbu.gif" alt=":thumb:" title="Thumbs Up" />  <img src="./images/smilies/thumbu.gif" alt=":thumb:" title="Thumbs Up" />  <img src="./images/smilies/thumbu.gif" alt=":thumb:" title="Thumbs Up" /> <br />I even not trying it yet, but i believe its very useful... once again, Thanks!  <img src="./images/smilies/icon_e_smile.gif" alt=":)" title="Smile" /></div>
+
+			<div class="scf-vote"><a href="#" onclick="rateUpDown(368339,'306282',1);return false;"><i class="icon-thumbs-up icon-large scf-vote-green"></i></a> <span id="forum-post-rate-368339" class="scf-vote-counter"> 0 </span> <a href="#" onclick="rateUpDown(368339,'306282',2);return false;"><i class="icon-thumbs-down icon-large scf-vote-red"></i></a></div>
+
+
+		</div>
+
+		
+			<dl class="postprofile" id="profile368339">
+			<dt>
+
+				<span class="x3dom-avatar" id="56638"></span><br />
+				<strong>Omez</strong>&nbsp;<span onmouseover="revealProfile( 368339 ); return false;" onmouseout="hideProfile( 368339 ); return false;"><i class="icon-info-sign"></i></span>
+
+		
+			</dt>
+
+			
+
+		<dd>&nbsp;</dd>
+
+<div id="grh-368339" style="display:none;">
+		<dd><strong>Posts:</strong> 1</dd><dd><strong>Joined:</strong> Thu Jul 29, 2010 11:24 am</dd>
+			<dd><strong>Name:</strong> Janu Jagostu</dd>
+		
+</div>
+		
+
+		</dl>
+	
+
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		
+	</div>
+	
+</div>
+	</div>
+	<hr class="divider" />
+
+<div class="post-bg">
+	<div class="rt-block">
+	
+	<div id="p376376" class="post bg2">
+		
+
+		<div class="postbody">
+			
+				<ul class="profile-icons">
+					<li class="report-icon"><a href="./report.php?f=323&amp;p=376376" title="Report this post"><span>Report this post</span></a></li><li class="quote-icon"><a href="./posting.php?mode=quote&amp;f=323&amp;p=376376" title="Reply with quote"><span>Reply with quote</span></a></li>
+				</ul>
+			
+
+			<h3 ><a href="#p376376">Re: [Plugin] Align tool 3D (bug fix)</a></h3>
+			<p class="author"><a href="./viewtopic.php?p=376376#p376376"><img src="./styles/halcyon/imageset/icon_post_target.svg" width="11" height="11" alt="Post" title="Post" /></a>by <strong>john2</strong> &raquo; Thu Jan 05, 2012 3:50 pm </p>
+
+			
+
+			<div class="content">couldn't understand 4m the pdf.  <img src="./images/smilies/icon_e_sad.gif" alt=":(" title="Sad" /> is there any video tutorial  <img src="./images/smilies/icon_rolleyes.gif" alt=":roll:" title="Rolling Eyes" /></div>
+
+			<div class="scf-vote"><a href="#" onclick="rateUpDown(376376,'306282',1);return false;"><i class="icon-thumbs-up icon-large scf-vote-green"></i></a> <span id="forum-post-rate-376376" class="scf-vote-counter"> 0 </span> <a href="#" onclick="rateUpDown(376376,'306282',2);return false;"><i class="icon-thumbs-down icon-large scf-vote-red"></i></a></div>
+<div id="sig376376" class="signature"><span style="font-style: italic">Google SketchUp Pro 8, SketchUp Make 2014, Vray 1.49, Windows 7 – 64 bit, ATI Radeon 8570 Graphics 2GB,  </span></div>
+
+		</div>
+
+		
+			<dl class="postprofile" id="profile376376">
+			<dt>
+
+				<span class="x3dom-avatar" id="103834"><img src="./download/file.php?avatar=103834_1397702193.jpg" width="90" height="51" alt="User avatar" /></span><br />
+				<strong>john2</strong>&nbsp;<span onmouseover="revealProfile( 376376 ); return false;" onmouseout="hideProfile( 376376 ); return false;"><i class="icon-info-sign"></i></span>
+
+		
+			</dt>
+
+			
+
+		<dd>&nbsp;</dd>
+
+<div id="grh-376376" style="display:none;">
+		<dd><strong>Posts:</strong> 320</dd><dd><strong>Joined:</strong> Tue Oct 18, 2011 7:27 am</dd>
+			<dd><strong>Name:</strong> john2</dd>
+		
+</div>
+		
+
+		</dl>
+	
+
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		
+	</div>
+	
+</div>
+	</div>
+	<hr class="divider" />
+
+<div class="post-bg">
+	<div class="rt-block">
+	
+	<div id="p376462" class="post bg1">
+		
+
+		<div class="postbody">
+			
+				<ul class="profile-icons">
+					<li class="report-icon"><a href="./report.php?f=323&amp;p=376462" title="Report this post"><span>Report this post</span></a></li><li class="quote-icon"><a href="./posting.php?mode=quote&amp;f=323&amp;p=376462" title="Reply with quote"><span>Reply with quote</span></a></li>
+				</ul>
+			
+
+			<h3 ><a href="#p376462">Re: [Plugin] Align tool 3D (bug fix)</a></h3>
+			<p class="author"><a href="./viewtopic.php?p=376462#p376462"><img src="./styles/halcyon/imageset/icon_post_target.svg" width="11" height="11" alt="Post" title="Post" /></a>by <strong>Didier Bur</strong> &raquo; Thu Jan 05, 2012 6:18 pm </p>
+
+			
+
+			<div class="content">Yes here: <a href="http://sketchuppluginreviews.com/2010/06/01/align-tool-google-sketchup-plugin-review-2/" class="postlink">http://sketchuppluginreviews.com/2010/06/01/align-tool-google-sketchup-plugin-review-2/</a><br /><br />Google is your friend <img src="./images/smilies/icon_e_wink.gif" alt=";)" title="Wink" /></div>
+
+			<div class="scf-vote"><a href="#" onclick="rateUpDown(376462,'306282',1);return false;"><i class="icon-thumbs-up icon-large scf-vote-green"></i></a> <span id="forum-post-rate-376462" class="scf-vote-counter"> 0 </span> <a href="#" onclick="rateUpDown(376462,'306282',2);return false;"><i class="icon-thumbs-down icon-large scf-vote-red"></i></a></div>
+<div id="sig376462" class="signature">Didier Bur (Bytes Farmer)<br />Ecole Nationale Supérieure d'Architecture de Nancy (F)<br /><a href="http://rld.crai.archi.fr/rubylibrarydepot/" class="postlink">http://rld.crai.archi.fr/rubylibrarydepot/</a></div>
+
+		</div>
+
+		
+			<dl class="postprofile" id="profile376462">
+			<dt>
+
+				<span class="x3dom-avatar" id="287"><img src="./download/file.php?avatar=287_1363727281.gif" width="90" height="90" alt="User avatar" /></span><br />
+				<strong>Didier Bur</strong>&nbsp;<span onmouseover="revealProfile( 376462 ); return false;" onmouseout="hideProfile( 376462 ); return false;"><i class="icon-info-sign"></i></span>
+
+		
+			</dt>
+
+			
+
+		<dd>&nbsp;</dd>
+
+<div id="grh-376462" style="display:none;">
+		<dd><strong>Posts:</strong> 1264</dd><dd><strong>Joined:</strong> Wed Nov 14, 2007 10:07 pm</dd><dd><strong>Location:</strong> Nancy, France</dd>
+			<dd><strong>Name:</strong> Didier Bur</dd>
+		
+			<dd><strong>Operating system:</strong> Windows</dd>
+		
+			<dd><strong>SketchUp version:</strong> 2013</dd>
+		
+			<dd><strong>License type:</strong> Pro</dd>
+		
+			<dd><strong>SketchUp use:</strong> architecture</dd>
+		
+			<dd><strong>Level of SketchUp:</strong> Advanced</dd>
+		
+</div>
+		
+			<dd>
+				<ul class="profile-icons">
+					<li class="web-icon"><a href="http://rhin.crai.archi.fr/RubyLibraryDepot/" title="WWW: http://rhin.crai.archi.fr/RubyLibraryDepot/"><span>Website</span></a></li>
+				</ul>
+			</dd>
+		
+
+		</dl>
+	
+
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		
+	</div>
+	
+</div>
+	</div>
+	<hr class="divider" />
+
+<div class="post-bg">
+	<div class="rt-block">
+	
+	<div id="p376469" class="post bg2">
+		
+
+		<div class="postbody">
+			
+				<ul class="profile-icons">
+					<li class="report-icon"><a href="./report.php?f=323&amp;p=376469" title="Report this post"><span>Report this post</span></a></li><li class="quote-icon"><a href="./posting.php?mode=quote&amp;f=323&amp;p=376469" title="Reply with quote"><span>Reply with quote</span></a></li>
+				</ul>
+			
+
+			<h3 ><a href="#p376469">Re: [Plugin] Align tool 3D (bug fix)</a></h3>
+			<p class="author"><a href="./viewtopic.php?p=376469#p376469"><img src="./styles/halcyon/imageset/icon_post_target.svg" width="11" height="11" alt="Post" title="Post" /></a>by <strong><span style="color: #c0392b;" class="username-coloured">Ken</span></strong> &raquo; Thu Jan 05, 2012 6:36 pm </p>
+
+			
+
+			<div class="content"><blockquote><div><cite>Didier Bur wrote:</cite>Yes here: <a href="http://sketchuppluginreviews.com/2010/06/01/align-tool-google-sketchup-plugin-review-2/" class="postlink">http://sketchuppluginreviews.com/2010/06/01/align-tool-google-sketchup-plugin-review-2/</a><br /><br />Google is your friend <img src="./images/smilies/icon_e_wink.gif" alt=";)" title="Wink" /></div></blockquote><br />Didier<br /><br />Not asking anything to be changed, however it took me some time to determine that what you call the &quot;X axis&quot; and &quot;Y axis&quot; can be any particular orientation. I was always trying to determine what the &quot;X and Y axis&quot; were while using the plugin. Lead to much frustration. <br /><br />I always wanted to be able to get inside the plugin and change the &quot;X&quot; to &quot;1&quot; and the &quot;Y&quot; to &quot;2&quot;. To me that would have been more logical to remember, I wanted the &quot;1's&quot; and &quot;2's&quot; to align with each other. <br /><br />Thank you for your contribution.<br /><br />Ken</div>
+
+			<div class="scf-vote"><a href="#" onclick="rateUpDown(376469,'306282',1);return false;"><i class="icon-thumbs-up icon-large scf-vote-green"></i></a> <span id="forum-post-rate-376469" class="scf-vote-counter"> 0 </span> <a href="#" onclick="rateUpDown(376469,'306282',2);return false;"><i class="icon-thumbs-down icon-large scf-vote-red"></i></a></div>
+<div id="sig376469" class="signature">Government rushes to help the irresponsible and does little for the responsible.</div>
+
+		</div>
+
+		
+			<dl class="postprofile" id="profile376469">
+			<dt>
+
+				<span class="x3dom-avatar" id="327"><img src="./download/file.php?avatar=327_1352481176.jpg" width="138" height="115" alt="User avatar" /></span><br />
+				<strong><span style="color: #c0392b;" class="username-coloured">Ken</span></strong>&nbsp;<span onmouseover="revealProfile( 376469 ); return false;" onmouseout="hideProfile( 376469 ); return false;"><i class="icon-info-sign"></i></span>
+
+		
+			</dt>
+
+			<dd>Premium Member<br /><img src="./images/ranks/premium-forum-badge.png" alt="Premium Member" title="Premium Member" /></dd>
+
+		<dd>&nbsp;</dd>
+
+<div id="grh-376469" style="display:none;">
+		<dd><strong>Posts:</strong> 908</dd><dd><strong>Joined:</strong> Thu Nov 15, 2007 1:38 pm</dd><dd><strong>Location:</strong> Fort Mill, SC</dd>
+			<dd><strong>Operating system:</strong> Windows</dd>
+		
+			<dd><strong>SketchUp version:</strong> 2014</dd>
+		
+			<dd><strong>License type:</strong> Pro</dd>
+		
+			<dd><strong>SketchUp use:</strong> engineering and mechanical design</dd>
+		
+			<dd><strong>Level of SketchUp:</strong> Advanced</dd>
+		
+</div>
+		
+
+		</dl>
+	
+
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		
+	</div>
+	
+</div>
+	</div>
+	<hr class="divider" />
+
+<div class="post-bg">
+	<div class="rt-block">
+	
+	<div id="p376705" class="post bg1">
+		
+
+		<div class="postbody">
+			
+				<ul class="profile-icons">
+					<li class="report-icon"><a href="./report.php?f=323&amp;p=376705" title="Report this post"><span>Report this post</span></a></li><li class="quote-icon"><a href="./posting.php?mode=quote&amp;f=323&amp;p=376705" title="Reply with quote"><span>Reply with quote</span></a></li>
+				</ul>
+			
+
+			<h3 ><a href="#p376705">Re: [Plugin] Align tool 3D (bug fix)</a></h3>
+			<p class="author"><a href="./viewtopic.php?p=376705#p376705"><img src="./styles/halcyon/imageset/icon_post_target.svg" width="11" height="11" alt="Post" title="Post" /></a>by <strong>Didier Bur</strong> &raquo; Fri Jan 06, 2012 9:22 am </p>
+
+			
+
+			<div class="content">Hi Ken,<br />You can also think that X represent the red axis, Y the green axis, just as when you locate/translate/rotate the SU axis system.</div>
+
+			<div class="scf-vote"><a href="#" onclick="rateUpDown(376705,'306282',1);return false;"><i class="icon-thumbs-up icon-large scf-vote-green"></i></a> <span id="forum-post-rate-376705" class="scf-vote-counter"> 0 </span> <a href="#" onclick="rateUpDown(376705,'306282',2);return false;"><i class="icon-thumbs-down icon-large scf-vote-red"></i></a></div>
+<div id="sig376705" class="signature">Didier Bur (Bytes Farmer)<br />Ecole Nationale Supérieure d'Architecture de Nancy (F)<br /><a href="http://rld.crai.archi.fr/rubylibrarydepot/" class="postlink">http://rld.crai.archi.fr/rubylibrarydepot/</a></div>
+
+		</div>
+
+		
+			<dl class="postprofile" id="profile376705">
+			<dt>
+
+				<span class="x3dom-avatar" id="287"><img src="./download/file.php?avatar=287_1363727281.gif" width="90" height="90" alt="User avatar" /></span><br />
+				<strong>Didier Bur</strong>&nbsp;<span onmouseover="revealProfile( 376705 ); return false;" onmouseout="hideProfile( 376705 ); return false;"><i class="icon-info-sign"></i></span>
+
+		
+			</dt>
+
+			
+
+		<dd>&nbsp;</dd>
+
+<div id="grh-376705" style="display:none;">
+		<dd><strong>Posts:</strong> 1264</dd><dd><strong>Joined:</strong> Wed Nov 14, 2007 10:07 pm</dd><dd><strong>Location:</strong> Nancy, France</dd>
+			<dd><strong>Name:</strong> Didier Bur</dd>
+		
+			<dd><strong>Operating system:</strong> Windows</dd>
+		
+			<dd><strong>SketchUp version:</strong> 2013</dd>
+		
+			<dd><strong>License type:</strong> Pro</dd>
+		
+			<dd><strong>SketchUp use:</strong> architecture</dd>
+		
+			<dd><strong>Level of SketchUp:</strong> Advanced</dd>
+		
+</div>
+		
+			<dd>
+				<ul class="profile-icons">
+					<li class="web-icon"><a href="http://rhin.crai.archi.fr/RubyLibraryDepot/" title="WWW: http://rhin.crai.archi.fr/RubyLibraryDepot/"><span>Website</span></a></li>
+				</ul>
+			</dd>
+		
+
+		</dl>
+	
+
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		
+	</div>
+	
+</div>
+	</div>
+	<hr class="divider" />
+
+<div class="post-bg">
+	<div class="rt-block">
+	
+	<div id="p376988" class="post bg2">
+		
+
+		<div class="postbody">
+			
+				<ul class="profile-icons">
+					<li class="report-icon"><a href="./report.php?f=323&amp;p=376988" title="Report this post"><span>Report this post</span></a></li><li class="quote-icon"><a href="./posting.php?mode=quote&amp;f=323&amp;p=376988" title="Reply with quote"><span>Reply with quote</span></a></li>
+				</ul>
+			
+
+			<h3 ><a href="#p376988">Re: [Plugin] Align tool 3D (bug fix)</a></h3>
+			<p class="author"><a href="./viewtopic.php?p=376988#p376988"><img src="./styles/halcyon/imageset/icon_post_target.svg" width="11" height="11" alt="Post" title="Post" /></a>by <strong>raineysky</strong> &raquo; Sat Jan 07, 2012 2:20 am </p>
+
+			
+
+			<div class="content">Ken,<br /><br /> <img src="./images/smilies/thumbu.gif" alt=":thumb:" title="Thumbs Up" /> <br /><br />I really like your idea too because I'm not use to the &quot;x,y,z&quot; language yet. Just now getting orientated in the 3d space <img src="./images/smilies/icon_e_smile.gif" alt=":)" title="Smile" /> <br /><br />Thank You for the plugin Mr. Didier Bur.</div>
+
+			<div class="scf-vote"><a href="#" onclick="rateUpDown(376988,'306282',1);return false;"><i class="icon-thumbs-up icon-large scf-vote-green"></i></a> <span id="forum-post-rate-376988" class="scf-vote-counter"> 0 </span> <a href="#" onclick="rateUpDown(376988,'306282',2);return false;"><i class="icon-thumbs-down icon-large scf-vote-red"></i></a></div>
+
+
+		</div>
+
+		
+			<dl class="postprofile" id="profile376988">
+			<dt>
+
+				<span class="x3dom-avatar" id="99644"></span><br />
+				<strong>raineysky</strong>&nbsp;<span onmouseover="revealProfile( 376988 ); return false;" onmouseout="hideProfile( 376988 ); return false;"><i class="icon-info-sign"></i></span>
+
+		
+			</dt>
+
+			
+
+		<dd>&nbsp;</dd>
+
+<div id="grh-376988" style="display:none;">
+		<dd><strong>Posts:</strong> 121</dd><dd><strong>Joined:</strong> Fri Sep 09, 2011 6:46 pm</dd><dd><strong>Location:</strong> Louisiana</dd>
+			<dd><strong>Name:</strong> Paul</dd>
+		
+			<dd><strong>Operating system:</strong> Windows</dd>
+		
+			<dd><strong>SketchUp version:</strong> 8</dd>
+		
+			<dd><strong>License type:</strong> Pro</dd>
+		
+			<dd><strong>SketchUp use:</strong> other</dd>
+		
+			<dd><strong>Level of SketchUp:</strong> Intermediate</dd>
+		
+</div>
+		
+
+		</dl>
+	
+
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		
+	</div>
+	
+</div>
+	</div>
+	<hr class="divider" />
+
+<div class="post-bg">
+	<div class="rt-block">
+	
+	<div id="p384188" class="post bg1">
+		
+
+		<div class="postbody">
+			
+				<ul class="profile-icons">
+					<li class="report-icon"><a href="./report.php?f=323&amp;p=384188" title="Report this post"><span>Report this post</span></a></li><li class="quote-icon"><a href="./posting.php?mode=quote&amp;f=323&amp;p=384188" title="Reply with quote"><span>Reply with quote</span></a></li>
+				</ul>
+			
+
+			<h3 ><a href="#p384188">Re: [Plugin] Align tool 3D (bug fix)</a></h3>
+			<p class="author"><a href="./viewtopic.php?p=384188#p384188"><img src="./styles/halcyon/imageset/icon_post_target.svg" width="11" height="11" alt="Post" title="Post" /></a>by <strong>kevinbearshu</strong> &raquo; Wed Feb 08, 2012 3:33 am </p>
+
+			
+
+			<div class="content">Thank you very mach!</div>
+
+			<div class="scf-vote"><a href="#" onclick="rateUpDown(384188,'306282',1);return false;"><i class="icon-thumbs-up icon-large scf-vote-green"></i></a> <span id="forum-post-rate-384188" class="scf-vote-counter"> 0 </span> <a href="#" onclick="rateUpDown(384188,'306282',2);return false;"><i class="icon-thumbs-down icon-large scf-vote-red"></i></a></div>
+
+
+		</div>
+
+		
+			<dl class="postprofile" id="profile384188">
+			<dt>
+
+				<span class="x3dom-avatar" id="117828"></span><br />
+				<strong>kevinbearshu</strong>&nbsp;<span onmouseover="revealProfile( 384188 ); return false;" onmouseout="hideProfile( 384188 ); return false;"><i class="icon-info-sign"></i></span>
+
+		
+			</dt>
+
+			
+
+		<dd>&nbsp;</dd>
+
+<div id="grh-384188" style="display:none;">
+		<dd><strong>Posts:</strong> 1</dd><dd><strong>Joined:</strong> Tue Feb 07, 2012 2:55 pm</dd>
+			<dd><strong>Name:</strong> shu ying hsiung</dd>
+		
+</div>
+		
+
+		</dl>
+	
+
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		
+	</div>
+	
+</div>
+	</div>
+	<hr class="divider" />
+
+<div class="post-bg">
+	<div class="rt-block">
+	
+	<div id="p392911" class="post bg2">
+		
+
+		<div class="postbody">
+			
+				<ul class="profile-icons">
+					<li class="report-icon"><a href="./report.php?f=323&amp;p=392911" title="Report this post"><span>Report this post</span></a></li><li class="quote-icon"><a href="./posting.php?mode=quote&amp;f=323&amp;p=392911" title="Reply with quote"><span>Reply with quote</span></a></li>
+				</ul>
+			
+
+			<h3 ><a href="#p392911">Re: [Plugin] Align tool 3D (bug fix)</a></h3>
+			<p class="author"><a href="./viewtopic.php?p=392911#p392911"><img src="./styles/halcyon/imageset/icon_post_target.svg" width="11" height="11" alt="Post" title="Post" /></a>by <strong>wodur</strong> &raquo; Tue Mar 20, 2012 7:25 pm </p>
+
+			
+
+			<div class="content">it's an impressive plugin, almost equal to the Autocad's align tool. Autocad can scale the objet as it aligns, is it possible to do that with this plugin?<br />Thanks for your work, all of you are making sketchup a very advanced tool.</div>
+
+			<div class="scf-vote"><a href="#" onclick="rateUpDown(392911,'306282',1);return false;"><i class="icon-thumbs-up icon-large scf-vote-green"></i></a> <span id="forum-post-rate-392911" class="scf-vote-counter"> 0 </span> <a href="#" onclick="rateUpDown(392911,'306282',2);return false;"><i class="icon-thumbs-down icon-large scf-vote-red"></i></a></div>
+
+
+		</div>
+
+		
+			<dl class="postprofile" id="profile392911">
+			<dt>
+
+				<span class="x3dom-avatar" id="45745"></span><br />
+				<strong>wodur</strong>&nbsp;<span onmouseover="revealProfile( 392911 ); return false;" onmouseout="hideProfile( 392911 ); return false;"><i class="icon-info-sign"></i></span>
+
+		
+			</dt>
+
+			
+
+		<dd>&nbsp;</dd>
+
+<div id="grh-392911" style="display:none;">
+		<dd><strong>Posts:</strong> 10</dd><dd><strong>Joined:</strong> Sun Apr 11, 2010 11:11 am</dd>
+			<dd><strong>Name:</strong> jaeyeok</dd>
+		
+</div>
+		
+
+		</dl>
+	
+
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		
+	</div>
+	
+</div>
+	</div>
+	<hr class="divider" />
+
+<div class="post-bg">
+	<div class="rt-block">
+	
+	<div id="p400516" class="post bg1">
+		
+
+		<div class="postbody">
+			
+				<ul class="profile-icons">
+					<li class="report-icon"><a href="./report.php?f=323&amp;p=400516" title="Report this post"><span>Report this post</span></a></li><li class="quote-icon"><a href="./posting.php?mode=quote&amp;f=323&amp;p=400516" title="Reply with quote"><span>Reply with quote</span></a></li>
+				</ul>
+			
+
+			<h3 ><a href="#p400516">Re: [Plugin] Align tool 3D (bug fix)</a></h3>
+			<p class="author"><a href="./viewtopic.php?p=400516#p400516"><img src="./styles/halcyon/imageset/icon_post_target.svg" width="11" height="11" alt="Post" title="Post" /></a>by <strong>seebe</strong> &raquo; Thu Apr 26, 2012 2:33 pm </p>
+
+			
+
+			<div class="content">Thank you so much for this tool. You have saved me so much time.</div>
+
+			<div class="scf-vote"><a href="#" onclick="rateUpDown(400516,'306282',1);return false;"><i class="icon-thumbs-up icon-large scf-vote-green"></i></a> <span id="forum-post-rate-400516" class="scf-vote-counter"> 0 </span> <a href="#" onclick="rateUpDown(400516,'306282',2);return false;"><i class="icon-thumbs-down icon-large scf-vote-red"></i></a></div>
+
+
+		</div>
+
+		
+			<dl class="postprofile" id="profile400516">
+			<dt>
+
+				<span class="x3dom-avatar" id="130374"></span><br />
+				<strong>seebe</strong>&nbsp;<span onmouseover="revealProfile( 400516 ); return false;" onmouseout="hideProfile( 400516 ); return false;"><i class="icon-info-sign"></i></span>
+
+		
+			</dt>
+
+			
+
+		<dd>&nbsp;</dd>
+
+<div id="grh-400516" style="display:none;">
+		<dd><strong>Posts:</strong> 1</dd><dd><strong>Joined:</strong> Thu Apr 26, 2012 1:59 pm</dd>
+</div>
+		
+
+		</dl>
+	
+
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		
+	</div>
+	
+</div>
+	</div>
+	<hr class="divider" />
+
+<div class="post-bg">
+	<div class="rt-block">
+	
+	<div id="p400579" class="post bg2">
+		
+
+		<div class="postbody">
+			
+				<ul class="profile-icons">
+					<li class="report-icon"><a href="./report.php?f=323&amp;p=400579" title="Report this post"><span>Report this post</span></a></li><li class="quote-icon"><a href="./posting.php?mode=quote&amp;f=323&amp;p=400579" title="Reply with quote"><span>Reply with quote</span></a></li>
+				</ul>
+			
+
+			<h3 ><a href="#p400579">Re: [Plugin] Align tool 3D (bug fix)</a></h3>
+			<p class="author"><a href="./viewtopic.php?p=400579#p400579"><img src="./styles/halcyon/imageset/icon_post_target.svg" width="11" height="11" alt="Post" title="Post" /></a>by <strong>Didier Bur</strong> &raquo; Thu Apr 26, 2012 3:33 pm </p>
+
+			
+
+			<div class="content">@seebe: you're welcome  <img src="./images/smilies/ddpen.gif" alt=":sketchstatic:" title="Sketchstatic" /></div>
+
+			<div class="scf-vote"><a href="#" onclick="rateUpDown(400579,'306282',1);return false;"><i class="icon-thumbs-up icon-large scf-vote-green"></i></a> <span id="forum-post-rate-400579" class="scf-vote-counter"> 0 </span> <a href="#" onclick="rateUpDown(400579,'306282',2);return false;"><i class="icon-thumbs-down icon-large scf-vote-red"></i></a></div>
+<div id="sig400579" class="signature">Didier Bur (Bytes Farmer)<br />Ecole Nationale Supérieure d'Architecture de Nancy (F)<br /><a href="http://rld.crai.archi.fr/rubylibrarydepot/" class="postlink">http://rld.crai.archi.fr/rubylibrarydepot/</a></div>
+
+		</div>
+
+		
+			<dl class="postprofile" id="profile400579">
+			<dt>
+
+				<span class="x3dom-avatar" id="287"><img src="./download/file.php?avatar=287_1363727281.gif" width="90" height="90" alt="User avatar" /></span><br />
+				<strong>Didier Bur</strong>&nbsp;<span onmouseover="revealProfile( 400579 ); return false;" onmouseout="hideProfile( 400579 ); return false;"><i class="icon-info-sign"></i></span>
+
+		
+			</dt>
+
+			
+
+		<dd>&nbsp;</dd>
+
+<div id="grh-400579" style="display:none;">
+		<dd><strong>Posts:</strong> 1264</dd><dd><strong>Joined:</strong> Wed Nov 14, 2007 10:07 pm</dd><dd><strong>Location:</strong> Nancy, France</dd>
+			<dd><strong>Name:</strong> Didier Bur</dd>
+		
+			<dd><strong>Operating system:</strong> Windows</dd>
+		
+			<dd><strong>SketchUp version:</strong> 2013</dd>
+		
+			<dd><strong>License type:</strong> Pro</dd>
+		
+			<dd><strong>SketchUp use:</strong> architecture</dd>
+		
+			<dd><strong>Level of SketchUp:</strong> Advanced</dd>
+		
+</div>
+		
+			<dd>
+				<ul class="profile-icons">
+					<li class="web-icon"><a href="http://rhin.crai.archi.fr/RubyLibraryDepot/" title="WWW: http://rhin.crai.archi.fr/RubyLibraryDepot/"><span>Website</span></a></li>
+				</ul>
+			</dd>
+		
+
+		</dl>
+	
+
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		
+	</div>
+	
+</div>
+	</div>
+	<hr class="divider" />
+
+<div class="post-bg">
+	<div class="rt-block">
+	
+	<div id="p400979" class="post bg1">
+		
+
+		<div class="postbody">
+			
+				<ul class="profile-icons">
+					<li class="report-icon"><a href="./report.php?f=323&amp;p=400979" title="Report this post"><span>Report this post</span></a></li><li class="quote-icon"><a href="./posting.php?mode=quote&amp;f=323&amp;p=400979" title="Reply with quote"><span>Reply with quote</span></a></li>
+				</ul>
+			
+
+			<h3 ><a href="#p400979">Re: [Plugin] Align tool 3D (bug fix)</a></h3>
+			<p class="author"><a href="./viewtopic.php?p=400979#p400979"><img src="./styles/halcyon/imageset/icon_post_target.svg" width="11" height="11" alt="Post" title="Post" /></a>by <strong><span style="color: #34495e;" class="username-coloured">Trogluddite</span></strong> &raquo; Fri Apr 27, 2012 9:06 am </p>
+
+			
+
+			<div class="content">D'oh moment for me!  <img src="./images/smilies/icon_redface.gif" alt=":oops:" title="Embarrassed" /> <br />I spent so long trying to align things using the rotate/protractor tools - when all I needed to do was type &quot;Align&quot; into the search box and intall this super plugin!<br /><br />Many thanks Didier, you have made my Sketchuping so much easier!</div>
+
+			<div class="scf-vote"><a href="#" onclick="rateUpDown(400979,'306282',1);return false;"><i class="icon-thumbs-up icon-large scf-vote-green"></i></a> <span id="forum-post-rate-400979" class="scf-vote-counter"> 0 </span> <a href="#" onclick="rateUpDown(400979,'306282',2);return false;"><i class="icon-thumbs-down icon-large scf-vote-red"></i></a></div>
+
+
+		</div>
+
+		
+			<dl class="postprofile" id="profile400979">
+			<dt>
+
+				<span class="x3dom-avatar" id="99345"></span><br />
+				<strong><span style="color: #34495e;" class="username-coloured">Trogluddite</span></strong>&nbsp;<span onmouseover="revealProfile( 400979 ); return false;" onmouseout="hideProfile( 400979 ); return false;"><i class="icon-info-sign"></i></span>
+
+		
+			</dt>
+
+			<dd>PluginStore Author<br /><img src="./images/ranks/pluginstore-forum-badge.png" alt="PluginStore Author" title="PluginStore Author" /></dd>
+
+		<dd>&nbsp;</dd>
+
+<div id="grh-400979" style="display:none;">
+		<dd><strong>Posts:</strong> 207</dd><dd><strong>Joined:</strong> Wed Sep 07, 2011 8:56 am</dd>
+			<dd><strong>Name:</strong> Steve</dd>
+		
+			<dd><strong>Operating system:</strong> Windows</dd>
+		
+			<dd><strong>SketchUp version:</strong> 8</dd>
+		
+			<dd><strong>License type:</strong> Pro</dd>
+		
+			<dd><strong>SketchUp use:</strong> engineering and mechanical design</dd>
+		
+			<dd><strong>Level of SketchUp:</strong> Intermediate</dd>
+		
+</div>
+		
+
+		</dl>
+	
+
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		
+	</div>
+	
+</div>
+	</div>
+	<hr class="divider" />
+
+<div class="post-bg">
+	<div class="rt-block">
+	
+	<div id="p" class="post bg2">
+		
+
+		<div class="postbody">
+			
+
+			<h3 ><a href="#p">SketchUcation One-Liner Adverts</a></h3>
+			<p class="author"><a href=""></a>by <strong>Ad Machine</strong> &raquo; 5 minutes ago </p>
+
+			
+
+			<div class="content"><p><a href ="http://sketchucation.com/shop/models/landscape/1008-35-sketchup-curved-tree-lines-v2" target="_blank"><img src="http://sketchucation.com/images/banners/676_sale.jpg" /></a><p><br/><br/></div>
+
+
+		</div>
+
+		
+			<dl class="postprofile" id="profile">
+			<dt>
+
+				<strong>Ad Machine</strong>&nbsp;<span onmouseover="revealProfile(  ); return false;" onmouseout="hideProfile(  ); return false;"><i class="icon-info-sign"></i></span>
+
+		
+			</dt>
+
+			<dd>Robot</dd>
+
+		<dd>&nbsp;</dd>
+
+<div id="grh-" style="display:none;">
+		<dd><strong>Posts:</strong> 2012</dd>
+</div>
+		
+			<dd>
+				<ul class="profile-icons">
+					<li class="web-icon"><a href="http://www.sketchucation.com" title="WWW: http://www.sketchucation.com"><span>Website</span></a></li>
+				</ul>
+			</dd>
+		
+
+		</dl>
+	
+
+		<div class="back2top"><a href="#wrap" class="top" title="Top">Top</a></div>
+
+		
+	</div>
+	
+</div>
+	</div>
+	<hr class="divider" />
+<script type="text/javascript">
+// <![CDATA[
+	function hide_qr(show)
+	{
+		dE('qr_editor_div');
+		dE('qr_showeditor_div');
+		if (show && document.getElementById('qr_editor_div').style.display != 'none')
+		{
+			document.getElementsByName('message')[0].focus();
+		}
+		return true;
+	}
+
+
+	function init_qr()
+	{
+		dE('qr_showeditor_div');
+		return true;
+	}
+	onload_functions.push('init_qr();');
+	// ]]>
+</script>
+<noscript>
+	<form method="post" action="./posting.php?mode=reply&amp;f=323&amp;t=11224">
+		<div class="panel" id="qr_ns_editor_div">
+			<div class="inner"><span class="corners-top"><span></span></span>
+					<h2>Quick Reply</h2>
+					<fieldset class="fields1">
+						<dl style="clear: left;">
+							<dt><label for="subject">Subject:</label></dt>
+							<dd><input type="text" name="subject" id="subject-ns" size="45" maxlength="64" tabindex="2" value="Re: [Plugin] Align tool 3D (bug fix)" class="inputbox autowidth" /></dd>
+						</dl>
+					<div id="message-box-ns">
+						<textarea style="height: 9em;" name="message" rows="7" cols="76" tabindex="3" class="inputbox"></textarea>
+					</div>
+					</fieldset>
+					<fieldset class="submit-buttons">
+						<input type="hidden" name="creation_time" value="1410182358" />
+<input type="hidden" name="form_token" value="e7fef1bd1eca64df94906bc7c56cec08b5f7a186" />
+
+						<input type="hidden" name="topic_cur_post_id" value="525110" />
+<input type="hidden" name="lastclick" value="1410182358" />
+<input type="hidden" name="topic_id" value="11224" />
+<input type="hidden" name="forum_id" value="323" />
+
+						<input type="submit" accesskey="s" tabindex="6" name="post" value="Submit" class="button1" />&nbsp;
+						<input type="submit" accesskey="f" tabindex="7" name="full_editor" value="Full Editor" class="button2" />&nbsp;
+					</fieldset>
+			<span class="corners-bottom"><span></span></span></div>
+		</div>
+	</form>
+</noscript>
+<form method="post" action="./posting.php?mode=reply&amp;f=323&amp;t=11224">
+	<div class="panel" style="display: none" id="qr_editor_div">
+		<div class="inner"><span class="corners-top"><span></span></span>
+				<h2>Quick Reply</h2>
+				<fieldset class="fields1">
+					<dl style="clear: left;">
+						<dt><label for="subject">Subject:</label></dt>
+						<dd><input type="text" name="subject" id="subject" size="45" maxlength="64" tabindex="2" value="Re: [Plugin] Align tool 3D (bug fix)" class="inputbox autowidth" /></dd>
+					</dl>
+				<div id="message-box">
+					<textarea style="height: 9em;" name="message" rows="7" cols="76" tabindex="3" class="inputbox"></textarea>
+				</div>
+				</fieldset>
+				<fieldset class="submit-buttons">
+					<input type="hidden" name="creation_time" value="1410182358" />
+<input type="hidden" name="form_token" value="e7fef1bd1eca64df94906bc7c56cec08b5f7a186" />
+
+					<input type="hidden" name="topic_cur_post_id" value="525110" />
+<input type="hidden" name="lastclick" value="1410182358" />
+<input type="hidden" name="topic_id" value="11224" />
+<input type="hidden" name="forum_id" value="323" />
+
+					<input type="submit" accesskey="s" tabindex="6" name="post" value="Submit" class="button1" />&nbsp;
+					<input type="submit" accesskey="f" tabindex="7" name="full_editor" value="Full Editor" class="button2" />&nbsp;
+				</fieldset>
+				<a href="" class="right-box up" onclick="hide_qr(false); return false;" title="Hide Quick Reply">Hide Quick Reply</a>
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+	<div class="panel" style="display: none" id="qr_showeditor_div" >
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+			<div class="content">
+				<fieldset class="submit-buttons">
+					<input type="submit" name="show_qr" tabindex="1" class="button2" value="Quick Reply" onclick="hide_qr(true);return false;"/>
+				</fieldset>
+			</div>
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+</form>
+	<form id="viewtopic" method="post" action="./viewtopic.php?f=323&amp;t=11224">
+
+	<fieldset class="display-options" style="margin-top: 0; ">
+		<a href="./viewtopic.php?f=323&amp;t=11224&amp;start=30" class="right-box right">Next</a>
+		<label>Display posts from previous: <select name="st" id="st"><option value="0" selected="selected">All posts</option><option value="1">1 day</option><option value="7">7 days</option><option value="14">2 weeks</option><option value="30">1 month</option><option value="90">3 months</option><option value="180">6 months</option><option value="365">1 year</option></select></label>
+		<label>Sort by <select name="sk" id="sk"><option value="a">Author</option><option value="t" selected="selected">Post time</option><option value="s">Subject</option></select></label> <label><select name="sd" id="sd"><option value="a" selected="selected">Ascending</option><option value="d">Descending</option></select> <input type="submit" name="sort" value="Go" class="button2" /></label>
+		
+	</fieldset>
+
+	</form>
+	<hr />
+
+
+<div class="topic-actions">
+	<div class="rdn_buttons">
+	
+		<div class="readon"><a href="./posting.php?mode=reply&amp;f=323&amp;t=11224"  class="button button4">Post a reply</a></div>
+	
+	</div>
+
+	
+		<div class="pagination">
+			51 posts
+			 &bull; <a href="#" onclick="jumpto(); return false;" title="Click to jump to page…">Page <strong>1</strong> of <strong>2</strong></a> &bull; <span><strong>1</strong><span class="page-sep">, </span><a href="./viewtopic.php?f=323&amp;t=11224&amp;start=30">2</a></span>
+		</div>
+	
+</div>
+
+<div>
+<h6 style="width:766px;height:88px;">
+<div class="bsa">
+<div id="bsap_1239366" class="bsarocks bsap_b35c76fd1b1509301d8767d019b8f183"></div></div><br/>&nbsp;
+</h6>
+</div>
+
+
+
+	<p></p><p><a href="./viewforum.php?f=323" class="left-box left" accesskey="r">Return to Plugins</a></p>
+
+<form method="post" id="jumpbox" action="./viewforum.php" onsubmit="if(this.f.value == -1){return false;}">
+	
+<fieldset class="jumpbox">
+	
+<label for="f" accesskey="j">Jump to:</label>
+<select name="f" id="f" onchange="if(this.options[this.selectedIndex].value != -1){ document.forms['jumpbox'].submit() }">
+<option value="-1">Select a forum</option><option value="-1">------------------</option><option value="371">Premium Members</option><option value="372">&nbsp; &nbsp;General Discussion</option><option value="373">&nbsp; &nbsp;Private Consultation Rooms</option><option value="385">SketchUp Forums</option><option value="15">&nbsp; &nbsp;SketchUp Pro &amp; Make Discussions</option><option value="79">&nbsp; &nbsp;&nbsp; &nbsp;Newbie Forum</option><option value="271">&nbsp; &nbsp;&nbsp; &nbsp;Google Earth</option><option value="289">&nbsp; &nbsp;&nbsp; &nbsp;Dynamic Components</option><option value="11">&nbsp; &nbsp;SketchUp Bug Reporting</option><option value="10">&nbsp; &nbsp;SketchUp Feature Requests</option><option value="18">&nbsp; &nbsp;SketchUp Tutorials</option><option value="40">&nbsp; &nbsp;SketchUp Components, Materials &amp; Styles</option><option value="388">&nbsp; &nbsp;SketchUp for 3D Printing</option><option value="386">LayOut Forums</option><option value="12">&nbsp; &nbsp;LayOut Discussions</option><option value="14">&nbsp; &nbsp;LayOut Bug Reporting</option><option value="13">&nbsp; &nbsp;LayOut Feature Requests</option><option value="391">Rendering Forums</option><option value="322">&nbsp; &nbsp;V-Ray</option><option value="384">&nbsp; &nbsp;Thea</option><option value="262">SketchUcation Community Forums</option><option value="81">&nbsp; &nbsp;Gallery</option><option value="333">&nbsp; &nbsp;&nbsp; &nbsp;WIP</option><option value="291">&nbsp; &nbsp;&nbsp; &nbsp;Competitions</option><option value="332">&nbsp; &nbsp;Resources</option><option value="323" selected="selected">&nbsp; &nbsp;&nbsp; &nbsp;Plugins</option><option value="351">&nbsp; &nbsp;&nbsp; &nbsp;Post Processing</option><option value="180">&nbsp; &nbsp;Developers' Forum</option><option value="314">&nbsp; &nbsp;&nbsp; &nbsp;City Generator</option><option value="315">&nbsp; &nbsp;&nbsp; &nbsp;Skx Extension Library</option><option value="334">&nbsp; &nbsp;Special interests</option><option value="183">&nbsp; &nbsp;&nbsp; &nbsp;Woodworking</option><option value="61">&nbsp; &nbsp;&nbsp; &nbsp;SketchyPhysics</option><option value="335">&nbsp; &nbsp;&nbsp; &nbsp;Organic Modelling</option><option value="80">&nbsp; &nbsp;Extensions &amp; Applications Discussions</option><option value="179">&nbsp; &nbsp;Corner Bar</option><option value="72">&nbsp; &nbsp;&nbsp; &nbsp;Hardware, Software &amp; Gadgets</option><option value="169">&nbsp; &nbsp;&nbsp; &nbsp;Freeware</option><option value="76">&nbsp; &nbsp;&nbsp; &nbsp;Ideas Box &amp; Board Issues</option><option value="287">&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;Old</option><option value="366">&nbsp; &nbsp;&nbsp; &nbsp;BaseCamp 2012</option>
+</select>
+<input type="submit" value="Go" class="button2" />
+</fieldset>
+</form>
+
+</div>
+<div id="page-footer">
+<div class="navbar">
+<div class="inner"><span class="corners-top"><span></span></span>
+<ul class="linklist">
+<li><a href="./index.php" accesskey="h"><i class="icon-home"></i> Board index</a></li>
+<li class="phpbb-icon-subscribe">&bull; <a href="./viewtopic.php?uid=306282&amp;f=323&amp;t=11224&amp;watch=topic&amp;start=0&amp;hash=685fdc47" title="Subscribe topic">Subscribe topic</a></li><li class="phpbb-icon-bookmark">&bull; <a href="./viewtopic.php?f=323&amp;t=11224&amp;bookmark=1&amp;hash=685fdc47" title="Bookmark topic">Bookmark topic</a></li><a href="./ucp.php?mode=delete_cookies">Delete all board cookies</a> &bull; All times are UTC + 1 hour </li>
+</ul>
+<span class="corners-bottom"><span></span></span></div>
+</div>
+<div class="copyright">Powered by <a href="http://www.phpbb.com/">phpBB</a>&reg; Forum Software &copy; phpBB Group
+
+</div></div></div>
+<div>
+<a id="bottom" name="bottom" accesskey="z"></a>
+
+</div></div></div></div></div>
+<div class="clear"></div>
+</div>
+<div id="rt-content-bottom">
+
+<div class="clear"></div>
+</div></div></div>
+
+</td>
+</tr>
+</table>
+<div class="clear"></div>
+</div></div>
+											</div>
+</div>
+
+<div id="rt-extension">
+<div class="rt-container">
+
+<div class="rt-grid-12 rt-alpha">
+<div class="default">
+<div class="rt-block">
+<div class="module-surround">
+    
+<div class="module-title ">
+ 
+	
+<h2 class="title">Who is online</h2>
+</div>
+<div class="module-content">Users browsing this forum: fbia, <span style="color: #9E8DA7;" class="username-coloured">Google Bot</span>, nav_k and 7 guests
+<div class="clear"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="clear"></div>
+<div style="width:100%;display:block;padding:15px;">
+    <h2 class="title">Visit our sponsors:</h2>
+    <div style="display:inline-block;padding-left:35px;padding-right:35px;">
+    <a title="Visit SketchUp" target="_blank" href="/click.php?url=http://sketchup.com/">
+	<img width="220" border="0" height="59" src="http://jroot.sketchucation.com/images/banners/su-sponsor-logo.png" smartload="14" style="opacity:1;"></img>
+    </a>
+    </div>
+    <div style="display:inline-block;padding-left:45px;padding-right:45px;">
+    <a title="Visit 3DConnexion" target="_blank" href="/click.php?url=http://www.3dconnexion.com/">
+	<img width="220" border="0" height="59" alt="3dconnexion-sponsor-logo" src="http://jroot.sketchucation.com/images/banners/3dconnexion-sponsor-logo.png" smartload="14" style="opacity:1;"></img>
+    </a>
+    </div>
+    <div style="display:inline-block;padding-left:35px;padding-right:35px;">
+    <a title="Visit Thea" target="_blank" href="/click.php?url=http://www.thearender.com/">
+	<img width="220" border="0" height="59" alt="thea-sponsor-logo" src="http://jroot.sketchucation.com/images/banners/thea-sponsor-logo.png" smartload="14" style="opacity:1;"></img>
+    </a>
+    </div>
+
+</div>
+</div></div>
+</div></div>
+<div id="rt-footer-surround" class="bottomblock-overlay-dark">
+<div class="rt-container">
+					
+<div id="rt-footer">
+<div class="rt-grid-3 rt-alpha"><div class="rt-block">
+<div class="module-surround">
+<div class="module-content">
+<div class="custom">
+<p>
+<a href="/tos">Terms of Service</a></p><p><a href="/eula">EULA</a></p><p><a href="/privacy-policy">Privacy Policy</a></p></div><div class="clear">&nbsp;</div></div></div></div></div><div class="rt-grid-3"><div class="rt-block"><div class="module-surround"><div class="module-content"><div class="custom"><p><a href="/./account-settings" title="Manage your email and password">Account Settings</a></p><p><a href="/forums/faq.php">Forum FAQs</a></p><p><a href="/./contact">Contact</a></p></div><div class="clear">&nbsp;</div></div></div></div></div><div class="rt-grid-3"><div class="rt-block"><div class="module-surround"><div class="module-content"><div class="custom"><p><a href="/./sketchucation-services">Services</a></p><p><a href="/./shop">Shop</a></p><p><a href="/./advertise">Advertise with us</a></p></div><div class="clear">&nbsp;</div></div></div></div></div><div class="rt-grid-3 rt-omega"><div class="rt-block"><div class="module-surround"><div class="module-content"><div class="custom">
+<div class="social-links"><a class="feed-icon" title="Feed - Topic - [Plugin] Align tool 3D (bug fix)" href="http://sketchucation.com/forums/feed.php?f=323&amp;t=11224"></a></div></div><div class="clear">&nbsp;</div></div></div></div></div>
+<div class="clear"></div>
+</div>
+
+</div></div>
+<div id="rt-copyright" class="bottom-color">
+<div class="rt-container">
+
+<div class="clear"></div> 
+</div> </div> 
+</body>
+</html>

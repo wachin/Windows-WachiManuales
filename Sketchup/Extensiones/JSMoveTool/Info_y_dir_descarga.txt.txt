@@ -1,0 +1,13 @@
+
+
+JS MoveTool
+http://www.pixero.com/downloads_sketchup.html
+
+Moves a selection with the arrow keys.Assign it to a shortcut hot key.
+For example Alt+M. Look inside the script for usage.
+
+
+Altes para mover hacia arriba. Y hay que escribir en el teclado el numero de metros para que suba o baje, esto después de aplastar enter(esto hace que se fije el valor) y usando las flechas del teclado.
+
+Att:
+wachín

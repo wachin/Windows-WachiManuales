@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+<HTML>
+  <HEAD>
+  <title> 1001bit.com - Polar Array </title>
+	<style type="text/css">
+	<!--
+	body,td,a,p,.h{font-family:arial,sans-serif; font-size:10pt;}
+	h1 {font-size: 16pt; color: #ffffff;}
+	h2 { font-size: 12pt; }
+	h3 { font-size: 11pt; }
+	p { font-size: 10pt; }
+
+	.f1 {font-size: 16pt}
+	.f2 {font-size: 14pt}
+	a {text-decoration: none}
+	a:hover {color:#ff0000; font-size:12pt}
+	.textbox {
+	 background-color: white; font-size: 12px;
+	 border: 1px solid #000000;
+	}	
+
+	-->
+	</style>	
+  
+  <script language="Javascript" type="text/javascript">
+
+      function SUdoPolarArray(name)
+      {
+      window.location='skp:DoPolarArray@' + name;
+      }
+      function SUexitPolarArray(name)
+      {
+      window.location='skp:ExitPolarArray@' + name;
+      }
+      function DL_polarangle(ang)
+      {
+      document.theForm.polar_angle.value = ang;
+      }
+      function DL_polarnos(nos)
+      {
+     document.theForm.polar_nos.value = nos;
+      }
+     function DL_polarvdis(dis)
+      {
+      dis = dis.replace("ft", "\'");
+      dis = dis.replace("in", "\"");
+      document.theForm.polar_vdis.value = dis;
+      }
+      
+    function DL_translate(id, newtext)
+    {
+      var newentry=document.getElementById(id);
+      newentry.firstChild.data=newtext;
+    }
+
+    function DL_translate_button(id, newtext)
+    {
+      var newentry=document.getElementById(id);
+      newentry.value=newtext;
+    }
+
+
+</script>
+      
+  </HEAD>
+  <body bgcolor=#788B9A>
+      <div>
+      <form name="theForm" action="#">
+        
+
+        <table>
+        <tr><td><h1><span name="title" id="title">Polar Array</span></h1></td></tr>
+        <tr><td colspan=2><img src='images/polar_array_1.png'></td></tr>
+	<tr><td><span name="t1" id="t1">Polar array angle</span></td><td><input type=text class="textbox"  name="polar_angle" id="polar_angle" onfocus="javascript:document.theForm.polar_angle.select()"></td></tr>
+  <tr><td><span name="t2" id="t2">Number of entities</span></td><td><input type=text class="textbox"  name="polar_nos" id="polar_nos" onfocus="javascript:document.theForm.polar_nos.select()"></td></tr>
+ 	<tr><td><span name="t3" id="t3">Total distance along center axes</span> (h)</td><td><input type=text class="textbox"  name="polar_vdis" id="polar_vdis" onfocus="javascript:document.theForm.polar_vdis.select()"></td></tr>
+  </table>
+
+  <hr>
+        <input type=button name="do_polarray" id="do_polarray" value="Build Array"
+        onClick="SUdoPolarArray(this.value)">
+        <input type=button name="exit_polarray" id="exit_polarray" value="Exit" 
+        onClick="SUexitPolarArray(this.value)">
+        
+        </form>
+        	<font size="2pt"><i><span name="author" id="author">.</span></i></font>
+        
+      </div>
+      
+ 
+      </body>
+      
+</html>

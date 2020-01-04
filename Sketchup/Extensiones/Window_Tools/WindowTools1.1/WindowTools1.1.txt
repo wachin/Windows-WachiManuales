@@ -1,0 +1,54 @@
+window Tools 1.1 
+================
+
+Overview:
+=========
+WindowTools 1.1 includes 4 tools under the Window Tools menu: 
+
+Glass
+Frame
+Trim
+Mullion
+
+Removal of previous Window Tools components:
+--------------------------------------------
+
+01. Goto the following directory:
+    C:\Program Files\Google\Google SketchUp 6\Plugins
+    If your using Vista it will be the following directory:
+    C:\Program Files (x86)\Google\Google SketchUp 6\Plugins
+02. Delete the WindowTools.rb file in the Plugins directory
+03. Delete the WindowTools folder from the Plugins directory.
+
+Installation:
+=============
+
+01. Unrar WindowTools1.1.rar into the following directory:
+    C:\Program Files\Google\Google SketchUp 6\Plugins
+    If your using Vista it will be the following directory:
+    C:\Program Files (x86)\Google\Google SketchUp 6\Plugins
+02. Place the WindowTools1.1rb file in the Plugins directory
+03. Add the WindowTools1.1 folder to the Plugins directory.
+04. Access the WindowTools either by looking for the new "Window Tools" entry in the Plugins menu
+    There are 4 window related objects in the "Window Tools" sub menu.
+    or use the WindowTools Icon Pallete, Goto View>Toolbars, check mark the entry "Window Tools"
+05. There are 4 Window related objects in the Window Tool bar.
+
+ 
+Happy Window Tool'in!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

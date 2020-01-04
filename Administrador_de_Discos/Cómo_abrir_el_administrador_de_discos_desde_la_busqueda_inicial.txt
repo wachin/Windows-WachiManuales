@@ -1,0 +1,7 @@
+
+How to Open Disk Management From Command Prompt
+https://www.lifewire.com/how-to-open-disk-management-from-command-prompt-2626097
+
+Type the following Disk Management command in the text box (Tecla Windows + R):
+
+diskmgmt.msc 

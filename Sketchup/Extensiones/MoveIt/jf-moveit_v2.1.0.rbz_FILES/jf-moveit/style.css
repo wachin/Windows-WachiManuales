@@ -1,0 +1,70 @@
+body {
+   background-color: #ECE9D8;
+   font-family: sans-serif;
+   padding: 0;
+   margin-top: 0;
+}
+img {
+   width: 16px; 
+   height: 16px;
+}
+button {
+   cursor: hand;
+   /*font: menu;*/
+   font-size: xx-small;
+   padding: 0;
+}
+legend {
+   /*font-weight: bold;*/
+   /*background: gray;*/
+   /*font-style: italic;*/
+   font-size: 75%;
+}
+input {
+   /*font-family: courier;*/
+   font-size: x-small;
+}
+label {
+   font-size: small;
+   width: 3em;
+   float: left;
+   text-align: right
+   display: block;
+}
+fieldset {
+   /*background-color: #ECE9e8;*/
+}
+
+td {
+   padding: 0;
+}
+
+#plugin_name {
+   font-variant: small-caps;
+   font-size: small;
+   text-align: center;
+}
+.bu {
+   /*color: blue;*/
+   cursor: hand;
+   font-size: small;
+   font: fixed;
+   /*border-top: 1px solid;*/
+   /*padding: 1px;*/
+   border-style: outset;
+   border-width: 1px;
+   background: #e0e0e0;
+}
+.bug { color: green; }
+
+.b35 {
+   width: 42px;
+}
+
+.xsmall {
+   font-size: x-small;
+}
+
+.hand {
+   cursor: hand;
+}

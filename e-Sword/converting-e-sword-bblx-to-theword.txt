@@ -1,0 +1,71 @@
+http://www.biblesupport.com/topic/5593-converting-e-sword-bblx-to-theword/
+
+
+ 
+Veterans
+Pip
+10 posts
+OFFLINE
+Posted 31 October 2013 - 07:45 AM
+I think we worked out a procedure for converting a BBLX to a theWord OT\ONT. It's probably not for everyone, or for every bible, but Niobi's project is fairly complex, and we got most of the way there with this method. Additional software is required, but if you are working with modules, you may already have it.
+ 
+GENERAL: 
+ 
+1. Starting with a BBLX file read with ToolTipNT, it was saved as an RTF file. 
+2. The RTF file was converted to an HTML file with defined styles. 
+3. The styles are then converted onto theWord verse.rules. 
+4. The HTML style tags within the bible text are then converted to correspond with the verse rules.
+ 
+MORE SPECIFIC:
+ 
+1-Read:
+In ToolTip Tool NT, read the BBLX from "Modules" | "Bible" | "Read ...". Save it to an RTF: "File" | "Save" or "Save as".
+ 
+2-Convert the RTF to an HTML
+theWord bibles are text files that use HTML-like codes. Convert the RTF to an HTML file with defined styles. The styles can be defined internally, or as a separate file. If internal, it will be cut & pasted into another file for editing. I used the ActionTest demo, http://www.trichview.../actiontest.zip. It's free and makes a nice simple file with internal styles.  
+ 
+Once the styles have been removed for editing, clean out everything except the bible text. Make sure that the resulting file is in a verse-per-line format. 23,145 lines for OT. 31,103 for ONT. This will become the ONT file.
+ 
+3-Convert the styles to verse.rules.
+A typical style produced by ActionTest looks like this:
+span.rvts20
+{
+ font-size: 12pt;
+ font-family: 'Arial', 'Helvetica', sans-serif;
+ font-weight: bold;
+ color: #800000;
+}
+It is converted to the verse rule:
+verse.rule="<X20>(.*?)<20>" "<font size=0 name=Arial, Helvetica, sans-serif color=#800000><b>$1</b></font>"
+Note that the style number was kept. The opening tag only is prefixed with an X. This will important later with the text tags. TW does not use points for text size, so: 12 pts. is size=0. Since 0 is the default it could have been left off. Add or subtract for different sizes. See the TW: "tw3-bible-module-spec.doc" for more information on this.
+ 
+In the trial, 83 styles were produced. This is too much for hand editing, so regular expressions were applied with some fixing afterwards. The text editor Editpad Pro is an outstanding tool for this.
+ 
+4-Converting the tags within the bible text.
+This is quick, but the only way I know how to do this is with a regular expression. The regex will also work in the free Notepad++.
+ 
+(a) The HTML text:
+<span class=rvts1>In the beginning</span>
+(B) The regex:
+Search:
+ <span class=rvts(\d+)>(.*?)</span>
+Replace:
+<X\1>\2<\1>
+© Will produce something that looks like this:
+<X1>In the beginning<1>
+Note that the number corresponds to the verse.rule. The verse.rules will now apply to the text tags in the module.
+ 
+5-Finish:
+Skip a few spaces. Paste the edited verse.rules at the end of the file. Add some TW bible ID. Save to an OT/ONT file.
+ 
+To Do
+Strong's Numbers, Notes fixup.
+ 
+Good luck,
+ 
+ALbeSH
+ 
+ 
+ 
+
+

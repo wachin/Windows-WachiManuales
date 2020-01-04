@@ -1,0 +1,134 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+<HTML>
+  <HEAD>
+  <title> 1001bit.com - Escalator</title>
+	<style type="text/css">
+	<!--
+	body,td,a,p,.h{font-family:arial,sans-serif; font-size:10pt;}
+	h1 { font-size: 16pt; color: #ffffff; }
+	h2 { font-size: 12pt; }
+	h3 { font-size: 11pt; }
+	p { font-size: 10pt; }
+
+	.f1 {font-size: 16pt}
+	.f2 {font-size: 14pt}
+	a {text-decoration: none}
+	a:hover {color:#ff0000; font-size:12pt}
+	.textbox {
+	 background-color: white; font-size: 12px;
+	 border: 1px solid #000000;
+	}	
+
+
+	-->
+	</style>	
+  
+  <script language="Javascript" type="text/javascript">
+      function SUescalMode(name)
+      {
+      DL_img2();
+      window.location='skp:set_escalMode@' + name;
+      }
+      function SUdoescal(name)
+      {
+      window.location='skp:Doescal@' + name;
+      }
+      function SUexitescal(name)
+      {
+      window.location='skp:Exitescal@' + name;
+      }
+      function DL_escal_width(wdh)
+      {
+        wdh = wdh.replace("ft", "\'");
+        wdh = wdh.replace("in", "\"");
+        document.theForm.escal_width.value = wdh;
+      }
+      function DL_escal_thick(thick)
+     { 
+        thick = thick.replace("ft", "\'");
+        thick = thick.replace("in", "\"");
+        document.theForm.escal_thick.value = thick;
+      }
+    function DL_escal_height(hgt)
+     { 
+        hgt = hgt.replace("ft", "\'");
+        hgt = hgt.replace("in", "\"");
+        document.theForm.escal_height.value = hgt;
+      }
+      function DL_escal_mode(i)
+      {
+      document.theForm.escal_mode[i].checked = true;
+      }
+      function DL_img1()
+      {
+      document.myPic.src="images/escalator_1.png";
+      }
+      function DL_img2()
+      {
+      document.myPic.src="images/escalator_2.png";
+      }
+      function DL_enter_width()
+      {
+      document.theForm.escal_width.select();
+      DL_img1();
+      }
+      function DL_enter_thick()
+      {
+      document.theForm.escal_thick.select();
+      DL_img1();
+      }
+      function DL_enter_height()
+      {
+      document.theForm.escal_mode[1].checked=true;
+      document.theForm.escal_height.select();
+      DL_img2();
+      }
+      
+  function DL_translate(id, newtext)
+	{
+		var newentry=document.getElementById(id);
+		newentry.firstChild.data=newtext;
+
+	}
+
+	function DL_translate_button(id, newtext)
+	{
+				
+		var newentry=document.getElementById(id);
+		newentry.value=newtext;
+
+	} 
+      
+</script>
+      
+  </HEAD>
+  <body bgcolor=#788B9A>
+      <div>
+      <form name="theForm" action="#">
+        
+        <table>
+        <tr><td colspan=2><h1><span name="title" id="title">Create Escalator</span></h1></td></tr>
+        <tr><td colspan=2 bgcolor=#788B9A><img name="myPic" id="myPic" src='images/escalator_1.png' align="center"></td></tr>
+        <tr><td><span name="t1" id="t1">Escalator steps width</span> (a)</td><td><input type=text class="textbox"  name="escal_width" id="escal_width" onfocus="DL_enter_width()"></td></tr>
+        <tr><td colspan=2><i> <span name="t2" id="t2">Note: standard width of escalators are approx</span>. 600mm(24"), 800mm(32"), 1000mm(40")<hr></td></tr>
+        <tr><td><span name="t3" id="t3">Width/thickness of side panel</span> (b) </td><td><input type=text class="textbox"  name="escal_thick" id="escal_thick" onfocus="DL_enter_thick()"></td></tr>
+        <tr><td colspan=2><hr><span name="t4" id="t4">Floor to floor height</span> (c)<br><input type=radio name="escal_mode" id="escal_mode" value="pick" checked =true
+        onClick="SUescalMode(this.value, this.checked)" ><span name="t5" id="t5">Floor to floor height calculated from picked points</span></input></td></tr>
+        <tr><td><input type=radio name="escal_mode" id="escal_mode" value="entry"
+        onClick="SUescalMode(this.value, this.checked)"  ><span name="t6" id="t6">Floor to floor height</span></input></td><td><input type=text class="textbox"  name="escal_height" id="escal_height" onfocus="DL_enter_height()"></td></tr>
+        </table>
+  <hr>
+        <input type=button name="do_escal" id="do_escal" value="Create Escalator"
+        onClick="SUdoescal(this.value)">
+        <input type=button name="exit_escal" id="exit_escal" value="Exit" 
+        onClick="SUexitescal(this.value)">
+        
+        </form>
+        	<font size="2pt"><i><span name="author" id="author">.</span></i></font>
+
+      </div>
+      
+ 
+      </body>
+      
+</html>

@@ -1,0 +1,17 @@
+MoveIt | SketchUcation
+http://sketchucation.com/plugin/826-jf-moveit
+
+
+
+
+******************************
+Mover
+Submitted by jim on Sun, 2007-04-22 16:26
+
+This SketchUp plugin is a WebDialog for moving and copying Groups/Instances. You can enter a move distance in any valid SketchUp units. Use the mouse to click on the arrows to move the object in any of the 10 pre-set directions.
+
+To use the keyboard, you need to first select the object you want to move. Then, click on the Mover Plugin Window to return focus to the window. Then you can use the cursor keys to move in X-Y plane.
+
+Rotation is clock-wise around the Z-Axis.
+
+http://www.scriptspot.com/sketchup/plugins/mover

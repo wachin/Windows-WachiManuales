@@ -1,0 +1,4 @@
+
+
+
+wget -c http://www.acdlabs.com/download/freeware/chemsk2015.exe
