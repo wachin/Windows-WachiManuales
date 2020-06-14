@@ -1,0 +1,15 @@
+
+
+How to quick Access "AppData" folder or "programdata" folder
+https://www.youtube.com/watch?v=YDc1KaEJnPo
+
+tutorial how to quick access 
+"appdata|" folder or "program data" folder
+first
+press windows + R key
+and 
+type %appdata%
+for program data type
+%programdata%
+
+this work for windows XP, VISTA, 7, 8, 8.1, and 10
