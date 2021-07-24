@@ -1,0 +1,20 @@
+
+
+Ver los videos:
+
+How to make Karaoke #new version - insert Lyrics to MIDI file - YouTube - https://www.youtube.com/watch?v=kXDOg5PqQJ8
+
+se requiere hacer esto en Windows
+
+Se necesitan dos programas:
+
+LyricsEditorV102Setup.exe
+
+y 
+
+PSRUTI817_setup.msi
+
+https://www.heikoplate.de/downloads.html
+
+PSRUTI - hpmusic
+https://www.heikoplate.de/psruti.html

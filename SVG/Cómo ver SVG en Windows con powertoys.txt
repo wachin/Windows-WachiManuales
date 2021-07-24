@@ -1,0 +1,13 @@
+
+
+
+PowerToys/unofficialInstallMethods.md at master · microsoft/PowerToys
+https://github.com/microsoft/PowerToys/blob/master/doc/unofficialInstallMethods.md
+
+aquí me reenvia a:
+
+https://chocolatey.org/pricing
+
+allí elegir la versión opensource gratuita
+
+
